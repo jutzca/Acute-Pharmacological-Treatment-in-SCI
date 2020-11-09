@@ -1,0 +1,2839 @@
+﻿NEW_ID,reason,generic_name,indication
+289101-ABCDEF,ANTIBIOTIC,Cefazolin,Infections and infestations
+6106-ABC,CERVICAL STABILIZATION,Cefazolin,Surgical and medical procedures
+289701-ABCDEFGHI,POST PEG PLACEMENT,Cefazolin,Surgical and medical procedures
+289105-ABC,ANTIHISTAMINE,Diphenhydramine,Immune system disorders
+29101-AB,ANTIBIOTIC,Gentamicin,Infections and infestations
+7101-ABCD,PAIN,Ketorolac,Pain
+99705-ABCDEFGHI,PREVENT CONSTIPATION,Metoclopramide,Gastrointestinal disorders
+21401-ABCDEFG,FEVER / HA PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+6106-ABC,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+23401-ABCDE,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+23104-ABCDE,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+23302-ABC,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+23201-AB,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+219201-ABCD,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+21104-ABCDE,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+23301-ABC,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+23402-ABCDEF,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+23102-ABCDEF,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+21403-ABCDEFGHI,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+219703-ABC,FEVER PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+21401-ABCDEFG,"FEVER, HA, PROPHYLAXIS",Acetaminophen,General disorders and administration site conditions
+21401-ABCDEFG,FEVER/HA PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+21401-ABCDEFG,"H/A, FEVER PROPHYLAXIS",Acetaminophen,General disorders and administration site conditions
+19206-ABCDEFGHI,PAIN PROPHYLAXIS,Acetaminophen,Pain
+19206-ABCDEFGHI,PAIN PROPHYLAXIS,Acetaminophen,Pain
+239201-A,PRE-TREAT SYGEN - FEVER PROPH.,Acetaminophen,General disorders and administration site conditions
+26111-ABCDEFGHI,PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+26111-ABCDEFGHI,PROPHYLAXIS,Acetaminophen,General disorders and administration site conditions
+21403-ABCDEFGHI,PROPHYLAXIS FEVER,Acetaminophen,General disorders and administration site conditions
+21401-ABCDEFG,"PROPHYLAXIS FEVER, A/A",Acetaminophen,General disorders and administration site conditions
+211003--BCD,PROPHYLAXIS FOR FEVER,Acetaminophen,General disorders and administration site conditions
+21204-AB,"PROPHYLAXIS FOR FEVER, HA",Acetaminophen,General disorders and administration site conditions
+4301-ABCDE,ULCER PROPHYLAXIS GIVEN X 2,Acetaminophen,Gastrointestinal disorders
+109105-ABC,PROPHYLAXIS RESP. RX,Acetylcysteine,"Respiratory, thoracic and mediastinal disorders"
+101001-ABCDEF,RESP BREATH PROPHYLAXIS,Acetylcysteine,"Respiratory, thoracic and mediastinal disorders"
+199109-ABCDE,PROPHYLACTIC,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+199109-ABCDE,PROPHYLACTIC,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+199109-ABCDE,PROPHYLACTICALLY,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+101001-ABCDEF,PROPHYLAXIS,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+199901-ABCD,PROPHYLAXIS,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+199901-ABCD,PROPHYLAXIS,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+19405-AB,PROPHYLAXIS BY PULMONARY,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+19405-AB,PROPHYLAXIS PULMONARY,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+109105-ABC,PROPHYLAXIS RESP. RX,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+21202-ABCD,PROPHYLAXIS WHEEZING,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+19305-A,RESP. PROPHYLAXIS,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+269703-ABCDEFGHI,PROPHYLAXIS,Alprazolam,Psychiatric disorders
+1302-ABC,PROPHYLAXIS,Aluminum Hydroxide,Gastrointestinal disorders
+219201-ABCD,ULCER PROPHYLAXIS,Aluminum Hydroxide,Gastrointestinal disorders
+4305-AB,GI ULCER PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+199701-A,PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+199702-ABCDEFGHI,PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+191001-ABC,PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+19103-AB,PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+199104-ABCDEFGHI,PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+269901-ABCDEF,PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+279101-ABCDE,STRESS ULCER PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+279101-ABCDE,STRESS ULCER PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+219703-ABC,ULCER PROPH.,Aluminum Magnesium,Gastrointestinal disorders
+4109-ABCDEFG,ULCER PROPHYALXIS,Aluminum Magnesium,Gastrointestinal disorders
+219201-ABCD,ULCER PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+9303-AB,ULCER PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+4112-ABCDEFGH,ULCER PROPHYLAXIS,Aluminum Magnesium,Gastrointestinal disorders
+1203-ABC,PROPHYLAXIS,Aluminum Magnesium Simethicone,Metabolism and nutrition disorders
+279101-ABCDE,STRESS ULCER PROPHYLAXIS,Aluminum Magnesium Simethicone,Gastrointestinal disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Aminophylline,"Respiratory, thoracic and mediastinal disorders"
+199706-ABCDEFGHI,PROPHYLAXIS FOR PULMONARY,Aminophylline,"Respiratory, thoracic and mediastinal disorders"
+199706-ABCDEFGHI,PROPHYLAXIS FOR PULMONARY,Aminophylline,"Respiratory, thoracic and mediastinal disorders"
+19313-ABCDEF,PROPHYLAXIS PULMONARY,Aminophylline,"Respiratory, thoracic and mediastinal disorders"
+25105-A,INFECTION PROPHYLAXIS DENTAL,Amoxicillin,Infections and infestations
+25105-A,INFECTION PROPHYLAXIS-DENTAL,Amoxicillin,Infections and infestations
+269705-ABCDEFGH,PROPHYLAXIS,Amoxicillin And Clavulanate Potassium,Infections and infestations
+12402-AB,PROPHYLAXIS TOENAIL REMOVED,Amoxicillin And Clavulanate Potassium,Infections and infestations
+9101-ABCD,ANTIBIOTIC PROPHYLAXIS,Ampicillin,Infections and infestations
+25401-AB,POST-OP PROPHYLAXIS,Ampicillin,Infections and infestations
+10405-ABCDEFGHI,PROPHYLACTIC,Ampicillin,Infections and infestations
+9305-ABCDEF,PROPHYLACTIC FOR SURGERY,Ampicillin,Surgical and medical procedures
+2402-A,PROPHYLAXIS,Ampicillin,Infections and infestations
+59405-AB,PROPHYLAXIS,Ampicillin,Infections and infestations
+19203-,PROPHYLAXIS,Ampicillin,Infections and infestations
+21108-ABC,PROPHYLAXIS,Ampicillin,Infections and infestations
+99105ABCDEFGHIJ,PROPHYLAXIS,Ampicillin,Infections and infestations
+279702-ABCDEFGHI,INFECTION PROPHYLAXIS,Ampicillin And Sulbactam,Infections and infestations
+59902-AB,PROPHYLACTIC,Ampicillin And Sulbactam,Infections and infestations
+299101-A,SURGICAL PROPHYLAXIS,Ampicillin And Sulbactam,Surgical and medical procedures
+9403-ABCD,DVT PROPHYLAXIS,Aspirin,Vascular disorders
+9103-ABCDE,DVT PROPHYLAXIS,Aspirin,Vascular disorders
+2403-A,PROPHYLAXIS,Aspirin,General disorders and administration site conditions
+269705-ABCDEFGH,PROPHYLAXIS,Aspirin,Pain
+269705-ABCDEFGH,PROPHYLAXIS,Aspirin,Pain
+20101-ABCDEFG,PROPHYLAXIS DVT,Aspirin,Vascular disorders
+239713-ABCD,BRADYCARDIA PROPH. PROCEDURE,Atropine,Cardiac disorders
+129102-ABCDE,ANTIBIOTIC PROPHYLAXIS,Aztreonam,Infections and infestations
+279703-ABC,INFECTION PROPHYLAXIS,Aztreonam,Infections and infestations
+9403-ABCD,ANTIBIOTIC PROPHYLAXIS,Bacitracin,Infections and infestations
+279402-ABC,INFECTION PROPHYLAXIS,Bacitracin,Infections and infestations
+279402-ABC,INFECTION PROPHYLAXIS,Bacitracin,Infections and infestations
+279901-AB,INFECTION PROPHYLAXIS,Bacitracin,Infections and infestations
+25305-A,INFECTION PROPHYLAXIS,Bacitracin,Infections and infestations
+279703-ABC,INFECTION PROPHYLAXIS,Bacitracin,Infections and infestations
+99702-ABCDEFG,PROPHYLAXIS,Bacitracin,Infections and infestations
+99105ABCDEFGHIJ,PROPHYLAXIS,Bacitracin,Infections and infestations
+21407-AB,PROPHYLAXIS ABRASIONS,Bacitracin,Skin and subcutaneous tissue disorders
+211001-ABCD,PROPHYLAXIS FACIAL LACS,Bacitracin,Skin and subcutaneous tissue disorders
+91001-ABCDEFG,PROPHYLAXIS FACIAL SUTURES,Bacitracin,Skin and subcutaneous tissue disorders
+109102-ABCD,PROPHYLAXIS INFECTION,Bacitracin,Infections and infestations
+109103-ABCDEFGH,PROPHYLAXIS INFECTION SURGERY,Bacitracin,Infections and infestations
+169703-ABCDE,PROPHYLAXIS PIN SITES,Bacitracin,Skin and subcutaneous tissue disorders
+21205-A,PROPHYLAXIS: NECK WOUND,Bacitracin,Infections and infestations
+21105-ABCDEF,PROPHYLAXIS,Benztropine,Nervous system disorders
+21202-ABCD,PROPHYLAXIS,Benztropine,Nervous system disorders
+22103-ABCDEF,ULCER PROPHYLAXIS,Capsaicin,Gastrointestinal disorders
+19301-AB,PROPHYLAXIS,Carbamazepine,Nervous system disorders
+19301-AB,PROPHYLAXIS,Carbamazepine,Nervous system disorders
+19301-AB,PROPHYLAXIS,Carbamazepine,Nervous system disorders
+259901-A,SEIZURE PROPHYLAXIS,Carbamazepine,Nervous system disorders
+6401-ABC,"UTI, SKIN GRAFT PROPHYLAXIS",Cefadroxil,Infections and infestations
+23401-ABCDE,INFECTIO PROPHYLAXIS POST-OP,Cefamandole,Infections and infestations
+23101-ABC,INFECTION PROPHYLAXIS,Cefamandole,Infections and infestations
+2104-ABC,AFTER OP PROPHYLAXIS,Cefazolin,Infections and infestations
+2401-AB,AFTER-OP PROPHYLAXIS ABX,Cefazolin,Infections and infestations
+9401-ABCDE,ANTIB. PROPHYLAXIS SCALP LAC.,Cefazolin,Infections and infestations
+9302-ACDEFGHI,ANTIBIOTIC OR PROPHYLAXIS,Cefazolin,Infections and infestations
+311001-ABC,ANTIBIOTIC PROPHYLAXIS,Cefazolin,Infections and infestations
+4305-AB,ANTIBIOTIC PROPHYLAXIS,Cefazolin,Infections and infestations
+129405-AB,ANTIBIOTIC PROPHYLAXIS,Cefazolin,Infections and infestations
+9401-ABCDE,ANTIBIOTIC PROPHYLAXIS - OR,Cefazolin,Infections and infestations
+12106-ABC,ARM FX. PROPHYLAXIS,Cefazolin,Infections and infestations
+219603-ABCD,CHEST TUBE PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+4301-ABCDE,DR. PROPHYLAXIS,Cefazolin,Infections and infestations
+211002-ABC,FEMUR FX PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+279805-ABC,INFECTIO PROPHYLAXIS,Cefazolin,Infections and infestations
+239712-ABCDEF,INFECTION POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+309701-ABCD,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279806-A,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+271102-ABCDE,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+29904-AB,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279502-ABCD,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+69201-AB,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+291001-A,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+69102-ABC,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+239712-ABCDEF,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279105-ABCDE,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279206-A,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279402-ABC,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+61001-ABC,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+271201-ABC,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279102-ABCD,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279104-ABCD,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279202-ABC,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279204-A,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279703-ABC,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279901-AB,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279101-ABCDE,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279203-AB,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279704-ABCDEFGHI,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+29703-ABCD,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+4111-ABCDEFGHI,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+69101-AB,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279502-ABCD,INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+7108-ABCD,INFECTION PROPHYLAXIS HAND,Cefazolin,Infections and infestations
+309701-ABCD,INFECTION PROPHYLAXIS POST-OP,Cefazolin,Infections and infestations
+9305-ABCDEF,IVAC DRAIN (R) HIP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+6401-ABC,LACERATIONS PROPHYLAXIS,Cefazolin,Infections and infestations
+1303-A,O.R. PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+21305-A,O.R. PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+279802-ABC,OPEN FOR INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+21109-ABCD,OPERATIVE PROPHYLAXIS,Cefazolin,Infections and infestations
+219102-ABCD,OPERATIVE PROPHYLAXIS,Cefazolin,Infections and infestations
+211001-ABCD,OPERATIVE PROPHYLAXIS,Cefazolin,Infections and infestations
+12401-AB,OR ATX PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+4305-AB,OR PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+4109-ABCDEFG,OR PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219201-ABCD,OR PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+4108-ABCDEF,OR PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+49102-ABCDEFGH,OR PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+99105ABCDEFGHIJ,PEG PROPHYLAXIS,Cefazolin,Infections and infestations
+219301-ABC,PERIOPERATIVE PROPHYLAXIS,Cefazolin,Infections and infestations
+239302-AB,POST OP ANTIBIOTIC PROPH.,Cefazolin,Infections and infestations
+219402-ABC,POST OP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+69201-AB,POST OP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+319103-ABCD,POST OP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+239713-ABCD,POST OP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+25203-ABCDEFFG,POST-OP INFECTION PROPH.,Cefazolin,Infections and infestations
+279201-ABC,POST-OP INFECTION PROPHYLAXIAS,Cefazolin,Infections and infestations
+231005-A,POST-OP INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+23102-ABCDEF,POST-OP INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+319501-A,POST-OP INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+25307-ABCDE,POST-OP INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+15102-ABCDE,POST-OP PROPHYL.CONT.TEMP.INCR,Cefazolin,General disorders and administration site conditions
+4601-AB,POST-OP PROPHYLATIC,Cefazolin,Infections and infestations
+15102-ABCDE,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+259802-ABCDE,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+281001-ABC,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+6103-ABCD,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+25303-ABC,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+4112-ABCDEFGH,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+4103-ABCDEF,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+25403-A,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+169901-A,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+12103-ABCDE,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+12407-AB,POST-OP PROPHYLAXIS,Cefazolin,Infections and infestations
+129702-ABCDEFGHI,POST-OP PROPHYLAXIS PNEUMONIA,Cefazolin,Infections and infestations
+129402-A,POST-OP-PROPHYLAXIS,Cefazolin,Infections and infestations
+159704-ABC,PRE-OP PROPH.,Cefazolin,Surgical and medical procedures
+15102-ABCDE,PRE-OP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+239202-ABC,PRE-OP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+21106-ABC,PRE-OP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+21408-A,PRE-OP PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+21303-,PRE-OP PROPHYLAXIS POST-OP,Cefazolin,Surgical and medical procedures
+15101ABCDEFGH,PREO-OPERAT. PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+49101-ABCD,PROPH. ANTIBIOTIC,Cefazolin,Infections and infestations
+109901-AB,PROPH. INFECTION,Cefazolin,Infections and infestations
+10404-ABCD,PROPH. INFECTION,Cefazolin,Infections and infestations
+169301-AB,PROPH. THERAPY PRE/POST SX,Cefazolin,Infections and infestations
+5104-ABCD,PROPH. X INFECTION POST-OP,Cefazolin,Infections and infestations
+59903-,PROPHYL. INFEC. AFTER SURGERY,Cefazolin,Surgical and medical procedures
+59404-AB,PROPHYLACTIC,Cefazolin,Infections and infestations
+19407-ABCDE,PROPHYLACTIC,Cefazolin,Infections and infestations
+59107-AB,PROPHYLACTIC,Cefazolin,Infections and infestations
+1402-AB,PROPHYLACTIC,Cefazolin,Infections and infestations
+51003-AB,PROPHYLACTIC,Cefazolin,Infections and infestations
+59405-AB,PROPHYLACTIC,Cefazolin,Infections and infestations
+59804-ABC,PROPHYLACTIC,Cefazolin,Infections and infestations
+59901-AB,PROPHYLACTIC,Cefazolin,Infections and infestations
+59701-AB,PROPHYLACTIC,Cefazolin,Infections and infestations
+17204-ABCD,PROPHYLACTIC,Cefazolin,Infections and infestations
+5101-ABC,PROPHYLACTIC,Cefazolin,Infections and infestations
+159301-,PROPHYLACTIC ABX,Cefazolin,Infections and infestations
+2301-AB,PROPHYLACTIC ABX AFTER - OP,Cefazolin,Infections and infestations
+59801-ABC,PROPHYLACTIC ANTIBIOTIC,Cefazolin,Infections and infestations
+239707-ABC,PROPHYLACTIC ANTIBIOTIC,Cefazolin,Infections and infestations
+61002-AB,PROPHYLACTIC ANTIBIOTIC,Cefazolin,Infections and infestations
+161001-AB,PROPHYLACTIC ANTIBIOTIC,Cefazolin,Infections and infestations
+239401-AB,PROPHYLACTIC ANTIBIOTIC,Cefazolin,Infections and infestations
+239707-ABC,PROPHYLACTIC ANTIBIOTIC,Cefazolin,Infections and infestations
+5103-A,PROPHYLACTIC FOR INFECTION,Cefazolin,Infections and infestations
+59201-,PROPHYLACTIC FOR SURGERY,Cefazolin,Surgical and medical procedures
+5502-ABC,PROPHYLACTIC FOR SURGERY,Cefazolin,Surgical and medical procedures
+59402-A,PROPHYLACTIC FOR SURGICAL INF,Cefazolin,Surgical and medical procedures
+59403-AB,PROPHYLACTIC FOR SURGICAL INF,Cefazolin,Surgical and medical procedures
+161001-AB,PROPHYLACTIC TMT POST SURGERY,Cefazolin,Surgical and medical procedures
+59104-AB,PROPHYLATIC,Cefazolin,Infections and infestations
+231101-ABC,PROPHYLATIC ANTIBIOTIC,Cefazolin,Infections and infestations
+59103-ABCD,PROPHYLATIC FOR INFECTION,Cefazolin,Infections and infestations
+109401-ABC,PROPHYLAXIC,Cefazolin,Infections and infestations
+199706-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+199305-ABCDEF,PROPHYLAXIS,Cefazolin,Infections and infestations
+199903-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+1501-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+19106-ABCDEFG,PROPHYLAXIS,Cefazolin,Infections and infestations
+199105-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+19109-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+199405-ABCDEF,PROPHYLAXIS,Cefazolin,Infections and infestations
+199708-ABCDE,PROPHYLAXIS,Cefazolin,Infections and infestations
+199903-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+19107-ABCDEFGH,PROPHYLAXIS,Cefazolin,Infections and infestations
+199705-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+19104-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+99103-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+259902-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+26404-ABCDEFGH,PROPHYLAXIS,Cefazolin,Infections and infestations
+109301-ABCDE,PROPHYLAXIS,Cefazolin,Infections and infestations
+269705-ABCDEFGH,PROPHYLAXIS,Cefazolin,Infections and infestations
+26404-ABCDEFGH,PROPHYLAXIS,Cefazolin,Infections and infestations
+26404-ABCDEFGH,PROPHYLAXIS,Cefazolin,Infections and infestations
+199303-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+10301-AB,PROPHYLAXIS,Cefazolin,Infections and infestations
+21411-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+1403-AB,PROPHYLAXIS,Cefazolin,Infections and infestations
+159404-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+19203-,PROPHYLAXIS,Cefazolin,Infections and infestations
+199707-ABCDEFG,PROPHYLAXIS,Cefazolin,Infections and infestations
+199902-ABC,PROPHYLAXIS,Cefazolin,Infections and infestations
+199904-ABCDE,PROPHYLAXIS,Cefazolin,Infections and infestations
+21601-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+19101-ABCDE,PROPHYLAXIS,Cefazolin,Infections and infestations
+21410-AB,PROPHYLAXIS,Cefazolin,Infections and infestations
+26405-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+15202-ABCDEF,PROPHYLAXIS,Cefazolin,Infections and infestations
+19104-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+19105-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+19203-,PROPHYLAXIS,Cefazolin,Infections and infestations
+19207-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+19401-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+19706-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+2402-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+99902-ABC,PROPHYLAXIS,Cefazolin,Infections and infestations
+1203-ABC,PROPHYLAXIS,Cefazolin,Infections and infestations
+199705-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+2403-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+269103-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+269110-ABCDE,PROPHYLAXIS,Cefazolin,Infections and infestations
+269401-ABCDEF,PROPHYLAXIS,Cefazolin,Infections and infestations
+269706-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+4201-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+99701-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+19405-AB,PROPHYLAXIS,Cefazolin,Infections and infestations
+20103-ABCDEF,PROPHYLAXIS,Cefazolin,Infections and infestations
+21112-AB,PROPHYLAXIS,Cefazolin,Infections and infestations
+2404-A,PROPHYLAXIS,Cefazolin,Infections and infestations
+26403-ABCDEFG,PROPHYLAXIS,Cefazolin,Infections and infestations
+269706-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+1501-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+269704-ABCDEFGH,PROPHYLAXIS,Cefazolin,Infections and infestations
+269706-ABCDEFGHI,PROPHYLAXIS,Cefazolin,Infections and infestations
+49201-ABCD,PROPHYLAXIS,Cefazolin,Infections and infestations
+12201-ABCD,PROPHYLAXIS - SURGERY,Cefazolin,Surgical and medical procedures
+21412-ABC,PROPHYLAXIS (OR),Cefazolin,Surgical and medical procedures
+21602-A,PROPHYLAXIS (OR),Cefazolin,Surgical and medical procedures
+17201-AB,PROPHYLAXIS AFTER OR,Cefazolin,Surgical and medical procedures
+99107-ABCDEFGHI,PROPHYLAXIS AGAINTST INFECTION,Cefazolin,Infections and infestations
+29701-ABCDE,PROPHYLAXIS ANTIBIOTIC,Cefazolin,Infections and infestations
+329101-ABCDEF,PROPHYLAXIS ANTIBIOTIC,Cefazolin,Infections and infestations
+69401-ABC,PROPHYLAXIS ANTIBIOTIC,Cefazolin,Infections and infestations
+6102-ABC,PROPHYLAXIS CERVICAL SURGERY,Cefazolin,Surgical and medical procedures
+21404-ABC,PROPHYLAXIS CT,Cefazolin,Infections and infestations
+99402-AB,PROPHYLAXIS FOR INFECTION,Cefazolin,Infections and infestations
+319102-AB,PROPHYLAXIS FOR OR,Cefazolin,Infections and infestations
+17103-ABCDEDG,PROPHYLAXIS GSW->NECK,Cefazolin,Infections and infestations
+109801-ABCD,PROPHYLAXIS INFECTION,Cefazolin,Infections and infestations
+109703-ABC,PROPHYLAXIS INFECTION,Cefazolin,Infections and infestations
+159401-ABCDE,PROPHYLAXIS INFECTION,Cefazolin,Infections and infestations
+109102-ABCD,PROPHYLAXIS INFECTION,Cefazolin,Infections and infestations
+109103-ABCDEFGH,PROPHYLAXIS INFECTION,Cefazolin,Infections and infestations
+109104-ABCD,PROPHYLAXIS INFECTION,Cefazolin,Infections and infestations
+109801-ABCD,PROPHYLAXIS INFECTION,Cefazolin,Infections and infestations
+15403-AB,PROPHYLAXIS INFECTION,Cefazolin,Infections and infestations
+109105-ABC,PROPHYLAXIS INFECTION/FEVER,Cefazolin,Infections and infestations
+2102-AB,PROPHYLAXIS OF INFECTION,Cefazolin,Infections and infestations
+29201-A,PROPHYLAXIS OF INFECTION,Cefazolin,Infections and infestations
+69901-AB,PROPHYLAXIS OR,Cefazolin,Infections and infestations
+21409-A,PROPHYLAXIS OR,Cefazolin,Infections and infestations
+99102-ABCDEFG,PROPHYLAXIS OR,Cefazolin,Infections and infestations
+99101-ABCDEFGHI,PROPHYLAXIS PACEMAKER INSERT.,Cefazolin,Infections and infestations
+7401-ABCD,PROPHYLAXIS PERIOPERATIVELY,Cefazolin,Infections and infestations
+21408-A,PROPHYLAXIS POST-OP,Cefazolin,Infections and infestations
+309101-ABCDE,PROPHYLAXIS POST-OP COVERAGE,Cefazolin,Infections and infestations
+169901-A,PROPHYLAXIS PRE-OP,Cefazolin,Surgical and medical procedures
+109402-ABC,PROPHYLAXIS SURGERY,Cefazolin,Surgical and medical procedures
+219901-AB,PROPHYLAXIS SURGERY,Cefazolin,Surgical and medical procedures
+259301-ABCD,PROPHYLAXIS SURGICAL,Cefazolin,Surgical and medical procedures
+21107-A,"PROPHYLAXIS, OR",Cefazolin,Infections and infestations
+12103-ABCDE,SCALP LACERATION PROPHYLAXIS,Cefazolin,Skin and subcutaneous tissue disorders
+279702-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Cefazolin,Gastrointestinal disorders
+129803-AB,SURG. PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219603-ABCD,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+211004-AB,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219405-ABC,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219901-AB,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219401-ABC,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219703-ABC,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219901-AB,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219201-ABCD,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219103-ABC,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219105-ABCD,SURGERY PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+69801-ABCD,SURGERY/INFECTION PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+4104-ABC,SURGICAL PROPH,Cefazolin,Surgical and medical procedures
+219702-ABCD,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+211003--BCD,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+21102-ABCDEFGHI,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+219106-AB,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+299401-AB,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+299901-A,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+12405-ABC,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+299701-AB,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+259303-ABC,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+259302-ABCD,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+259802-ABCDE,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+299101-A,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+4303-AB,SURGICAL PROPHYLAXIS,Cefazolin,Surgical and medical procedures
+99704-ABCDEF,WENT TO SURGERY INFECT. PROPH.,Cefazolin,Infections and infestations
+279501-ABC,WOUND INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+279501-ABC,WOUND INFECTION PROPHYLAXIS,Cefazolin,Infections and infestations
+12105-ABCDEF,WOUND PROPHYLAXIS,Cefazolin,Skin and subcutaneous tissue disorders
+12403-ABC,WOUND PROPHYLAXIS,Cefazolin,Skin and subcutaneous tissue disorders
+129401-ABCD,WOUND PROPHYLAXIS,Cefazolin,Skin and subcutaneous tissue disorders
+7108-ABCD,PROPHYLAXIS AFTER TEMP,Cefoperazone,General disorders and administration site conditions
+23403-AB,INFECTION PROPHYLAXIS,Cefotaxime,Infections and infestations
+23403-AB,INFECTION PROPHYLAXIS,Cefotaxime,Infections and infestations
+5105-A,PROPHYLATIC FOR INFECTION,Cefotaxime,Infections and infestations
+199102-ABCDE,PROPHYLAXIS,Cefotaxime,Infections and infestations
+199707-ABCDEFG,PROPHYLAXIS,Cefotaxime,Infections and infestations
+199704-ABCDEFG,PROPHYLAXIS,Cefotaxime,Infections and infestations
+199704-ABCDEFG,PROPHYLAXIS,Cefotaxime,Infections and infestations
+279901-AB,INFECTION PROPHYLAXIS,Cefotetan,Infections and infestations
+269108-ABCDEFG,PROPHYLAXIS,Cefotetan,Infections and infestations
+269702-ABCDEFGHI,PROPHYLAXIS,Cefotetan,Infections and infestations
+20102-ABCD,PROPHYLAXIS,Cefotetan,Infections and infestations
+269105-ABCDEFGHI,PROPHYLAXIS,Cefotetan,Infections and infestations
+9403-ABCD,INCREASED TEMP ANTIB. PROPHYL.,Cefoxitin,Infections and infestations
+9402-ABCDEFGHI,ANTIBIOTIC (INCR. WBC) PROPH.,Ceftazidime,Infections and infestations
+129102-ABCDE,ANTIBIOTIC PROPHYLAXIS,Ceftazidime,Infections and infestations
+9402-ABCDEFGHI,ANTIBIOTIC PROPHYLAXIS,Ceftazidime,Infections and infestations
+29703-ABCD,INFECTION PROPHYLAXIS,Ceftazidime,Infections and infestations
+99101-ABCDEFGHI,POSSIBLE ASPIRATION PROPHILAX.,Ceftazidime,Infections and infestations
+10405-ABCDEFGHI,PROPHYLACTIC,Ceftazidime,Infections and infestations
+129401-ABCD,PROPHYLAX. RESP INFECT.,Ceftazidime,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Ceftazidime,Infections and infestations
+26110-ABCDEFGH,PROPHYLAXIS,Ceftazidime,Infections and infestations
+109701-ABC,PROPHYLAXIS,Ceftazidime,Infections and infestations
+19205-ABCDE,PROPHYLAXIS,Ceftazidime,Infections and infestations
+6202-ABC,PROPHYLAXIS,Ceftazidime,Infections and infestations
+109104-ABCD,PROPHYLAXIS,Ceftazidime,Infections and infestations
+26110-ABCDEFGH,PROPHYLAXIS,Ceftazidime,Infections and infestations
+99801-AB,PROPHYLAXIS INCREASED TEMP,Ceftazidime,General disorders and administration site conditions
+109103-ABCDEFGH,PROPHYLAXIS INFECTION,Ceftazidime,Infections and infestations
+309701-ABCD,PROPHYLAXIS INFECTION,Ceftazidime,Infections and infestations
+19309-ABCDEFG,PROPHYLAXIS TEMP,Ceftazidime,General disorders and administration site conditions
+19309-ABCDEFG,PROPHYLAXIS TEMP,Ceftazidime,General disorders and administration site conditions
+129102-ABCDE,RESP. PROPHYLAXIS,Ceftazidime,"Respiratory, thoracic and mediastinal disorders"
+26201ABCDEFG,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269105-ABCDEFGHI,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269704-ABCDEFGH,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269111-ABCDEFGHI,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269102-ABC,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269709-ABCDEF,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269103-ABCD,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269201-ABCDEFG,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269705-ABCDEFGH,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269711-ABCDEFGH,PROPHYLAXIS,Ceftizoxime,Infections and infestations
+269101-ABCD,PROPHYLAXIS POST-OP,Ceftizoxime,Surgical and medical procedures
+9101-ABCD,ANTIBIOTIC PROPHYLAXIS,Ceftriaxone,Infections and infestations
+9102-ABCDEFGHI,ANTIBIOTIC PROPHYLAXIS,Ceftriaxone,Infections and infestations
+9101-ABCD,ANTIBIOTIC PROPHYLAXIS,Ceftriaxone,Infections and infestations
+259201-A,BRONCHITIS PROPHYLACTIC,Ceftriaxone,Infections and infestations
+219402-ABC,CHEST TUBE PROPHYLAXIS,Ceftriaxone,Infections and infestations
+259801-ABCD,INFECTION PROPHYLAXIS,Ceftriaxone,Infections and infestations
+259801-ABCD,INFECTION PROPHYLAXIS,Ceftriaxone,Infections and infestations
+23303-AB,INFECTION PROPHYLAXIS,Ceftriaxone,Infections and infestations
+59404-AB,PROPHYLACTIC,Ceftriaxone,Infections and infestations
+51002-,PROPHYLACTIC,Ceftriaxone,Infections and infestations
+59402-A,PROPHYLACTIC FOR INFECTION,Ceftriaxone,Infections and infestations
+59403-AB,PROPHYLACTIC FOR SURGICAL INF,Ceftriaxone,Infections and infestations
+1103-ABCD,PROPHYLAXIS,Ceftriaxone,Infections and infestations
+259302-ABCD,PROPHYLAXIS,Ceftriaxone,Infections and infestations
+109702-ABCD,PROPHYLAXIS,Ceftriaxone,Infections and infestations
+269202-ABCDEFGHI,PROPHYLAXIS,Ceftriaxone,Infections and infestations
+269802-ABCDEFGHI,PROPHYLAXIS,Ceftriaxone,Infections and infestations
+1104-ABCD,PROPHYLAXIS,Ceftriaxone,Infections and infestations
+19108-AB,PROPHYLAXIS,Ceftriaxone,Infections and infestations
+269802-ABCDEFGHI,PROPHYLAXIS,Ceftriaxone,Infections and infestations
+109702-ABCD,PROPHYLAXIS INFECTION,Ceftriaxone,Infections and infestations
+23101-ABC,INF. PULMON.-PROPH. BRONCHITIS,Cefuroxime,"Respiratory, thoracic and mediastinal disorders"
+21412-ABC,P. EFFUSION PROPHYLAXIS,Cefuroxime,Surgical and medical procedures
+19107-ABCDEFGH,PROPHYLAXIS,Cephalexin,Infections and infestations
+199705-ABCDEFGHI,PROPHYLAXIS,Cephapirin,Infections and infestations
+19405-AB,PROPHYLAXIS,Cephapirin,Infections and infestations
+199906-ABCDE,PROPHYLAXIS,Chloral Hydrate,Surgical and medical procedures
+1101-AB,DT PROPHYLAXIS,Chlordiazepoxide,Vascular disorders
+239301-AB,PROPHYLAXIS SEIZURE ACTIVITY,Chlorpromazine,Psychiatric disorders
+1405-AB,PROPHYLAXIS,Choline Magnesium Trisalicylate,General disorders and administration site conditions
+329101-ABCDEF,GASTRIC PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+329101-ABCDEF,GASTRIC PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+329101-ABCDEF,GASTRIC PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+59903-,GI PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+59404-AB,GI PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+2104-ABC,GI PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+59107-AB,PROPHYLACTIC,Cimetidine,Gastrointestinal disorders
+59804-ABC,PROPHYLACTIC,Cimetidine,Gastrointestinal disorders
+59104-AB,PROPHYLATIC,Cimetidine,Gastrointestinal disorders
+59101-A,PROPHYLATIC FOR ULCERS,Cimetidine,Gastrointestinal disorders
+19301-AB,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19103-AB,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+2404-A,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+1203-ABC,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19106-ABC,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+1203-ABC,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19801-,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19108-AB,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19205-A,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19207-A,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19401-A,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19701-AB,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+269708-ABCDEFGH,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19201-AB,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19106-ABC,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19706-A,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+19701-AB,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+1405-AB,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+1104-ABCD,PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+329101-ABCDEF,PROPHYLAXIS GASTRIC,Cimetidine,Gastrointestinal disorders
+279802-ABC,STRESS ULCER PROPHYLAIXS,Cimetidine,Gastrointestinal disorders
+279803-ABCDEF,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279105-ABCDE,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279301-A,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279101-ABCDE,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279105-ABCDE,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+271101-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+271001-ABCDEF,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279105-ABCDE,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279101-ABCDE,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279102-ABCD,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279402-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279201-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279501-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279704-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+271001-ABCDEF,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+271101-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279103-ABCDEFG,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279105-ABCDE,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279202-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279203-AB,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279205-,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279301-A,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279502-ABCD,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279701-AB,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279801-ABCDEF,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279804-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279806-A,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+271201-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279104-ABCD,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279206-A,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279703-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279803-ABCDEF,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279805-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279102-ABCD,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279105-ABCDE,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279301-A,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279201-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279703-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279202-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279402-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279201-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+271001-ABCDEF,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279502-ABCD,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+279804-ABC,STRESS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4104-ABC,ULCER PROPH,Cimetidine,Gastrointestinal disorders
+4104-ABC,ULCER PROPH,Cimetidine,Gastrointestinal disorders
+4111-ABCDEFGHI,ULCER PROPH,Cimetidine,Gastrointestinal disorders
+4111-ABCDEFGHI,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4202-ABCDEF,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4104-ABC,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4202-ABCDEF,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4301-ABCDE,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4309-A,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4309-A,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4202-ABCDEF,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4101-ABC,ULCER PROPHYALXIS,Cimetidine,Gastrointestinal disorders
+4301-ABCDE,ULCER PROPHYL.,Cimetidine,Gastrointestinal disorders
+4304-ABCDEFGH,ULCER PROPHYL. PRE-OP DHT PLAC,Cimetidine,Gastrointestinal disorders
+49101-ABCD,ULCER PROPHYLATIC,Cimetidine,Gastrointestinal disorders
+4306-ABCD,ULCER PROPHYLAXIC,Cimetidine,Gastrointestinal disorders
+4301-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4301-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4303-AB,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4106-ABCD,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4301-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4304-ABCDEFGH,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4106-ABCD,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4101-ABC,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4101-ABC,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+41001ABCD,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4112-ABCDEFGH,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4105-ABCDEFG,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4109-ABCDEFG,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4302-A,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4304-ABCDEFGH,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4303-AB,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+29601-AB,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+41001ABCD,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4201-ABCD,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4308-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+21403-ABCDEFGHI,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+1201-AB,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4105-ABCDEFG,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4302-A,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4304-ABCDEFGH,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4107-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4105-ABCDEFG,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4107-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4308-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4308-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+41001ABCD,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+309101-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4305-AB,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+49901-A,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4201-ABCD,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4112-ABCDEFGH,X 10 ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4112-ABCDEFGH,X 16 BAGS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4103-ABCDEF,X 25 BAGS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4304-ABCDEFGH,ULCER PROPH,Cimetidine,Gastrointestinal disorders
+4304-ABCDEFGH,ULCER PROPH.,Cimetidine,Gastrointestinal disorders
+4109-ABCDEFG,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4308-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4107-ABCDE,ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+4112-ABCDEFGH,X 1 ULCER PROPHYLAX,Cimetidine,Gastrointestinal disorders
+4112-ABCDEFGH,X 10 BAGS ULCER PROPHYLAXIS,Cimetidine,Gastrointestinal disorders
+9101-ABCD,ANTIBIOTIC PROPHYLAXIS,Ciprofloxacin,Infections and infestations
+9402-ABCDEFGHI,ANTIBIOTIC PROPHYLAXIS,Ciprofloxacin,Infections and infestations
+12403-ABC,FEVER PROPHYLAXIS SUSPECT UTI,Ciprofloxacin,Infections and infestations
+99103-ABCD,PROPHYLAXIS PNEUMONIA,Ciprofloxacin,Infections and infestations
+9104-AB,UTI PROPHYLAXIS,Ciprofloxacin,Infections and infestations
+21405-AB,"UTI, PROPHYLAXIS",Ciprofloxacin,Infections and infestations
+13102-ABCDEFGHI,GASTRIC MOTILITY ULCER PROPH.,Cisapride,Gastrointestinal disorders
+319701-ABCD,GASTRIC REFLUX PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+319701-ABCD,GASTRIC REFLUX PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+269711-ABCDEFGH,PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+269708-ABCDEFGH,PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+261201-ABCDEFGHI,PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+261002-ABCDE,PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+269111-ABCDEFGHI,PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+239712-ABCDEF,PROPHYLAXIS ESOPHAGEAL REFLUX,Cisapride,Gastrointestinal disorders
+239712-ABCDEF,PROPHYLAXIS ESOPHAGEAL REFLUX,Cisapride,Gastrointestinal disorders
+171001-AB,STOMACH PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+99107-ABCDEFGHI,ULCER PROPHYLAXIS,Cisapride,Gastrointestinal disorders
+309701-ABCD,INFECTION PROPHYLAXIS,Clindamycin,Infections and infestations
+99101-ABCDEFGHI,POSSIBLE ASPIRATION PROPHYLAX.,Clindamycin,"Respiratory, thoracic and mediastinal disorders"
+129401-ABCD,PROPHYLAX RESP. INFECT,Clindamycin,Infections and infestations
+99105ABCDEFGHIJ,PROPHYLAXIS,Clindamycin,Infections and infestations
+99801-AB,PROPHYLAXIS INCREASED TEMP,Clindamycin,General disorders and administration site conditions
+109701-ABC,PROPHYLAXIS INFECTION,Clindamycin,Infections and infestations
+129102-ABCDE,RESP. PROPHYLAXIS,Clindamycin,Infections and infestations
+169902-A,POST SURG PROPHYLAXIS,Cloxacillin,Surgical and medical procedures
+169801-AB,POST-OP INFECTION PROPHYLAXIS,Cloxacillin,Infections and infestations
+169801-AB,PRE-OP INFECTION PROPHYLAXIS,Cloxacillin,Infections and infestations
+169703-ABCDE,PROPH. ANTIBIOTIC THER POST-OP,Cloxacillin,Infections and infestations
+169703-ABCDE,PROPHYLACTIC THERAPY,Cloxacillin,Infections and infestations
+269802-ABCDEFGHI,ANTI-INFLAMMATORY PROPHYLAXIS,Dexamethasone,Infections and infestations
+219901-AB,EXTUBATION PROPHYLAXIS,Dexamethasone,Surgical and medical procedures
+91201-ABCD,PROPHYLAXIS,Dexamethasone,Surgical and medical procedures
+91201-ABCD,PROPHYLAXIS,Dexamethasone,Surgical and medical procedures
+91201-ABCD,PROPHYLAXIS EDEMA,Dexamethasone,General disorders and administration site conditions
+239301-AB,PROPHYLAXIS EDEMA,Dexamethasone,General disorders and administration site conditions
+91201-ABCD,PROPHYLAXIS EDEMA,Dexamethasone,General disorders and administration site conditions
+23302-ABC,"CONFUSION, AGITATION PROPH.",Diazepam,Psychiatric disorders
+23302-ABC,"CONFUSION, AGITATION PROPH.",Diazepam,Psychiatric disorders
+23401-ABCDE,ALLERGIC REACTION PROPHYLAXIS,Diphenhydramine,Immune system disorders
+289105-ABC,ANTIHISTAMINE PROPH.,Diphenhydramine,Immune system disorders
+2104-ABC,BLOOD TRANSF. REACTION PROPH.,Diphenhydramine,Blood and lymphatic system disorders
+23301-ABC,ITCHING PROPHYLAXIS,Diphenhydramine,Skin and subcutaneous tissue disorders
+23301-ABC,ITCHING PROPHYLAXIS,Diphenhydramine,Skin and subcutaneous tissue disorders
+161001-AB,PROPHYLACTIC TMT PRIOR INSERT,Diphenhydramine,Surgical and medical procedures
+26111-ABCDEFGHI,PROPHYLAXIS,Diphenhydramine,Blood and lymphatic system disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Diphenhydramine,Blood and lymphatic system disorders
+21410-AB,PROPHYLAXIS FOR SLEEP,Diphenhydramine,Psychiatric disorders
+279202-ABC,PROPHYLAXIS FOR VANCOMYCIN,Diphenhydramine,Blood and lymphatic system disorders
+109101-ABCDE,PROPHYLAXIS REACTION TO VANC.,Diphenhydramine,Blood and lymphatic system disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Diptheria Pertussis And Tetanus Vaccine,Infections and infestations
+269706-ABCDEFGHI,PROPHYLAXIS,Diptheria Pertussis And Tetanus Vaccine,Infections and infestations
+99401-AB,PROPHYLACTIC,Docusate And Senna,Gastrointestinal disorders
+279805-ABC,DEEP VENOUS THROMBOSIS PROPH.,Enoxaparin,Vascular disorders
+4109-ABCDEFG,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+199702-ABCDEFGHI,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+199109-ABCDE,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+219102-ABCD,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+7111-ABCDEF,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+69401-ABC,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+199201-ABCDE,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+129104-ABC,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+19407-ABCDE,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+279201-ABC,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+199401-ABCDEF,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+219201-ABCD,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+19207-ABCDEF,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+219101-ABCD,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+239716-AB,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+319701-ABCD,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+7111-ABCDEF,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+311001-ABC,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+311002-A,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+319201-ABCD,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+319501-A,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+7110-ABC,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+7203-ABCDEFGH,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+319103-ABCD,DVT PROPHYLAXIS,Enoxaparin,Vascular disorders
+239717-ABCDE,PROPH. DEEP RDN THROMBOSIS,Enoxaparin,Vascular disorders
+19705-A,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+19704A-,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+19109-AB,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+261003-ABCDEFG,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+199901-ABCD,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269710-ABCD,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+261004-ABCDEFGH,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269109-ABCDE,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269711-ABCDEFGH,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269109-ABCDE,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269901-ABCDEF,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269111-ABCDEFGHI,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269202-ABCDEFGHI,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+269802-ABCDEFGHI,PROPHYLAXIS,Enoxaparin,Blood and lymphatic system disorders
+311001-ABC,PROPHYLAXIS BLOOD THINNER,Enoxaparin,Blood and lymphatic system disorders
+109703-ABC,PROPHYLAXIS DCT,Enoxaparin,Blood and lymphatic system disorders
+109703-ABC,PROPHYLAXIS DVT,Enoxaparin,Vascular disorders
+109104-ABCD,PROPHYLAXIS DVT,Enoxaparin,Vascular disorders
+109104-ABCD,PROPHYLAXIS DVT,Enoxaparin,Vascular disorders
+239713-ABCD,PROPHYLAXIS DVT,Enoxaparin,Vascular disorders
+109703-ABC,PROPHYLAXIS DVT,Enoxaparin,Vascular disorders
+109104-ABCD,PROPHYLAXIS DVT,Enoxaparin,Vascular disorders
+239712-ABCDEF,PROPHYLAXIS FOR DVT,Enoxaparin,Vascular disorders
+239715-ABCD,PROPHYLAXIS FOR DVT,Enoxaparin,Vascular disorders
+239712-ABCDEF,PROPHYLAXIS FOR DVT,Enoxaparin,Vascular disorders
+319102-AB,PROPHYLAXIS FOR DVT,Enoxaparin,Vascular disorders
+231005-A,PROPHYLAXIS FOR DVT,Enoxaparin,Vascular disorders
+199704-ABCDEFG,THROMBOSIS PROPHYLAXIS,Enoxaparin,Vascular disorders
+129702-ABCDEFGHI,VASCULAR PROPHYLAXIS,Enoxaparin,Vascular disorders
+319501-A,HYPOTENSION PROPHYLAXIS,Ephedrine,Vascular disorders
+289103-BACD,PROPHYLAXIS ORTHOSTATIC HYPOT,Ephedrine,Vascular disorders
+289103-BACD,PROPHYLAXIS ORTHOSTATIC HYPOT.,Ephedrine,Vascular disorders
+269110-ABCDE,PROPHYLAXIS,Epinephrine Sulfate,"Respiratory, thoracic and mediastinal disorders"
+26107-ABCDEFGHI,PROPHYLAXIS PRIOR TO GETTIN UP,Epinephrine Sulfate,"Respiratory, thoracic and mediastinal disorders"
+6202-ABC,DENTAL PROCEDURE PROPHYLAXIS,Erythromycin,Infections and infestations
+7110-ABC,INFECTION PROPHYL.CENTRAL LINE,Erythromycin,Infections and infestations
+59102-A,PROPHYLACTIC,Erythromycin,Infections and infestations
+19407-ABCDE,PROPHYLAXIS,Erythromycin,Infections and infestations
+199405-ABCDEF,PROPHYLAXIS,Erythromycin,Infections and infestations
+199405-ABCDEF,PROPHYLAXIS,Erythromycin,Infections and infestations
+199708-ABCDE,PROPHYLAXIS,Erythromycin,Infections and infestations
+109402-ABC,PROPH. OSSIFICATION HETEROT.,Etidronate,Musculoskeletal and connective tissue disorders
+259901-A,ANTACID PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+5105-A,G.I. PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+329101-ABCDEF,GASTRIC PROPHYLAXIC,Famotidine,Gastrointestinal disorders
+7402-A,GASTRIC ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7402-A,GASTRIC ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+309701-ABCD,GASTRO INTESTINAL PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59702-ABC,GI PROPHYL,Famotidine,Gastrointestinal disorders
+51001-AB,GI PROPHYLACTIC,Famotidine,Gastrointestinal disorders
+59404-AB,GI PROPHYLACTIC,Famotidine,Gastrointestinal disorders
+59705-ABCDE,GI PROPHYLACTIC,Famotidine,Gastrointestinal disorders
+159704-ABC,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+2101ABCDE,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59107-AB,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59403-AB,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59801-ABC,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59401-ABC,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59105-A,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59703-AB,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59802-A,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59401-ABC,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59801-ABC,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59103-ABCD,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59403-AB,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59701-AB,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+309701-ABCD,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+5103-A,GI PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+109902-ABC,GI UPSET PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26107-ABCDEFGHI,H BLOCKER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26107-ABCDEFGHI,H BLOCKER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+10601-ABC,PROPH. ULCER,Famotidine,Gastrointestinal disorders
+10601-ABC,PROPH. ULCER,Famotidine,Gastrointestinal disorders
+79901-,PROPHALACTIC FOR ULCERS,Famotidine,Gastrointestinal disorders
+51003-AB,PROPHYLACTIC,Famotidine,Gastrointestinal disorders
+59104-AB,PROPHYLACTIC,Famotidine,Gastrointestinal disorders
+59901-AB,PROPHYLACTIC,Famotidine,Gastrointestinal disorders
+59101-A,PROPHYLACTIC FOR ULCERS,Famotidine,Gastrointestinal disorders
+5204-ABC,PROPHYLACTIC ULCERS,Famotidine,Gastrointestinal disorders
+5204-ABC,PROPHYLACTIC ULCERS,Famotidine,Gastrointestinal disorders
+269108-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+261201-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26104-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26108-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269701-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269704-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269202-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+261003-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269802-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269103-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269704-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269708-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269401-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269701-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269801-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269802-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269101-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269104-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269105-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269109-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269110-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269111-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26404-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269104-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269107-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269702-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269708-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26106-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26106-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269103-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269108-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269202-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269704-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+261201-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269709-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269708-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269901-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269709-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269711-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+261001-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269111-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269802-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26105-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269108-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269401-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269901-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269101-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199107-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269901-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269702-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199707-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26101-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269111-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26104-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269103-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26401-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269705-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269708-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+59801-ABC,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199906-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269202-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269802-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+19702-AB,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26105-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269705-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199403-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199405-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+261001-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269105-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199107-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+239716-AB,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26106-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26201ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269106-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199709-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269101-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269107-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269108-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269709-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269711-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199109-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+261002-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+261004-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+261201-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269707-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269708-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199906-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26109-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269702-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199403-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199404-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199707-ABCDEFG,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+2402-A,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26109-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269710-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+191001-ABC,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199108-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199904-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+2102-AB,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+22401-A,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+2401-AB,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269401-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199904-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199305-ABCDEF,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199904-ABCDE,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+199403-ABCD,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+269106-ABCDEFGH,PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+239712-ABCDEF,PROPHYLAXIS FOR GI BLEED,Famotidine,Gastrointestinal disorders
+239712-ABCDEF,PROPHYLAXIS FOR GI BLEED,Famotidine,Gastrointestinal disorders
+239712-ABCDEF,PROPHYLAXIS FOR GI BLEED,Famotidine,Gastrointestinal disorders
+239715-ABCD,PROPHYLAXIS FOR GI BLEED,Famotidine,Gastrointestinal disorders
+231005-A,PROPHYLAXIS FOR GI BLEED,Famotidine,Gastrointestinal disorders
+239712-ABCDEF,PROPHYLAXIS FOR GI BLEED,Famotidine,Gastrointestinal disorders
+329101-ABCDEF,PROPHYLAXIS GASTRIC ACIDITY,Famotidine,Gastrointestinal disorders
+231005-A,PROPHYLAXIS GI BLEED,Famotidine,Gastrointestinal disorders
+239714-AB,PROPHYLAXIS GI BLEED,Famotidine,Gastrointestinal disorders
+239715-ABCD,PROPHYLAXIS GI BLEED,Famotidine,Gastrointestinal disorders
+231004-ABCDEFG,PROPHYLAXIS GI BLEED,Famotidine,Gastrointestinal disorders
+239713-ABCD,PROPHYLAXIS GI BLEED,Famotidine,Gastrointestinal disorders
+199707-ABCDEFG,PROPHYLAXIS PRE-OP,Famotidine,Surgical and medical procedures
+109701-ABC,PROPHYLAXIS ULCER,Famotidine,Gastrointestinal disorders
+109701-ABC,PROPHYLAXIS ULCER,Famotidine,Gastrointestinal disorders
+249901-ABC,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23402-ABCDEF,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+69103-ABCD,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+249401-ABCDE,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+249701-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+249702-ABCDE,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23301-ABC,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+249102-ABCDEF,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+69701-ABCD,STRESS ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7103-ACDE,ULCER PROPH,Famotidine,Gastrointestinal disorders
+7103-ACDE,ULCER PROPH,Famotidine,Gastrointestinal disorders
+7110-ABC,ULCER PROPH,Famotidine,Gastrointestinal disorders
+7103-ACDE,ULCER PROPH,Famotidine,Gastrointestinal disorders
+7105-ABCD,ULCER PROPH,Famotidine,Gastrointestinal disorders
+7107-AB,ULCER PROPH,Famotidine,Gastrointestinal disorders
+7101-ABCD,ULCER PROPHYL,Famotidine,Gastrointestinal disorders
+7203-ABCDEFGH,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7111-ABCDEF,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7101-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7111-ABCDEF,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+4108-ABCDEF,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7101-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7204-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23104-ABCDE,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23301-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23303-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+15102-ABCDE,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7204-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+2401-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7108-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23102-ABCDEF,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7109-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7204-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23404-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7104-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+29902-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7104-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7106-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7201-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+15102-ABCDE,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+211001-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+249902-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+4108-ABCDEF,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7107-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7109-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7111-ABCDEF,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7204-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+15102-ABCDE,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+219202-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23102-ABCDEF,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23401-ABCDE,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7104-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7110-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7203-ABCDEFGH,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+219405-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+219603-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+219604-AA,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+219802-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23103-ABCDEFG,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23303-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7108-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7401-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23104-ABCDE,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+291001-A,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+29904-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+299401-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+299702-ABCD,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+299901-A,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+299902-AB,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+309101-ABCDE,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+7106-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+219703-ABC,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+23102-ABCDEF,ULCER PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+26401-ABCDEF,ULCER PROPHYLAXIS ANTIACID,Famotidine,Gastrointestinal disorders
+23403-AB,ULCER X PROPHYLAXIS,Famotidine,Gastrointestinal disorders
+99102-ABCDEFG,PE PROPHYLAXIS,Fentanyl,Surgical and medical procedures
+1401-AB,PROPHYLACTIC,Ferrous Sulfate,Blood and lymphatic system disorders
+219102-ABCD,FUNGAL PROPHYLAXIS,Fluconazole,Infections and infestations
+219102-ABCD,FUNGAL PROPHYLAXIS,Fluconazole,Infections and infestations
+21304-AB,PROPHYLAXIS ANTI FUNGAL,Fluconazole,Infections and infestations
+21104-ABCDE,PROPHYLAXIS ANTIFUNGAL,Fluconazole,Infections and infestations
+219702-ABCD,YEAST PROPHYLAXIS,Fluconazole,Infections and infestations
+219702-ABCD,YEAST PROPHYLAXIS,Fluconazole,Infections and infestations
+219702-ABCD,YEAST PROPHYLAXIS,Fluconazole,Infections and infestations
+219801-ABCD,YEAST PROPHYLAXIS,Fluconazole,Infections and infestations
+19313-ABCDEF,PROPHYLAXIS,Folic Acid,Metabolism and nutrition disorders
+199103-ABCDEFGHI,PROPHYLAXIS,Folic Acid,Metabolism and nutrition disorders
+199705-ABCDEFGHI,PROPHYLAXIS,Folic Acid,Metabolism and nutrition disorders
+199709-ABCDEFGHI,PROPHYLAXIS,Folic Acid,Metabolism and nutrition disorders
+319701-ABCD,CHF PROPHYLAXIS,Furosemide,Cardiac disorders
+2104-ABC,AFTER OP PROPHYLAXIS,Gentamicin,Infections and infestations
+9101-ABCD,ANTIBIOTIC PROPHYLAXIS,Gentamicin,Infections and infestations
+9102-ABCDEFGHI,ANTIBIOTIC PROPHYLAXIS,Gentamicin,Infections and infestations
+9302-ACDEFGHI,ANTIBIOTIC PROPHYLAXIS,Gentamicin,Infections and infestations
+9101-ABCD,ANTIBIOTIC PROPHYLAXIS,Gentamicin,Infections and infestations
+24301-A,ANTIBIOTIC PROPHYLAXIS,Gentamicin,Infections and infestations
+9401-ABCDE,ANTIBIOTIC PROPHYLAXIS - OR,Gentamicin,Infections and infestations
+9302-ACDEFGHI,ANTIBIOTIC PROPHYLAXIS OR,Gentamicin,Infections and infestations
+12106-ABC,ARM FX PROPHYLAXIS,Gentamicin,Infections and infestations
+309101-ABCDE,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+23402-ABCDEF,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+7108-ABCD,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279601-A,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279703-ABC,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279806-A,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279202-ABC,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279103-ABCDEFG,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279105-ABCDE,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279101-ABCDE,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279104-ABCD,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279901-AB,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279103-ABCDEFG,INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+279802-ABC,OPEN FX INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+7402-A,OR PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+7301-,OR PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+7106-ABC,PERIOP PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+7107-AB,PERIOP PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+7104-ABC,PERIOP PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+7401-ABCD,PERIOP PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+7110-ABC,PERIOPERATION PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+23402-ABCDEF,POST SURGERY INFECTION PROPH.,Gentamicin,Infections and infestations
+23402-ABCDEF,POST-SURGERY INFECTION PROPH.,Gentamicin,Infections and infestations
+9403-ABCD,PRE-OP ANTIBIOTIC PROPHYLAXIS,Gentamicin,Infections and infestations
+7103-ACDE,PRE-OP PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+7202-A,PREOP PROPHYLAXIS,Gentamicin,Surgical and medical procedures
+7204-ABC,PROPHYL. ABX FOR OR,Gentamicin,Surgical and medical procedures
+10405-ABCDEFGHI,PROPHYLACTIC,Gentamicin,Infections and infestations
+5502-ABC,PROPHYLACTIC,Gentamicin,Infections and infestations
+59405-AB,PROPHYLACTIC,Gentamicin,Infections and infestations
+5502-ABC,PROPHYLACTIC ANTIBX,Gentamicin,Infections and infestations
+129101-ABC,PROPHYLACTIC FEVER,Gentamicin,General disorders and administration site conditions
+5103-A,PROPHYLACTIC FOR INFECTION,Gentamicin,Infections and infestations
+199404-ABCD,PROPHYLAXIS,Gentamicin,Infections and infestations
+199106-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+199101-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+19206-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+199403-ABCD,PROPHYLAXIS,Gentamicin,Infections and infestations
+199903-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+199102-ABCDE,PROPHYLAXIS,Gentamicin,Infections and infestations
+26404-ABCDEFGH,PROPHYLAXIS,Gentamicin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+19309-ABCDEFG,PROPHYLAXIS,Gentamicin,Infections and infestations
+7111-ABCDEF,PROPHYLAXIS,Gentamicin,Infections and infestations
+199301-ABC,PROPHYLAXIS,Gentamicin,Infections and infestations
+199704-ABCDEFG,PROPHYLAXIS,Gentamicin,Infections and infestations
+199107-ABCDEFG,PROPHYLAXIS,Gentamicin,Infections and infestations
+19205-ABCDE,PROPHYLAXIS,Gentamicin,Infections and infestations
+1501-ABCD,PROPHYLAXIS,Gentamicin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+26404-ABCDEFGH,PROPHYLAXIS,Gentamicin,Infections and infestations
+26404-ABCDEFGH,PROPHYLAXIS,Gentamicin,Infections and infestations
+191101-A,PROPHYLAXIS,Gentamicin,Infections and infestations
+199701-A,PROPHYLAXIS,Gentamicin,Infections and infestations
+199707-ABCDEFG,PROPHYLAXIS,Gentamicin,Infections and infestations
+26405-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+19207-ABCDEF,PROPHYLAXIS,Gentamicin,Infections and infestations
+26404-ABCDEFGH,PROPHYLAXIS,Gentamicin,Infections and infestations
+2402-A,PROPHYLAXIS,Gentamicin,Infections and infestations
+199401-ABCDEF,PROPHYLAXIS,Gentamicin,Infections and infestations
+91201-ABCD,PROPHYLAXIS,Gentamicin,Infections and infestations
+7105-ABCD,PROPHYLAXIS,Gentamicin,Infections and infestations
+199708-ABCDE,PROPHYLAXIS,Gentamicin,Infections and infestations
+99701-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+19313-ABCDEF,PROPHYLAXIS,Gentamicin,Infections and infestations
+199101-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+199903-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+199706-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+199107-ABCDEFG,PROPHYLAXIS,Gentamicin,Infections and infestations
+199103-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+199705-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+199102-ABCDE,PROPHYLAXIS,Gentamicin,Infections and infestations
+1501-ABCD,PROPHYLAXIS,Gentamicin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+2402-A,PROPHYLAXIS,Gentamicin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+19205-ABCDE,PROPHYLAXIS,Gentamicin,Infections and infestations
+19207-ABCDEF,PROPHYLAXIS,Gentamicin,Infections and infestations
+199102-ABCDE,PROPHYLAXIS,Gentamicin,Infections and infestations
+26111-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+26110-ABCDEFGH,PROPHYLAXIS,Gentamicin,Infections and infestations
+261002-ABCDE,PROPHYLAXIS,Gentamicin,Infections and infestations
+269901-ABCDEF,PROPHYLAXIS,Gentamicin,Infections and infestations
+269101-ABCD,PROPHYLAXIS,Gentamicin,Infections and infestations
+269702-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+261002-ABCDE,PROPHYLAXIS,Gentamicin,Infections and infestations
+269711-ABCDEFGH,PROPHYLAXIS,Gentamicin,Infections and infestations
+269104-ABCDEFG,PROPHYLAXIS,Gentamicin,Infections and infestations
+26201ABCDEFG,PROPHYLAXIS,Gentamicin,Infections and infestations
+261004-ABCDEFGH,PROPHYLAXIS,Gentamicin,Infections and infestations
+199202-AB,PROPHYLAXIS,Gentamicin,Infections and infestations
+199103-ABCDEFGHI,PROPHYLAXIS,Gentamicin,Infections and infestations
+2401-AB,PROPHYLAXIS ABX AFTER - OP,Gentamicin,Surgical and medical procedures
+329101-ABCDEF,PROPHYLAXIS COVERAGE FOR SURG.,Gentamicin,Surgical and medical procedures
+199801-ABCD,PROPHYLAXIS IN O.R.,Gentamicin,Surgical and medical procedures
+99102-ABCDEFG,PROPHYLAXIS INCREASED TEMP,Gentamicin,General disorders and administration site conditions
+99102-ABCDEFG,PROPHYLAXIS INCREASED TEMP,Gentamicin,General disorders and administration site conditions
+7203-ABCDEFGH,PROPHYLAXIS OR,Gentamicin,Surgical and medical procedures
+7109-ABC,PROPHYLAXIS OR,Gentamicin,Surgical and medical procedures
+9303-AB,PROPHYLAXIS PICC LINE PLAC.,Gentamicin,Surgical and medical procedures
+199709-ABCDEFGHI,PROPHYLAXIS SEPSIS,Gentamicin,Infections and infestations
+99102-ABCDEFG,PROPHYLAXIS TEMP,Gentamicin,General disorders and administration site conditions
+19309-ABCDEFG,PROPHYLAXIS TEMP,Gentamicin,General disorders and administration site conditions
+12402-AB,PROPHYLAXIS TOENAIL REMOVED,Gentamicin,Infections and infestations
+9302-ACDEFGHI,PROPHYLAXIS URODYNAMICS,Gentamicin,Surgical and medical procedures
+279501-ABC,WOUND INFECTION PROPHYLAXIS,Gentamicin,Infections and infestations
+9401-ABCDE,ANTICOAGULANT PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+99905-ABCDE,BLD CLOT PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+109102-ABCD,BLOD CLOT PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+99107-ABCDEFGHI,BLOOD CLOT PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+1101-AB,CLOT PROPHYLAXIS 2'A FIB/QUAD.,Heparin,Blood and lymphatic system disorders
+279901-AB,DEEP VENOUS THROMBOSIS PROPH.,Heparin,Vascular disorders
+279301-A,DEEP VENOUS THROMBOSIS PROPH.,Heparin,Vascular disorders
+279805-ABC,DEEP VENOUS THROMBOSIS PROPH.,Heparin,Vascular disorders
+4108-ABCDEF,DVT + PE PROPHYLAXIS,Heparin,Vascular disorders
+4101-ABC,DVT PE PROPHYLAXIS,Heparin,Vascular disorders
+4202-ABCDEF,DVT PROPH.,Heparin,Vascular disorders
+4309-A,DVT PROPH.,Heparin,Vascular disorders
+289705-ABC,DVT PROPH.,Heparin,Vascular disorders
+4309-A,DVT PROPH.,Heparin,Vascular disorders
+4202-ABCDEF,DVT PROPH.,Heparin,Vascular disorders
+4111-ABCDEFGHI,DVT PROPHAL,Heparin,Vascular disorders
+4306-ABCD,DVT PROPHILATIC,Heparin,Vascular disorders
+4601-AB,DVT PROPHYLATIC,Heparin,Vascular disorders
+49101-ABCD,DVT PROPHYLATIC,Heparin,Vascular disorders
+4306-ABCD,DVT PROPHYLAXIC,Heparin,Vascular disorders
+211002-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129702-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7108-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+12403-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129401-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+69201-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15106-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+6103-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+6103-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+239105-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4105-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7108-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4304-ABCDEFGH,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7103-ACDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+219105-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17204-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7101-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+311002-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4106-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+79801-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4101-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+49901-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+1403-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+99905-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129102-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7109-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+79801-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+2101ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4308-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7101-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7103-ACDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7108-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7202-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7105-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7106-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7107-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7401-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+6103-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+299902-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129702-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17103-ABCDEDG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4112-ABCDEFGH,DVT PROPHYLAXIS,Heparin,Vascular disorders
+239105-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15107-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4304-ABCDEFGH,DVT PROPHYLAXIS,Heparin,Vascular disorders
+19102-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+6104-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+22103-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+199801-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+22104-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+25303-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+6106-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+13201-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+239101-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+23403-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+23401-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+13102-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4304-ABCDEFGH,DVT PROPHYLAXIS,Heparin,Vascular disorders
+289801-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+6103-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+99704-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+13201-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15106-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+69102-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+69801-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15402-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+23501-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+23102-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+289201-ABDC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+291001-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+69201-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15107-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15402-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+219102-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+25301-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4301-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+1304-,DVT PROPHYLAXIS,Heparin,Vascular disorders
+211002-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+219106-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+219201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+259301-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+41001ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+91201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15107-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+219103-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+259101-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+29902-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+61002-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+211003--BCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+289105-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+91001-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+13202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+19103-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4301-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+25401-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+289901-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4109-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+6201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+211002-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+22103-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+22104-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+259101-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+289702-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+29601-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4108-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+25109-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+259801-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+279703-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+69101-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15106-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+2104-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+23601-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+271101-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+281004-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+49901-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+9305-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129404-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129405-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129705-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129904-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+15301-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+17201-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+211003--BCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+219103-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+219703-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+23105-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+25301-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+259303-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+259701-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+279101-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+279201-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+281005-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+289704-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4103-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+9102-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+9602-ABCDEFGHI,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129403-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+22102-,DVT PROPHYLAXIS,Heparin,Vascular disorders
+22104-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+2403-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+25307-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+259901-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+279202-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+29703-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+299701-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+311001-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+41001ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4106-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4107-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4109-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4305-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+7104-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+91101-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+9601-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+99104-ABCDE,DVT PROPHYLAXIS,Heparin,Vascular disorders
+99704-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+99902-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+12401-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+22401-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+29903-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+29904-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4105-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+9303-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+99103-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+99703-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+99904-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+299101-A,DVT PROPHYLAXIS,Heparin,Vascular disorders
+6201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+21407-AB,DVT PROPHYLAXIS,Heparin,Vascular disorders
+25303-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+4201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+25109-ABCDEFG,DVT PROPHYLAXIS,Heparin,Vascular disorders
+22103-ABCDEF,DVT PROPHYLAXIS,Heparin,Vascular disorders
+319201-ABCD,DVT PROPHYLAXIS,Heparin,Vascular disorders
+129701-ABC,DVT PROPHYLAXIS,Heparin,Vascular disorders
+219105-ABCD,DVT/PROPHYLAXIS,Heparin,Vascular disorders
+16202-ABCD,EMBOLISM PROPHYLACTIC,Heparin,Vascular disorders
+269802-ABCDEFGHI,IV MAINTAIN PROPHYLAXIS,Heparin,Surgical and medical procedures
+211001-ABCD,P.E. PROPHYLAXIS,Heparin,Surgical and medical procedures
+211001-ABCD,PE PROPHYLAXIS,Heparin,Surgical and medical procedures
+211001-ABCD,PE PROPHYLAXIS,Heparin,Surgical and medical procedures
+211001-ABCD,PG PROPHYLAXIS,Heparin,Surgical and medical procedures
+169801-AB,PROPH. ANTICOAG.THERAPY DVT/PE,Heparin,Blood and lymphatic system disorders
+169801-AB,PROPH. ANTICOAG.THERAPY DVT/PE,Heparin,Blood and lymphatic system disorders
+10404-ABCD,PROPH. BLOOD CLOT,Heparin,Blood and lymphatic system disorders
+10404-ABCD,PROPH. BLOOD CLOT,Heparin,Blood and lymphatic system disorders
+10401-BCDEFGHIJ,PROPH. BLOOD CLOT,Heparin,Blood and lymphatic system disorders
+10403-ABCDEFGHI,PROPH. BLOOD CLOT,Heparin,Blood and lymphatic system disorders
+10404-ABCD,PROPH. BLOOD CLOT,Heparin,Blood and lymphatic system disorders
+10404-ABCD,PROPH. BLOOD CLOTT,Heparin,Blood and lymphatic system disorders
+10101-ABCDE,PROPH. BLOOD CLOTT,Heparin,Blood and lymphatic system disorders
+10403-ABCDEFGHI,PROPH. BLOOD CLOTT,Heparin,Blood and lymphatic system disorders
+10404-ABCD,PROPH. BLOOD CLOTT,Heparin,Blood and lymphatic system disorders
+10404-ABCD,PROPH. BLOOD CLOTT,Heparin,Blood and lymphatic system disorders
+329101-ABCDEF,PROPHYL. DEEP VEIN THROMBOSIS,Heparin,Vascular disorders
+1401-AB,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+159702-ABCDE,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+109401-ABC,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+109401-ABC,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+99401-AB,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+1302-ABC,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+159101-ABC,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+15104-ABCDEF,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+59107-AB,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+59901-AB,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+99401-AB,PROPHYLACTIC,Heparin,Blood and lymphatic system disorders
+26303-ABCDEF,PROPHYLACTIC ANTICOAG.,Heparin,Blood and lymphatic system disorders
+109301-ABCDE,PROPHYLACTIC BLOOD CLOT,Heparin,Blood and lymphatic system disorders
+5205-A,PROPHYLACTIC D.V.T.,Heparin,Blood and lymphatic system disorders
+5203-A,PROPHYLACTIC FOR DVT,Heparin,Vascular disorders
+51001-AB,PROPHYLACTIC FOR DVT,Heparin,Vascular disorders
+59901-AB,PROPHYLACTIC FOR DVT,Heparin,Vascular disorders
+59201-,PROPHYLACTIC FOR DVT,Heparin,Vascular disorders
+59801-ABC,PROPHYLACTIC FOR DVT,Heparin,Vascular disorders
+59403-AB,PROPHYLACTIC FOR DVT,Heparin,Vascular disorders
+59403-AB,PROPHYLACTIC FOR DVT,Heparin,Vascular disorders
+59103-ABCD,PROPHYLACTIC FOR DVT,Heparin,Vascular disorders
+161001-AB,PROPHYLACTIC TMT FOR DVT/PE,Heparin,Vascular disorders
+59401-ABC,PROPHYLATIC FOR DVT,Heparin,Vascular disorders
+16402-ABCDEFG,PROPHYLAXIC,Heparin,Blood and lymphatic system disorders
+16402-ABCDEFG,PROPHYLAXIC,Heparin,Blood and lymphatic system disorders
+261201-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269109-ABCDE,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+91002-AB,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+16102-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+169701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+169701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+169701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+16102-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+169701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+16102-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269708-ABCDEFGH,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+169701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+169701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+1104-ABCD,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26101-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+1302-ABC,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+1403-AB,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26201ABCDEFG,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+19206-,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26201ABCDEFG,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+1202-ABCDE,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+1203-ABC,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+199706-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+19705-A,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+16101-ABCD,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+16101-ABCD,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+19402-ABCD,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26106-ABCDEF,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+169701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269701-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+1301-AB,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+59801-ABC,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+199302-ABC,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+59103-ABCD,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+69301-ABC,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26201ABCDEFG,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269106-ABCDEFGH,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269105-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+19701-AB,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26106-ABCDEF,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+59405-AB,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+199905-A,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+17202-ABC,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+17501-ABCD,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269101-ABCD,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+12501-A,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+16102-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+16402-ABCDEFG,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269107-ABCDE,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269103-ABCD,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269706-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+19407-ABCDE,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+59801-ABC,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+269702-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+26403-ABCDEFG,PROPHYLAXIS ANTICOAG,Heparin,Blood and lymphatic system disorders
+26101-ABCDEFGHI,PROPHYLAXIS ANTICOAGULANT,Heparin,Blood and lymphatic system disorders
+9201-AB,PROPHYLAXIS ANTICOAGULANT,Heparin,Blood and lymphatic system disorders
+159401-ABCDE,PROPHYLAXIS ANTICOAGULATE,Heparin,Blood and lymphatic system disorders
+159401-ABCDE,PROPHYLAXIS ANTICOAGULATE,Heparin,Blood and lymphatic system disorders
+10302-AB,PROPHYLAXIS BLOOD CLOT,Heparin,Blood and lymphatic system disorders
+109102-ABCD,PROPHYLAXIS BLOOD CLOT,Heparin,Blood and lymphatic system disorders
+9304-A,PROPHYLAXIS DVT,Heparin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Heparin,Vascular disorders
+17301-A,PROPHYLAXIS DVT,Heparin,Vascular disorders
+21204-AB,PROPHYLAXIS DVT,Heparin,Vascular disorders
+109105-ABC,PROPHYLAXIS DVT,Heparin,Vascular disorders
+109703-ABC,PROPHYLAXIS DVT,Heparin,Vascular disorders
+17301-A,PROPHYLAXIS DVT,Heparin,Vascular disorders
+17204-ABCD,PROPHYLAXIS DVT,Heparin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Heparin,Vascular disorders
+109105-ABC,PROPHYLAXIS DVT,Heparin,Vascular disorders
+5103-A,PROPHYLAXIS FOR DVT,Heparin,Vascular disorders
+169901-A,PROPHYLAXIS FOR EMBOLI,Heparin,Vascular disorders
+169701-ABCDEFGHI,PROPHYLAXIS FOR THROMBI,Heparin,Blood and lymphatic system disorders
+69901-AB,PROPHYLAXIS THROMBOSIS,Heparin,Vascular disorders
+24101-ABCE,THROMBOEMBOLIC PROPHYLAXIS,Heparin,Vascular disorders
+279501-ABC,THROMBOEMBOLISM PROPHYLAXIS,Heparin,Vascular disorders
+13301-A,THROMBOPHLEBITIS PROPHYLAXIS,Heparin,Vascular disorders
+13101-ABC,THROMBOPHLEBITIS PROPHYLAXIS,Heparin,Vascular disorders
+129401-ABCD,VAS PROPHYLAXIS,Heparin,Blood and lymphatic system disorders
+129702-ABCDEFGHI,VAS PROPHYLAXIS,Heparin,Vascular disorders
+12103-ABCDE,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+129401-ABCD,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+12301-ABCDEFGH,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+12406-A,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+121201-AB,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+129401-ABCD,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+12402-AB,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+129402-A,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+129702-ABCDEFGHI,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+12201-ABCD,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+12404-ABCDEF,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+129801-AB,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+12403-ABC,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+12407-AB,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+129701-ABC,VASCULAR PROPHYLAXIS,Heparin,Vascular disorders
+12105-ABCDEF,VISCULAR PROPHYLAXIS,Heparin,Vascular disorders
+16102-ABCDEFGHI,PROPHYLAXIS RUN WITH AMPHO B,Hydrocortisone,Infections and infestations
+10601-ABC,PROPHYLAXIS,Hydroxyzine,Psychiatric disorders
+109702-ABCD,PROPHYLAXIS NAUSEA,Hydroxyzine,Gastrointestinal disorders
+129802-ABCDE,PROPHYLAXIS UTI/GUT,Imipenem And Cilastatin,Infections and infestations
+79103-ABCDE,FLU PROP.,Influenza Vaccine,Infections and infestations
+23103-ABCDEFG,FLU PROPHYLAXIS,Influenza Vaccine,Infections and infestations
+25307-ABCDE,FLU PROPHYLAXIS,Influenza Vaccine,Infections and infestations
+281004-ABCD,INFLUENZA PROPHYLAXS,Influenza Vaccine,Infections and infestations
+1303-A,PROPHYLACTIC,Influenza Vaccine,Infections and infestations
+159706-ABCDEF,PROPHYLAXIS,Influenza Vaccine,Infections and infestations
+1301-AB,PROPHYLAXIS,Influenza Vaccine,Infections and infestations
+99905-ABCDE,PROPHYLAXIS AGAINST FLU,Influenza Vaccine,Infections and infestations
+26104-ABCDEFGHI,USED WITH TPN PROPHYLAXIS,Insulin,Metabolism and nutrition disorders
+99102-ABCDEFG,PE PROPHYLAXIS,Iothalamate Meglumine,Surgical and medical procedures
+101001-ABCDEF,PROPHYLAXIS,Ipratropium,"Respiratory, thoracic and mediastinal disorders"
+199706-ABCDEFGHI,PROPHYLAXIS FOR PULMONARY,Ipratropium,"Respiratory, thoracic and mediastinal disorders"
+199706-ABCDEFGHI,PROPHYLAXIS FOR PULMONARY,Ipratropium,"Respiratory, thoracic and mediastinal disorders"
+19201-AB,PROPHYLAXIS,Ketorolac,Pain
+23101-ABC,DIARRHEA PROPHYLAXIS,Lactobacillus,Gastrointestinal disorders
+23601-AB,DIARRHEA PROPHYLAXIS,Lactobacillus,Gastrointestinal disorders
+279702-ABCDEFGHI,DELIRIUM TREMONS PROPH.,Lorazepam,General disorders and administration site conditions
+199906-ABCDE,PROPHYLAXIS,Lorazepam,Surgical and medical procedures
+199401-ABCDEF,PROPHYLAXIS,Magnesium Hydroxide,Gastrointestinal disorders
+109705-ABCDEFGHI,DECREASED PROPHYLAXIS MG,Magnesium Sulfate,Metabolism and nutrition disorders
+59804-ABC,PROPHYLACTIC,Methadone,Pain
+199106-ABCDEFGHI,PROPHYLAXIS,Methocarbamol,Nervous system disorders
+219901-AB,POST-OP PROPHYLAXIS,Methylprednisolone,Surgical and medical procedures
+219901-AB,POST-OP PROPHYLAXIS,Methylprednisolone,Surgical and medical procedures
+19113-ABCDEFGHI,PROPHYLAXIS,Methylprednisolone,"Respiratory, thoracic and mediastinal disorders"
+261003-ABCDEFG,> MOTILITY PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+15106-ABCDE,GI PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+23103-ABCDEFG,NAUSEA PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+21204-AB,PROP-INC. GASTRIC MOTILITY,Metoclopramide,Gastrointestinal disorders
+10405-ABCDEFGHI,PROPH. ULCER,Metoclopramide,Gastrointestinal disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199106-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199106-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+261201-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+26401-ABCDEF,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+269802-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199403-ABCD,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199901-ABCD,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+269703-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+269708-ABCDEFGH,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+19207-ABCDEF,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199702-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+91201-ABCD,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+19706-A,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+19205-ABCDE,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+19313-ABCDEF,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199201-ABCDE,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+19207-ABCDEF,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+21112-AB,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+26201ABCDEFG,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+26201ABCDEFG,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+309701-ABCD,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199901-ABCD,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199101-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+26110-ABCDEFGH,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+26103-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+261201-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+191001-ABC,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+19206-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+199904-ABCDE,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+269802-ABCDEFGHI,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+19105-ABCDEF,PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+309101-ABCDE,PROPHYLAXIS FOR NAUSEA,Metoclopramide,Gastrointestinal disorders
+21205-A,PROPHYLAXIS PRE-OP,Metoclopramide,Surgical and medical procedures
+199707-ABCDEFG,PROPHYLAXIS PRE-OP,Metoclopramide,Surgical and medical procedures
+99107-ABCDEFGHI,STIMULATE PROPULSION,Metoclopramide,Gastrointestinal disorders
+249701-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+249901-ABC,STRESS ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+69701-ABCD,STRESS ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+249701-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+249701-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+24101-ABCE,STRESS ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+4308-ABCDE,ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+4108-ABCDEF,ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+9203-ABCD,ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+49102-ABCDEFGH,ULCER PROPHYLAXIS,Metoclopramide,Gastrointestinal disorders
+9102-ABCDEFGHI,ANTIBIOTIC PROPHYLAXIS,Metronidazole,Infections and infestations
+129102-ABCDE,ANTIBIOTIC PROPHYLAXIS,Metronidazole,Infections and infestations
+109101-ABCDE,PROPH. C-DIFF,Metronidazole,Infections and infestations
+109101-ABCDE,PROPH. C-DIFF IN STOOL,Metronidazole,Infections and infestations
+109705-ABCDEFGHI,PROPHYLAXIS,Metronidazole,Infections and infestations
+2402-A,PROPHYLAXIS,Metronidazole,Infections and infestations
+199708-ABCDE,PROPHYLAXIS,Metronidazole,Infections and infestations
+109705-ABCDEFGHI,PROPHYLAXIS,Metronidazole,Infections and infestations
+109704-ABCDEF,PROPHYLAXIS C-DIFF STOOL,Metronidazole,Infections and infestations
+129802-ABCDE,PROPHYLAXIS UTI GUT,Metronidazole,Infections and infestations
+12403-ABC,WOUND PROPHYLAXIS,Metronidazole,Infections and infestations
+211004-AB,PROPHYLAXIS: PLATELET AGG,Miconazole,Blood and lymphatic system disorders
+219201-ABCD,ANXIETY PROPHYLAXIS,Midazolam,Psychiatric disorders
+99102-ABCDEFG,PE PROPHYLAXIS,Midazolam,Pain
+249702-ABCDE,STRESS ULCER PROPHYLAXIS,Misoprostol,Gastrointestinal disorders
+19406-ABCDEFGH,PROPHYLAXIS,Multivitamin And Supplements,Metabolism and nutrition disorders
+19114-ABCDFGHIE,PROPHYLAXIS,Multivitamin And Supplements,Metabolism and nutrition disorders
+199709-ABCDEFGHI,PROPHYLAXIS,Multivitamin And Supplements,Metabolism and nutrition disorders
+19407-ABCDE,PROPHYLAXIS,Multivitamin And Supplements,Metabolism and nutrition disorders
+23104-ABCDE,INFECTION PROPHYLAXIS POST-OP,Nafcillin,Infections and infestations
+239108-ABCDE,OPERATIVE PROPHYLAXIS,Nafcillin,Surgical and medical procedures
+239712-ABCDEF,POST OP PROPHYLAXIS,Nafcillin,Surgical and medical procedures
+25307-ABCDE,POST-OP INFECTION PROPHYLAXIS,Nafcillin,Infections and infestations
+1302-ABC,PROPHYLACTIC,Nafcillin,Infections and infestations
+269105-ABCDEFGHI,PROPHYLAXIS,Nafcillin,Infections and infestations
+269202-ABCDEFGHI,PROPHYLAXIS,Nafcillin,Infections and infestations
+269802-ABCDEFGHI,PROPHYLAXIS,Nafcillin,Infections and infestations
+269711-ABCDEFGH,PROPHYLAXIS,Nafcillin,Infections and infestations
+269802-ABCDEFGHI,PROPHYLAXIS,Nafcillin,Infections and infestations
+269201-ABCDEFG,PROPHYLAXIS,Nafcillin,Infections and infestations
+269705-ABCDEFGH,PROPHYLAXIS,Nafcillin,Infections and infestations
+99102-ABCDEFG,PROPHYLAXIS,Nafcillin,Infections and infestations
+1201-AB,PROPHYLAXIS FOR O.R.,Nafcillin,Surgical and medical procedures
+269704-ABCDEFGH,TX PROPHYLAXIS,Nafcillin,Infections and infestations
+99102-ABCDEFG,PROPHYLAXIS,Neomycin,Infections and infestations
+109901-AB,PROPH. NICOTENE WITHDRAWAL,Nicotine,Psychiatric disorders
+109901-AB,PROPH. SMOKING WITHDRAWAL,Nicotine,Psychiatric disorders
+19404-ABCDEFGHI,PROPHYLAXIS,Nifedipine,Vascular disorders
+26102-ABCDEFG,PROPHYLACTIC,Nitrofurantoin,Infections and infestations
+269802-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26105-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26105-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26105-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269701-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26106-ABCDEF,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269703-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26107-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26111-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269704-ABCDEFGH,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269901-ABCDEF,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269901-ABCDEF,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269101-ABCD,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269702-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26201ABCDEFG,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+261001-ABCDEFG,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26106-ABCDEF,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+26107-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+261004-ABCDEFGH,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269107-ABCDE,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+269702-ABCDEFGHI,PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+299902-AB,UTI PROPHYLAXIS,Nitrofurantoin,Infections and infestations
+259901-A,ANTACID PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+259801-ABCD,GI PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+269111-ABCDEFGHI,PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+19109-AB,PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+19102-ABCD,PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+269111-ABCDEFGHI,PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+269401-ABCDEF,PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+261004-ABCDEFGH,PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+261201-ABCDEFGHI,PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+269711-ABCDEFGH,PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+69701-ABCD,STRESS ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+279105-ABCDE,STRESS ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+279702-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+279201-ABC,STRESS ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+271201-ABC,STRESS ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+69102-ABC,STRESS ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+271201-ABC,STRESS ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+219105-ABCD,ULCER PROPH,Nizatidine,Gastrointestinal disorders
+219105-ABCD,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+219702-ABCD,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+211001-ABCD,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+211003--BCD,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+219103-ABC,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+219202-AB,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+19703-AB,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+211002-ABC,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+19103-AB,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+219703-ABC,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+219702-ABCD,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+211003--BCD,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+219405-ABC,ULCER PROPHYLAXIS,Nizatidine,Gastrointestinal disorders
+279103-ABCDEFG,INFECTION PROPHYLAXIS,Nystatin,Infections and infestations
+23102-ABCDEF,MOUTH INFECTION PROPHYLAXIS,Nystatin,Infections and infestations
+23401-ABCDE,ORAL INFECTION PROPHYLAXIS,Nystatin,Infections and infestations
+19106-ABC,PROPHYLAXIS,Nystatin,Infections and infestations
+19201-AB,PROPHYLAXIS,Nystatin,Infections and infestations
+19205-A,PROPHYLAXIS,Nystatin,Infections and infestations
+21302-ABCD,PROPHYLAXIS SORE THROAT,Nystatin,Infections and infestations
+101001-ABCDEF,PROPHYLAXIS THRUSH,Nystatin,Infections and infestations
+109101-ABCDE,PROPHYLAXIS THRUSH,Nystatin,Infections and infestations
+109704-ABCDEF,PROPHYLAXIS THRUSH,Nystatin,Infections and infestations
+10302-AB,PROPHYLAXIS XXXXX,Nystatin,Infections and infestations
+21203-AB,PROPHYLAXIS! WHITE,Nystatin,Infections and infestations
+239301-AB,PROPHYLATIC ANTIBIOTIC,Ofloxacin,Infections and infestations
+1203-ABC,PROPHYLAXIS,Omeprazole,Gastrointestinal disorders
+199709-ABCDEFGHI,PROPHYLAXIS,Omeprazole,Gastrointestinal disorders
+199906-ABCDE,PROPHYLAXIS HYPERACIDITY,Omeprazole,Gastrointestinal disorders
+279703-ABC,STRESS ULCER PROPHYLAXIS,Omeprazole,Gastrointestinal disorders
+279502-ABCD,INFECTION PROPHYLAXIS,Penicillin,Infections and infestations
+129802-ABCDE,POST-OP PROPHYLAXIS,Penicillin,Surgical and medical procedures
+59104-AB,PROPHYLACTIC,Penicillin,Infections and infestations
+199903-ABCDEFGHI,PROPHYLAXIS,Penicillin,Infections and infestations
+199903-ABCDEFGHI,PROPHYLAXIS,Penicillin,Infections and infestations
+219101-ABCD,PROPHYLAXIS ORAL SURG,Penicillin,Surgical and medical procedures
+2404-A,PROPHYLAXIS,Phenytoin,Psychiatric disorders
+19107-ABCDEFGH,PROPHYLAXIS,Phenytoin,Psychiatric disorders
+12404-ABCDEF,SEIZ. PROPHYLAXIS,Phenytoin,Nervous system disorders
+199104-ABCDEFGHI,SEIZURE PROPHY,Phenytoin,Nervous system disorders
+279801-ABCDEF,SEIZURE PROPHYLAXIS,Phenytoin,Nervous system disorders
+279801-ABCDEF,SEIZURE PROPHYLAXIS,Phenytoin,Nervous system disorders
+12404-ABCDEF,SEIZURE PROPHYLAXIS,Phenytoin,Nervous system disorders
+269802-ABCDEFGHI,PROPHYLAXIS,Phytonadione,Blood and lymphatic system disorders
+269711-ABCDEFGH,PROPHYLAXIS,Phytonadione,Blood and lymphatic system disorders
+19113-ABCDEFGHI,PROPHYLAXIS,Piperacillin,Infections and infestations
+199107-ABCDEFG,PROPHYLAXIS,Piperacillin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Piperacillin,Infections and infestations
+1303-A,PROPHYLACTIC,Pneumococcal Vaccine,Infections and infestations
+19107-ABCDEFGH,PROPHYLACTIC,Pneumococcal Vaccine,Infections and infestations
+91001-ABCDEFG,PROPHYLAXIS,Pneumococcal Vaccine,Infections and infestations
+159706-ABCDEF,PROPHYLAXIS,Pneumococcal Vaccine,Infections and infestations
+19405-AB,PROPHYLAXIS,Pneumococcal Vaccine,Infections and infestations
+199401-ABCDEF,PROPHYLAXIS,Pneumococcal Vaccine,Infections and infestations
+1301-AB,PROPHYLAXIS,Pneumococcal Vaccine,Infections and infestations
+19307-ABCDEFGHI,PROPHYLAXIS,Pneumococcal Vaccine,Infections and infestations
+109702-ABCD,PROPHYLAXIS,Pneumococcal Vaccine,Infections and infestations
+309701-ABCD,POTASSIUM PROPHYLAXIS,Potassium Chloride,Metabolism and nutrition disorders
+269106-ABCDEFGH,PROPHYLAXIS,Potassium Chloride,Metabolism and nutrition disorders
+269202-ABCDEFGHI,PROPHYLAXIS,Potassium Chloride,Metabolism and nutrition disorders
+26106-ABCDEF,PROPHYLAXIS,Potassium Chloride,Metabolism and nutrition disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Potassium Chloride,Metabolism and nutrition disorders
+199109-ABCDE,INFECTION PROPHYLAXIS,Povidone Iodine,Infections and infestations
+211002-ABC,DYE PROPHYLAXIS,Prednisone,Infections and infestations
+109103-ABCDEFGH,NAUSEA / PROPHYLAXIS,Prochlorperazine,Gastrointestinal disorders
+19206-ABCDEFGHI,PROPHYLAXIS,Promethazine,Pain
+109801-ABCD,PROPHYLAXIS NAUSEA,Promethazine,Gastrointestinal disorders
+23101-ABC,DIZZINESS PROPHYLAXIS,Pseudoephedrine,Psychiatric disorders
+319201-ABCD,GASTRIC PROPHYLAXIS LINING,Ranitidine,Gastrointestinal disorders
+25301-ABCDEFG,GASTRIC ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+309101-ABCDE,GI PROPH.,Ranitidine,Gastrointestinal disorders
+2104-ABC,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+15106-ABCDE,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+129403-AB,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+17301-A,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+2101ABCDE,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+2104-ABC,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+15106-ABCDE,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+2101ABCDE,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+129403-AB,GI PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+259101-ABCDEFGHI,GI-ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69101-AB,GTT FOR ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6201-ABCD,GTT FOR ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+23401-ABCDE,PEPTIC ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+109901-AB,PROPH. ULCER,Ranitidine,Gastrointestinal disorders
+109101-ABCDE,PROPH. ULCER,Ranitidine,Gastrointestinal disorders
+10601-ABC,PROPH. ULCER,Ranitidine,Gastrointestinal disorders
+10101-ABCDE,PROPH. ULCER,Ranitidine,Gastrointestinal disorders
+10302-AB,PROPH. ULCER,Ranitidine,Gastrointestinal disorders
+10405-ABCDEFGHI,PROPH. ULCER,Ranitidine,Gastrointestinal disorders
+109901-AB,PROPH. ULCER,Ranitidine,Gastrointestinal disorders
+10201-ABCDEFGHI,PROPH. ULCERS,Ranitidine,Gastrointestinal disorders
+109301-ABCDE,PROPHYLACTIC,Ranitidine,Gastrointestinal disorders
+99401-AB,PROPHYLACTIC,Ranitidine,Gastrointestinal disorders
+10405-ABCDEFGHI,PROPHYLACTIC,Ranitidine,Gastrointestinal disorders
+109301-ABCDE,PROPHYLACTIC,Ranitidine,Gastrointestinal disorders
+1402-AB,PROPHYLACTIC,Ranitidine,Gastrointestinal disorders
+1103-ABCD,PROPHYLACTIC,Ranitidine,Gastrointestinal disorders
+109401-ABC,PROPHYLACTIC ULCER,Ranitidine,Gastrointestinal disorders
+26102-ABCDEFG,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19301-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+26103-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199104-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199705-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199702-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199702-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199104-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19406-ABCDEFGH,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199101-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+26102-ABCDEFG,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19206-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19206-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199107-ABCDEFG,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+26404-ABCDEFGH,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199703-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19113-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+269702-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199704-ABCDEFG,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+26110-ABCDEFGH,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19407-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199305-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19407-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199303-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199201-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199201-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199305-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199301-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19407-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199303-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199801-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199901-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19207-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+2403-A,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1203-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199902-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199303-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199902-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199901-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69301-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+319501-A,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199305-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1102-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199702-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+21105-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19406-ABCDEFGH,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199102-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19406-ABCDEFGH,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19113-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199106-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199302-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199104-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199201-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199305-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19112-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199701-A,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199105-A,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199902-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+319501-A,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19204-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19403-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19407-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199101-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199103-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199201-ABCDE,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199202-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199301-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199302-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199702-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199704-ABCDEFG,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199706-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199901-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199903-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+2301-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+2403-A,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+10301-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19201-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19207-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199202-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199303-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199304-ABC,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199703-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199705-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+91002-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19113-ABCDEFGHI,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1201-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1201-AB,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+199403-ABCD,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19110-ABCDEF,PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+239713-ABCD,PROPHYLAXIS GI BLEED,Ranitidine,Gastrointestinal disorders
+109705-ABCDEFGHI,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+101001-ABCDEF,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109901-AB,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+10301-AB,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109103-ABCDEFGH,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109105-ABC,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+9304-A,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109705-ABCDEFGHI,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109705-ABCDEFGHI,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109705-ABCDEFGHI,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109902-ABC,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109701-ABC,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109701-ABC,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109701-ABC,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+101001-ABCDEF,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+10403-ABCDEFGHI,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109103-ABCDEFGH,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109704-ABCDEF,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+219401-ABC,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109105-ABC,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+109703-ABC,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+219101-ABCD,PROPHYLAXIS ULCER,Ranitidine,Gastrointestinal disorders
+10101-ABCDE,PROPHYLAXIS ULCERS,Ranitidine,Gastrointestinal disorders
+109402-ABC,PROPHYLAXIS ULCERS,Ranitidine,Gastrointestinal disorders
+1404-ABCD,PROPHYLAXIS/ULCER,Ranitidine,Gastrointestinal disorders
+279704-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279702-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69801-ABCD,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24101-ABCE,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24103-ABCDEF,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279702-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24101-ABCE,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279804-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24102-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+249101-ABCDEGHIF,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+249702-ABCDE,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279402-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279901-AB,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279702-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69801-ABCD,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+61002-AB,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24101-ABCE,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279702-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24103-ABCDEF,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24103-ABCDEF,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279702-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279101-ABCDE,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279704-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279806-A,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69801-ABCD,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279804-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69801-ABCD,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+271101-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279804-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69801-ABCD,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279703-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+249901-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24302-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+271102-ABCDE,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279703-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279901-AB,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24102-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24103-ABCDEF,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+249101-ABCDEGHIF,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+249702-ABCDE,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279801-ABCDEF,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24301-A,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+249301-AB,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69103-ABCD,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24301-A,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+249301-AB,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279702-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+279103-ABCDEFG,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69701-ABCD,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+61001-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+24302-ABC,STRESS ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69401-ABC,STRESS ULCER PROTOCOL PROPHYL.,Ranitidine,Gastrointestinal disorders
+6101-AB,ULCER PROPHY,Ranitidine,Gastrointestinal disorders
+4108-ABCDEF,ULCER PROPHYALXIS,Ranitidine,Gastrointestinal disorders
+1301-AB,ULCER PROPHYL. WHILE ON SOLUM.,Ranitidine,Gastrointestinal disorders
+1301-AB,ULCER PROPHYL. WHITE ON SOLUM.,Ranitidine,Gastrointestinal disorders
+211003--BCD,ULCER PROPHYLAX,Ranitidine,Gastrointestinal disorders
+99703-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13201-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25106-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99701-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1404-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99802-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9402-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9402-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1501-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+4108-ABCDEF,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99101-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+21410-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99103-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13201-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1302-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+49102-ABCDEFGH,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9102-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219105-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69901-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9302-ACDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9101-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9602-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219703-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6105-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99102-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99105ABCDEFGHIJ,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6104-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99701-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99703-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1304-,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6105-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+211002-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13202-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219401-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+23103-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+299401-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+91001-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+91201-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13301-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9602-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219106-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9401-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99702-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219101-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219102-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+253062ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6301-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9102-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99704-ABCDEF,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1404-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+23103-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25108-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6106-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6201-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9101-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99101-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99402-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99903-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+21109-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219701-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25101-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69101-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99701-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25109-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6105-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+91101-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+91201-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9303-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9305-ABCDEF,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99103-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99104-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99902-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219103-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219703-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219801-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99905-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99702-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99904-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+253062ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6104-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6105-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25103-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9402-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13201-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9102-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+21304-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1501-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99101-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25202-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13201-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+23103-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219105-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+23501-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9101-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25203-ABCDEFFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9602-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99702-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9101-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9602-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219702-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+21109-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219103-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25203-ABCDEFFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6105-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13102-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13202-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99104-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13102-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9101-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+91201-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+19103-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+21602-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219102-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219106-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25103-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99701-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13202-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219801-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+22103-ABCDEF,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25105-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6102-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6106-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69901-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9102-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9103-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9203-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99801-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13201-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13301-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+211002-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+21410-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219201-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219901-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+22102-,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+22104-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25101-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25307-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6201-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+69201-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+91001-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9101-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+91101-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9202-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9401-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9402-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9403-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9602-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99104-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99107-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99402-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99704-ABCDEF,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99803-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99902-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99903-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1101-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+21109-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219105-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219701-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219703-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25108-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9201-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9301-ABCDEF,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9302-ACDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9303-AB,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99102-ABCDEFG,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99103-ABCD,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99105ABCDEFGHIJ,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99703-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99905-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6105-ABCDE,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+1303-A,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+6106-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+49102-ABCDEFGH,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+25202-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13201-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9402-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9402-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13101-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+99101-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+23101-ABC,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+9402-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+13102-ABCDEFGHI,ULCER PROPHYLAXIS,Ranitidine,Gastrointestinal disorders
+219402-ABC,ULCER PROPHYLAXIS (IN TPN),Ranitidine,Gastrointestinal disorders
+309701-ABCD,LOW HCT PROPHYLAXIS,Rbc,Blood and lymphatic system disorders
+109801-ABCD,PROPHYLAXIS,Sertraline,Psychiatric disorders
+19702-AB,ULCER PROPHYLAXIS,Simethicone,Gastrointestinal disorders
+109705-ABCDEFGHI,PROPHYLAXIS LOW BICARB.,Sodium Bicarbonate,Metabolism and nutrition disorders
+4101-ABC,DUODENAL ULCER PROPH,Sucralfate,Gastrointestinal disorders
+239202-ABC,GASTRIC ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+2104-ABC,GI PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+17501-ABCD,GI PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+259701-AB,GI PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+259801-ABCD,GI PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25102-ABCD,GI PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+10405-ABCDEFGHI,PROPHYLACTIC,Sucralfate,Gastrointestinal disorders
+51003-AB,PROPHYLATIC,Sucralfate,Gastrointestinal disorders
+10402-ABCDEFGHI,PROPHYLATIC ULCER,Sucralfate,Gastrointestinal disorders
+1104-ABCD,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+199706-ABCDEFGHI,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19403-ABCDEF,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+1105-AB,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19109-AB,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+199709-ABCDEFGHI,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+26201ABCDEFG,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+269111-ABCDEFGHI,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+269901-ABCDEF,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+1202-ABCDE,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19104-A,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19203-,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19203-ABCDEFGHI,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19206-,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19308-ABCD,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+21112-AB,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+26106-ABCDEF,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+26106-ABCDEF,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19201-AB,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19306-ABCDEFG,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19204-,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+199705-ABCDEFGHI,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19207-A,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+26104-ABCDEFGHI,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+26106-ABCDEF,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+261001-ABCDEFG,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+199107-ABCDEFG,PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19102-ABCD,PROPHYLAXIS GI ACID,Sucralfate,Gastrointestinal disorders
+109705-ABCDEFGHI,PROPHYLAXIS ULCER,Sucralfate,Gastrointestinal disorders
+109103-ABCDEFGH,PROPHYLAXIS ULCER,Sucralfate,Gastrointestinal disorders
+109701-ABC,PROPHYLAXIS ULCER,Sucralfate,Gastrointestinal disorders
+109702-ABCD,PROPHYLAXIS ULCER,Sucralfate,Gastrointestinal disorders
+109703-ABC,PROPHYLAXIS ULCER,Sucralfate,Gastrointestinal disorders
+109704-ABCDEF,PROPHYLAXIS ULCER,Sucralfate,Gastrointestinal disorders
+249102-ABCDEF,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+249702-ABCDE,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19702-AB,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+249701-ABCDEFGHI,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+249102-ABCDEF,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+24103-ABCDEF,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+249801-AB,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+249401-ABCDE,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+279103-ABCDEFG,STRESS ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+4105-ABCDEFG,ULCER (NAUSEA) PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+4111-ABCDEFGHI,ULCER PROPH.,Sucralfate,Gastrointestinal disorders
+6101-AB,ULCER PROPHY,Sucralfate,Gastrointestinal disorders
+6101-AB,ULCER PROPHY,Sucralfate,Gastrointestinal disorders
+22101-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+22101-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+239715-ABCD,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25202-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+22104-ABCD,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+259101-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+231004-ABCDEFG,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+299901-A,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+4201-ABCD,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+99701-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+13102-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+9202-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+291001-A,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+2194031ABCD,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25401-AB,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+49901-A,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+6401-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+7401-ABCD,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+99703-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+1501-ABCD,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25109-ABCDEFG,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+6103-ABCD,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+6202-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+22104-ABCD,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25302-A,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25401-AB,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+6301-AB,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+6401-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25202-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25303-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25305-A,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25307-ABCDE,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25308-,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+259101-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+289102-ACB,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+99107-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+13102-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+19101-ABCDE,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25103-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+25108-AB,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+13202-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+13202-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+29904-AB,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+49901-A,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+13101-ABC,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+13201-ABCDEFGHI,ULCER PROPHYLAXIS,Sucralfate,Gastrointestinal disorders
+99905-ABCDE,BLADDER INF. PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+279402-ABC,INFECTION PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+5205-A,PROPHYLACTIC U.T.I.,Sulfamethoxazole,Infections and infestations
+5205-A,PROPHYLACTIC U.T.I.,Sulfamethoxazole,Infections and infestations
+26108-ABCDEFGH,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+269703-ABCDEFGHI,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+26111-ABCDEFGHI,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+261004-ABCDEFGH,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+199707-ABCDEFG,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+91201-ABCD,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+269104-ABCDEFG,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+19407-ABCDE,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+261004-ABCDEFGH,PROPHYLAXIS,Sulfamethoxazole,Infections and infestations
+21405-AB,PROPHYLAXIS ANTIBX,Sulfamethoxazole,Infections and infestations
+9403-ABCD,PROPHYLAXIS UTI,Sulfamethoxazole,Infections and infestations
+9602-ABCDEFGHI,PROPHYLAXIS UTI,Sulfamethoxazole,Infections and infestations
+9304-A,PROPHYLAXIS UTI,Sulfamethoxazole,Infections and infestations
+4104-ABC,PROPH,Tetanus Vaccine,Infections and infestations
+49101-ABCD,PROPH. TETANUS,Tetanus Vaccine,Infections and infestations
+1501-ABCD,PROPHYLAXIS,Tetanus Vaccine,Infections and infestations
+329101-ABCDEF,PROPHYLAXIS,Tetanus Vaccine,Infections and infestations
+109103-ABCDEFGH,PROPHYLAXIS TETANUS,Tetanus Vaccine,Infections and infestations
+299702-ABCD,TETANUS PROPHYLAXIS,Tetanus Vaccine,Infections and infestations
+291001-A,TETANUS PROPHYLAXIS,Tetanus Vaccine,Infections and infestations
+309101-ABCDE,TETANUS PROPHYLAXIS,Tetanus Vaccine,Infections and infestations
+19304-ABC,PROPHYLAXIS,Tetracycline,Infections and infestations
+19304-ABC,SLIPPED PIN PROPHYLAXIS,Tetracycline,Skin and subcutaneous tissue disorders
+191101-A,BLEEDING PROPHYLAXIS,Thrombin,Blood and lymphatic system disorders
+59102-A,PROPHYLACTIC FEMUR FX,Ticarcillin,Infections and infestations
+199405-ABCDEF,PROPHYLAXIS,Ticarcillin,Infections and infestations
+199405-ABCDEF,PROPHYLAXIS,Ticarcillin,Infections and infestations
+2301-AB,PROPHYLAXIS,Tolterodine,Renal and urinary system disorders
+99905-ABCDE,BLADDER INF. PROPHYLAXIS,Trimethoprim,Infections and infestations
+279402-ABC,INFECTION PROPHYLAXIS,Trimethoprim,Infections and infestations
+5205-A,PROPHYLACTIC U.T.I.,Trimethoprim,Infections and infestations
+5205-A,PROPHYLACTIC U.T.I.,Trimethoprim,Infections and infestations
+26108-ABCDEFGH,PROPHYLAXIS,Trimethoprim,Infections and infestations
+269703-ABCDEFGHI,PROPHYLAXIS,Trimethoprim,Infections and infestations
+26111-ABCDEFGHI,PROPHYLAXIS,Trimethoprim,Infections and infestations
+261004-ABCDEFGH,PROPHYLAXIS,Trimethoprim,Infections and infestations
+199707-ABCDEFG,PROPHYLAXIS,Trimethoprim,Infections and infestations
+91201-ABCD,PROPHYLAXIS,Trimethoprim,Infections and infestations
+269104-ABCDEFG,PROPHYLAXIS,Trimethoprim,Infections and infestations
+19407-ABCDE,PROPHYLAXIS,Trimethoprim,Infections and infestations
+21405-AB,PROPHYLAXIS ANTIBX,Trimethoprim,Infections and infestations
+9403-ABCD,PROPHYLAXIS UTI,Trimethoprim,Infections and infestations
+9602-ABCDEFGHI,PROPHYLAXIS UTI,Trimethoprim,Infections and infestations
+9304-A,PROPHYLAXIS UTI,Trimethoprim,Infections and infestations
+219202-AB,(+) BLOOD CULTURE? PROPHYLAXIS,Vancomycin,Infections and infestations
+129102-ABCDE,ANTIBIOTIC PROPHYLAXIS,Vancomycin,Infections and infestations
+9402-ABCDEFGHI,ANTIBIOTIC PROPHYLAXIS,Vancomycin,Infections and infestations
+279105-ABCDE,EMPIRIC PROPHYLAXIS THERAPY,Vancomycin,Infections and infestations
+279103-ABCDEFG,INFECTION PROPHYLAXIS,Vancomycin,Infections and infestations
+279702-ABCDEFGHI,INFECTION PROPHYLAXIS,Vancomycin,Infections and infestations
+279601-A,INFECTION PROPHYLAXIS,Vancomycin,Infections and infestations
+69701-ABCD,INFECTION PROPHYLAXIS,Vancomycin,Infections and infestations
+279703-ABC,INFECTION PROPHYLAXIS,Vancomycin,Infections and infestations
+7108-ABCD,INFECTION PROPHYLAXIS OR,Vancomycin,Infections and infestations
+7402-A,OR PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+7106-ABC,PERIOP PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+7107-AB,PERIOP PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+7104-ABC,PERIOP PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+7401-ABCD,PERIOP PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+7202-A,PERIOP PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+7110-ABC,PERIOPERATION PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+12201-ABCD,POST OP PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+7103-ACDE,PRE-OP PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+4105-ABCDEFG,PRE+POST OP PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+7204-ABC,PROPHYL. ABX FOR OR,Vancomycin,Surgical and medical procedures
+129802-ABCDE,PROPHYL. UTI GUT,Vancomycin,Infections and infestations
+59706-AB,PROPHYLACTIC,Vancomycin,Infections and infestations
+199106-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+199403-ABCD,PROPHYLAXIS,Vancomycin,Infections and infestations
+199404-ABCD,PROPHYLAXIS,Vancomycin,Infections and infestations
+199301-ABC,PROPHYLAXIS,Vancomycin,Infections and infestations
+199101-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+199701-A,PROPHYLAXIS,Vancomycin,Infections and infestations
+7111-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+199704-ABCDEFG,PROPHYLAXIS,Vancomycin,Infections and infestations
+19205-ABCDE,PROPHYLAXIS,Vancomycin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+191101-A,PROPHYLAXIS,Vancomycin,Infections and infestations
+19309-ABCDEFG,PROPHYLAXIS,Vancomycin,Infections and infestations
+199706-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+269108-ABCDEFG,PROPHYLAXIS,Vancomycin,Infections and infestations
+269108-ABCDEFG,PROPHYLAXIS,Vancomycin,Infections and infestations
+26110-ABCDEFGH,PROPHYLAXIS,Vancomycin,Infections and infestations
+26201ABCDEFG,PROPHYLAXIS,Vancomycin,Infections and infestations
+269702-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+269111-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+199401-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+269103-ABCD,PROPHYLAXIS,Vancomycin,Infections and infestations
+269709-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+91201-ABCD,PROPHYLAXIS,Vancomycin,Infections and infestations
+1405-AB,PROPHYLAXIS,Vancomycin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+19205-ABCDE,PROPHYLAXIS,Vancomycin,Infections and infestations
+199101-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+269801-ABCDE,PROPHYLAXIS,Vancomycin,Infections and infestations
+26109-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+7105-ABCD,PROPHYLAXIS,Vancomycin,Infections and infestations
+13301-A,PROPHYLAXIS,Vancomycin,Infections and infestations
+19206-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+199702-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+199103-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+19313-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+199707-ABCDEFG,PROPHYLAXIS,Vancomycin,Infections and infestations
+19207-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+199702-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+99901-ABC,PROPHYLAXIS,Vancomycin,Infections and infestations
+19113-ABCDEFGHI,PROPHYLAXIS,Vancomycin,Infections and infestations
+19207-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+19205-ABCDE,PROPHYLAXIS,Vancomycin,Infections and infestations
+19207-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+26110-ABCDEFGH,PROPHYLAXIS,Vancomycin,Infections and infestations
+19306-ABCDEFG,PROPHYLAXIS,Vancomycin,Infections and infestations
+269102-ABC,PROPHYLAXIS,Vancomycin,Infections and infestations
+91101-AB,PROPHYLAXIS,Vancomycin,Infections and infestations
+26109-ABCDEF,PROPHYLAXIS,Vancomycin,Infections and infestations
+329101-ABCDEF,PROPHYLAXIS COVERAGE FOR SURG.,Vancomycin,Surgical and medical procedures
+199709-ABCDEFGHI,PROPHYLAXIS FOR SEPSIS,Vancomycin,Infections and infestations
+199801-ABCD,PROPHYLAXIS IN OR,Vancomycin,Surgical and medical procedures
+99102-ABCDEFG,PROPHYLAXIS INCREASED TEMP,Vancomycin,General disorders and administration site conditions
+7109-ABC,PROPHYLAXIS OR,Vancomycin,Surgical and medical procedures
+7203-ABCDEFGH,PROPHYLAXIS OR,Vancomycin,Surgical and medical procedures
+269101-ABCD,PROPHYLAXIS POST-OP,Vancomycin,Surgical and medical procedures
+1301-AB,PROPHYLAXIS POST-OP,Vancomycin,Surgical and medical procedures
+21205-A,PROPHYLAXIS PRE-OP,Vancomycin,Surgical and medical procedures
+19309-ABCDEFG,PROPHYLAXIS TEMP,Vancomycin,General disorders and administration site conditions
+19309-ABCDEFG,PROPHYLAXIS TEMP,Vancomycin,General disorders and administration site conditions
+19309-ABCDEFG,PROPHYLAXIS TEMP,Vancomycin,General disorders and administration site conditions
+9104-AB,SURGERY PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+259301-ABCD,SURGICAL PROPHYLAXIS,Vancomycin,Surgical and medical procedures
+199705-ABCDEFGHI,PROPHYLAXIS,Vitamin B1,Metabolism and nutrition disorders
+59703-AB,PROPHYLAXIS,Vitamin B1,Metabolism and nutrition disorders
+19114-ABCDFGHIE,PROPHYLAXIS,Vitamin B1,Metabolism and nutrition disorders
+19313-ABCDEF,PROPHYLAXIS,Vitamin B1,Metabolism and nutrition disorders
+199103-ABCDEFGHI,PROPHYLAXIS,Vitamin B1,Metabolism and nutrition disorders
+199404-ABCD,PROPHYLAXIS,Vitamin B1,Metabolism and nutrition disorders
+199709-ABCDEFGHI,PROPHYLAXIS,Vitamin B1,Metabolism and nutrition disorders
+1401-AB,PROPHYLACTIC,Vitamin K,Blood and lymphatic system disorders
+1401-AB,PROPHYLACTIC,Vitamin K,Blood and lymphatic system disorders
+269103-ABCD,PROPHYLAXIS,Vitamin K,Blood and lymphatic system disorders
+7201-ABCD,PROPHYLAXIS,Vitamin K,Blood and lymphatic system disorders
+269901-ABCDEF,PROPHYLAXIS,Vitamin K,Blood and lymphatic system disorders
+219801-ABCD,CLOT PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+4109-ABCDEFG,DVT + PE PROPHYLAXIS,Warfarin,Vascular disorders
+4101-ABC,DVT PE PROPHYLAXIS,Warfarin,Vascular disorders
+4111-ABCDEFGHI,DVT PROPH,Warfarin,Vascular disorders
+12403-ABC,DVT PROPHY,Warfarin,Vascular disorders
+1402-AB,DVT PROPHY.,Warfarin,Vascular disorders
+1402-AB,DVT PROPHY.,Warfarin,Vascular disorders
+12403-ABC,DVT PROPHY.,Warfarin,Vascular disorders
+129702-ABCDEFGHI,DVT PROPHY.,Warfarin,Vascular disorders
+129702-ABCDEFGHI,DVT PROPHY.,Warfarin,Vascular disorders
+129702-ABCDEFGHI,DVT PROPHY.,Warfarin,Vascular disorders
+129401-ABCD,DVT PROPHYL.,Warfarin,Vascular disorders
+129801-AB,DVT PROPHYL.,Warfarin,Vascular disorders
+129801-AB,DVT PROPHYL.,Warfarin,Vascular disorders
+1501-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+12103-ABCDE,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+129401-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+12105-ABCDEF,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+129701-ABC,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+129702-ABCDEFGHI,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+12105-ABCDEF,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+129702-ABCDEFGHI,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+12103-ABCDE,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+12105-ABCDEF,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+12103-ABCDE,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+129701-ABC,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+311002-A,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+319201-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+319102-AB,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+311002-A,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+259303-ABC,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+12105-ABCDEF,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+211001-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+319701-ABCD,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+25303-ABC,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+25303-ABC,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+129702-ABCDEFGHI,DVT PROPHYLAXIS,Warfarin,Vascular disorders
+12103-ABCDE,DVT-PROPHYLAXIS,Warfarin,Vascular disorders
+109401-ABC,PROPHYLACTIC,Warfarin,Blood and lymphatic system disorders
+10405-ABCDEFGHI,PROPHYLACTIC,Warfarin,Blood and lymphatic system disorders
+109401-ABC,PROPHYLACTIC BLOOD CLOTS,Warfarin,Blood and lymphatic system disorders
+109401-ABC,PROPHYLACTIC BLOOD CLOTT,Warfarin,Blood and lymphatic system disorders
+109401-ABC,PROPHYLACTIC DVT,Warfarin,Vascular disorders
+109401-ABC,PROPHYLACTIC DVT,Warfarin,Vascular disorders
+59106-,PROPHYLATIC,Warfarin,Blood and lymphatic system disorders
+1302-ABC,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+1202-ABCDE,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+1104-ABCD,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+1302-ABC,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+1202-ABCDE,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+26111-ABCDEFGHI,PROPHYLAXIS,Warfarin,Blood and lymphatic system disorders
+109102-ABCD,PROPHYLAXIS BLOOD CLOT,Warfarin,Blood and lymphatic system disorders
+109102-ABCD,PROPHYLAXIS BLOOD CLOT,Warfarin,Blood and lymphatic system disorders
+219801-ABCD,PROPHYLAXIS CLOT,Warfarin,Blood and lymphatic system disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109402-ABC,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109402-ABC,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109402-ABC,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109402-ABC,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109102-ABCD,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+109402-ABC,PROPHYLAXIS DVT,Warfarin,Vascular disorders
+219801-ABCD,PROPHYLAXIS: CLOT,Warfarin,Blood and lymphatic system disorders
+121201-AB,VASCULAR PROPHYLAXIS,Warfarin,Vascular disorders
+121201-AB,VASCULAR PROPHYLAXIS,Warfarin,Vascular disorders
+29402-ABCDEF,PREVENT FEVER,Acetaminophen,General disorders and administration site conditions
+99803-ABCDEFGHI,PREVENT CONGESTION,Acetylcysteine,"Respiratory, thoracic and mediastinal disorders"
+279802-ABC,PREVENT HERPES OUTBREAK,Acyclovir,Infections and infestations
+279501-ABC,PREVENT BRONCHOSPASM,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+99803-ABCDEFGHI,PREVENT CONGESTION,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+99705-ABCDEFGHI,PREVENT CONGESTION,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+99705-ABCDEFGHI,PREVENT CONGESTION,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+99403-ABCDE,PREVENT LUNG CONGESTION,Albuterol,"Respiratory, thoracic and mediastinal disorders"
+99803-ABCDEFGHI,PREVENT ULCER,Aluminum Magnesium,Gastrointestinal disorders
+4310-ABCDEFGHI,ULCER PREVENTION,Aluminum Magnesium,Gastrointestinal disorders
+2302-,PREVENT STOMA OK PAIN,Aluminum Magnesium Simethicone,Pain
+29601-AB,PREVENT DEPRESSION,Amitriptyline,Psychiatric disorders
+2102-AB,PREVENT INFECTION,Ampicillin And Sulbactam,Infections and infestations
+2406-ABC,PREVENT INFECTION,Ampicillin And Sulbactam,Infections and infestations
+17101-AB,STREP PREVENTION,Ampicillin And Sulbactam,Infections and infestations
+2404-A,APPLIED TO ABRASIONS TO PREVEN,Bacitracin,Infections and infestations
+2103-ABC,PREV. INFECT INSERT NGT,Bacitracin,Infections and infestations
+279802-ABC,PREVENT INFECTION,Bacitracin,Infections and infestations
+3401-ABC,PREVENT INFECTION KNEE,Bacitracin,Infections and infestations
+239301-AB,PREVENT INFECTION/ABRASIONS,Bacitracin,Infections and infestations
+99803-ABCDEFGHI,PREVENT CONSTIPATION,Bisacodyl,Gastrointestinal disorders
+99201-ABCDEF,ELECTROLYTE PREVENT,Calcium Gluconate,Metabolism and nutrition disorders
+99803-ABCDEFGHI,PREVENT ELECTROLYTE,Calcium Gluconate,Metabolism and nutrition disorders
+99705-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Calcium Gluconate,Metabolism and nutrition disorders
+99803-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Calcium Gluconate,Metabolism and nutrition disorders
+29402-ABCDEF,PREVENT ELECTROLYTE IMBALANCE,Calcium Gluconate,Metabolism and nutrition disorders
+99705-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Calcium Gluconate,Metabolism and nutrition disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Carbamazepine,Nervous system disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Carbamazepine,Nervous system disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Carbamazepine,Nervous system disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Carbamazepine,Nervous system disorders
+16401-AB,FEVER-ATELECTASIS-PREVENTION,Cefazolin,General disorders and administration site conditions
+29101-AB,PREV INFECT,Cefazolin,Infections and infestations
+2406-ABC,PREV. INFECT,Cefazolin,Infections and infestations
+2405-ABCDE,PREV. INFECTION,Cefazolin,Infections and infestations
+29901-ABCD,PREVENT INFECTION,Cefazolin,Infections and infestations
+2406-ABC,PREVENT INFECTION,Cefazolin,Infections and infestations
+21001-ABC,PREVENT INFECTION,Cefazolin,Infections and infestations
+29901-ABCD,PREVENT INFECTION,Cefazolin,Infections and infestations
+29701-ABCDE,PREVENT INFECTION,Cefazolin,Infections and infestations
+21001-ABC,PREVENT INFECTION,Cefazolin,Infections and infestations
+20301-AB,PREVENT INFECTION,Cefazolin,Infections and infestations
+20107-AB,PREVENT INFECTION,Cefazolin,Infections and infestations
+29901-ABCD,PREVENT INFECTION,Cefazolin,Infections and infestations
+29901-ABCD,PREVENT INFECTION,Cefazolin,Infections and infestations
+29402-ABCDEF,PREVENT INFECTIONS,Cefazolin,Infections and infestations
+26405-ABCDEFGHI,PREVENTION OF INFECTION,Cefazolin,Infections and infestations
+239705-AB,SURGICAL INFECTION PREV.,Cefazolin,Surgical and medical procedures
+21001-ABC,PREVENT INFECTION,Cefotaxime,Infections and infestations
+21001-ABC,PREVENT INFECTION,Cefotaxime,Infections and infestations
+3401-ABC,PREVENT INFECTION,Cefotaxime,Infections and infestations
+2102-AB,PREVENT INFECTION,Ceftazidime,Infections and infestations
+21001-ABC,PREVENT INFECTION,Ceftazidime,Infections and infestations
+2102-AB,PREVENT INFECTION,Ceftazidime,Infections and infestations
+3402-AB,PREVENT INFECTION,Cephalexin,Infections and infestations
+79101-,DT PREVENTION,Chlordiazepoxide,Vascular disorders
+17103-ABCDEDG,PREVENT DT,Chlordiazepoxide,Vascular disorders
+7403-A,PREVENT SHIVERING,Chlorpromazine,Psychiatric disorders
+2405-ABCDE,PREV ULCERS,Cimetidine,Gastrointestinal disorders
+29101-AB,PREV ULCERS,Cimetidine,Gastrointestinal disorders
+2406-ABC,PREV. ULCER,Cimetidine,Gastrointestinal disorders
+2405-ABCDE,PREV. ULCERS,Cimetidine,Gastrointestinal disorders
+29301-A,PREV. ULCERS,Cimetidine,Gastrointestinal disorders
+2405-ABCDE,PREV. ULCERS,Cimetidine,Gastrointestinal disorders
+2405-ABCDE,PREV. ULCERS,Cimetidine,Gastrointestinal disorders
+3401-ABC,PREVENT STRESS ULCER,Cimetidine,Gastrointestinal disorders
+3402-AB,PREVENT STRESS ULCER,Cimetidine,Gastrointestinal disorders
+3401-ABC,PREVENT STRESS ULCER,Cimetidine,Gastrointestinal disorders
+3401-ABC,PREVENT STRESS ULCER,Cimetidine,Gastrointestinal disorders
+3401-ABC,PREVENT STRESS ULCER,Cimetidine,Gastrointestinal disorders
+2405-ABCDE,PREVENT STRESS ULCER,Cimetidine,Gastrointestinal disorders
+3302-ABCDEFGH,PREVENT STRESS ULCER,Cimetidine,Gastrointestinal disorders
+29901-ABCD,PREVENT STRESS ULCER PROT STOM,Cimetidine,Gastrointestinal disorders
+29902-AB,PREVENT STRESS ULCERS,Cimetidine,Gastrointestinal disorders
+29402-ABCDEF,PREVENT STRESS ULCERS,Cimetidine,Gastrointestinal disorders
+2406-ABC,PREVENT STRESS ULCERS,Cimetidine,Gastrointestinal disorders
+4301-ABCDE,PREVENT ULCER,Cimetidine,Gastrointestinal disorders
+29302-A,PREVENT ULCERS,Cimetidine,Gastrointestinal disorders
+3301-AB,TO PREVENT STRESS ULCER,Cimetidine,Gastrointestinal disorders
+4102-ABCDEFGHI,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+4311-ABCDE,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+4301-ABCDE,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+4310-ABCDEFGHI,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+4102-ABCDEFGHI,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+49201-ABCD,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+49201-ABCD,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+4303-AB,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+4310-ABCDEFGHI,ULCER PREVENTION,Cimetidine,Gastrointestinal disorders
+2406-ABC,PREVENT INFECTION,Ciprofloxacin,Infections and infestations
+99402-AB,PREVENT INFECTION,Ciprofloxacin,Infections and infestations
+29402-ABCDEF,PREVENT INFECTION,Ciprofloxacin,Infections and infestations
+99803-ABCDEFGHI,PREVENT CONSTIPATION,Cisapride,Gastrointestinal disorders
+99803-ABCDEFGHI,PREVENT HEART BURN,Cisapride,Gastrointestinal disorders
+99803-ABCDEFGHI,PREVENT HEARTBURN,Cisapride,Gastrointestinal disorders
+99803-ABCDEFGHI,PREVENT HEARTBURN,Cisapride,Gastrointestinal disorders
+99803-ABCDEFGHI,PREVENT ULCERS,Cisapride,Gastrointestinal disorders
+2102-AB,PREVENT YEAST INFECTION,Clotrimazole,Infections and infestations
+29101-AB,PREV ANXIETY,Diazepam,Psychiatric disorders
+29101-AB,PREV ANXIETY,Diazepam,Psychiatric disorders
+2406-ABC,PREV ANXIETY,Diazepam,Psychiatric disorders
+29701-ABCDE,PREVENT ANXIETY,Diazepam,Psychiatric disorders
+99106-BDEFG,PREVENT REACTION FROM VIT. K,Diphenhydramine,Blood and lymphatic system disorders
+99803-ABCDEFGHI,PREVENT CONSTIPATION,Docusate,Gastrointestinal disorders
+99803-ABCDEFGHI,PREVENT CONSTIPATION,Docusate And Senna,Gastrointestinal disorders
+239301-AB,DVT PREVENTION,Enoxaparin,Vascular disorders
+219901-AB,DVT PREVENTION,Enoxaparin,Vascular disorders
+239402-A,DVT PREVENTION,Enoxaparin,Vascular disorders
+239709-AB,DVT PREVENTION,Enoxaparin,Vascular disorders
+99403-ABCDE,PREVENT BLD CLOTS,Enoxaparin,Blood and lymphatic system disorders
+99109-ABCDEFGH,PREVENT BLD CLOTS,Enoxaparin,Blood and lymphatic system disorders
+99109-ABCDEFGH,PREVENT BLOOD CLOTS,Enoxaparin,Blood and lymphatic system disorders
+99201-ABCDEF,PREVENT BLOOD CLOTS,Enoxaparin,Blood and lymphatic system disorders
+199102-ABCDE,PREVENT DVT,Enoxaparin,Vascular disorders
+29702-ABCDEFG,PREVENT DVT,Enoxaparin,Vascular disorders
+319101-A,PREVENT DVT,Enoxaparin,Vascular disorders
+281005-A,PREVENT NEUROGENIC HYPOTENSION,Ephedrine,Vascular disorders
+22101-ABC,INTUBATION STRESS ULCER PREV.,Famotidine,Gastrointestinal disorders
+20103-ABCDEF,PREVENT STRESS ULCER,Famotidine,Gastrointestinal disorders
+20106-ABCDE,PREVENT STRESS ULCER,Famotidine,Gastrointestinal disorders
+20106-ABCDE,PREVENT STRESS ULCER,Famotidine,Gastrointestinal disorders
+20404BCDE,PREVENT STRESS ULCER,Famotidine,Gastrointestinal disorders
+20103-ABCDEF,PREVENT STRESS ULCER,Famotidine,Gastrointestinal disorders
+20106-ABCDE,PREVENT STRESS ULCER,Famotidine,Gastrointestinal disorders
+20102-ABCD,PREVENT STRESS ULCER,Famotidine,Gastrointestinal disorders
+20402-ABCD,PREVENT STRESS ULCER,Famotidine,Gastrointestinal disorders
+29402-ABCDEF,PREVENT STRESS ULCERS,Famotidine,Gastrointestinal disorders
+21001-ABC,PREVENT STRESS ULCERS,Famotidine,Gastrointestinal disorders
+26104-ABCDEFGHI,PREVENT TX PEPTIC ULCER,Famotidine,Gastrointestinal disorders
+20105-ABCD,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20202-AB,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20301-AB,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20107-AB,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20103-ABCDEF,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20405-A,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20202-AB,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20101-ABCDEFG,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20107-AB,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20301-AB,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20406-A,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+20401-ABCDE,PREVENT ULCER,Famotidine,Gastrointestinal disorders
+29201-A,PREVENT ULCERS,Famotidine,Gastrointestinal disorders
+26405-ABCDEFGHI,PREVENTION,Famotidine,Gastrointestinal disorders
+129806-AB,PREVENTION GI BLEEDING,Famotidine,Gastrointestinal disorders
+26108-ABCDEFGH,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+249103-ABCDEFGHI,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+249902-AB,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+239707-ABC,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+239702-ABCD,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+239707-ABC,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+231201-ABC,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+239707-ABC,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+239703-ABCDEFG,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+231201-ABC,ULCER PREVENTION,Famotidine,Gastrointestinal disorders
+2406-ABC,PREV. ANEMIA,Ferrous Sulfate,Blood and lymphatic system disorders
+29402-ABCDEF,PREVENT ANEMIA,Ferrous Sulfate,Blood and lymphatic system disorders
+21001-ABC,PREVENT ANEMIA,Ferrous Sulfate,Blood and lymphatic system disorders
+279802-ABC,PREVENT ANEMIA,Ferrous Sulfate,Blood and lymphatic system disorders
+3302-ABCDEFGH,PREVENT SWELLING,Fludrocortisone,Nervous system disorders
+19308-ABCD,PREVENT D.T.'S,Folic Acid,Blood and lymphatic system disorders
+21001-ABC,PREVENT BLEEDING,Plasma,Blood and lymphatic system disorders
+29402-ABCDEF,PREVENT BLEEDING,Plasma,Blood and lymphatic system disorders
+99705-ABCDEFGHI,PREVENT FLD OVERLOAD,Furosemide,Vascular disorders
+99803-ABCDEFGHI,PREVENT FLD OVERLOAD,Furosemide,Vascular disorders
+99803-ABCDEFGHI,PREVENT FLD OVERLOAD,Furosemide,Vascular disorders
+29402-ABCDEF,PREVENT FLUID OVERLOAD,Furosemide,Vascular disorders
+29402-ABCDEF,PREVENT FLUID OVERLOAD,Furosemide,Vascular disorders
+2103-ABC,PREV. INFECT.,Gentamicin,Infections and infestations
+2406-ABC,PREV. INFECT.,Gentamicin,Infections and infestations
+2405-ABCDE,PREV. INFECTION,Gentamicin,Infections and infestations
+2405-ABCDE,PREV. INFECTION,Gentamicin,Infections and infestations
+29402-ABCDEF,PREVENT INFECTION,Gentamicin,Infections and infestations
+99402-AB,PREVENT INFECTION,Gentamicin,Infections and infestations
+2406-ABC,PREVENT INFECTION,Gentamicin,Infections and infestations
+29701-ABCDE,PREVENT INFECTION,Gentamicin,Infections and infestations
+29701-ABCDE,PREVENT INFECTIONS,Gentamicin,Infections and infestations
+249103-ABCDEFGHI,BLOOD CLOT PREV. MIDDLINE CATH,Heparin,Blood and lymphatic system disorders
+279103-ABCDEFG,DEEP VENOUS THROMBOSIS PREV.,Heparin,Vascular disorders
+19202-ABCDEFG,DVT PREVENT,Heparin,Vascular disorders
+239402-A,DVT PREVENTION,Heparin,Vascular disorders
+17202-ABC,DVT PREVENTION,Heparin,Vascular disorders
+239709-AB,DVT PREVENTION,Heparin,Vascular disorders
+239901-ABCD,DVT PREVENTION,Heparin,Vascular disorders
+15109-ABC,DVT PREVENTION,Heparin,Vascular disorders
+171002-AB,DVT PREVENTION,Heparin,Vascular disorders
+2402-A,DVT PREVENTION,Heparin,Vascular disorders
+2404-A,DVT PREVENTION,Heparin,Vascular disorders
+2402-A,DVT PREVENTION,Heparin,Vascular disorders
+4310-ABCDEFGHI,DVT PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT PREVENTION,Heparin,Vascular disorders
+15108-ABCD,DVT PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+49201-ABCD,DVT/PE PREVENTION,Heparin,Vascular disorders
+29301-A,PREV. THROMB.,Heparin,Blood and lymphatic system disorders
+2406-ABC,PREV. THROMB.,Heparin,Blood and lymphatic system disorders
+29101-AB,PREV. THROMBUS,Heparin,Blood and lymphatic system disorders
+26107-ABCDEFGHI,PREVENT ANTICOAG,Heparin,Blood and lymphatic system disorders
+99403-ABCDE,PREVENT BLD,Heparin,Blood and lymphatic system disorders
+99109-ABCDEFGH,PREVENT BLD CLOTS,Heparin,Blood and lymphatic system disorders
+99109-ABCDEFGH,PREVENT BLD CLOTS,Heparin,Blood and lymphatic system disorders
+99705-ABCDEFGHI,PREVENT BLD CLOTS,Heparin,Blood and lymphatic system disorders
+10201-ABCDEFGHI,PREVENT BLOOD CLOTS,Heparin,Blood and lymphatic system disorders
+99106-BDEFG,PREVENT BLOOD CLOTS,Heparin,Blood and lymphatic system disorders
+3101-ABC,PREVENT BLOOD CLOTS,Heparin,Blood and lymphatic system disorders
+3302-ABCDEFGH,PREVENT CLOTS,Heparin,Blood and lymphatic system disorders
+3401-ABC,PREVENT CLOTS,Heparin,Blood and lymphatic system disorders
+99109-ABCDEFGH,PREVENT CLOTS,Heparin,Blood and lymphatic system disorders
+21001-ABC,PREVENT DEEP VAR THROMBOSIS,Heparin,Vascular disorders
+2406-ABC,PREVENT DEEP VEIN THROMBOSIS,Heparin,Vascular disorders
+2406-ABC,PREVENT DEEP VEIN THROMBOSIS,Heparin,Vascular disorders
+2102-AB,PREVENT DEEP VEIN THROMBOSIS,Heparin,Vascular disorders
+29702-ABCDEFG,PREVENT DEEP VEIN THROMBOSIS,Heparin,Vascular disorders
+29301-A,PREVENT DVT,Heparin,Vascular disorders
+10402-ABCDEFGHI,PREVENT DVT,Heparin,Vascular disorders
+99905-ABCDE,PREVENT DVT,Heparin,Vascular disorders
+29302-A,PREVENT DVT,Heparin,Vascular disorders
+29701-ABCDE,PREVENT DVT,Heparin,Vascular disorders
+29302-A,PREVENT DVT,Heparin,Vascular disorders
+29201-A,PREVENT DVT,Heparin,Vascular disorders
+2401-AB,PREVENT DVT,Heparin,Vascular disorders
+21001-ABC,PREVENT DVT'S,Heparin,Vascular disorders
+2405-ABCDE,PREVENT DVT'S,Heparin,Vascular disorders
+29402-ABCDEF,PREVENT OVT,Heparin,Blood and lymphatic system disorders
+279802-ABC,PREVENT THROMBOEMBOLIC EVENT,Heparin,Vascular disorders
+279104-ABCD,PREVENT THROMBOEMBOLISM,Heparin,Vascular disorders
+279105-ABCDE,PREVENT THROMBOEMBOLISM,Heparin,Vascular disorders
+279402-ABC,PREVENT THROMBOEMBOLISM,Heparin,Vascular disorders
+279203-AB,PREVENT THROMBOEMBOLISM,Heparin,Vascular disorders
+279806-A,PREVENT THROMBOEMBOLISM,Heparin,Vascular disorders
+279206-A,PREVENT THROMBOEMBOLISM,Heparin,Vascular disorders
+279105-ABCDE,PREVENT THROMBOEMBOLISM,Heparin,Vascular disorders
+29701-ABCDE,PREVENT THROMBOSIS,Heparin,Vascular disorders
+29901-ABCD,PREVENT THROMBOSIS,Heparin,Vascular disorders
+26405-ABCDEFGHI,PREVENTION,Heparin,Blood and lymphatic system disorders
+26302-ABCDEFGHI,PREVENTION DVT,Heparin,Vascular disorders
+169101-ABCD,PREVENTION OF BLD CLOTS,Heparin,Blood and lymphatic system disorders
+2401-AB,RESTARTED-PREVENT DVT,Heparin,Vascular disorders
+279801-ABCDEF,THROMBOEMBOLISM PREVENTION,Heparin,Vascular disorders
+29402-ABCDEF,PREVENT PAIN,Acetaminophen And Hydrocodone,Pain
+129402-A,PIGGYBACK+DEMEROL PREV. NAUSEA,Hydroxyzine,Gastrointestinal disorders
+12305-ABCD,PREVENT NAUSEA WITH DEMEROL,Hydroxyzine,Gastrointestinal disorders
+219602-A,FLU PREVENTION,Influenza Vaccine,Infections and infestations
+99109-ABCDEFGH,PREVENT FLU,Influenza Vaccine,Infections and infestations
+99402-AB,PREVENT FLU,Influenza Vaccine,Infections and infestations
+29901-ABCD,PREVENT ANXIETY,Lorazepam,Psychiatric disorders
+279702-ABCDEFGHI,HYPOMAGNESEMIA PREVENTION,Magnesium Oxide,Metabolism and nutrition disorders
+279702-ABCDEFGHI,HYPOMAGNESEMIA PREVENTION,Magnesium Oxide,Metabolism and nutrition disorders
+99803-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Magnesium Sulfate,Metabolism and nutrition disorders
+99803-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Magnesium Sulfate,Metabolism and nutrition disorders
+29402-ABCDEF,PREVENT ELECTROLYTE IMBALANCE,Magnesium Sulfate,Metabolism and nutrition disorders
+29702-ABCDEFG,PREVENT ELECTROLYTE IMBALANCE,Magnesium Sulfate,Metabolism and nutrition disorders
+99201-ABCDEF,PREVENT ELECTROLYTE IMBALANCE,Magnesium Sulfate,Metabolism and nutrition disorders
+99705-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Magnesium Sulfate,Metabolism and nutrition disorders
+271101-ABC,PREVENT HYPOMAGNESEMIA,Magnesium Sulfate,Metabolism and nutrition disorders
+279105-ABCDE,PREVENT HYPOMAGNESEMIA,Magnesium Sulfate,Metabolism and nutrition disorders
+279103-ABCDEFG,PREVENT HYPOMAGNESEMIA,Magnesium Sulfate,Metabolism and nutrition disorders
+279402-ABC,PREVENT HYPOMAGNESEMIA,Magnesium Sulfate,Metabolism and nutrition disorders
+279803-ABCDEF,PREVENT HYPOMAGNESEMIA,Magnesium Sulfate,Metabolism and nutrition disorders
+239202-ABC,PREVENT SPINAL CORD SWELLING,Mannitol,Nervous system disorders
+29402-ABCDEF,PREVENT PAIN,Meperidine,Pain
+29101-AB,PREV INCREASED RESIDUALS,Metoclopramide,Surgical and medical procedures
+99705-ABCDEFGHI,PREVENT CONSTIPATION,Metoclopramide,Gastrointestinal disorders
+99705-ABCDEFGHI,PREVENT CONSTIPATION,Metoclopramide,Gastrointestinal disorders
+99803-ABCDEFGHI,PREVENT CONSTIPATION,Metoclopramide,Gastrointestinal disorders
+20103-ABCDEF,PREVENT REFLEX,Metoclopramide,Gastrointestinal disorders
+29701-ABCDE,PREVENT ULCERS,Metoclopramide,Gastrointestinal disorders
+16101-ABCD,PREVENT ULCERS,Metoclopramide,Gastrointestinal disorders
+19101-ABCDEFGHI,PREVENTION NAUSEA,Metoclopramide,Gastrointestinal disorders
+19301-ABCDEFGHI,PREVENTION OF NAUSEA,Metoclopramide,Gastrointestinal disorders
+21001-ABC,PREVENT INFECTION,Metronidazole,Infections and infestations
+21001-ABC,PREVENT INFECTION,Metronidazole,Infections and infestations
+29701-ABCDE,PREVENT INFECTIONS,Metronidazole,Infections and infestations
+29402-ABCDEF,PREVENT INFECTIONS,Metronidazole,Infections and infestations
+3302-ABCDEFGH,PREVENTIVE,Metronidazole,Gastrointestinal disorders
+279802-ABC,PREVENT YEAST INFECTION,Miconazole,Infections and infestations
+4301-ABCDE,ULCER PREVENTION,Misoprostol,Gastrointestinal disorders
+19308-ABCD,PREVENT D.T.'S,Multivitamin And Supplements,Metabolism and nutrition disorders
+10403-ABCDEFGHI,NAUSEA PREVIOUS,Nalbuphine,Gastrointestinal disorders
+10403-ABCDEFGHI,PREVIOUS NAUSEA,Nalbuphine,Gastrointestinal disorders
+271001-ABCDEF,PREVENT NICOTINE WITHDRAWAL,Nicotine,Psychiatric disorders
+271001-ABCDEF,PREVENT NICOTINE WITHDRAWAL,Nicotine,Psychiatric disorders
+271001-ABCDEF,PREVENT NICOTINE WITHDRAWAL,Nicotine,Psychiatric disorders
+279801-ABCDEF,PREVENT GI FUNGAL OVERGROWTH,Nystatin,Infections and infestations
+99702-ABCDEFG,PREVENT NAUSEA,Ondansetron,Gastrointestinal disorders
+21001-ABC,PREVENT INFECTION,Oxacillin,Infections and infestations
+21001-ABC,PREVENT INFECTION,Oxacillin,Infections and infestations
+29402-ABCDEF,PREVENT INFECTION,Oxacillin,Infections and infestations
+3401-ABC,PREVENT INFECTION,Oxacillin,Infections and infestations
+3402-AB,PREVENT INFECTION,Oxacillin,Infections and infestations
+129902-ABC,SEIZURE PREVENTION,Phenobarbital,Nervous system disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Phenytoin,Nervous system disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Phenytoin,Nervous system disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Phenytoin,Nervous system disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Phenytoin,Nervous system disorders
+99803-ABCDEFGHI,PREVENT SEIZURES,Phenytoin,Nervous system disorders
+4310-ABCDEFGHI,SEIZURE PREVENTION,Phenytoin,Nervous system disorders
+4310-ABCDEFGHI,SEIZURE PREVENTION,Phenytoin,Nervous system disorders
+4110-ABCDE,SEIZURE PREVENTION,Phenytoin,Nervous system disorders
+279801-ABCDEF,SEIZURE PREVENTION,Phenytoin,Nervous system disorders
+129902-ABC,SEIZURE PREVENTION,Phenytoin,Nervous system disorders
+4110-ABCDE,SEIZURE PREVENTION,Phenytoin,Nervous system disorders
+129902-ABC,SEIZURE PREVENTION,Phenytoin,Nervous system disorders
+4310-ABCDEFGHI,SEIZURE PREVENTION,Phenytoin,Nervous system disorders
+99705-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Potassium Chloride,Metabolism and nutrition disorders
+29402-ABCDEF,PREVENT ELECTROLYTE IMBALANCE,Potassium Chloride,Metabolism and nutrition disorders
+29302-A,PREVENT ELECTROLYTE IMBALANCE,Potassium Chloride,Metabolism and nutrition disorders
+29201-A,PREVENT ELECTROLYTE IMBALANCE,Potassium Chloride,Metabolism and nutrition disorders
+99705-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Potassium Chloride,Metabolism and nutrition disorders
+29702-ABCDEFG,PREVENT ELECTROLYTE IMBALANCE,Potassium Chloride,Metabolism and nutrition disorders
+99201-ABCDEF,PREVENT ELECTROLYTE IMBALANCE,Potassium Chloride,Metabolism and nutrition disorders
+279702-ABCDEFGHI,PREVENT HYPOKALEMIA,Potassium Chloride,Metabolism and nutrition disorders
+279103-ABCDEFG,PREVENT HYPOKALEMIA,Potassium Chloride,Metabolism and nutrition disorders
+279102-ABCD,PREVENT HYPOKALEMIA,Potassium Chloride,Metabolism and nutrition disorders
+279704-ABCDEFGHI,PREVENT HYPOKALEMIA,Potassium Chloride,Metabolism and nutrition disorders
+279901-AB,PREVENT TREAT HYPOKALEMIA,Potassium Chloride,Metabolism and nutrition disorders
+279803-ABCDEF,PREVENTION/TREATMENT OF HYP.,Potassium Chloride,Vascular disorders
+99803-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Potassium Phosphate,Metabolism and nutrition disorders
+99705-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Potassium Phosphate,Metabolism and nutrition disorders
+99705-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Potassium Phosphate,Metabolism and nutrition disorders
+279704-ABCDEFGHI,PREVENT HYPOPHOSPHATEMIA,Potassium Phosphate,Metabolism and nutrition disorders
+279804-ABC,PREVENTION OF HYPOPHOSPHATEMIA,Potassium Phosphate,Metabolism and nutrition disorders
+279802-ABC,PREVENT ITCHING,Promethazine,General disorders and administration site conditions
+279801-ABCDEF,PREVENT NAUSEA,Promethazine,Gastrointestinal disorders
+279801-ABCDEF,PREVENT NAUSEA,Promethazine,Gastrointestinal disorders
+279801-ABCDEF,PREVENT NAUSEA,Promethazine,Gastrointestinal disorders
+279801-ABCDEF,PREVENT NAUSEA,Promethazine,Gastrointestinal disorders
+16401-AB,GI PREVENTION,Ranitidine,Gastrointestinal disorders
+16401-AB,GI PREVENTION,Ranitidine,Gastrointestinal disorders
+16401-AB,GI PREVENTION,Ranitidine,Gastrointestinal disorders
+289702-ABCDEFG,H2 INHIBITOR PUD PREVENTION,Ranitidine,Gastrointestinal disorders
+319101-A,PREVENT G.I. ULCER,Ranitidine,Gastrointestinal disorders
+3302-ABCDEFGH,PREVENT STRESS ULCER,Ranitidine,Gastrointestinal disorders
+29701-ABCDE,PREVENT STRESS ULCER,Ranitidine,Gastrointestinal disorders
+3302-ABCDEFGH,PREVENT STRESS ULCER,Ranitidine,Gastrointestinal disorders
+311001-ABC,PREVENT ULCER,Ranitidine,Gastrointestinal disorders
+20401-ABCDE,PREVENT ULCER,Ranitidine,Gastrointestinal disorders
+20401-ABCDE,PREVENT ULCER,Ranitidine,Gastrointestinal disorders
+20401-ABCDE,PREVENT ULCER,Ranitidine,Gastrointestinal disorders
+20401-ABCDE,PREVENT ULCER,Ranitidine,Gastrointestinal disorders
+99705-ABCDEFGHI,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99201-ABCDEF,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+2103-ABC,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99107-ABCDEFGHI,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99109-ABCDEFGH,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99403-ABCDE,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99109-ABCDEFGH,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99109-ABCDEFGH,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99201-ABCDEF,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99705-ABCDEFGHI,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99109-ABCDEFGH,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+99107-ABCDEFGHI,PREVENT ULCERS,Ranitidine,Gastrointestinal disorders
+22101-ABC,STRESS ULCER PREVENTION,Ranitidine,Gastrointestinal disorders
+16101-ABCD,ULCER PREVENTION,Ranitidine,Gastrointestinal disorders
+29402-ABCDEF,PREVENT ELECTROLYTE IMBALANCE,Sodium Bicarbonate,Metabolism and nutrition disorders
+21001-ABC,PREVENT ELECTROLYTE IMBALANCE,Sodium Chloride,Metabolism and nutrition disorders
+99803-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Sodium Phosphates,Metabolism and nutrition disorders
+99705-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Sodium Phosphates,Metabolism and nutrition disorders
+99803-ABCDEFGHI,PREVENT ELECTROLYTE IMBALANCE,Sodium Phosphates,Metabolism and nutrition disorders
+279402-ABC,PREVENT HYPOPHOSPHATEMIA,Sodium Phosphates,Metabolism and nutrition disorders
+271101-ABC,PREVENT HYPOPHOSPHATEMIA,Sodium Phosphates,Metabolism and nutrition disorders
+279704-ABCDEFGHI,PREVENT HYPOPHOSPHATEMIA,Sodium Phosphates,Metabolism and nutrition disorders
+279101-ABCDE,PREVENT HYPOPHOSPHATEMIA,Sodium Phosphates,Metabolism and nutrition disorders
+279102-ABCD,PREVENT HYPOPHOSPHATEMIA,Sodium Phosphates,Metabolism and nutrition disorders
+271001-ABCDEF,PREVENT HYPOPHOSPHATEMIA,Sodium Phosphates,Metabolism and nutrition disorders
+239710-ABCD,GASTRIC ULCER PREVENTION,Sucralfate,Gastrointestinal disorders
+17101-AB,GI MOTILITY BLEEDING PREVENT,Sucralfate,Gastrointestinal disorders
+20404BCDE,PREVENT STRESS ULCER,Sucralfate,Gastrointestinal disorders
+29201-A,PREVENT STRESS ULCERS,Sucralfate,Gastrointestinal disorders
+20102-ABCD,PREVENT ULCER,Sucralfate,Gastrointestinal disorders
+99803-ABCDEFGHI,PREVENT ULCER,Sucralfate,Gastrointestinal disorders
+99803-ABCDEFGHI,PREVENT ULCER,Sucralfate,Gastrointestinal disorders
+20301-AB,PREVENT ULCER,Sucralfate,Gastrointestinal disorders
+29901-ABCD,PREVENT ULCERS,Sucralfate,Gastrointestinal disorders
+29901-ABCD,PREVENT ULCERS,Sucralfate,Gastrointestinal disorders
+29101-AB,PREVENT ULCERS,Sucralfate,Gastrointestinal disorders
+29701-ABCDE,PREVENT ULCERS,Sucralfate,Gastrointestinal disorders
+29201-A,PREVENT ULCERS,Sucralfate,Gastrointestinal disorders
+29302-A,PREVENT ULCERS,Sucralfate,Gastrointestinal disorders
+29701-ABCDE,PREVENT ULCERS,Sucralfate,Gastrointestinal disorders
+239105-ABC,ULCER PREVENTION,Sucralfate,Gastrointestinal disorders
+249103-ABCDEFGHI,ULCER PREVENTION,Sucralfate,Gastrointestinal disorders
+29402-ABCDEF,PREVENT INFECTION,Sulfamethoxazole,Infections and infestations
+16401-AB,PREVENTATIVE,Sulfamethoxazole,Infections and infestations
+4311-ABCDE,TETANUS PREVENTION,Tetanus Vaccine,Infections and infestations
+4202-ABCDEF,PREVENT CON VACCINE,Tolterodine,Infections and infestations
+2302-,PREVENT NAUSEA,Trimethobenzamide,Gastrointestinal disorders
+29402-ABCDEF,PREVENT INFECTION,Trimethoprim,Infections and infestations
+16401-AB,PREVENTATIVE,Trimethoprim,Infections and infestations
+19308-ABCD,PREVENT D.T.'S,Vitamin B1,Metabolism and nutrition disorders
+21001-ABC,PREVENT BLEEDING,Vitamin K,Blood and lymphatic system disorders
+29402-ABCDEF,PREVENT BLEEDING,Vitamin K,Blood and lymphatic system disorders
+99106-BDEFG,PREVENT BLEEDING,Vitamin K,Blood and lymphatic system disorders
+319101-A,PREVENT DVT,Warfarin,Vascular disorders
+99905-ABCDE,PREVENT DVT'S,Warfarin,Vascular disorders
+99905-ABCDE,PREVENT DVT'S,Warfarin,Vascular disorders
+279501-ABC,PREVENT THROMBOEMBOLISM,Warfarin,Vascular disorders
+279501-ABC,PREVENT THROMBOEMBOLISM,Warfarin,Vascular disorders
+279501-ABC,PREVENT THROMBOEMBOLISM,Warfarin,Vascular disorders
+311001-ABC,PREVENTS CLOTS,Warfarin,Vascular disorders
+129806-AB,PREVENTS SKIN BREAKDOWN,Zinc Oxide,Skin and subcutaneous tissue disorders
+4310-ABCDEFGHI,DVT PRECAUTIONS,Heparin,Vascular disorders
+4310-ABCDEFGHI,SEIZURE PRECAUTIONS,Phenytoin,Nervous system disorders
+4310-ABCDEFGHI,SEIZURE PRECAUTIONS,Phenytoin,Nervous system disorders
+4310-ABCDEFGHI,SEIZURE PRECAUTIONS,Phenytoin,Nervous system disorders
+4110-ABCDE,X 2 DOSES SEIZURE PRECAUTION,Phenytoin,Infections and infestations
