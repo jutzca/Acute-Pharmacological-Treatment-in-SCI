@@ -1,6 +1,6 @@
 ## ---------------------------
 ##
-## Script name: cohort_description_sygen
+## Script name: 1_cohort_description_sygen
 ##
 ## Purpose of script: To describe the Sygen cohort and create a table for publication
 ##
