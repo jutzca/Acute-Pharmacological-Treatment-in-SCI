@@ -1,39 +1,60 @@
-##### Code created by C. Jutzeler Noveber 10th, 2020
-##### Cohort: Sygen study
-#### Analysis of prophylactic drug use
+## ---------------------------
+##
+## Script name: 3_prophylactic_drug_use_sygen
+##
+## Purpose of script: To describe and quantify the number of medications that were administered for prophylaxis or prevention.
+##
+## Author: Dr. Catherine Jutzeler
+##
+## Date Created: 2020-12-2
+##
+## Copyright (c) Catherine Jutzeler, 2020
+## Email: catherine.jutzeler@bsse.ethz.ch
+##
+## ---------------------------
+##
+## Data source: Sygen Clinical Trial
+##
+## Notes: This analysis is for the publication Jutzeler et al, 2021 published in XX
+##   
+#### ---------------------------
 
+## set working directory
 
-#Clear workspace
-rm(list = ls())
- 
-#Set local drive
-Sys.setlocale(category = "LC_CTYPE", locale = "C")
+setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
 
-#The following commands will install these packages if they are not already installed:
-
-if(!require(magrittr)){install.packages("magrittr")}
-if(!require(dplyr)){install.packages("dplyr")}
-if(!require(ggplot2)){install.packages("ggplot2")}
-if(!require(gghighlight)){install.packages("gghighlight")}
-
-
-#List of libraries required for the analyses below
+## ---------------------------
+## load up the packages we will need:  
 library(magrittr) # needs to be run every time you start R and want to use %>%
 library(dplyr) 
 library(ggplot2)
 library(gghighlight)
 
-#where libraries are stored
-.libPaths()
+## ----------------------------
+## Install packages needed:  (uncomment as required)
 
-#paths
-outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures'
-outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables'
+# if(!require(magrittr)){install.packages("magrittr")}
+# if(!require(dplyr)){install.packages("dplyr")}
+# if(!require(ggplot2)){install.packages("ggplot2")}
+# if(!require(gghighlight)){install.packages("gghighlight")}
 
-#-------------------------Number of unique drugs administered to for disease prophylaxi------------------------------------------------------------------------------------------------------
+#### ---------------------------
+#Clear working space
+
+rm(list = ls())
+
+#### ---------------------------
+#Set output directorypaths
+
+outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
+outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
 
 
-prevent.indication <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Prophylactic_drug_use/prophylactic_drug_use_indications.csv", header = T, sep = ',')
+#### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
+
+#----- Number of unique drugs administered to for prophylaxis of secondary health complications -----
+#Load original data set
+prevent.indication <- read.csv("Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Prophylactic_drug_use/prophylactic_drug_use_indications.csv", header = T, sep = ',')
 names(prevent.indication)
 
 
@@ -64,7 +85,7 @@ ggsave(
 dev.off()
 
 
-#--------------------------Number of indications per organ system------------------------------------------------------------------------------------------------------
+#----- Number of indications per organ system ----- 
 
 #load original dataset
 prevent.organsystem <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Prophylactic_drug_use/Unique_drugs_prophylaxis.csv", header = T, sep = ',')
@@ -97,7 +118,7 @@ ggsave(
 dev.off()
 
 
-#-------------------------Number of indications per drugs------------------------------------------------------------------------------------------------------
+#----- Number of indications per drugs ----- 
 
 
 prevent.indication <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Prophylactic_drug_use/prophylactic_drug_use_indications.csv", header = T, sep = ',')
@@ -133,7 +154,7 @@ ggsave(
 
 dev.off()
 
-#-------------------------Number of patients that received prophylactic treatment per organ system----------------------------------------------------------------------------
+#----- Number of patients that received prophylactic treatment per organ system ----- 
 
 prevent.indication <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Prophylactic_drug_use/prophylactic_drug_use_indications.csv", header = T, sep = ',')
 names(prevent.indication)
@@ -154,7 +175,7 @@ prevent.indication.drugs.per.patient.plot
 
 
 
-#-------------------------Combine all plots----------------------------------------------------------------------------
+#----- Combine all plots ----- 
 
 library(ggpubr)
 prevention.combined.plot <-ggarrange(drugs_per_indication, drugs_per_orgsystem, prevent.indication.per.drug.plot,prevent.indication.drugs.per.patient.plot,
@@ -179,4 +200,5 @@ ggsave(
 dev.off()
 
 
+#### -------------------------------------------------------------------------- CODE END ------------------------------------------------------------------------------------------------####
 
