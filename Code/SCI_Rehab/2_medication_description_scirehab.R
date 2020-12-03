@@ -56,8 +56,8 @@ rm(list = ls())
 #### ---------------------------
 #Set output directorypaths
 
-outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/SCI_Rehab'
-outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/SCI_Rehab'
+outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/SCI_Rehab/'
+outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/SCI_Rehab/'
 
 
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
@@ -125,7 +125,6 @@ point.prevalence.scirehab
 #Make copy of data file to work with
 scirehab.medication.data.3 <- scirehab.medication.data
 
-
 #Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
 scirehab.medication.data.3[scirehab.medication.data.3>0] <- 1
 scirehab.medication.data.3[is.na(scirehab.medication.data.3)] <- 0 
@@ -140,7 +139,7 @@ for(i in cols_to_change){
 scirehab.medication.data.3.subset <- scirehab.medication.data.3[c(4:64)]
 
 #Aggregate data: Number of medications per day for each patient
-scirehab_medication_wide<-aggregate(scirehab.medication.data.3.subset[-1],by=list(scirehab.medication.data.3$generic_name, scirehab.medication.data.3$NEW_ID), FUN=sum)
+scirehab_medication_wide<-aggregate(scirehab.medication.data.3.subset[-1],by=list(scirehab.medication.data.3$generic_name, scirehab.medication.data.3$newid), FUN=sum)
 
 ####------ Calcualte number of patients
 scirehab_medication_wide.sum = scirehab_medication_wide%>%rowwise%>% dplyr::mutate(sum_7_days = sum(c(X1,X2,X3,X4,X5,X6,X7)))
@@ -153,17 +152,21 @@ scirehab_medication_wide.sum =scirehab_medication_wide.sum %>% rowwise%>% dplyr:
 
 #Covert all numbers greater than 1 to 1
 scirehab_medication_wide.sum$sum_7_days[scirehab_medication_wide.sum$sum_7_days>0] <- 1
+scirehab_medication_wide.sum$sum_7_days[scirehab_medication_wide.sum$sum_7_days<0] <- 0
 scirehab_medication_wide.sum$sum_14_days[scirehab_medication_wide.sum$sum_14_days>0] <- 1
+scirehab_medication_wide.sum$sum_14_days[scirehab_medication_wide.sum$sum_14_days<0] <- 0
 scirehab_medication_wide.sum$sum_30_days[scirehab_medication_wide.sum$sum_30_days>0] <- 1
+scirehab_medication_wide.sum$sum_30_days[scirehab_medication_wide.sum$sum_30_days<0] <- 0
 scirehab_medication_wide.sum$sum_60_days[scirehab_medication_wide.sum$sum_60_days>0] <- 1
+scirehab_medication_wide.sum$sum_60_days[scirehab_medication_wide.sum$sum_60_days<0] <- 0
 
 ####------ 7-day average and standard deviation
 #Subset data
 scirehab_medication_wide.sum.subset.7d <- scirehab_medication_wide.sum[c(1,2,63)]
 
 #Calcualte number of unique medications given per patient within first 7 days post injury
-x7_days_mean <- scirehab_medication_wide.sum.subset.7d %>% 
-  group_by(Group.2)%>% 
+x7_days_mean <- scirehab_medication_wide.sum.subset.7d%>%
+  dplyr::group_by(Group.2)%>% 
   summarise(Frequency.7days = sum(sum_7_days))
 
 #Calculate mean and sd for 7 days
@@ -234,22 +237,22 @@ library(plyr)
 data_long$condition<-revalue(data_long$condition, c("Frequency.7days"="7 Days", "Frequency.14days"="14 Days","Frequency.30days"="30 Days","Frequency.60days"="60 Days"))
 
 
-prevalence.plot <- data_long%>%ggplot( aes(x=condition, y=measurement, fill=condition)) +
+prevalence.plot.scirehab <- data_long%>%ggplot( aes(x=condition, y=measurement, fill=condition)) +
   geom_violin(trim=FALSE)+
-  geom_boxplot(width=0.1, fill="white")+  #scale_fill_viridis(discrete = TRUE, option='plasma', direction =-1) +
+  geom_boxplot(width=0.07, fill="white")+  #scale_fill_viridis(discrete = TRUE, option='plasma', direction =-1) +
   theme_classic() +
   theme(
     legend.position="none",
     axis.title.y = element_text(size=10)
   ) +scale_fill_brewer(palette="Blues") + 
   xlab("")+ylab("Average Number of Medications")
-prevalence.plot
+prevalence.plot.scirehab
 
 
 ##Save plot
 ggsave(
   "medication.prevalence.7-14-30-60days.plot.scirehab.pdf",
-  plot = prevalence.plot,
+  plot = prevalence.plot.scirehab,
   device = 'pdf',
   path = outdir_figures,
   scale = 1,
