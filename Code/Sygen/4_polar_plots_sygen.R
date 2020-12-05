@@ -21,7 +21,7 @@
 
 ## set working directory
 
-setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
+setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
 
 ## ---------------------------
 ## load up the packages we will need:  
@@ -43,8 +43,8 @@ rm(list = ls())
 #### ---------------------------
 #Set output directorypaths
 
-outdir_figures='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
-outdir_tables='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
+outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
+outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
 
 
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
@@ -85,25 +85,23 @@ ggsave(
 dev.off()
 
 
-
 #Count number of patients per indication
 df_2 <- dataframe_rm_duplicates %>%
   count(NEW_ID, indication, sort = TRUE)%>%
   count(indication, sort = TRUE)
 
 #Plotnumber of patients per indication
-nr.medications.indication.plot.sygen <- ggplot(data=df_2, aes(x=indication, y=n, fill=n)) +
+nr.patient.indication.plot.sygen <- ggplot(data=df_2, aes(x=indication, y=n, fill=n)) +
   geom_bar(stat='identity')+theme_light() +
   scale_fill_gradient(low='yellow', high='red', limits=c(0,800)) +
   theme(axis.title.y=element_text(angle=0)) + coord_polar()+theme(axis.title.y=element_blank(), axis.title.x = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank())
-
-
+nr.patient.indication.plot.sygen
 
 
 ##Save plot
 ggsave(
-  "nr.medications.indication.plot.sygen.pdf",
-  plot = nr.medications.indication.plot.sygen,
+  "nr.patient.indication.plot.sygen.pdf",
+  plot = nr.patient.indication.plot.sygen,
   device = 'pdf',
   path = outdir_figures,
   scale = 1,
