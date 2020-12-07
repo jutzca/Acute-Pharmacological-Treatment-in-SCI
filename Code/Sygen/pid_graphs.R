@@ -1,6 +1,6 @@
 #Split the masterfile by pid
 
-df_test <- read.csv("/Users/localadmin/Documents/5_R/masterfile/df1.csv", sep=',', header = TRUE)
+df_test <- read.csv("/Users/jutzca/Documents/5_R/masterfile/df1.csv", sep=',', header = TRUE)
 
 
 id <- df_test[order(df_test$NEW_ID),] 
@@ -64,8 +64,13 @@ class( data[, i]) = "numeric"
   data_long$daily_dose<- as.numeric(data_long$daily_dose)
   
     myplot1<- ggplot(data_long, aes(time, generic_name, fill=daily_dose ))+geom_tile(color = "white") +
-    scale_fill_gradient(low = "white", high="black") +theme_linedraw()+scale_x_continuous(expand = c(0, 0), breaks = c(0,10,20,30,60))+  ggtitle(paste(file))+ labs(x="Days Post-Injury")+ 
-    theme(panel.grid.major = element_blank(),axis.title.x = element_text(size = 12) ,axis.text.x = element_text(color="black", size=10), axis.text.y = element_text( color="gray28", size=9), axis.title.y  = element_blank(), legend.position = "none")
+    scale_fill_gradient(low = "white", high="black") +theme_linedraw()+
+      scale_x_continuous(expand = c(0, 0), breaks = c(0,10,20,30,60))+  
+      ggtitle(paste(file))+ labs(x="Days Post-Injury")+ 
+    theme(panel.grid.major = element_blank(),axis.title.x = element_text(size = 12),
+          axis.text.x = element_text(color="black", size=10), 
+          axis.text.y = element_text( color="gray28", size=9), 
+          axis.title.y  = element_blank(), legend.position = "none")
   
    ggsave(myplot1,filename=paste("myplot",file,".pdf",sep=""))
    

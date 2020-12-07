@@ -28,6 +28,7 @@ setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
 library(plyr)
 library(tidyr)
 library(ggplot2)
+library(dplyr)
 
 ## ----------------------------
 ## Install packages needed:  (uncomment as required)
@@ -51,7 +52,7 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 #load original sygen medication dataset
-masterfile.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_final.csv", sep=',', header = TRUE)
+masterfile.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_per_days.csv", sep=',', header = TRUE)
 
 #Create copy to work with
 
@@ -60,6 +61,10 @@ medication.per.patient <- masterfile.medication.data
 #Assign new ID for the patients (for data protection reason)
 medication.per.patient<-medication.per.patient %>% 
   dplyr::mutate(ID = group_indices_(medication.per.patient, .dots="NEW_ID")) 
+
+##Add the letter P in front of the newly created ID variable
+medication.per.patient$ID <- sub("^", "P", medication.per.patient$ID )
+medication.per.patient
 
 #Split the masterfile by pid
 id <- medication.per.patient[order(medication.per.patient$ID),] 
@@ -84,18 +89,20 @@ for(file in file_list)    #repeat for all files in dir folder
 {
   data <- read.csv(file, header=TRUE, sep=',')
   
-  data <-select(data,-c(1,2)) #remove first column as it is not needed
+  data <- read.csv(file.choose())
   
-  cols_to_change = c(3:365)    #change columns 4:368 to numerics class format
+  data.select <-dplyr::select(data,-c(1,2)) #remove first column as it is not needed
+  
+  cols_to_change = c(2:367)    #change columns 4:368 to numerics class format
   for(i in cols_to_change){
-    class( data[, i]) = "numeric"
+    class(data.select[, i]) = "numeric"
   }
   
-  data [data>0] <- 1
-  data  <-  data [c(1:62)]
+  data.select [data.select>0] <- 1
+  data.select  <-  data.select [c(1:62,368)]
   
   
-  datan<-ddply(data,.(generic_name), function(x) colSums(x[,-1], na.rm = TRUE))
+  datan<-ddply(data.select,.(generic_name), function(x) colSums(x[,-c(1,63)], na.rm = TRUE))
   
   data_long<-datan%>%
     gather(time, dose, X0:X60)
@@ -106,11 +113,19 @@ for(file in file_list)    #repeat for all files in dir folder
   data_long$time<- as.numeric(data_long$time)
   data_long$daily_dose<- as.numeric(data_long$daily_dose)
   
-  myplot1<- ggplot(data_long, aes(time, generic_name, fill=daily_dose ))+geom_tile(color = "white") +
-    scale_fill_gradient(low = "white", high="black") +theme_linedraw()+scale_x_continuous(expand = c(0, 0), breaks = c(0,10,20,30,60))+  ggtitle(paste(file))+ labs(x="Days Post-Injury")+ 
-    theme(panel.grid.major = element_blank(),axis.title.x = element_text(size = 12) ,axis.text.x = element_text(color="black", size=10), axis.text.y = element_text( color="gray28", size=9), axis.title.y  = element_blank(), legend.position = "none")
   
-  ggsave(myplot1,filename=paste("myplot",file,".pdf",sep=""))
+  myplot1<- ggplot(data_long, aes(time, generic_name, fill=daily_dose))+geom_tile(color = "white") +
+        scale_fill_gradient(low = "white", high="black") +
+    theme_linedraw()+scale_x_continuous(expand = c(0, 0), breaks = c(0,10,20,30,60))+ 
+    ggtitle("Number of Administrations per Drug per Day")+ 
+    labs(x="Days Post-Injury")+ 
+    theme(panel.grid.major = element_blank(),axis.title.x = element_text(size = 12),
+          axis.text.x = element_text(color="black", size=10), 
+          axis.text.y = element_text( color="gray28", size=9), 
+          axis.title.y  = element_blank(), legend.position = "none")
+  
+  
+  ggsave(myplot1,filename=paste("myplot",file,".pdf",sep=""),path='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen/Polypharmacy')
   
 }
 
@@ -121,3 +136,4 @@ for(file in file_list)    #repeat for all files in dir folder
 
 
 #### -------------------------------------------------------------------------- CODE END ------------------------------------------------------------------------------------------------####
+

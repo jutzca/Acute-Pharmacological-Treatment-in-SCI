@@ -1,19 +1,74 @@
-library(plyr)
-library(tidyr)
-library(ggplot2)
 
+# ---------------------------
+##
+## Script name: 1_Data_preprocessing_scirehab
+##
+## Purpose of script: Data preprocessing of the scirehab data
+##
+## Author: Dr. Catherine Jutzeler
+##
+## Date Created: 2020-12-7
+##
+## Copyright (c) Catherine Jutzeler, 2020
+## Email: catherine.jutzeler@bsse.ethz.ch
+##
+## ---------------------------
+##
+## Data source: SCIRehab Data
+##
+## Notes: This analysis is for the publication Jutzeler et al, 2021 published in XX
+##   
+#### ---------------------------
 
+## set working directory
 
+setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
 
 Sys.setlocale(category = "LC_CTYPE", locale = "C")
 
-drug <- read.csv("/Users/localadmin/Documents/5_R/Drug_addep/masterfile/catherine_drug_file_new.csv", header = T, sep = ',')
+## ---------------------------
+## load up the packages we will need:  
+library(plyr)
+library(tidyr)
+library(ggplot2)
+library(reshape2)
+library(hablar)
+library(dplyr)
+library(data.table)
+
+
+## ----------------------------
+## Install packages needed:  (uncomment as required)
+
+#if(!require(plyr)){install.packages("plyr")}
+#if(!require(tidyr)){install.packages("tidyr")}
+#if(!require(ggplot2)){install.packages("ggplot2")}
+#if(!require(reshape2)){install.packages("reshape2")}
+#if(!require(hablar)){install.packages("hablar")}
+#if(!require(dplyr)){install.packages("dplyr")}
+#if(!require(data.table)){install.packages("data.table")}
+
+#### ---------------------------
+#Clear working space
+
+rm(list = ls())
+
+#### ---------------------------
+#Set output directorypaths
+
+outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/SCI_Rehab'
+outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/SCI_Rehab'
+
+
+#### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
+
+#Load original data
+drug <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/masterfile/catherine_drug_file_new.csv", header = T, sep = ',')
 
 ##Add character c to ID
 drug$newid<- sprintf('C%i', drug$newid)
 
 drug <- drug[order(drug$generic_name),] 
-
 
 drug_split <- split(drug, drug$generic_name)
 
@@ -22,18 +77,13 @@ new_names <- as.character(unique(drug$generic_name))
 
 for (i in 1:length(drug_split)) {
   assign(new_names[i],  drug_split[[i]])
-  write.csv(drug_split[[i]], paste("/Users/localadmin/Documents/5_R/Drug_addep/data/",new_names[i],".csv"))
+  write.csv(drug_split[[i]], paste("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/data/",new_names[i],".csv"))
 }
 
-###Load data
-setwd("/Users/localadmin/Documents/5_R/Drug_addep/data/")
 
-library(plyr)
-library(reshape2)
-library(hablar)
-library(dplyr)
-library(data.table)
 
+#--- Set working directory
+setwd("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/data/")
 
 
 #all files in folder
@@ -55,7 +105,7 @@ for(file in file_list)    #repeat for all files in dir folder
   
   data_new<-ddply( data,.(newid, generic_name), function(x) colSums(x[,-1], na.rm = TRUE))
   
-  dataset <- read.csv("/Users/localadmin/Documents/5_R/Drug_addep/pid/pid.csv", header = T, sep = ',')
+  dataset <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/pid/pid.csv", header = T, sep = ',')
   df_final <-merge(data_new, dataset, by="newid", all.y =TRUE ) #extend NEW_ID to all 791 IDs
   
   
@@ -66,7 +116,7 @@ for(file in file_list)    #repeat for all files in dir folder
   df_final2 <-  df_final[order(df_final$newid),] 
   
   
-  write.csv(df_final2, paste("/Users/localadmin/Documents/5_R/Drug_addep/new/",file)) #export each merged and modified file
+  write.csv(df_final2, paste("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/new/",file)) #export each merged and modified file
   
 }
 
