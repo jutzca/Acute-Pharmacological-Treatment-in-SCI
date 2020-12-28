@@ -88,9 +88,7 @@ file_list <- list.files()
 for(file in file_list)    #repeat for all files in dir folder
 {
   data <- read.csv(file, header=TRUE, sep=',')
-  
-  data <- read.csv(file.choose())
-  
+
   data.select <-dplyr::select(data,-c(1,2)) #remove first column as it is not needed
   
   cols_to_change = c(2:367)    #change columns 4:368 to numerics class format
