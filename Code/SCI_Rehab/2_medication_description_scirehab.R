@@ -245,7 +245,7 @@ prevalence.plot.scirehab <- data_long%>%ggplot( aes(x=condition, y=measurement, 
     legend.position="none",
     axis.title.y = element_text(size=10)
   ) +scale_fill_brewer(palette="Blues") + 
-  xlab("")+ylab("Average Number of Medications")
+  xlab("")+ylab("Number of Medications")
 prevalence.plot.scirehab
 
 

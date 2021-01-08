@@ -115,6 +115,21 @@
   
   point.prevalence.sygen
   
+  ##Save plot
+  ggsave(
+    "point.prevalence.sygen.pdf",
+    plot = point.prevalence.sygen,
+    device = 'pdf',
+    path = outdir_figures,
+    scale = 1,
+    width = 6,
+    height = 4,
+    units = "in",
+    dpi = 300
+  )
+  
+  dev.off()
+  
   
   #-------------------------Calculate and visualize number of drugs per patient with 7,14, and 30 days respectively-----------------
   
@@ -219,9 +234,7 @@
   max(x60_days_mean$Frequency.60days)
   
   ####------ Plot the average drugs per 7, 14, 30, and 60 days
-  
-  
-  sygen_medication.plot <-cbind(x7_days_mean,x14_days_mean[c(2)],x30_days_mean[c(2)],x60_days_mean[c(2)])
+    sygen_medication.plot <-cbind(x7_days_mean,x14_days_mean[c(2)],x30_days_mean[c(2)],x60_days_mean[c(2)])
   
   #Wide to long format
   data_long <- gather(sygen_medication.plot, condition, measurement, Frequency.7days:Frequency.60days, factor_key=TRUE)
@@ -239,7 +252,7 @@
       legend.position="none",
       axis.title.y = element_text(size=10)
     ) +scale_fill_brewer(palette="Blues") + 
-    xlab("")+ylab("Average Number of Medications")
+    xlab("")+ylab("Number of Medications")
   prevalence.plot
   
   
