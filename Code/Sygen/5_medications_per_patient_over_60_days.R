@@ -29,6 +29,7 @@ library(plyr)
 library(tidyr)
 library(ggplot2)
 library(dplyr)
+library(stringr)
 
 ## ----------------------------
 ## Install packages needed:  (uncomment as required)
@@ -115,7 +116,8 @@ for(file in file_list)    #repeat for all files in dir folder
   myplot1<- ggplot(data_long, aes(time, generic_name, fill=daily_dose))+geom_tile(color = "white") +
         scale_fill_gradient(low = "white", high="black") +
     theme_linedraw()+scale_x_continuous(expand = c(0, 0), breaks = c(0,10,20,30,60))+ 
-    ggtitle("Number of Administrations per Drug per Day")+ 
+    ggtitle(stringr::str_sub(file, end=-5))+
+     #ggtitle(paste(file))+ 
     labs(x="Days Post-Injury")+ 
     theme(panel.grid.major = element_blank(),axis.title.x = element_text(size = 12),
           axis.text.x = element_text(color="black", size=10), 
@@ -123,7 +125,7 @@ for(file in file_list)    #repeat for all files in dir folder
           axis.title.y  = element_blank(), legend.position = "none")
   
   
-  ggsave(myplot1,filename=paste("myplot",file,".pdf",sep=""),path='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen/Polypharmacy')
+  ggsave(myplot1,filename=paste(stringr::str_sub(file, end=-5),".pdf",sep=""),path='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen/Polypharmacy')
   
 }
 

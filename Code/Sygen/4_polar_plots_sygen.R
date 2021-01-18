@@ -27,6 +27,8 @@ setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
 ## load up the packages we will need:  
 library(ggplot2)
 library(dplyr)
+library(easyGgplot2)
+library(tidytext)
 
 
 ## ----------------------------
@@ -55,24 +57,24 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 dataframe <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df2_drugs_freq_disorder.csv", sep = ',', header = T)
 
 #Remove Duplicates based on three rows
-dataframe_rm_duplicates <- dataframe[!duplicated(dataframe[c(1:3)]),]
+dataframe_rm_duplicates <- dataframe[!duplicated(dataframe[c(2:4)]),]
 
 #Count number of drugs per indication
 df_1 <- dataframe_rm_duplicates %>%
-  count(generic_name, indication, sort = TRUE) %>%
-  count(indication, sort = TRUE)
+  dplyr::count(generic_name, indication, sort = TRUE) %>%
+  dplyr::count(indication, sort = TRUE)
 
 #Plot number of drugs per indication
-nr.medications.indication.plot.sygen <-ggplot(data=df_1, aes(x=indication, y=n, fill=n)) +
+polar_plots.nr.medications.indication.sygen <-ggplot(data=df_1, aes(x=indication, y=n, fill=n)) +
   geom_bar(stat='identity')+theme_light() +
   scale_fill_gradient(low='red', high='blue', limits=c(0,150)) +
   theme(axis.title.y=element_text(angle=0))+ coord_polar()+theme(axis.title.y=element_blank(), axis.title.x = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank())
-nr.medications.indication.plot.sygen
+polar_plots.nr.medications.indication.sygen
 
 ##Save plot
 ggsave(
-  "nr.medications.indication.plot.pdf",
-  plot = nr.medications.indication.plot.sygen,
+  "polar_plots.nr.medications.indication.sygen.pdf",
+  plot = polar_plots.nr.medications.indication.sygen,
   device = 'pdf',
   path = outdir_figures,
   scale = 1,
@@ -87,21 +89,21 @@ dev.off()
 
 #Count number of patients per indication
 df_2 <- dataframe_rm_duplicates %>%
-  count(NEW_ID, indication, sort = TRUE)%>%
-  count(indication, sort = TRUE)
+  dplyr::count( NEW_ID, indication, sort = TRUE)   %>%
+  dplyr::count(indication, sort = TRUE)
 
 #Plotnumber of patients per indication
-nr.patient.indication.plot.sygen <- ggplot(data=df_2, aes(x=indication, y=n, fill=n)) +
+polar_plots.nr.patient.indication.sygen <- ggplot(data=df_2, aes(x=indication, y=n, fill=n)) +
   geom_bar(stat='identity')+theme_light() +
   scale_fill_gradient(low='yellow', high='red', limits=c(0,800)) +
   theme(axis.title.y=element_text(angle=0)) + coord_polar()+theme(axis.title.y=element_blank(), axis.title.x = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank())
-nr.patient.indication.plot.sygen
+polar_plots.nr.patient.indication.sygen
 
 
 ##Save plot
 ggsave(
-  "nr.patient.indication.plot.sygen.pdf",
-  plot = nr.patient.indication.plot.sygen,
+  "polar_plots.nr.patient.indication.sygen.pdf",
+  plot = polar_plots.nr.patient.indication.sygen,
   device = 'pdf',
   path = outdir_figures,
   scale = 1,
@@ -112,5 +114,27 @@ ggsave(
 )
 
 dev.off()
+
+
+
+# Barplot of drugs per indication
+dataframe_rm_duplicates %>% subset(!(indication=="Cardiac System")) %>% subset(!(indication=="Immune system  "))%>%  subset(!(indication=="Renal and urinary system  "))%>%                      
+  dplyr::count(indication, generic_name) %>%  
+  dplyr::filter(n>= 20) %>%   
+  dplyr::arrange(desc(n))%>%  
+  dplyr::arrange(.,indication) %>%    
+  ggplot(aes(tidytext::reorder_within(indication, -n, generic_name), n))+
+  geom_bar(stat = "identity")+
+  labs(x = NULL, y = "n") +
+  facet_wrap(.~indication, scales = "free", ncol=3) +theme_bw()+theme()
+
+
+
+
+
+
+
+
+
 
 
