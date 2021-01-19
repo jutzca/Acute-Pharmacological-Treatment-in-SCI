@@ -129,7 +129,7 @@ ui <- dashboardPage(
                 heigth = "500px",
                 solidHeader = TRUE,
                 
-                h4("Background"),
+                h4("Study description"),
                 "Complications arising from acute traumatic spinal cord injury (SCI) are routinely managed by various pharmacological interventions. 
                 Despite decades of clinical application, the potential impact on neurological recovery has been largely overlooked. The goal of this
                 study was to highlight drugs with potential disease modifying effects, and, in doing so, identify a novel translational path to enhancing 
@@ -145,18 +145,6 @@ ui <- dashboardPage(
                 Over 770 unique medications were administered within the first month after injury. On average, patients received 20 unique medications (range 1-58), 
                 often in a combinatorial or overlapping fashion (i.e., polypharmacy). Approximately 10% of medications were administered acutely as prophylaxis 
                 (e.g., pain, infections). Our study revealed a high degree of polypharmacy in the acute stages of spinal cord injury, with potential to both positively and negatively impact neurological recovery.",
-                br(),
-                br(),
-                
-                h4("Confidentiality/anonymity and data security"),
-                "All of your personal identifying information will be pseudonymised using a keycode. Any data presented in reports will be anonymous, that is
-                information used in any journal article or presentation will not allow identification to any specific individual.",
-                br(),
-                "Data will be stored securely on a password protected computer to ensure confidentiality. Only the research team who are directly involved in the
-                study will have access to the data.",
-                br(),
-                "We will follow ethical and legal practices in accordance with the Data Protection Act (2018), and the General Data Practice Regulations (GDPR)
-                (2018).",
                 br(),
                 br(),
                 h4("Study team"),
