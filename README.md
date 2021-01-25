@@ -29,7 +29,7 @@ This repository is maintained by:
 
 ## Funding
 
-This study was funded by a research grant from the [Swiss National Science Foundation](http://www.snf.ch/en/Pages/default.aspx) (Ambizione Grant #PZ00P3_186101, Jutzeler) and [Wings for Life Research Foundation](https://www.wingsforlife.com/en/research/blood-biomarkers-to-predict-outcome-after-spinal-cord-injury-a-precision-medicine-approach-3486/) (#2017_044, Jutzeler and Kramer).
+This study was funded by the [Swiss National Science Foundation](http://www.snf.ch/en/Pages/default.aspx) (Ambizione Grant #PZ00P3_186101, Jutzeler) and [Wings for Life Research Foundation](https://www.wingsforlife.com/en/research/blood-biomarkers-to-predict-outcome-after-spinal-cord-injury-a-precision-medicine-approach-3486/) (#2017_044, Jutzeler and Kramer).
 
 
 
