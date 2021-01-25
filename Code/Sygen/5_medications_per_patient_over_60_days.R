@@ -39,9 +39,11 @@ library(stringr)
 #if(!require(ggplot2)){install.packages("ggplot2")}
 
 #### ---------------------------
-#Clear working space
+# R Studio Clean-Up:
+cat("\014") # clear console
+rm(list=ls()) # clear workspace
+gc() # garbage collector
 
-rm(list = ls())
 
 #### ---------------------------
 #Set output directorypaths
@@ -111,6 +113,8 @@ for(file in file_list)    #repeat for all files in dir folder
   data_long$time<- sub("X","",data_long$time)
   data_long$time<- as.numeric(data_long$time)
   data_long$daily_dose<- as.numeric(data_long$daily_dose)
+  
+  
   
   
   myplot1<- ggplot(data_long, aes(time, generic_name, fill=daily_dose))+geom_tile(color = "white") +

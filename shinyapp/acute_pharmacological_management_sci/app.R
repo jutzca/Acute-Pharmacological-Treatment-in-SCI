@@ -47,6 +47,9 @@ library(igraph)
 library(intergraph)
 library(sna)
 library(shinyjs)
+library(metathis)
+library(r2d3)
+
 
 
 ## ----------------------------
@@ -62,15 +65,28 @@ library(shinyjs)
 
 
 #### ---------------------------
-#Clear working space
-
-rm(list = ls())
+# R Studio Clean-Up:
+# cat("\014") # clear console
+# rm(list=ls()) # clear workspace
+# gc() # garbage collector
 
 #### ---------------------------
 #Set local system
 Sys.setlocale('LC_ALL','C') 
 
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
+
+#### ---------------------------
+# load data:
+# data creation not possible in docker container (i.e., on server)
+# if (!file.exists("data/shinyDataAggregated.RData")) {
+#   data_prep()
+# }
+
+#load("data/shinyDataAggregated.RData")
+#load("data/shinyDataLongitudinal.RData")
+
+
 
 # Default
 
@@ -85,23 +101,22 @@ ui <- dashboardPage(
    #Select 'skin' color: blue, black, green, purple, red, yellow
   skin = "purple",
   
+  
+  
+  
+  
   #----Dashboard sidebar----
   dashboardSidebar(width = 350,
     sidebarMenu(id = "sidebarMenu",
                 menuItem("About", tabName = "about", icon = icon("info-circle")),
-                menuItem("Cohort", tabName = "cohort", icon = icon("users"))
-                #menuItem("Psychological Variables", tabName = "Variables", icon = icon("fas fa-pencil-ruler")),
-                #menuItem("Development", tabName = "development", icon = icon("fas fa-chart-line"), badgeLabel = "new", badgeColor = "blue"),
-                #menuItem("Data", tabName = "data", icon = icon("fas fa-share-square")),
-               #menuItem(HTML(paste0("Take the survey now ", icon("external-link"))), icon=icon("fas fa-file-signature"), href = "https://nyu.qualtrics.com/jfe/form/SV_6svo6J4NF7wE6tD", newtab = T),
-                #uiOutput("dynamic_content")
-                ),
-    
+                menuItem("Cohorts", tabName = "cohort", icon = icon("users")),
+                menuItem(HTML(paste0("Take the survey now ", icon("external-link"))), icon=icon("signature"), href = "https://nyu.qualtrics.com/jfe/form/SV_6svo6J4NF7wE6tD", newtab = T),
+                uiOutput("dynamic_content")),
     shinyjs::useShinyjs(),
     tags$footer(HTML("<strong>Copyright &copy; 2020 <a href=\"Dr. Catherine Jutzeler\" target=\"_blank\">Data Science for Health Lab</a>.</strong> 
                      <br>This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
                      <br><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png\" /></a>
-                     "), 
+                     "),
                 #latest.DateTime,
                 id = "sideFooter",
                 align = "left",
@@ -110,12 +125,134 @@ ui <- dashboardPage(
                 bottom:0;
                 width:100%;
                 padding: 10px;
-                "
-    )
+                ")
   ),
   
   #----Dashboard body----
   dashboardBody(
+    tags$script(HTML("$('body').addClass('sidebar-mini');")),
+    tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "style.css")),
+    tags$head(tags$meta(name = "viewport", content = "width=1600"), uiOutput("body")),
+    tags$head(tags$link(rel = "shortcut icon", href = "favicon.ico")),
+    #tags$head(tags$link(rel="shortcut icon", href="https://raw.githubusercontent.com/JannisCodes/PsyCorona-WebApp/master/www/faviconData.png")),
+    tags$head(tags$link(rel = "shortcut icon", href = "favicon.ico")),
+    tags$style(
+      type = 'text/css',
+      '.bg-aqua {background-color: #605ca8!important; }
+      .bttn-simple.bttn-primary {background-color: #605ca8!important; }
+      .btn.radiobtn.btn-primary {float: center!important;
+      display: block;
+      width: 160px}
+      '
+    ),
+    tags$style("@import url(https://use.fontawesome.com/releases/v5.13.0/css/all.css);"),
+    tags$script(src = "https://code.highcharts.com/mapdata/custom/world.js"),
+    tags$script(HTML("
+                     var openTab = function(tabName){
+                     $('a', $('.sidebar')).each(function() {
+                     if(this.getAttribute('data-value') == tabName) {
+                     this.click()
+                     };
+                     });
+                     };
+                     $('.sidebar-toggle').attr('id','menu');
+                     var dimension = [0, 0];
+                     $(document).on('shiny:connected', function(e) {
+                     dimension[0] = window.innerWidth;
+                     dimension[1] = window.innerHeight;
+                     Shiny.onInputChange('dimension', dimension);
+                     });
+                     $(window).resize(function(e) {
+                     dimension[0] = window.innerWidth;
+                     dimension[1] = window.innerHeight;
+                     Shiny.onInputChange('dimension', dimension);
+                     });
+                     ")),
+    
+    
+    
+    tags$style(HTML("
+                      .btn-primary.btn {
+                    color: #605ca8;
+                    background-color: #fff;
+                    border: 2px #605ca8 solid;
+                    }
+                    .btn-primary.btn:hover {
+                    color: #fff;
+                    background-color: #605ca8;
+                    }
+                    .btn-primary.active {
+                    color: #fff;
+                    background-color: #605ca8;
+                    border-color: #605ca8;
+                    }
+                    .btn-outline-primary:focus,
+                    .btn-outline-primary.focus{
+                    color: #fff;
+                    background-color: #605ca8;
+                    border-color: #605ca8;
+                    }
+                    
+
+                    .btn.btn-success {
+                     color: #fff;
+                    background-color: #605ca8;
+                    border-color: #605ca8;
+                    }
+                    .btn.btn-success.focus,
+                    .btn.btn-success:focus {
+                    color: #fff;
+                    background-color: #605ca8;
+                    border-color: #605ca8;
+                    outline: none;
+                    box-shadow: none;
+                    }
+                    .btn.btn-success:hover {
+                    color: #fff;
+                    background-color: #605ca8;
+                    border-color: #605ca8;
+                    outline: none;
+                    box-shadow: none;
+                    }
+                    .btn.btn-success.active,
+                    .btn.btn-success:active {
+                    color: #fff;
+                    background-color: #605ca8;
+                    border-color: #605ca8;
+                    outline: none;
+                    }
+                    .btn.btn-success.active.focus,
+                    .btn.btn-success.active:focus,
+                    .btn.btn-success.active:hover,
+                    .btn.btn-success:active.focus,
+                    .btn.btn-success:active:focus,
+                    .btn.btn-success:active:hover {
+                    color: #fff;
+                    background-color: #8f8cc2 ;
+                    border-color: #8f8cc2 ;
+                    outline: none;
+                    box-shadow: none;
+                    }
+
+
+
+
+                    ")),
+
+    
+    # meta() %>%
+    #   meta_social(
+    #     title = "PsyCorona: Data Visualization",
+    #     description = paste0("A tool to explore the patterns of psychological reactions to the Covid-19 epidemic across ", nrow(ctry.only.red), " countries."),
+    #     url = "https://psycorona.shinyapps.io/WebApp/",
+    #     image = "https://raw.githubusercontent.com/JannisCodes/PsyCorona-WebApp/master/www/media.png",
+    #     image_alt = "PsyCorona Data Tool",
+    #     twitter_creator = "@JannisWrites",
+    #     twitter_card_type = "summary",
+    #     twitter_site = "@JannisWrites"
+    #   ),
+    # 
+    # 
     
     
     shinyjs::useShinyjs(),
@@ -184,14 +321,17 @@ ui <- dashboardPage(
                 br(),
                 br(),
               box(width = 4,
-                  HTML("<a class=\"twitter-timeline\" data-height=\"600\" href=\"https://twitter.com/Jutzeler_Cathy\">A Twitter List by FortuneMagazine</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
+                  HTML("<a class=\"twitter-timeline\" data-height=\"600\" href=\"https://twitter.com/DatSci_4_health\">A Twitter List by FortuneMagazine</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
               )
                   ),
             fluidRow(
               valueBox(prettyNum(1895, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
               valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
-              valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
-              valueBox("XX", "Researchers", icon = icon("user-graduate"), width = 3,  color = "purple")#,
+              valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
+                "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
+              ),
+              #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
+              valueBox("XX", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
               #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
             )
 
@@ -199,7 +339,29 @@ ui <- dashboardPage(
             )
       ),
     tabItem(tabName = "cohort",
-            h3("Description of Cohort")
+            h3("Description of Cohorts"),
+                        fluidRow(
+              box(width = 12,
+                  div(style="display:inline-block;width:100%;text-align:center;",
+                      radioGroupButtons(
+                        inputId = "var", 
+                        label = "Patient characteristics:", 
+                        selected = "languages",
+                        status = "success",
+                        #justified = T, #if true, all boxes have the same length
+                        individual = T, #if false, then the boxes are connected
+                        choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- or paraplegia"),
+                        choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia")
+                        #checkIcon = list(yes = icon("ok", lib = "glyphicon"), no = icon("remove", lib = "glyphicon"))
+                      )
+                  ),
+                  h3(textOutput("sample.bar.NA"), align = "center"),
+                  r2d3::d3Output("d3.bar"),
+                  textOutput("SampleTxt"), align = "center")
+              #)
+            )
+            
+            
     )
     
     
@@ -210,6 +372,8 @@ ui <- dashboardPage(
 
 
 server <- function(input, output) {
+  
+  
   output$cohort <- renderMenu({
     sidebarMenu(
       menuItem("Cohort description", icon = icon("users"))
