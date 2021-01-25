@@ -109,7 +109,9 @@ ui <- dashboardPage(
   dashboardSidebar(width = 350,
     sidebarMenu(id = "sidebarMenu",
                 menuItem("About", tabName = "about", icon = icon("info-circle")),
-                menuItem("Cohorts", tabName = "cohort", icon = icon("users")),
+                menuItem("Cohorts", tabName = "cohort", icon = icon("users"),
+                         menuSubItem('Sygen Trial', tabName = 'sygentrial', icon = icon("hospital-user")),
+                         menuSubItem('SCIRehab', tabName = 'scirehab', icon=icon("database"))),
                 menuItem(HTML(paste0("Take the survey now ", icon("external-link"))), icon=icon("signature"), href = "https://nyu.qualtrics.com/jfe/form/SV_6svo6J4NF7wE6tD", newtab = T),
                 uiOutput("dynamic_content")),
     shinyjs::useShinyjs(),
@@ -170,7 +172,7 @@ ui <- dashboardPage(
                      ")),
     
     
-    
+    # Customize color for the box status 'primary' and 'success' to match the skin color
     tags$style(HTML("
                       .btn-primary.btn {
                     color: #605ca8;
@@ -234,10 +236,53 @@ ui <- dashboardPage(
                     box-shadow: none;
                     }
 
-
-
-
-                    ")),
+                  ")),
+    
+    
+    # .btn.btn-success {
+    #   color: #ffd43a;
+    #     background-color: #193152;
+    #     border-color: #193152;
+    # }
+    # .btn.btn-success.focus,
+    # .btn.btn-success:focus {
+    #   color: #ffd43a;
+    #     background-color: #193152;
+    #     border-color: #193152;
+    #     outline: none;
+    #   box-shadow: none;
+    # }
+    # .btn.btn-success:hover {
+    #   color: #ffd43a;
+    #     background-color: #193152;
+    #     border-color: #193152;
+    #     outline: none;
+    #   box-shadow: none;
+    # }
+    # .btn.btn-success.active,
+    # .btn.btn-success:active {
+    #   color: #ffd43a;
+    #     background-color: #193152;
+    #     border-color: #193152;
+    #     outline: none;
+    # }
+    # .btn.btn-success.active.focus,
+    # .btn.btn-success.active:focus,
+    # .btn.btn-success.active:hover,
+    # .btn.btn-success:active.focus,
+    # .btn.btn-success:active:focus,
+    # .btn.btn-success:active:hover {
+    #   color: #ffd43a;
+    #     background-color: #1d4c8d ;
+    #     border-color: #1d4c8d ;
+    #     outline: none;
+    #   box-shadow: none;
+    # }
+    
+    
+    
+    
+    
 
     
     # meta() %>%
@@ -338,22 +383,22 @@ ui <- dashboardPage(
     
             )
       ),
-    tabItem(tabName = "cohort",
-            h3("Description of Cohorts"),
+    tabItem(tabName = "sygentrial",
+            h3("Description of Sygen Trial Cohort"),
                         fluidRow(
-              box(width = 12,
-                  div(style="display:inline-block;width:100%;text-align:center;",
-                      radioGroupButtons(
-                        inputId = "var", 
-                        label = "Patient characteristics:", 
-                        selected = "languages",
-                        status = "success",
-                        #justified = T, #if true, all boxes have the same length
-                        individual = T, #if false, then the boxes are connected
-                        choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- or paraplegia"),
-                        choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia")
-                        #checkIcon = list(yes = icon("ok", lib = "glyphicon"), no = icon("remove", lib = "glyphicon"))
-                      )
+                         box(width = 12,
+                         div(style="display:inline-block;width:100%;text-align:center;",
+                          radioGroupButtons(
+                          inputId = "var", 
+                          label = "Patient characteristics:", 
+                          selected = "languages",
+                          status = "success",
+                          #justified = T, #if true, all boxes have the same length
+                          individual = T, #if false, then the boxes are connected
+                          choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- or paraplegia"),
+                          choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia")
+                          #checkIcon = list(yes = icon("ok", lib = "glyphicon"), no = icon("remove", lib = "glyphicon"))
+                        )
                   ),
                   h3(textOutput("sample.bar.NA"), align = "center"),
                   r2d3::d3Output("d3.bar"),
@@ -362,6 +407,30 @@ ui <- dashboardPage(
             )
             
             
+    ),    tabItem(tabName = "scirehab",
+                  h3("Description of SCIRehab Study Cohort"),
+                  fluidRow(
+                    box(width = 12,
+                        div(style="display:inline-block;width:100%;text-align:center;",
+                            radioGroupButtons(
+                              inputId = "var", 
+                              label = "Patient characteristics:", 
+                              selected = "languages",
+                              status = "success",
+                              #justified = T, #if true, all boxes have the same length
+                              individual = T, #if false, then the boxes are connected
+                              choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- or paraplegia"),
+                              choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia")
+                              #checkIcon = list(yes = icon("ok", lib = "glyphicon"), no = icon("remove", lib = "glyphicon"))
+                            )
+                        ),
+                        h3(textOutput("sample.bar.NA"), align = "center"),
+                        r2d3::d3Output("d3.bar"),
+                        textOutput("SampleTxt"), align = "center")
+                    #)
+                  )
+                  
+                  
     )
     
     
