@@ -17,7 +17,7 @@ Our study revealed a high degree of polypharmacy in the acute stages of spinal c
 
 ## External resources
 
-* [EMSCI](https://www.emsci.org/)
+* [SCIRehab](https://www.icpsr.umich.edu/web/ADDEP/studies/36724)
 
 ## Contact
 Questions or comments related to the manuscript:
