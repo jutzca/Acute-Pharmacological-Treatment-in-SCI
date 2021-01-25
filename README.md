@@ -25,7 +25,7 @@ Questions or comments related to the manuscript:
 * [Prof. Dr. John Kramer](mailto:kramer@icord.org?subject=[GitHub]%20Source%20Han%20Sans)
 
 This repository is maintained by:
-* [Catherine Jutzeler](https://github.com/jutzca)
+* [Dr. Catherine Jutzeler](https://github.com/jutzca)
 
 ## Funding
 
