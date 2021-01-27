@@ -62,7 +62,10 @@ dataframe_rm_duplicates <- dataframe[!duplicated(dataframe[c(2:4)]),]
 #Count number of drugs per indication
 df_1 <- dataframe_rm_duplicates %>%
   dplyr::count(generic_name, indication, sort = TRUE) %>%
-  dplyr::count(indication, sort = TRUE)
+  dplyr::count(indication, sort = TRUE) %>%
+  as.data.frame()
+
+write.csv(df_1, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3.csv")
 
 #Plot number of drugs per indication
 polar_plots.nr.medications.indication.sygen <-ggplot(data=df_1, aes(x=indication, y=n, fill=n)) +
@@ -90,7 +93,11 @@ dev.off()
 #Count number of patients per indication
 df_2 <- dataframe_rm_duplicates %>%
   dplyr::count( NEW_ID, indication, sort = TRUE)   %>%
-  dplyr::count(indication, sort = TRUE)
+  dplyr::count(indication, sort = TRUE)%>%
+  as.data.frame()
+
+write.csv(df_2, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_2.csv")
+
 
 #Plotnumber of patients per indication
 polar_plots.nr.patient.indication.sygen <- ggplot(data=df_2, aes(x=indication, y=n, fill=n)) +

@@ -1,0 +1,1143 @@
+"","indication","generic_name","n"
+"1","Pain","morphine",551
+"2","General Disorders","acetaminophen",420
+"3","Gastrointestinal System","ranitidine",349
+"4","Infections and infestations","trimethoprim",326
+"5","Infections and infestations","sulfamethoxazole",325
+"6","Metabolism and nutrition  ","potassium_chloride",310
+"7","Infections and infestations","cefazolin",308
+"8","Infections and infestations","ciprofloxacin",290
+"9","Pain","acetaminophen_and_oxycodone",289
+"10","Psychiatric Disorders","diphenhydramine",276
+"11","Infections and infestations","vancomycin",272
+"12","Psychiatric Disorders","lorazepam",268
+"13","Respiratory System","albuterol",267
+"14","Gastrointestinal System","famotidine",265
+"15","Infections and infestations","gentamicin",265
+"16","Pain","acetaminophen",252
+"17","Gastrointestinal System","metoclopramide",250
+"18","Vascular System","heparin",243
+"19","Pain","meperidine",239
+"20","Nervous system  ","baclofen",212
+"21","Psychiatric Disorders","midazolam",209
+"22","Pain","acetaminophen_and_codeine",198
+"23","Vascular System","furosemide",190
+"24","Gastrointestinal System","sucralfate",166
+"25","Pain","ketorolac",163
+"26","Pain","ibuprofen",155
+"27","Blood and lymphatic system  ","heparin",153
+"28","Infections and infestations","ceftazidime",149
+"29","Surgical and medical procedures","midazolam",145
+"30","Psychiatric Disorders","diazepam",144
+"31","Vascular System","albumin",141
+"32","Gastrointestinal System","promethazine",139
+"33","Blood and lymphatic system  ","rbc",131
+"34","Pain","acetaminophen_and_propoxyphene",121
+"35","Metabolism and nutrition  ","magnesium_sulfate",119
+"36","Psychiatric Disorders","chloral_hydrate",116
+"37","Surgical and medical procedures","vecuronium_bromide",116
+"38","Gastrointestinal System","prochlorperazine",113
+"39","Gastrointestinal System","cimetidine",112
+"40","Surgical and medical procedures","cefazolin",112
+"41","Pain","acetaminophen_and_hydrocodone",109
+"42","Psychiatric Disorders","amitriptyline",107
+"43","Surgical and medical procedures","heparin",104
+"44","Pain","hydroxyzine",101
+"45","Infections and infestations","ceftriaxone",98
+"46","Metabolism and nutrition  ","insulin",97
+"47","Metabolism and nutrition  ","calcium_gluconate",96
+"48","Gastrointestinal System","docusate",90
+"49","Metabolism and nutrition  ","vitamin_B1",90
+"50","Pain","codeine",90
+"51","Nervous system  ","diazepam",89
+"52","Surgical and medical procedures","fentanyl",88
+"53","Infections and infestations","metronidazole",85
+"54","Metabolism and nutrition  ","folic_acid",80
+"55","Infections and infestations","ampicillin_and_sulbactam",76
+"56","Infections and infestations","nystatin",75
+"57","Infections and infestations","piperacillin",75
+"58","Infections and infestations","ticarcillin",75
+"59","Surgical and medical procedures","morphine",73
+"60","Vascular System","norepinephrine",73
+"61","Infections and infestations","ampicillin",71
+"62","Psychiatric Disorders","zolpidem",69
+"63","Infections and infestations","tobramycin",68
+"64","Gastrointestinal System","bisacodyl",67
+"65","Metabolism and nutrition  ","potassium_phosphate",66
+"66","Metabolism and nutrition  ","multivitamin_and_supplements",65
+"67","Respiratory System","aminophylline",65
+"68","Surgical and medical procedures","gentamicin",65
+"69","Psychiatric Disorders","haloperidol",64
+"70","Infections and infestations","nitrofurantoin",63
+"71","Psychiatric Disorders","hydroxyzine",59
+"72","Blood and lymphatic system  ","vitamin_K",58
+"73","Infections and infestations","fluconazole",58
+"74","Cardiac System","atropine",57
+"75","Metabolism and nutrition  ","sodium_phosphates",56
+"76","Psychiatric Disorders","triazolam",56
+"77","Respiratory System","pseudoephedrine",56
+"78","Skin and subcutaneous tissue  ","diphenhydramine",56
+"79","Infections and infestations","clindamycin",55
+"80","Infections and infestations","ofloxacin",55
+"81","Vascular System","rbc",55
+"82","Vascular System","warfarin",55
+"83","Psychiatric Disorders","alprazolam",53
+"84","Gastrointestinal System","aluminum_magnesium",52
+"85","Infections and infestations","bacitracin",52
+"86","Surgical and medical procedures","metoclopramide",52
+"87","Vascular System","dopamine",52
+"88","Gastrointestinal System","cisapride",51
+"89","Nervous system  ","dexamethasone",51
+"90","Respiratory System","guaifenesin",50
+"91","Gastrointestinal System","nizatidine",47
+"92","Surgical and medical procedures","glycopyrrolate",47
+"93","Vascular System","enoxaparin",47
+"94","Infections and infestations","clotrimazole",45
+"95","Infections and infestations","nafcillin",45
+"96","Surgical and medical procedures","lidocaine",45
+"97","Infections and infestations","amoxicillin",44
+"98","Nervous system  ","methocarbamol",44
+"99","Infections and infestations","cefotaxime",43
+"100","Psychiatric Disorders","flurazepam",41
+"101","Respiratory System","acetylcysteine",41
+"102","Vascular System","ephedrine",41
+"103","General Disorders","ibuprofen",40
+"104","Infections and infestations","miconazole",40
+"105","Respiratory System","theophylline",40
+"106","Blood and lymphatic system  ","enoxaparin",39
+"107","Pain","propoxyphene",39
+"108","Infections and infestations","norfloxacin",38
+"109","Blood and lymphatic system  ","ferrous_sulfate",37
+"110","Surgical and medical procedures","vancomycin",37
+"111","Gastrointestinal System","rbc",36
+"112","Vascular System","nifedipine",36
+"113","Respiratory System","ipratropium",35
+"114","Skin and subcutaneous tissue  ","nystatin",35
+"115","Metabolism and nutrition  ","ferrous_sulfate",34
+"116","Infections and infestations","amoxicillin_and_clavulanate_potassium",33
+"117","Pain","fentanyl",33
+"118","Renal and urinary system  ","dopamine",32
+"119","Surgical and medical procedures","propofol",32
+"120","Pain","midazolam",31
+"121","Respiratory System","methylprednisolone",31
+"122","Blood and lymphatic system  ","warfarin",30
+"123","Gastrointestinal System","trimethobenzamide",30
+"124","Infections and infestations","cephalexin",30
+"125","Surgical and medical procedures","pancuronium_bromide",30
+"126","Surgical and medical procedures","thiopental",29
+"127","Psychiatric Disorders","morphine",28
+"128","Respiratory System","dexamethasone",28
+"129","Infections and infestations","imipenem",27
+"130","Metabolism and nutrition  ","sodium_chloride",27
+"131","Nervous system  ","cyclobenzaprine",27
+"132","Pain","hydromorphone",27
+"133","Psychiatric Disorders","trazodone",27
+"134","Renal and urinary system  ","oxybutynin",27
+"135","Surgical and medical procedures","diphenhydramine",27
+"136","Pain","phenol",26
+"137","Pain","oxycodone",25
+"138","Surgical and medical procedures","meperidine",25
+"139","Gastrointestinal System","docusate_and_senna",24
+"140","General Disorders","vancomycin",24
+"141","Infections and infestations","cefuroxime",24
+"142","Skin and subcutaneous tissue  ","clotrimazole",24
+"143","Vascular System","potassium_chloride",24
+"144","Gastrointestinal System","simethicone",23
+"145","Infections and infestations","erythromycin",23
+"146","Psychiatric Disorders","nortriptyline",23
+"147","Psychiatric Disorders","sertraline",23
+"148","Surgical and medical procedures","diazepam",23
+"149","Blood and lymphatic system  ","fresh_frozen_plasma",22
+"150","General Disorders","furosemide",22
+"151","General Disorders","gentamicin",22
+"152","Infections and infestations","aztreonam",22
+"153","Infections and infestations","dexamethasone",22
+"154","Infections and infestations","penicillin",22
+"155","Metabolism and nutrition  ","calcium_chloride",22
+"156","Psychiatric Disorders","chlordiazepoxide",22
+"157","Respiratory System","saline",22
+"158","Metabolism and nutrition  ","sodium_bicarbonate",21
+"159","Skin and subcutaneous tissue  ","bacitracin",21
+"160","Surgical and medical procedures","dexamethasone",21
+"161","Surgical and medical procedures","ranitidine",21
+"162","Gastrointestinal System","atropine_and_diphenoxylate",20
+"163","Gastrointestinal System","hydroxyzine",20
+"164","Immune system  ","diphenhydramine",20
+"165","Infections and infestations","cefotetan",20
+"166","Metabolism and nutrition  ","phytonadione",20
+"167","Nervous system  ","oxybutynin",20
+"168","Pain","amitriptyline",20
+"169","Pain","promethazine",20
+"170","Surgical and medical procedures","isoflurane",20
+"171","Blood and lymphatic system  ","phytonadione",19
+"172","Pain","lidocaine",19
+"173","Gastrointestinal System","mineral_oil",18
+"174","Gastrointestinal System","omeprazole",18
+"175","Gastrointestinal System","ondansetron",18
+"176","General Disorders","cefazolin",18
+"177","Infections and infestations","amikacin",18
+"178","Infections and infestations","pneumococcal_vaccine",18
+"179","Psychiatric Disorders","fluoxetine",18
+"180","Cardiac System","digoxin",17
+"181","Infections and infestations","ceftizoxime",17
+"182","Metabolism and nutrition  ","potassium_phosphate_and_sodium_phosphates",17
+"183","Nervous system  ","carbamazepine",17
+"184","Pain","diazepam",17
+"185","Pain","naproxen",17
+"186","Skin and subcutaneous tissue  ","hydrocortisone",17
+"187","Gastrointestinal System","dimenhydrinate",16
+"188","General Disorders","ceftazidime",16
+"189","Metabolism and nutrition  ","magnesium",16
+"190","Musculoskeletal System","etidronate",16
+"191","Respiratory System","beclomethasone",16
+"192","Respiratory System","brompheniramine_pseudoephedrine",16
+"193","Respiratory System","furosemide",16
+"194","Vascular System","mannitol",16
+"195","Gastrointestinal System","loperamide",15
+"196","Gastrointestinal System","magnesium_citrate",15
+"197","Metabolism and nutrition  ","sodium_polystyrene_sulfonate",15
+"198","Pain","butamben_tetracaine_benzocaine",15
+"199","Pain","methocarbamol",15
+"200","Respiratory System","norepinephrine",15
+"201","Surgical and medical procedures","iothalamate_meglumine",15
+"202","Gastrointestinal System","droperidol",14
+"203","Gastrointestinal System","metronidazole",14
+"204","Metabolism and nutrition  ","vitamin_C",14
+"205","Surgical and medical procedures","atropine",14
+"206","Surgical and medical procedures","hydroxyzine",14
+"207","Surgical and medical procedures","lorazepam",14
+"208","Surgical and medical procedures","neostigmine",14
+"209","Vascular System","dobutamine",14
+"210","Vascular System","fresh_frozen_plasma",14
+"211","Vascular System","sodium_chloride",14
+"212","Blood and lymphatic system  ","platelets",13
+"213","Infections and infestations","imipenem_and_cilastatin",13
+"214","Infections and infestations","mezlocillin",13
+"215","Metabolism and nutrition  ","potassium",13
+"216","Nervous system  ","phenytoin",13
+"217","Pain","nabumetone",13
+"218","Psychiatric Disorders","promethazine",13
+"219","Renal and urinary system  ","furosemide",13
+"220","Surgical and medical procedures","etomidate",13
+"221","Gastrointestinal System","lactobacillus",12
+"222","Gastrointestinal System","sennosides",12
+"223","Infections and infestations","acyclovir",12
+"224","Nervous system  ","mannitol",12
+"225","Pain","capsaicin",12
+"226","Pain","tramadol",12
+"227","Psychiatric Disorders","doxepin",12
+"228","Respiratory System","gentamicin",12
+"229","Respiratory System","terfenadine",12
+"230","Respiratory System","vancomycin",12
+"231","Cardiac System","nitroglycerin",11
+"232","Gastrointestinal System","aluminum_magnesium_simethicone",11
+"233","Gastrointestinal System","glycopyrrolate",11
+"234","Gastrointestinal System","sorbitol",11
+"235","Infections and infestations","amphotericin_B",11
+"236","Infections and infestations","influenza_vaccine",11
+"237","Infections and infestations","oxacillin",11
+"238","Infections and infestations","tetanus_vaccine",11
+"239","Psychiatric Disorders","chlorpromazine",11
+"240","Renal and urinary system  ","bethanechol",11
+"241","Respiratory System","guaifenesin_potassium_guaiacolsulfonate",11
+"242","Surgical and medical procedures","rbc",11
+"243","Vascular System","dextrose",11
+"244","Cardiac System","epinephrine",10
+"245","General Disorders","ciprofloxacin",10
+"246","General Disorders","dexamethasone",10
+"247","General Disorders","indomethacin",10
+"248","General Disorders","ketorolac",10
+"249","Infections and infestations","ibuprofen",10
+"250","Infections and infestations","methylprednisolone",10
+"251","Infections and infestations","neomycin_sulfate_polymyxin_B_sulfate_bacitracin_zinc_and_hydrocortisone",10
+"252","Metabolism and nutrition  ","acetazolamide",10
+"253","Metabolism and nutrition  ","calcium_carbonate",10
+"254","Metabolism and nutrition  ","zinc",10
+"255","Pain","buprenorphine",10
+"256","Pain","carbamazepine",10
+"257","Psychiatric Disorders","vecuronium_bromide",10
+"258","Respiratory System","chlorpromazine",10
+"259","Respiratory System","phenylephrine",10
+"260","Vascular System","nitroglycerin",10
+"261","Vascular System","phenylephrine",10
+"262","Blood and lymphatic system  ","diphenhydramine",9
+"263","Gastrointestinal System","magnesium_hydroxide",9
+"264","General Disorders","sulfamethoxazole",9
+"265","General Disorders","trimethoprim",9
+"266","Infections and infestations","albuterol",9
+"267","Infections and infestations","cefoxitin",9
+"268","Infections and infestations","mupirocin",9
+"269","Infections and infestations","phenazopyridine",9
+"270","Metabolism and nutrition  ","lipids",9
+"271","Nervous system  ","amitriptyline",9
+"272","Nervous system  ","carisoprodol",9
+"273","Pain","cyclobenzaprine",9
+"274","Psychiatric Disorders","nicotine",9
+"275","Psychiatric Disorders","paroxetine",9
+"276","Psychiatric Disorders","propofol",9
+"277","Respiratory System","epinephrine",9
+"278","Surgical and medical procedures","haloperidol",9
+"279","Surgical and medical procedures","potassium_chloride",9
+"280","Surgical and medical procedures","succinylcholine",9
+"281","Vascular System","epinephrine",9
+"282","Vascular System","hetastarch",9
+"283","Vascular System","saline",9
+"284","Cardiac System","nifedipine",8
+"285","Gastrointestinal System","aluminum_hydroxide",8
+"286","Gastrointestinal System","bismuth_subsalicylate",8
+"287","General Disorders","ceftriaxone",8
+"288","General Disorders","clindamycin",8
+"289","Metabolism and nutrition  ","calcium",8
+"290","Nervous system  ","clonidine",8
+"291","Pain","benzocaine_menthol",8
+"292","Pain","diclofenac",8
+"293","Pain","trolamine_salicylate",8
+"294","Psychiatric Disorders","pentobarbital",8
+"295","Respiratory System","guaifenesin_phenylephrine",8
+"296","Respiratory System","pseudoephedrine_triprolidine",8
+"297","Skin and subcutaneous tissue  ","hydroxyzine",8
+"298","Surgical and medical procedures","naloxone",8
+"299","Surgical and medical procedures","sufentanil",8
+"300","Ear and labyrinth  ","triethanolamine_polypeptide_oleate",7
+"301","General Disorders","aspirin",7
+"302","General Disorders","promethazine",7
+"303","General Disorders","ticarcillin",7
+"304","Infections and infestations","rifampin",7
+"305","Infections and infestations","terconazole",7
+"306","Infections and infestations","tetracycline",7
+"307","Metabolism and nutrition  ","magnesium_oxide",7
+"308","Psychiatric Disorders","fentanyl",7
+"309","Psychiatric Disorders","imipramine",7
+"310","Respiratory System","ceftazidime",7
+"311","Respiratory System","prednisone",7
+"312","Respiratory System","ticarcillin",7
+"313","Respiratory System","triamcinolone",7
+"314","Surgical and medical procedures","bacitracin",7
+"315","Surgical and medical procedures","cyclobenzaprine",7
+"316","Surgical and medical procedures","DOM",7
+"317","Surgical and medical procedures","droperidol",7
+"318","Surgical and medical procedures","hetastarch",7
+"319","Surgical and medical procedures","lidocaine_and_epinephrine",7
+"320","Surgical and medical procedures","nafcillin",7
+"321","Vascular System","acetazolamide",7
+"322","Vascular System","epinephrine_sulfate",7
+"323","Vascular System","fludrocortisone",7
+"324","Cardiac System","diltiazem",6
+"325","Cardiac System","verapamil",6
+"326","Ear and labyrinth  ","carbamide_peroxide",6
+"327","Gastrointestinal System","fresh_frozen_plasma",6
+"328","Gastrointestinal System","psyllium",6
+"329","General Disorders","ampicillin",6
+"330","General Disorders","piperacillin",6
+"331","Infections and infestations","neomycin",6
+"332","Infections and infestations","norepinephrine",6
+"333","Infections and infestations","piperacillin_and_tazobactam",6
+"334","Metabolism and nutrition  ","dextrose",6
+"335","Metabolism and nutrition  ","sodium",6
+"336","Nervous system  ","clonazepam",6
+"337","Nervous system  ","dantrolene",6
+"338","Pain","butorphanol_tartrate",6
+"339","Pain","indomethacin",6
+"340","Pain","lorazepam",6
+"341","Psychiatric Disorders","buspirone",6
+"342","Psychiatric Disorders","clonazepam",6
+"343","Psychiatric Disorders","quazepam",6
+"344","Respiratory System","diphenhydramine",6
+"345","Respiratory System","docusate",6
+"346","Respiratory System","piperacillin",6
+"347","Respiratory System","terbutaline",6
+"348","Skin and subcutaneous tissue  ","cefazolin",6
+"349","Surgical and medical procedures","famotidine",6
+"350","Surgical and medical procedures","norepinephrine",6
+"351","Vascular System","pseudoephedrine",6
+"352","Blood and lymphatic system  ","furosemide",5
+"353","Cardiac System","dopamine",5
+"354","Cardiac System","lidocaine",5
+"355","Ear and labyrinth  ","neomycin_sulfate_polymyxin_B_sulfate_bacitracin_zinc_and_hydrocortisone",5
+"356","Eye  ","sulfacetamide",5
+"357","Gastrointestinal System","lactulose",5
+"358","Gastrointestinal System","platelets",5
+"359","General Disorders","acetaminophen_and_codeine",5
+"360","General Disorders","naproxen",5
+"361","Infections and infestations","cloxacillin",5
+"362","Infections and infestations","doxycycline",5
+"363","Infections and infestations","indomethacin",5
+"364","Infections and infestations","ketoconazole",5
+"365","Infections and infestations","oxybutynin",5
+"366","Metabolism and nutrition  ","fresh_frozen_plasma",5
+"367","Metabolism and nutrition  ","metoclopramide",5
+"368","Nervous system  ","lorazepam",5
+"369","Nervous system  ","methylprednisolone",5
+"370","Pain","aspirin",5
+"371","Pain","magnesium_sulfate",5
+"372","Pain","methadone",5
+"373","Psychiatric Disorders","clorazepate",5
+"374","Psychiatric Disorders","estazolam",5
+"375","Respiratory System","chlorpheniramine",5
+"376","Respiratory System","metaproterenol",5
+"377","Skin and subcutaneous tissue  ","zinc_oxide",5
+"378","Surgical and medical procedures","methylprednisolone",5
+"379","Surgical and medical procedures","rocuronium",5
+"380","Vascular System","labetalol",5
+"381","Cardiac System","adenosine",4
+"382","Cardiac System","esmolol",4
+"383","Cardiac System","furosemide",4
+"384","Cardiac System","isoproterenol",4
+"385","Gastrointestinal System","ferrous_sulfate",4
+"386","Gastrointestinal System","kaolin_pectin",4
+"387","General Disorders","acetazolamide",4
+"388","General Disorders","cefotaxime",4
+"389","General Disorders","lorazepam",4
+"390","General Disorders","meclizine",4
+"391","General Disorders","metronidazole",4
+"392","General Disorders","morphine",4
+"393","General Disorders","tobramycin",4
+"394","Immune system  ","furosemide",4
+"395","Infections and infestations","acetic_acid",4
+"396","Infections and infestations","baclofen",4
+"397","Infections and infestations","cephapirin",4
+"398","Infections and infestations","hydrocortisone",4
+"399","Infections and infestations","ipratropium",4
+"400","Infections and infestations","prednisone",4
+"401","Infections and infestations","pseudoephedrine",4
+"402","Infections and infestations","saline",4
+"403","Metabolism and nutrition  ","famotidine",4
+"404","Metabolism and nutrition  ","saline",4
+"405","Nervous system  ","ephedrine",4
+"406","Nervous system  ","furosemide",4
+"407","Nervous system  ","phenobarbital",4
+"408","Pain","aspirin_and_oxycodone",4
+"409","Pain","aspirin_butalbital_and_caffeine",4
+"410","Pain","benzocaine",4
+"411","Pain","ketoprofen",4
+"412","Pain","methyl_salicylate",4
+"413","Pain","nortriptyline",4
+"414","Psychiatric Disorders","droperidol",4
+"415","Psychiatric Disorders","phenobarbital",4
+"416","Psychiatric Disorders","phenytoin",4
+"417","Psychiatric Disorders","terazosin",4
+"418","Psychiatric Disorders","thioridazine",4
+"419","Renal and urinary system  ","bumetanide",4
+"420","Renal and urinary system  ","metronidazole",4
+"421","Respiratory System","cefotaxime",4
+"422","Respiratory System","epinephrine_sulfate",4
+"423","Respiratory System","imipenem",4
+"424","Respiratory System","midazolam",4
+"425","Skin and subcutaneous tissue  ","benzoyl_peroxide",4
+"426","Skin and subcutaneous tissue  ","betamethasone_and_clotrimazole",4
+"427","Skin and subcutaneous tissue  ","ketoconazole",4
+"428","Skin and subcutaneous tissue  ","silver_sulfadiazine",4
+"429","Skin and subcutaneous tissue  ","triamcinolone",4
+"430","Skin and subcutaneous tissue  ","zinc",4
+"431","Surgical and medical procedures","aminophylline",4
+"432","Surgical and medical procedures","atracurium",4
+"433","Surgical and medical procedures","butorphanol",4
+"434","Surgical and medical procedures","chloral_hydrate",4
+"435","Surgical and medical procedures","methocarbamol",4
+"436","Surgical and medical procedures","phenylephrine",4
+"437","Surgical and medical procedures","saline",4
+"438","Vascular System","atropine",4
+"439","Vascular System","chlordiazepoxide",4
+"440","Vascular System","clonidine",4
+"441","Vascular System","hydralazine",4
+"442","Vascular System","kcl",4
+"443","Blood and lymphatic system  ","cryoprecipitate",3
+"444","Blood and lymphatic system  ","dopamine",3
+"445","Blood and lymphatic system  ","ferrous_gluconate",3
+"446","Blood and lymphatic system  ","folic_acid",3
+"447","Cardiac System","dobutamine",3
+"448","Cardiac System","glycopyrrolate",3
+"449","Eye  ","bacitracin",3
+"450","Eye  ","tobramycin",3
+"451","Gastrointestinal System","diphenhydramine",3
+"452","Gastrointestinal System","vancomycin",3
+"453","General Disorders","acetaminophen_and_propoxyphene",3
+"454","General Disorders","ampicillin_and_sulbactam",3
+"455","General Disorders","codeine",3
+"456","General Disorders","fluconazole",3
+"457","General Disorders","piperacillin_and_tazobactam",3
+"458","Infections and infestations","aminophylline",3
+"459","Infections and infestations","beclomethasone",3
+"460","Infections and infestations","carbenicillin_indanyl",3
+"461","Infections and infestations","cefadroxil",3
+"462","Infections and infestations","cefamandole",3
+"463","Infections and infestations","cefoperazone",3
+"464","Infections and infestations","cephalosporin",3
+"465","Infections and infestations","cephradine",3
+"466","Infections and infestations","chlorpheniramine",3
+"467","Infections and infestations","clarithromycin",3
+"468","Infections and infestations","diclofenac",3
+"469","Infections and infestations","heparin",3
+"470","Infections and infestations","meperidine",3
+"471","Infections and infestations","naproxen",3
+"472","Infections and infestations","terfenadine",3
+"473","Metabolism and nutrition  ","acetate",3
+"474","Metabolism and nutrition  ","albumin",3
+"475","Metabolism and nutrition  ","glyburide",3
+"476","Metabolism and nutrition  ","magnesium_gluconate",3
+"477","Metabolism and nutrition  ","phosphate",3
+"478","Metabolism and nutrition  ","potassium_acetate",3
+"479","Metabolism and nutrition  ","sodium_acetate",3
+"480","Metabolism and nutrition  ","vitamin_K3",3
+"481","Musculoskeletal System","indomethacin",3
+"482","Nervous system  ","acetazolamide",3
+"483","Nervous system  ","benztropine",3
+"484","Nervous system  ","gabapentin",3
+"485","Nervous system  ","levodopa",3
+"486","Pain","gabapentin",3
+"487","Pain","naloxone",3
+"488","Pain","nystatin",3
+"489","Psychiatric Disorders","desipramine",3
+"490","Renal and urinary system  ","terazosin",3
+"491","Respiratory System","brompheniramine",3
+"492","Respiratory System","ephedrine",3
+"493","Respiratory System","fentanyl",3
+"494","Respiratory System","glycopyrrolate",3
+"495","Respiratory System","hydrocortisone",3
+"496","Respiratory System","ipratropium_bromide",3
+"497","Respiratory System","ketotifen",3
+"498","Respiratory System","metronidazole",3
+"499","Respiratory System","morphine",3
+"500","Respiratory System","vecuronium_bromide",3
+"501","Skin and subcutaneous tissue  ","clindamycin",3
+"502","Skin and subcutaneous tissue  ","miconazole",3
+"503","Skin and subcutaneous tissue  ","vancomycin",3
+"504","Surgical and medical procedures","acetaminophen_and_codeine",3
+"505","Surgical and medical procedures","albumin",3
+"506","Surgical and medical procedures","ampicillin",3
+"507","Surgical and medical procedures","butamben_tetracaine_benzocaine",3
+"508","Surgical and medical procedures","cefuroxime",3
+"509","Surgical and medical procedures","cloxacillin",3
+"510","Surgical and medical procedures","codeine",3
+"511","Surgical and medical procedures","ephedrine",3
+"512","Surgical and medical procedures","lidocaine_and_prilocaine",3
+"513","Surgical and medical procedures","nitrous_oxide",3
+"514","Surgical and medical procedures","penicillin",3
+"515","Vascular System","aspirin",3
+"516","Vascular System","hydrochlorothiazide",3
+"517","Vascular System","hydrocortisone_acetate",3
+"518","Vascular System","sodium_chloride_sodium_gluconate_sodium_acetate_potassium_chloride_and_magnesium_chloride",3
+"519","Blood and lymphatic system  ","atropine",2
+"520","Blood and lymphatic system  ","epoetin",2
+"521","Blood and lymphatic system  ","protamine",2
+"522","Cardiac System","calcium_chloride",2
+"523","Cardiac System","ephedrine",2
+"524","Cardiac System","heparin",2
+"525","Cardiac System","isosorbide_dinitrate",2
+"526","Cardiac System","midazolam",2
+"527","Cardiac System","propranolol",2
+"528","Cardiac System","scopolamine",2
+"529","Endocrine System","dexamethasone",2
+"530","Eye  ","gentamicin",2
+"531","Eye  ","hydroxypropyl_methylcellulose",2
+"532","Eye  ","naphazoline",2
+"533","Eye  ","tropicamide",2
+"534","Gastrointestinal System","acetaminophen",2
+"535","Gastrointestinal System","erythromycin",2
+"536","Gastrointestinal System","misoprostol",2
+"537","Gastrointestinal System","pancrelipase",2
+"538","Gastrointestinal System","vasopressin",2
+"539","General Disorders","acetaminophen_and_oxycodone",2
+"540","General Disorders","amoxicillin_and_clavulanate_potassium",2
+"541","General Disorders","aztreonam",2
+"542","General Disorders","cefoperazone",2
+"543","General Disorders","cefotetan",2
+"544","General Disorders","chlorhexidine_gluconate",2
+"545","General Disorders","lidocaine",2
+"546","General Disorders","midazolam",2
+"547","General Disorders","nafcillin",2
+"548","General Disorders","ofloxacin",2
+"549","General Disorders","pseudoephedrine",2
+"550","General Disorders","saline",2
+"551","General Disorders","scopolamine",2
+"552","Immune system  ","ketotifen",2
+"553","Immune system  ","rbc",2
+"554","Infections and infestations","acetylcysteine",2
+"555","Infections and infestations","azithromycin",2
+"556","Infections and infestations","butoconazole_nitrate",2
+"557","Infections and infestations","carbenicillin",2
+"558","Infections and infestations","cefaclor",2
+"559","Infections and infestations","cimetidine",2
+"560","Infections and infestations","cisapride",2
+"561","Infections and infestations","dicloxacillin",2
+"562","Infections and infestations","diphenhydramine",2
+"563","Infections and infestations","furosemide",2
+"564","Infections and infestations","glycopyrrolate",2
+"565","Infections and infestations","guaifenesin_phenylephrine",2
+"566","Infections and infestations","lactobacillus",2
+"567","Infections and infestations","minocycline",2
+"568","Infections and infestations","phenol",2
+"569","Infections and infestations","phenytoin",2
+"570","Infections and infestations","silver_sulfadiazine",2
+"571","Infections and infestations","terazosin",2
+"572","Metabolism and nutrition  ","bicarbonate",2
+"573","Metabolism and nutrition  ","calcium_gluceptate",2
+"574","Metabolism and nutrition  ","chloride",2
+"575","Metabolism and nutrition  ","cholestyramine",2
+"576","Metabolism and nutrition  ","etidronate",2
+"577","Metabolism and nutrition  ","ferrous_gluconate",2
+"578","Metabolism and nutrition  ","furosemide",2
+"579","Metabolism and nutrition  ","iron_dextran",2
+"580","Metabolism and nutrition  ","iron_vitamin_c",2
+"581","Metabolism and nutrition  ","magnesium_hydroxide",2
+"582","Metabolism and nutrition  ","morphine",2
+"583","Metabolism and nutrition  ","platelets",2
+"584","Metabolism and nutrition  ","polyethylene_glycol_electrolyte_solution",2
+"585","Metabolism and nutrition  ","urea",2
+"586","Musculoskeletal System","vecuronium_bromide",2
+"587","Nervous system  ","dopamine",2
+"588","Nervous system  ","nitrofurantoin",2
+"589","Nervous system  ","nortriptyline",2
+"590","Pain","aluminum_magnesium_simethicone",2
+"591","Pain","baclofen",2
+"592","Pain","bupivacaine",2
+"593","Pain","hydrocodone",2
+"594","Pain","levorphanol",2
+"595","Pain","zinc_sulfate_monohydrate",2
+"596","Psychiatric Disorders","butorphanol_tartrate",2
+"597","Psychiatric Disorders","codeine",2
+"598","Psychiatric Disorders","ephedrine",2
+"599","Psychiatric Disorders","hydromorphone",2
+"600","Psychiatric Disorders","meperidine",2
+"601","Psychiatric Disorders","methylphenidate",2
+"602","Psychiatric Disorders","metoclopramide",2
+"603","Psychiatric Disorders","multivitamin_and_supplements",2
+"604","Psychiatric Disorders","oxazepam",2
+"605","Psychiatric Disorders","pseudoephedrine",2
+"606","Psychiatric Disorders","ranitidine",2
+"607","Psychiatric Disorders","venlafaxine",2
+"608","Renal and urinary system  ","ciprofloxacin",2
+"609","Renal and urinary system  ","methenamine",2
+"610","Renal and urinary system  ","metolazone",2
+"611","Renal and urinary system  ","ranitidine",2
+"612","Renal and urinary system  ","saline",2
+"613","Reproductive system and breast  ","conjugated_estrogens",2
+"614","Reproductive system and breast  ","estrogen",2
+"615","Respiratory System","acetaminophen_dexbrompheniramine_pseudoephedrine",2
+"616","Respiratory System","acetylcysteine_and_albuterol",2
+"617","Respiratory System","bacitracin",2
+"618","Respiratory System","benzocaine_menthol",2
+"619","Respiratory System","cefuroxime",2
+"620","Respiratory System","clindamycin",2
+"621","Respiratory System","epinepherine",2
+"622","Respiratory System","lidocaine",2
+"623","Respiratory System","lorazepam",2
+"624","Respiratory System","ofloxacin",2
+"625","Respiratory System","potassium_iodide",2
+"626","Respiratory System","rbc",2
+"627","Respiratory System","sodium_chloride",2
+"628","Respiratory System","tobramycin",2
+"629","Skin and subcutaneous tissue  ","cephalexin",2
+"630","Skin and subcutaneous tissue  ","ciprofloxacin",2
+"631","Skin and subcutaneous tissue  ","collagenase",2
+"632","Skin and subcutaneous tissue  ","cyproheptadine",2
+"633","Skin and subcutaneous tissue  ","erythromycin",2
+"634","Skin and subcutaneous tissue  ","framycetin",2
+"635","Skin and subcutaneous tissue  ","sodium_hypochlorite",2
+"636","Skin and subcutaneous tissue  ","tetracycline",2
+"637","Surgical and medical procedures","bupivacaine",2
+"638","Surgical and medical procedures","bupivacaine_hydrochloride_and_epinephrine_bitartrate",2
+"639","Surgical and medical procedures","cefotetan",2
+"640","Surgical and medical procedures","ceftazidime",2
+"641","Surgical and medical procedures","ceftizoxime",2
+"642","Surgical and medical procedures","ceftriaxone",2
+"643","Surgical and medical procedures","cisatracurium",2
+"644","Surgical and medical procedures","cocaine",2
+"645","Surgical and medical procedures","desflurane",2
+"646","Surgical and medical procedures","dimenhydrinate",2
+"647","Surgical and medical procedures","epinephrine",2
+"648","Surgical and medical procedures","flumazenil",2
+"649","Surgical and medical procedures","furosemide",2
+"650","Surgical and medical procedures","hydrocortisone",2
+"651","Surgical and medical procedures","ketamine",2
+"652","Surgical and medical procedures","labetalol",2
+"653","Surgical and medical procedures","methylprednisolone_sodium_succinate",2
+"654","Surgical and medical procedures","metocurine_iodide",2
+"655","Surgical and medical procedures","nitroglycerin",2
+"656","Surgical and medical procedures","pancrelipase",2
+"657","Surgical and medical procedures","pipecuronium",2
+"658","Surgical and medical procedures","sodium_chloride_sodium_gluconate_sodium_acetate_potassium_chloride_and_magnesium_chloride",2
+"659","Surgical and medical procedures","thrombin",2
+"660","Surgical and medical procedures","tobramycin",2
+"661","Vascular System","atenolol",2
+"662","Vascular System","captopril",2
+"663","Vascular System","isoproterenol",2
+"664","Vascular System","magnesium_sulfate",2
+"665","Vascular System","metoprolol",2
+"666","Vascular System","phenoxybenzamine",2
+"667","Vascular System","platelets",2
+"668","Vascular System","propranolol",2
+"669","Vascular System","zinc_sulfate_monohydrate",2
+"670","Blood and lymphatic system  ","albumin",1
+"671","Blood and lymphatic system  ","bicarbonate",1
+"672","Blood and lymphatic system  ","clonazepam",1
+"673","Blood and lymphatic system  ","desmopressin",1
+"674","Blood and lymphatic system  ","digoxin",1
+"675","Blood and lymphatic system  ","enalapril_maleate",1
+"676","Blood and lymphatic system  ","famotidine",1
+"677","Blood and lymphatic system  ","ferrous",1
+"678","Blood and lymphatic system  ","filgrastim",1
+"679","Blood and lymphatic system  ","hydroxyurea",1
+"680","Blood and lymphatic system  ","insulin",1
+"681","Blood and lymphatic system  ","iron",1
+"682","Blood and lymphatic system  ","iron_dextran",1
+"683","Blood and lymphatic system  ","miconazole",1
+"684","Blood and lymphatic system  ","nortriptyline",1
+"685","Blood and lymphatic system  ","plasma",1
+"686","Blood and lymphatic system  ","potassium_phosphate",1
+"687","Blood and lymphatic system  ","pseudoephedrine",1
+"688","Blood and lymphatic system  ","thrombin",1
+"689","Cardiac System","acetaminophen_and_hydrocodone",1
+"690","Cardiac System","albumin",1
+"691","Cardiac System","aminophylline",1
+"692","Cardiac System","aspirin",1
+"693","Cardiac System","bretylium",1
+"694","Cardiac System","captopril",1
+"695","Cardiac System","clotrimazole",1
+"696","Cardiac System","diazepam",1
+"697","Cardiac System","diphenhydramine",1
+"698","Cardiac System","dipyridamole",1
+"699","Cardiac System","doxazosin",1
+"700","Cardiac System","epinephrine_sulfate",1
+"701","Cardiac System","indomethacin",1
+"702","Cardiac System","lidocaine_and_epinephrine",1
+"703","Cardiac System","lorazepam",1
+"704","Cardiac System","magnesium",1
+"705","Cardiac System","mannitol",1
+"706","Cardiac System","metoprolol",1
+"707","Cardiac System","metoprolol_hydrochlorothiazide",1
+"708","Cardiac System","norepinephrine",1
+"709","Cardiac System","sodium_bicarbonate",1
+"710","Cardiac System","theophylline",1
+"711","Cardiac System","warfarin",1
+"712","Ear and labyrinth  ","ampicillin",1
+"713","Ear and labyrinth  ","epinephrine",1
+"714","Ear and labyrinth  ","lidocaine",1
+"715","Ear and labyrinth  ","neomycin",1
+"716","Ear and labyrinth  ","tobramycin",1
+"717","Endocrine System","insulin",1
+"718","Eye  ","fluorometholone",1
+"719","Eye  ","metipranolol",1
+"720","Eye  ","neomycin_sulfate_polymyxin_B_sulfate_bacitracin_zinc_and_hydrocortisone",1
+"721","Eye  ","phenylephrine",1
+"722","Gastrointestinal System","acetic_acid_and_hydrocortisone",1
+"723","Gastrointestinal System","albumin",1
+"724","Gastrointestinal System","bacitracin",1
+"725","Gastrointestinal System","belladonna_alkaloids_and_phenobarbital",1
+"726","Gastrointestinal System","benzquinamide_hydrochloride",1
+"727","Gastrointestinal System","bethanechol",1
+"728","Gastrointestinal System","capsaicin",1
+"729","Gastrointestinal System","cefazolin",1
+"730","Gastrointestinal System","ciprofloxacin",1
+"731","Gastrointestinal System","clotrimazole",1
+"732","Gastrointestinal System","dexamethasone",1
+"733","Gastrointestinal System","dextrose",1
+"734","Gastrointestinal System","digoxin",1
+"735","Gastrointestinal System","epinephrine",1
+"736","Gastrointestinal System","fentanyl",1
+"737","Gastrointestinal System","fluconazole",1
+"738","Gastrointestinal System","fludrocortisone",1
+"739","Gastrointestinal System","glycerin",1
+"740","Gastrointestinal System","guaifenesin_phenylephrine",1
+"741","Gastrointestinal System","hetastarch",1
+"742","Gastrointestinal System","hydrocortisone",1
+"743","Gastrointestinal System","lactase",1
+"744","Gastrointestinal System","lidocaine",1
+"745","Gastrointestinal System","magnesium_oxide",1
+"746","Gastrointestinal System","meperidine",1
+"747","Gastrointestinal System","multivitamin_and_supplements",1
+"748","Gastrointestinal System","nalbuphine",1
+"749","Gastrointestinal System","nicotine",1
+"750","Gastrointestinal System","nitroglycerin",1
+"751","Gastrointestinal System","nystatin",1
+"752","Gastrointestinal System","octreotide",1
+"753","Gastrointestinal System","phosphate",1
+"754","Gastrointestinal System","polyethylene_glycol_electrolyte_solution",1
+"755","Gastrointestinal System","potassium_acetate",1
+"756","Gastrointestinal System","potassium_permanganate",1
+"757","Gastrointestinal System","potassium_phosphate",1
+"758","Gastrointestinal System","prochlorperazine_maleate",1
+"759","Gastrointestinal System","propantheline",1
+"760","Gastrointestinal System","scopolamine",1
+"761","Gastrointestinal System","senna",1
+"762","Gastrointestinal System","sodium_phosphates",1
+"763","Gastrointestinal System","sodium_polystyrene_sulfonate",1
+"764","Gastrointestinal System","sulfamethoxazole",1
+"765","Gastrointestinal System","tobramycin",1
+"766","Gastrointestinal System","trimethoprim",1
+"767","Gastrointestinal System","vitamin_a_and_d",1
+"768","General Disorders","acetaminophen_and_hydrocodone",1
+"769","General Disorders","albumin",1
+"770","General Disorders","amikacin",1
+"771","General Disorders","amitriptyline",1
+"772","General Disorders","cefuroxime",1
+"773","General Disorders","cephalexin",1
+"774","General Disorders","chloramphenicol",1
+"775","General Disorders","chlorhexidine",1
+"776","General Disorders","chlorpromazine",1
+"777","General Disorders","choline_magnesium_trisalicylate",1
+"778","General Disorders","cimetidine",1
+"779","General Disorders","dicloxacillin",1
+"780","General Disorders","erythromycin",1
+"781","General Disorders","etomidate",1
+"782","General Disorders","fentanyl",1
+"783","General Disorders","hydrocortisone",1
+"784","General Disorders","hydroxyzine",1
+"785","General Disorders","ipratropium",1
+"786","General Disorders","mecamylamine",1
+"787","General Disorders","meperidine",1
+"788","General Disorders","methylprednisolone",1
+"789","General Disorders","oxacillin",1
+"790","General Disorders","penicillin",1
+"791","General Disorders","piroxicam",1
+"792","General Disorders","propoxyphene",1
+"793","General Disorders","sodium_chloride",1
+"794","Immune system  ","acetazolamide",1
+"795","Immune system  ","astemizole",1
+"796","Immune system  ","cimetidine",1
+"797","Immune system  ","hydrocortisone",1
+"798","Immune system  ","hydroxyzine",1
+"799","Immune system  ","methylprednisolone_sodium_succinate",1
+"800","Immune system  ","prednisone",1
+"801","Immune system  ","ranitidine",1
+"802","Infections and infestations","acetazolamide",1
+"803","Infections and infestations","alcohol",1
+"804","Infections and infestations","aluminum_magnesium",1
+"805","Infections and infestations","amitriptyline",1
+"806","Infections and infestations","antipyrine_benzocaine_otic",1
+"807","Infections and infestations","antipyrine_benzocaine_u-polycosanol",1
+"808","Infections and infestations","atropine",1
+"809","Infections and infestations","betamethasone_and_clotrimazole",1
+"810","Infections and infestations","bismuth_subsalicylate",1
+"811","Infections and infestations","brompheniramine_pseudoephedrine",1
+"812","Infections and infestations","cefpodoxime",1
+"813","Infections and infestations","chlordiazepoxide",1
+"814","Infections and infestations","chlorhexidine",1
+"815","Infections and infestations","corticosteroids",1
+"816","Infections and infestations","diptheria_pertussis_and_tetanus_vaccine",1
+"817","Infections and infestations","epinephrine",1
+"818","Infections and infestations","etomidate",1
+"819","Infections and infestations","fentanyl",1
+"820","Infections and infestations","fluoxetine",1
+"821","Infections and infestations","guaifenesin",1
+"822","Infections and infestations","ketorolac",1
+"823","Infections and infestations","lidocaine",1
+"824","Infections and infestations","meropenem",1
+"825","Infections and infestations","methenamine",1
+"826","Infections and infestations","methylprednisolone_sodium_succinate",1
+"827","Infections and infestations","midazolam",1
+"828","Infections and infestations","morphine",1
+"829","Infections and infestations","nabumetone",1
+"830","Infections and infestations","neostigmine",1
+"831","Infections and infestations","nystatin_triamcinolone",1
+"832","Infections and infestations","oxymetazoline",1
+"833","Infections and infestations","pancrelipase",1
+"834","Infections and infestations","pancuronium_bromide",1
+"835","Infections and infestations","permethrin",1
+"836","Infections and infestations","potassium_chloride",1
+"837","Infections and infestations","povidone_iodine",1
+"838","Infections and infestations","prednisolone_acetate",1
+"839","Infections and infestations","promazine",1
+"840","Infections and infestations","ranitidine",1
+"841","Infections and infestations","scopolamine",1
+"842","Infections and infestations","sodium_chloride",1
+"843","Infections and infestations","sulfacetamide",1
+"844","Infections and infestations","sulindac",1
+"845","Infections and infestations","tobramycin_and_dexamethasone",1
+"846","Infections and infestations","tolnaftate",1
+"847","Infections and infestations","tolterodine",1
+"848","Metabolism and nutrition  ","aluminum_hydroxide",1
+"849","Metabolism and nutrition  ","aluminum_magnesium_simethicone",1
+"850","Metabolism and nutrition  ","amino_acids",1
+"851","Metabolism and nutrition  ","bisacodyl",1
+"852","Metabolism and nutrition  ","calcium_carbide",1
+"853","Metabolism and nutrition  ","calcium_carbonate_and_magnesium_chloride",1
+"854","Metabolism and nutrition  ","calcium_citrate",1
+"855","Metabolism and nutrition  ","calcium_gluconate_and_sodium_phosphates",1
+"856","Metabolism and nutrition  ","carbonic_acid",1
+"857","Metabolism and nutrition  ","cimetidine",1
+"858","Metabolism and nutrition  ","cisatracurium",1
+"859","Metabolism and nutrition  ","desmopressin",1
+"860","Metabolism and nutrition  ","dimenhydrinate",1
+"861","Metabolism and nutrition  ","fludrocortisone",1
+"862","Metabolism and nutrition  ","fluoxetine",1
+"863","Metabolism and nutrition  ","glipizide",1
+"864","Metabolism and nutrition  ","glucose",1
+"865","Metabolism and nutrition  ","ipratropium",1
+"866","Metabolism and nutrition  ","isoflurane",1
+"867","Metabolism and nutrition  ","kcl",1
+"868","Metabolism and nutrition  ","lactase",1
+"869","Metabolism and nutrition  ","lactobacillus",1
+"870","Metabolism and nutrition  ","lactulose",1
+"871","Metabolism and nutrition  ","megestrol",1
+"872","Metabolism and nutrition  ","methylphenidate",1
+"873","Metabolism and nutrition  ","pamidronate",1
+"874","Metabolism and nutrition  ","ranitidine",1
+"875","Metabolism and nutrition  ","selenium",1
+"876","Metabolism and nutrition  ","sodium_biphosphate_and_sodium_phosphates",1
+"877","Metabolism and nutrition  ","sodium_phosphatess",1
+"878","Metabolism and nutrition  ","sucralfate",1
+"879","Metabolism and nutrition  ","tolbutamide",1
+"880","Metabolism and nutrition  ","vancomycin",1
+"881","Metabolism and nutrition  ","vitamin_B",1
+"882","Metabolism and nutrition  ","vitamin_D3",1
+"883","Musculoskeletal System","alendronate",1
+"884","Musculoskeletal System","dantrolene",1
+"885","Musculoskeletal System","diazepam",1
+"886","Musculoskeletal System","naproxen",1
+"887","Musculoskeletal System","pancuronium_bromide",1
+"888","Musculoskeletal System","prazosin",1
+"889","Musculoskeletal System","quinine_sulfate",1
+"890","Neoplasms","allopurinol",1
+"891","Neoplasms","hydroxyurea",1
+"892","Nervous system  ","acetaminophen_and_methocarbamol",1
+"893","Nervous system  ","acetaminophen_and_oxycodone",1
+"894","Nervous system  ","belladonna_alkaloids_opium",1
+"895","Nervous system  ","calcium_gluceptate",1
+"896","Nervous system  ","capsaicin",1
+"897","Nervous system  ","cefamandole",1
+"898","Nervous system  ","chlorzoxazone",1
+"899","Nervous system  ","choline_magnesium_trisalicylate",1
+"900","Nervous system  ","desipramine",1
+"901","Nervous system  ","divalproex_sodium",1
+"902","Nervous system  ","etidronate",1
+"903","Nervous system  ","famotidine",1
+"904","Nervous system  ","fludrocortisone",1
+"905","Nervous system  ","haloperidol",1
+"906","Nervous system  ","ibuprofen",1
+"907","Nervous system  ","insulin",1
+"908","Nervous system  ","ketorolac",1
+"909","Nervous system  ","magnesium_sulfate",1
+"910","Nervous system  ","methylprednisolone_sodium_succinate",1
+"911","Nervous system  ","morphine",1
+"912","Nervous system  ","naproxen",1
+"913","Nervous system  ","nifedipine",1
+"914","Nervous system  ","phenazopyridine",1
+"915","Nervous system  ","phenoxybenzamine",1
+"916","Nervous system  ","phenylephrine",1
+"917","Nervous system  ","potassium_iodide",1
+"918","Nervous system  ","terazosin",1
+"919","Nervous system  ","tramadol",1
+"920","Nervous system  ","xylometazoline_HCl",1
+"921","Pain","bacitracin",1
+"922","Pain","carbamide_peroxide",1
+"923","Pain","cocaine",1
+"924","Pain","codeine_phosphate",1
+"925","Pain","codeine_sulfate",1
+"926","Pain","desipramine",1
+"927","Pain","dexamethasone",1
+"928","Pain","enalapril_maleate",1
+"929","Pain","etodolac",1
+"930","Pain","fludrocortisone",1
+"931","Pain","gentamicin",1
+"932","Pain","haloperidol",1
+"933","Pain","meperidine_and_hydroxyzine",1
+"934","Pain","methadone_and_acetaminophen",1
+"935","Pain","methylprednisolone",1
+"936","Pain","metoclopramide",1
+"937","Pain","morphine_sulfate",1
+"938","Pain","nalbuphine",1
+"939","Pain","neomycin_sulfate_polymyxin_B_sulfate_bacitracin_zinc_and_hydrocortisone",1
+"940","Pain","norfloxacin",1
+"941","Pain","omeprazole",1
+"942","Pain","oxaprozin",1
+"943","Pain","pentobarbital",1
+"944","Pain","phenobarbital",1
+"945","Pain","potassium_chloride",1
+"946","Pain","trazodone",1
+"947","Pain","triazolam",1
+"948","Pain","triethanolamine_polypeptide_oleate",1
+"949","Psychiatric Disorders","acetaminophen_and_hydrocodone",1
+"950","Psychiatric Disorders","benztropine",1
+"951","Psychiatric Disorders","bisacodyl",1
+"952","Psychiatric Disorders","bupropion",1
+"953","Psychiatric Disorders","butamben_tetracaine_benzocaine",1
+"954","Psychiatric Disorders","clonidine",1
+"955","Psychiatric Disorders","dextromethorphan_guaifenesin_and_pseudoephedrine",1
+"956","Psychiatric Disorders","dimenhydrinate",1
+"957","Psychiatric Disorders","ethanol",1
+"958","Psychiatric Disorders","fluphenazine",1
+"959","Psychiatric Disorders","imipenem",1
+"960","Psychiatric Disorders","imipramine_pamoate",1
+"961","Psychiatric Disorders","levomepromazine",1
+"962","Psychiatric Disorders","lithium",1
+"963","Psychiatric Disorders","methocarbamol",1
+"964","Psychiatric Disorders","naloxone",1
+"965","Psychiatric Disorders","nefazodone",1
+"966","Psychiatric Disorders","neostigmine",1
+"967","Psychiatric Disorders","risperidone",1
+"968","Psychiatric Disorders","trifluoperazine_",1
+"969","Psychiatric Disorders","vitamin_B1",1
+"970","Renal and urinary system  ","acetazolamide",1
+"971","Renal and urinary system  ","aminocaproic_acid",1
+"972","Renal and urinary system  ","amitriptyline",1
+"973","Renal and urinary system  ","amphotericin_B",1
+"974","Renal and urinary system  ","cefazolin",1
+"975","Renal and urinary system  ","chlorothiazide",1
+"976","Renal and urinary system  ","desmopressin",1
+"977","Renal and urinary system  ","gentamicin",1
+"978","Renal and urinary system  ","hetastarch",1
+"979","Renal and urinary system  ","levodopa",1
+"980","Renal and urinary system  ","metoclopramide",1
+"981","Renal and urinary system  ","mezlocillin",1
+"982","Renal and urinary system  ","neostigmine",1
+"983","Renal and urinary system  ","propantheline",1
+"984","Renal and urinary system  ","sennosides",1
+"985","Renal and urinary system  ","sodium_bicarbonate",1
+"986","Renal and urinary system  ","tolterodine",1
+"987","Reproductive system and breast  ","progesterone",1
+"988","Respiratory System","albumin",1
+"989","Respiratory System","ammonium_chloride",1
+"990","Respiratory System","baclofen",1
+"991","Respiratory System","bicarbonate",1
+"992","Respiratory System","brompheniramine_dextromethorphan_and_pseudoephedrine",1
+"993","Respiratory System","cefaclor",1
+"994","Respiratory System","cefazolin",1
+"995","Respiratory System","cefotetan",1
+"996","Respiratory System","ceftriaxone",1
+"997","Respiratory System","cephalexin",1
+"998","Respiratory System","chlorpheniramine_methscopolamine_phenylephrine",1
+"999","Respiratory System","clarithromycin",1
+"1000","Respiratory System","cromolyn_sodium",1
+"1001","Respiratory System","diazepam",1
+"1002","Respiratory System","dornase_alfa",1
+"1003","Respiratory System","erythromycin",1
+"1004","Respiratory System","fluconazole",1
+"1005","Respiratory System","guaifenesin_and_theophylline",1
+"1006","Respiratory System","haloperidol",1
+"1007","Respiratory System","isoflurane",1
+"1008","Respiratory System","methylprednisolone_sodium_succinate",1
+"1009","Respiratory System","metoclopramide",1
+"1010","Respiratory System","metocurine_iodide",1
+"1011","Respiratory System","metolazone",1
+"1012","Respiratory System","mezlocillin",1
+"1013","Respiratory System","naloxone",1
+"1014","Respiratory System","nitroglycerin",1
+"1015","Respiratory System","norfloxacin",1
+"1016","Respiratory System","oxymetazoline",1
+"1017","Respiratory System","phenylpropanolamine",1
+"1018","Respiratory System","pirbuterol",1
+"1019","Respiratory System","prochlorperazine",1
+"1020","Respiratory System","rifampin",1
+"1021","Respiratory System","salmeterol_",1
+"1022","Respiratory System","sodium_bicarbonate",1
+"1023","Respiratory System","sulfamethoxazole",1
+"1024","Respiratory System","trimethoprim",1
+"1025","Respiratory System","xylometazoline_HCl",1
+"1026","Skin and subcutaneous tissue  ","aluminum_magnesium",1
+"1027","Skin and subcutaneous tissue  ","ammonium_lactate",1
+"1028","Skin and subcutaneous tissue  ","ampicillin_and_sulbactam",1
+"1029","Skin and subcutaneous tissue  ","cefotaxime",1
+"1030","Skin and subcutaneous tissue  ","ceftazidime",1
+"1031","Skin and subcutaneous tissue  ","chlorhexidine_gluconate",1
+"1032","Skin and subcutaneous tissue  ","desipramine",1
+"1033","Skin and subcutaneous tissue  ","dexamethasone",1
+"1034","Skin and subcutaneous tissue  ","dicloxacillin",1
+"1035","Skin and subcutaneous tissue  ","fluconazole",1
+"1036","Skin and subcutaneous tissue  ","fusidic_acid",1
+"1037","Skin and subcutaneous tissue  ","gentamicin",1
+"1038","Skin and subcutaneous tissue  ","griseofulvin",1
+"1039","Skin and subcutaneous tissue  ","hydrogen_peroxide",1
+"1040","Skin and subcutaneous tissue  ","lidocaine",1
+"1041","Skin and subcutaneous tissue  ","lindane",1
+"1042","Skin and subcutaneous tissue  ","mafenide",1
+"1043","Skin and subcutaneous tissue  ","merbromin",1
+"1044","Skin and subcutaneous tissue  ","mineral_oil",1
+"1045","Skin and subcutaneous tissue  ","minoxidil",1
+"1046","Skin and subcutaneous tissue  ","mupirocin",1
+"1047","Skin and subcutaneous tissue  ","pancuronium_bromide",1
+"1048","Skin and subcutaneous tissue  ","penicillin",1
+"1049","Skin and subcutaneous tissue  ","podofilox",1
+"1050","Skin and subcutaneous tissue  ","potassium_chloride",1
+"1051","Skin and subcutaneous tissue  ","potassium_permanganate",1
+"1052","Skin and subcutaneous tissue  ","salicylic_acid",1
+"1053","Skin and subcutaneous tissue  ","saline",1
+"1054","Skin and subcutaneous tissue  ","selenium_sulfide",1
+"1055","Skin and subcutaneous tissue  ","sodium_chloride",1
+"1056","Skin and subcutaneous tissue  ","sulfacetamide_sodium_and_urea",1
+"1057","Skin and subcutaneous tissue  ","terbinafine_hydrochloride",1
+"1058","Skin and subcutaneous tissue  ","terconazole",1
+"1059","Skin and subcutaneous tissue  ","tobramycin_and_dexamethasone",1
+"1060","Skin and subcutaneous tissue  ","vitamin_C",1
+"1061","Skin and subcutaneous tissue  ","zinc_sulfate_monohydrate",1
+"1062","Surgical and medical procedures","acetaminophen_and_oxycodone",1
+"1063","Surgical and medical procedures","albuterol",1
+"1064","Surgical and medical procedures","amikacin",1
+"1065","Surgical and medical procedures","ampicillin_and_sulbactam",1
+"1066","Surgical and medical procedures","benzocaine",1
+"1067","Surgical and medical procedures","benzocaine_menthol",1
+"1068","Surgical and medical procedures","benzoyl_peroxide",1
+"1069","Surgical and medical procedures","butorphanol_tartrate",1
+"1070","Surgical and medical procedures","cephalexin",1
+"1071","Surgical and medical procedures","cimetidine",1
+"1072","Surgical and medical procedures","ciprofloxacin",1
+"1073","Surgical and medical procedures","cisapride",1
+"1074","Surgical and medical procedures","clonazepam",1
+"1075","Surgical and medical procedures","dezocine",1
+"1076","Surgical and medical procedures","diatrizoate_meglumine_and_diatrizoate_sodium",1
+"1077","Surgical and medical procedures","dibucaine",1
+"1078","Surgical and medical procedures","enoxaparin",1
+"1079","Surgical and medical procedures","epinephrine_sulfate",1
+"1080","Surgical and medical procedures","etidronate",1
+"1081","Surgical and medical procedures","fluconazole",1
+"1082","Surgical and medical procedures","flurazepam",1
+"1083","Surgical and medical procedures","gelatin",1
+"1084","Surgical and medical procedures","glucagon",1
+"1085","Surgical and medical procedures","hydralazine",1
+"1086","Surgical and medical procedures","hydromorphone",1
+"1087","Surgical and medical procedures","iohexol",1
+"1088","Surgical and medical procedures","kcl",1
+"1089","Surgical and medical procedures","ketorolac",1
+"1090","Surgical and medical procedures","levodopa",1
+"1091","Surgical and medical procedures","magnesium_citrate",1
+"1092","Surgical and medical procedures","magnesium_sulfate",1
+"1093","Surgical and medical procedures","mannitol",1
+"1094","Surgical and medical procedures","metacyclin",1
+"1095","Surgical and medical procedures","metronidazole",1
+"1096","Surgical and medical procedures","metubine",1
+"1097","Surgical and medical procedures","mivacurium_chloride",1
+"1098","Surgical and medical procedures","ofloxacin",1
+"1099","Surgical and medical procedures","oxacillin",1
+"1100","Surgical and medical procedures","pentobarbital",1
+"1101","Surgical and medical procedures","piperacillin",1
+"1102","Surgical and medical procedures","platelets",1
+"1103","Surgical and medical procedures","polyethylene_glycol_electrolyte_solution",1
+"1104","Surgical and medical procedures","povidone_iodine",1
+"1105","Surgical and medical procedures","prilocaine",1
+"1106","Surgical and medical procedures","sevoflurane",1
+"1107","Surgical and medical procedures","sodium_bicarbonate",1
+"1108","Surgical and medical procedures","sodium_chloride",1
+"1109","Surgical and medical procedures","sulfamethoxazole",1
+"1110","Surgical and medical procedures","tetracycline",1
+"1111","Surgical and medical procedures","trimethoprim",1
+"1112","Surgical and medical procedures","urokinase",1
+"1113","Surgical and medical procedures","vitamin_B",1
+"1114","Vascular System","amlodipine",1
+"1115","Vascular System","ciprofloxacin",1
+"1116","Vascular System","dalteparin",1
+"1117","Vascular System","desmopressin",1
+"1118","Vascular System","dexamethasone",1
+"1119","Vascular System","diltiazem",1
+"1120","Vascular System","enalapril",1
+"1121","Vascular System","enalapril_maleate",1
+"1122","Vascular System","esmolol",1
+"1123","Vascular System","fluconazole",1
+"1124","Vascular System","hydroxyzine",1
+"1125","Vascular System","insulin",1
+"1126","Vascular System","lidocaine",1
+"1127","Vascular System","lisinopril",1
+"1128","Vascular System","metolazone",1
+"1129","Vascular System","metoprolol_hydrochlorothiazide",1
+"1130","Vascular System","midazolam",1
+"1131","Vascular System","morphine",1
+"1132","Vascular System","nizatidine",1
+"1133","Vascular System","nortriptyline",1
+"1134","Vascular System","plasma",1
+"1135","Vascular System","potassium",1
+"1136","Vascular System","potassium_phosphate",1
+"1137","Vascular System","pramoxine_phenylephrine_glycerin_petrolatum",1
+"1138","Vascular System","quinapril",1
+"1139","Vascular System","sodium_bicarbonate",1
+"1140","Vascular System","urea",1
+"1141","Vascular System","vasopressin",1
+"1142","Vascular System","vitamin_K",1

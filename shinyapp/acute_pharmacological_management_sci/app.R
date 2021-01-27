@@ -109,9 +109,17 @@ ui <- dashboardPage(
   dashboardSidebar(width = 350,
     sidebarMenu(id = "sidebarMenu",
                 menuItem("About", tabName = "about", icon = icon("info-circle")),
-                menuItem("Cohorts", tabName = "cohort", icon = icon("users"),
-                         menuSubItem('Sygen Trial', tabName = 'sygentrial', icon = icon("hospital-user")),
-                         menuSubItem('SCIRehab', tabName = 'scirehab', icon=icon("database"))),
+                #menuItem("Cohorts", tabName = "cohort", icon = icon("users"),
+                menuItem('Sygen Trial', tabName = 'sygentrial', icon = icon("hospital-user"), 
+                         menuSubItem("Cohort", tabName = "cohort_sygen", icon = icon("users")), 
+                         menuSubItem("Medications", tabName = "medication_sygen", icon = icon("prescription")),
+                         menuSubItem("Polypharmacy", tabName = "polypharmacy_sygen", icon = icon("dice-d20")),
+                         menuSubItem("Drug administration pattern", tabName = "drug_pattern_sygen", icon = icon("chart-bar"))),
+                menuItem('SCIRehab', tabName = 'scirehab', icon=icon("database"),
+                         menuSubItem("Cohort", tabName = "cohort_scirehab", icon = icon("users")), 
+                         menuSubItem("Medications", tabName = "medication_scirehab", icon = icon("prescription")),
+                         menuSubItem("Polypharmacy", tabName = "polypharmacy_scirehab", icon = icon("dice-d20")),
+                         menuSubItem("Drug administration pattern", tabName = "drug_pattern_scirehab", icon = icon("chart-bar"))),
                 menuItem(HTML(paste0("Take the survey now ", icon("external-link"))), icon=icon("signature"), href = "https://nyu.qualtrics.com/jfe/form/SV_6svo6J4NF7wE6tD", newtab = T),
                 uiOutput("dynamic_content")),
     shinyjs::useShinyjs(),
@@ -383,7 +391,7 @@ ui <- dashboardPage(
     
             )
       ),
-    tabItem(tabName = "sygentrial",
+    tabItem(tabName = "cohort_sygen",
             h3("Description of Sygen Trial Cohort"),
                         fluidRow(
                          box(width = 12,
@@ -407,7 +415,7 @@ ui <- dashboardPage(
             )
             
             
-    ),    tabItem(tabName = "scirehab",
+    ),    tabItem(tabName = "cohort_scirehab",
                   h3("Description of SCIRehab Study Cohort"),
                   fluidRow(
                     box(width = 12,
