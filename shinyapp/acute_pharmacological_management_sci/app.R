@@ -18,15 +18,10 @@
 ##
 ## Notes: This app accompanies the publication of Jutzeler et al, 2021 published in XX. [add link here]
 ##      
-##   
-#### ---------------------------
-
-## set working directory
-
-setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/")  #replace with your working directory
-
 ## ---------------------------
-## load up the packages we will need:  
+##
+## Load up the packages required
+##
 library(shiny)
 library(shinydashboard)
 library(shinythemes)
@@ -49,32 +44,48 @@ library(sna)
 library(shinyjs)
 library(metathis)
 library(r2d3)
-
-
-
+##
 ## ----------------------------
+##
 ## Install packages needed:  (uncomment as required)
-
-#if(!require(shiny)){install.packages("shiny")}
-#if(!require(shinydashboard)){install.packages("shinydashboard")}
-#if(!require(dplyr)){install.packages("dplyr")}
-#if(!require(tidyr)){install.packages("tidyr")}
-#if(!require(ggplot2)){install.packages("ggplot2")}
-#if(!require(stats)){install.packages("stats")}
-#if(!require(ggthemes)){install.packages("ggthemes")}
-
-
-#### ---------------------------
-# R Studio Clean-Up:
-# cat("\014") # clear console
-# rm(list=ls()) # clear workspace
-# gc() # garbage collector
-
-#### ---------------------------
+##
+# if(!require(shiny)){install.packages("shiny")}
+# if(!require(shinydashboard)){install.packages("shinydashboard")}
+# if(!require(dplyr)){install.packages("dplyr")}
+# if(!require(tidyr)){install.packages("tidyr")}
+# if(!require(ggplot2)){install.packages("ggplot2")}
+# if(!require(stats)){install.packages("stats")}
+# if(!require(ggthemes)){install.packages("ggthemes")}
+##
+## ---------------------------
+##
+## R Studio Clean-Up:
+cat("\014") # clear console
+rm(list=ls()) # clear workspace
+gc() # garbage collector
+##
+## ---------------------------
+##
+## Set working directory 
+setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
+##
+## ---------------------------
+##
+## Set output directorypaths
+outdir_figures='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures'
+outdir_tables='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables'
+##
+## ---------------------------
+##
 #Set local system
 Sys.setlocale('LC_ALL','C') 
-
+##
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
+
+
+#---------- Source helper functions ----------# 
+source("helper_functions_2.R")
+
 
 #### ---------------------------
 # load data:
@@ -85,6 +96,10 @@ Sys.setlocale('LC_ALL','C')
 
 #load("data/shinyDataAggregated.RData")
 #load("data/shinyDataLongitudinal.RData")
+
+# Load data
+sygen_baseline<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app.csv", sep = ',', header = T)
+
 
 
 
@@ -245,152 +260,143 @@ ui <- dashboardPage(
                     }
 
                   ")),
-    
-    
-    # .btn.btn-success {
-    #   color: #ffd43a;
-    #     background-color: #193152;
-    #     border-color: #193152;
-    # }
-    # .btn.btn-success.focus,
-    # .btn.btn-success:focus {
-    #   color: #ffd43a;
-    #     background-color: #193152;
-    #     border-color: #193152;
-    #     outline: none;
-    #   box-shadow: none;
-    # }
-    # .btn.btn-success:hover {
-    #   color: #ffd43a;
-    #     background-color: #193152;
-    #     border-color: #193152;
-    #     outline: none;
-    #   box-shadow: none;
-    # }
-    # .btn.btn-success.active,
-    # .btn.btn-success:active {
-    #   color: #ffd43a;
-    #     background-color: #193152;
-    #     border-color: #193152;
-    #     outline: none;
-    # }
-    # .btn.btn-success.active.focus,
-    # .btn.btn-success.active:focus,
-    # .btn.btn-success.active:hover,
-    # .btn.btn-success:active.focus,
-    # .btn.btn-success:active:focus,
-    # .btn.btn-success:active:hover {
-    #   color: #ffd43a;
-    #     background-color: #1d4c8d ;
-    #     border-color: #1d4c8d ;
-    #     outline: none;
-    #   box-shadow: none;
-    # }
-    
-    
-    
-    
-    
 
-    
-    # meta() %>%
-    #   meta_social(
-    #     title = "PsyCorona: Data Visualization",
-    #     description = paste0("A tool to explore the patterns of psychological reactions to the Covid-19 epidemic across ", nrow(ctry.only.red), " countries."),
-    #     url = "https://psycorona.shinyapps.io/WebApp/",
-    #     image = "https://raw.githubusercontent.com/JannisCodes/PsyCorona-WebApp/master/www/media.png",
-    #     image_alt = "PsyCorona Data Tool",
-    #     twitter_creator = "@JannisWrites",
-    #     twitter_card_type = "summary",
-    #     twitter_site = "@JannisWrites"
-    #   ),
-    # 
-    # 
-    
+    # Create function to hyperlink a text with the tab links
+    tags$script(HTML("
+                            var openTab = function(tabName){
+                     $('a', $('.sidebar')).each(function() {
+                     if(this.getAttribute('data-value') == tabName) {
+                     this.click()
+                     };
+                     });
+                     };
+                     $('.sidebar-toggle').attr('id','menu');
+                     var dimension = [0, 0];
+                     $(document).on('shiny:connected', function(e) {
+                     dimension[0] = window.innerWidth;
+                     dimension[1] = window.innerHeight;
+                     Shiny.onInputChange('dimension', dimension);
+                     });
+                     $(window).resize(function(e) {
+                     dimension[0] = window.innerWidth;
+                     dimension[1] = window.innerHeight;
+                     Shiny.onInputChange('dimension', dimension);
+                     });
+                     ")),
     
     shinyjs::useShinyjs(),
     tabItems(
-    tabItem(tabName = "about",
-            h3("Welcome to the",strong("Pharmacological Management of Spinal Cord Injury"), "Project"),
-            br(),
-            fluidRow(
-              box(#title = "Explore The Data", 
-                width = 8, 
-                heigth = "500px",
-                solidHeader = TRUE,
-                
-                h4("Study description"),
-                "Complications arising from acute traumatic spinal cord injury (SCI) are routinely managed by various pharmacological interventions. 
-                Despite decades of clinical application, the potential impact on neurological recovery has been largely overlooked. The goal of this
-                study was to highlight drugs with potential disease modifying effects, and, in doing so, identify a novel translational path to enhancing 
-                function for individuals with acute injury.
-                Nearly every individual sustaining spinal cord injury receives multiple types and classes of medications to manage a litany of problems 
-                associated with traumatic spinal cord injury. We performed an analysis of available clinical trial and observational data to determine 
-                what constitutes standards of acute pharmacological care after traumatic spinal cord injury. The goal of this study was to determine 
-                the types of medications commonly administered, alone or in combination, in the acute phase of spinal cord injury. To this end, we conducted 
-                an analysis of available clinical trial and observational data to determine what constitutes standards of acute pharmacological care
-                after spinal cord injury. Concomitant medication use (i.e., non-randomized medications), including dosage, timing and reason for administration, 
-                was tracked through the duration of the trial and observational study. Descriptive statistics were used to describe the medications administered 
-                within the first 90 days after spinal cord injury. R Statistical Software was used for all statistical analyses and to create plots for data visualization.
-                Over 770 unique medications were administered within the first month after injury. On average, patients received 20 unique medications (range 1-58), 
-                often in a combinatorial or overlapping fashion (i.e., polypharmacy). Approximately 10% of medications were administered acutely as prophylaxis 
-                (e.g., pain, infections). Our study revealed a high degree of polypharmacy in the acute stages of spinal cord injury, with potential to both positively and negatively impact neurological recovery.",
-                br(),
-                br(),
-                h4("Study team"),
-                strong("Principal Investigator:"), "Dr. Catherine Jutzeler, Research Group Leader, Department of Biosystems Science and Engineering, Swiss Federal Institute of Technology (ETH Zurich) ", 
-                tags$a(href="mailto:Catherine.Jutzeler@bsse.ethz.ch", 
-                                                   target="_blank",
-                                                   icon("envelope")),
-                ".",
-                br(),
-                strong("Co-investigators:"), "Dr. John Kramer, Department of Anesthesiology, Pharmacology, and Therapeutics, Faculty of Medicine, University of British Columbia, Canada.  ",
-                br(),
-                "                  Dr. Jacquelyn Cragg, Faculty of Pharmaceutical Sciences, University of British Columbia, Vancouver, Canada.",
-                br(),
-                br(),
-                h4("Ethics statement"),
-                "Approval for this study (secondary analysis) was received by an institutional ethical standards committee on human experimentation at the University of 
-                British Columbia. The original Sygen clinical trial (results published elsewhere) also received ethical approval, but was conducted before clinical trials 
-                were required to be registered (i.e., no clinicaltrial.gov identifier available). Each participating center of the SCIRehab study received institutional 
-                review board approval for this study and obtained informed consent from each patient (or their parent/guardian).
-                If you have any questions or concerns regarding the study please do not hesitate to contact the Principal
-                Investigator, Dr. Catherine Jutzeler",
-                tags$a(href="mailto:catherine.jutzeler@bsse.ethz.ch", 
-                       target="_blank",
-                       icon("envelope")),
-                ".",
-                br(),
-                br(),
-                br(),
-                "More information ",
-                tags$a(href="https://bsse.ethz.ch/mlcb/people/person-detail.MTg3NjEz.TGlzdC83NjcsLTEyNjQ4MzU1MTY=.html", 
-                       target="_blank",
-                       icon("id-card")),
-                HTML("&nbsp"),
-                tags$a(href="https://github.com/jutzca/Acute-Pharmacological-Treatment-in-SCI", 
-                       target="_blank", 
-                       icon("github")),
-                br(),
-                br(),
-              box(width = 4,
-                  HTML("<a class=\"twitter-timeline\" data-height=\"600\" href=\"https://twitter.com/DatSci_4_health\">A Twitter List by FortuneMagazine</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
+      tabItem(tabName = "about",
+              h3("Welcome to the",strong("Pharmacological Management of Spinal Cord Injury"), "Project"),
+              br(),
+              fluidRow(
+                box(#title = "Explore The Data", 
+                  width = 8, 
+                  heigth = "500px",
+                  solidHeader = TRUE,
+                  
+                  h4("Study description"),
+                  "Complications arising from acute traumatic spinal cord injury (SCI) are routinely managed by various pharmacological interventions. 
+                  Despite decades of clinical application, the potential impact on neurological recovery has been largely overlooked. The goal of this
+                  study was to highlight drugs with potential disease modifying effects, and, in doing so, identify a novel translational path to enhancing 
+                  function for individuals with acute injury.
+                  Nearly every individual sustaining spinal cord injury receives multiple types and classes of medications to manage a litany of problems 
+                  associated with traumatic spinal cord injury. We performed an analysis of available clinical trial and observational data to determine 
+                  what constitutes standards of acute pharmacological care after traumatic spinal cord injury. The goal of this study was to determine 
+                  the types of medications commonly administered, alone or in combination, in the acute phase of spinal cord injury. To this end, we conducted 
+                  an analysis of available clinical trial and observational data to determine what constitutes standards of acute pharmacological care
+                  after spinal cord injury. Concomitant medication use (i.e., non-randomized medications), including dosage, timing and reason for administration, 
+                  was tracked through the duration of the trial and observational study. Descriptive statistics were used to describe the medications administered 
+                  within the first 90 days after spinal cord injury. R Statistical Software was used for all statistical analyses and to create plots for data visualization.
+                  Over 770 unique medications were administered within the first month after injury. On average, patients received 20 unique medications (range 1-58), 
+                  often in a combinatorial or overlapping fashion (i.e., polypharmacy). Approximately 10% of medications were administered acutely as prophylaxis 
+                  (e.g., pain, infections). Our study revealed a high degree of polypharmacy in the acute stages of spinal cord injury, with potential to both positively and negatively impact neurological recovery.",
+                  br(),
+                  br(),
+                  h4("Study team"),
+                  strong("Principal Investigator:"), 
+                  tags$ul(
+                    tags$li("Dr. Catherine Jutzeler, Research Group Leader, Department of Biosystems Science and Engineering, Swiss Federal Institute of Technology (ETH Zurich).",
+                            tags$a(href="mailto:Catherine.Jutzeler@bsse.ethz.ch", 
+                            target="_blank",
+                            icon("envelope")))),
+                  strong("Co-investigators:"), 
+                  tags$ul(
+                    tags$li("Dr. John Kramer, Department of Anesthesiology, Pharmacology, and Therapeutics, Faculty of Medicine, University of British Columbia, Canada."
+                            ),
+                    tags$li("Dr. Jacquelyn Cragg, Faculty of Pharmaceutical Sciences, University of British Columbia, Vancouver, Canada."
+                    )),
+                  br(),
+                  h4("Ethics statement"),
+                  "Approval for this study (secondary analysis) was received by an institutional ethical standards committee on human experimentation at the University of 
+                  British Columbia. The original Sygen clinical trial (results published elsewhere) also received ethical approval, but was conducted before clinical trials 
+                  were required to be registered (i.e., no clinicaltrial.gov identifier available). Each participating center of the SCIRehab study received institutional 
+                  review board approval for this study and obtained informed consent from each patient (or their parent/guardian).
+                  If you have any questions or concerns regarding the study please do not hesitate to contact the Principal
+                  Investigator, Dr. Catherine Jutzeler",
+                  tags$a(href="mailto:catherine.jutzeler@bsse.ethz.ch", 
+                         target="_blank",
+                         icon("envelope")),
+                  ".",
+                  br(),
+                  br(),
+                  h4("What You Can Do Here:"),
+                  "This applet has ",
+                  tags$b("four main interactive sections"),
+                  " that enable visitors to directly interact with the PsyCorona data: ",
+                  tags$ul(
+                    tags$li("The cohort tab provides information on the patients that were enrolled in the", 
+                            a("Sygen clinical trial", onclick = "openTab('cohort_sygen')", href="#"), 'or',
+                            a("SCIRehab study", onclick = "openTab('cohort_scirehab')", href="#"),
+                            ".")),
+                  tags$ul(
+                    tags$li("The ",
+                            a("Data Sources", onclick = "openTab('scirehab')", href="#"),
+                            "tab offers an insight into the diversity of our participants. We share compound information on some demographic variables, as well as the number of respondents in each country. 
+                            Please note that to protect the privacy and anonymity of our participants, data visualizations are only available for selections of more than 20 people."),
+                    tags$li("The ",
+                            a("Psychological Variables", onclick = "openTab('medication_scirehab')", href="#"),
+                            " tab offers an interactive interface to explore the psychological variables we collect in the initiative's baseline survey. 
+                            This survey is open to anyone interested at",
+                            tags$a(href="https://nyu.qualtrics.com/jfe/form/SV_6svo6J4NF7wE6tD", 
+                                   target="_blank",
+                                   "tiny.cc/corona_survey"),
+                            "and currently includes over 50 000 participants. You can explore psychological reactions to the coronavirus at five different levels: 
+                            (1) Governmental Response, (2) Community Response, (3) Cognitive Response, (4) Behavioral Response, as well as (5) Emotional Response. 
+                            Additionally, we offer a tool to explore the mean level relationship between different variables for different countries. Please note that to protect the 
+                            privacy and anonymity of our participants we only provide country-level visualizations once we have data for more than 20 people from any particular country."),
+                    tags$li("The ",
+                            a("Development", onclick = "openTab('medication_scirehab')", href="#"),
+                            " tab gives you the possibility to interactively explore how different areas are evolving over time. This section is currently partly under
+                            construction, but will be fully available soon.")
+                    ),
+                  br(),
+                  h4("Funding:"),
+                  p('This project is supported by the ',
+                    a('Swiss National Science Foundation', href = 'http://p3.snf.ch/project-186101', target="_blank"),
+                    ' (Ambizione Grant, #PZ00P3_186101), ',
+                    a('Wings for Life Research Foundation', href = 'https://www.wingsforlife.com/en/', target="_blank"),
+                    ' (#2017_044), the ',
+                    a('Craig H Neilsen', href = 'https://chnfoundation.org/', target="_blank"),
+                    '.', align = "justify")
+                    ),
+                box(width = 4,
+                    HTML("<a class=\"twitter-timeline\" data-height=\"600\" href=\"https://twitter.com/DatSci_4_health\">A Twitter List by FortuneMagazine</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
+                )
+                    ),
+              fluidRow(
+                valueBox(prettyNum(1895, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
+                valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
+                         "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
+                ),
+                #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
+                valueBox("XX", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
+                #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
               )
-                  ),
-            fluidRow(
-              valueBox(prettyNum(1895, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-              valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
-              valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
-                "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
-              ),
-              #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
-              valueBox("XX", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
-              #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
-            )
-
-    
-            )
-      ),
+           ),
+      
+      
     tabItem(tabName = "cohort_sygen",
             h3("Description of Sygen Trial Cohort"),
                         fluidRow(
@@ -437,25 +443,52 @@ ui <- dashboardPage(
                         textOutput("SampleTxt"), align = "center")
                     #)
                   )
-                  
-                  
     )
-    
     
     )
   )
 )
+                  
+
+    
+    
 
 
 
 server <- function(input, output) {
-  
+
   
   output$cohort <- renderMenu({
     sidebarMenu(
       menuItem("Cohort description", icon = icon("users"))
     )
   })
+  
+  # Gender 
+  output$d3.bar <- renderD3({
+    #input <- list(var = "language", sample_country_selection = c("France", "Germany"))
+    #input <- list(var = "gender", sample_country_selection = c("Poland", "Romania", "Albania"))
+    
+    dem <- reactive_ctry.scales() %>%
+      filter(coded_country %in% input$sample_country_selection) %>%
+      select(starts_with(input$var)) %>%
+      t() %>%
+      as.data.frame()
+    # colnames(dem) <- input$sample_country_selection
+    dem %>%
+      mutate(n = rowSums(., na.rm=TRUE),
+             label = str_replace(rownames(.), ".*_", "")) %>%
+      arrange(desc(n)) %>%
+      filter(n > 0,
+             label != "<NA>") %>%
+      mutate(y = n,
+             ylabel = scales::percent(n/sum(n), accuracy = 0.01), #prettyNum(n/sum(n)*100, big.mark = ",", format = "f", digits = 2),
+             fill = "#3b738f", #ifelse(label != input$val, "#E69F00", "red"),
+             mouseover = "#2a5674") %>%
+      r2d3(r2d3_file)
+  })
+  
+  
   
 
 }
