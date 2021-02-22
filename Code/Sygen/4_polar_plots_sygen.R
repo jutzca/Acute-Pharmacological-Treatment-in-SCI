@@ -61,19 +61,52 @@ dataframe <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfil
 # Remove Duplicates based on three rows
 dataframe_rm_duplicates <- dataframe[!duplicated(dataframe[c(2:4)]),]
 
-# Add demographics and injury characteristics
-demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics.csv", header=T, sep = ',')
-dataframe_rm_duplicates.extended <- merge(dataframe_rm_duplicates,demographics.data)
-
-# Count number of drugs per indication overall
+#---------- Number of drugs per indication overall ---------- 
+# Count number of drugs per indication
 number.of.drugs.per.indication.overall <- dataframe_rm_duplicates.extended %>%
-  dplyr::count(ais1, generic_name, indication, sort = TRUE) %>%
-  dplyr::count(ais1, indication, sort = TRUE) %>%
+  dplyr::count( generic_name, indication, sort = TRUE) %>%
+  dplyr::count(indication, sort = TRUE) %>%
   as.data.frame()
 number.of.drugs.per.indication.overall
 
 # Save table
 write.csv(number.of.drugs.per.indication.overall, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3_overall.csv", row.names = F)
+
+# Plot number of drugs per indication overall
+number.of.drugs.per.indication.overall.sygen <-ggplot(data=number.of.drugs.per.indication.overall, aes(x=indication, y=n, fill=n)) +
+  geom_bar(stat='identity')+
+  theme_light() +
+  scale_fill_gradient(low='red', high='blue', limits=c(0,150)) +
+  theme(axis.title.y=element_text(angle=0))+ coord_polar()+
+  theme(axis.title.y=element_blank(), 
+        axis.title.x = element_blank(), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(),
+        axis.text.x=element_text(size=12, family = 'Times'), 
+        strip.text = element_text(size=14, family = "Times", face='bold'))
+number.of.drugs.per.indication.overall.sygen
+
+# Save plot
+ggsave(
+  "polar_plots.nr.medications.indication.sygen.pdf",
+  plot = number.of.drugs.per.indication.overall.sygen,
+  device = 'pdf',
+  path = outdir_figures,
+  scale = 1,
+  width = 8,
+  height = 8,
+  units = "in",
+  dpi = 300
+)
+
+dev.off()
+
+
+#---------- Number of drugs per indication stratified by AIS grades ---------- 
+
+# Add demographics and injury characteristics
+demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics.csv", header=T, sep = ',')
+dataframe_rm_duplicates.extended <- merge(dataframe_rm_duplicates,demographics.data)
 
 # Count number of drugs per indication stratified by AIS grades
 number.of.drugs.per.indication.stratified.by.ais.grades <- dataframe_rm_duplicates.extended %>%
@@ -87,14 +120,16 @@ write.csv(number.of.drugs.per.indication.stratified.by.ais.grades, "/Users/jutzc
 
 # Plot number of drugs per indication stratified by AIS grades
 polar_plots.nr.medications.indication.by.ais.grade.sygen <-ggplot(data=number.of.drugs.per.indication.stratified.by.ais.grades, aes(x=indication, y=n, fill=n)) +
-  geom_bar(stat='identity')+facet_wrap(.~ais1, nrow = 3)+
+  geom_bar(stat='identity')+facet_wrap(.~ais1, nrow = 2)+
   theme_light() +
   scale_fill_gradient(low='red', high='blue', limits=c(0,140)) +
   theme(axis.title.y=element_text(angle=0))+ coord_polar()+
   theme(axis.title.y=element_blank(), 
         axis.title.x = element_blank(), 
         axis.ticks.y = element_blank(), 
-        axis.text.y = element_blank() )+force_panelsizes(cols = c(0.3, 1)) 
+        axis.text.y = element_blank(),
+        axis.text.x=element_text(size=12, family = 'Times'), 
+        strip.text = element_text(size=14, family = "Times", face='bold'))
 polar_plots.nr.medications.indication.by.ais.grade.sygen
 
 ##Save plot
@@ -113,24 +148,33 @@ ggsave(
 dev.off()
 
 
+#---------- Number of patients per indication overall ---------- 
+
 #Count number of patients per indication
-df_2 <- dataframe_rm_duplicates %>%
+number.of.patient.per.indication <- dataframe_rm_duplicates %>%
   dplyr::count( NEW_ID, indication, sort = TRUE)   %>%
   dplyr::count(indication, sort = TRUE)%>%
   as.data.frame()
+number.of.patient.per.indication
 
-write.csv(df_2, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_2.csv")
+# Save table
+write.csv(number.of.patient.per.indication, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_2_overall.csv")
 
-
-#Plotnumber of patients per indication
-polar_plots.nr.patient.indication.sygen <- ggplot(data=df_2, aes(x=indication, y=n, fill=n)) +
+# Plot number of patients per indication
+polar_plots.nr.patient.indication.sygen <- ggplot(data=number.of.patient.per.indication, aes(x=indication, y=n, fill=n)) +
   geom_bar(stat='identity')+theme_light() +
   scale_fill_gradient(low='yellow', high='red', limits=c(0,800)) +
-  theme(axis.title.y=element_text(angle=0)) + coord_polar()+theme(axis.title.y=element_blank(), axis.title.x = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank())
+  theme(axis.title.y=element_text(angle=0)) + coord_polar()+
+  theme(axis.title.y=element_blank(), 
+        axis.title.x = element_blank(), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(),
+        axis.text.x=element_text(size=12, family = 'Times'), 
+        strip.text = element_text(size=14, family = "Times", face='bold'))
 polar_plots.nr.patient.indication.sygen
 
 
-##Save plot
+# Save plot
 ggsave(
   "polar_plots.nr.patient.indication.sygen.pdf",
   plot = polar_plots.nr.patient.indication.sygen,
@@ -147,21 +191,78 @@ dev.off()
 
 
 
-# Barplot of drugs per indication
-dataframe_rm_duplicates %>% subset(!(indication=="Cardiac System")) %>% subset(!(indication=="Immune system  "))%>%  subset(!(indication=="Renal and urinary system  "))%>%                      
+#---------- Number of patients per indication stratified by AIS grades ---------- 
+
+# Add demographics and injury characteristics
+demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics.csv", header=T, sep = ',')
+dataframe_rm_duplicates.extended <- merge(dataframe_rm_duplicates, demographics.data)
+
+# Count number of patients per indication
+number.of.patient.per.indication.per.ais.grades <- dataframe_rm_duplicates.extended %>%
+  dplyr::count(ais1, NEW_ID, indication, sort = TRUE)   %>%
+  dplyr::count(ais1, indication, sort = TRUE)%>%
+  as.data.frame()
+number.of.patient.per.indication.per.ais.grades
+
+# Save table
+write.csv(number.of.patient.per.indication.per.ais.grades, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_2_per_ais_grade.csv")
+
+
+# Plot number of patients per indication
+polar_plots.nr.patient.indication.per.ais.grades.sygen <- ggplot(data=number.of.patient.per.indication.per.ais.grades, aes(x=indication, y=n, fill=n)) +
+  geom_bar(stat='identity')+theme_light() +facet_wrap(.~ais1, nrow = 2)+
+  scale_fill_gradient(low='yellow', high='red', limits=c(0,430)) +
+  theme(axis.title.y=element_text(angle=0)) + coord_polar()+
+  theme(axis.title.y=element_blank(), 
+        axis.title.x = element_blank(), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank(),
+        axis.text.x=element_text(size=12, family = 'Times'), 
+        strip.text = element_text(size=14, family = "Times", face='bold'))
+polar_plots.nr.patient.indication.per.ais.grades.sygen
+
+
+# Save plot
+ggsave(
+  "polar_plots.nr.patient.indication.per.ais.grades.sygen.pdf",
+  plot = polar_plots.nr.patient.indication.per.ais.grades.sygen,
+  device = 'pdf',
+  path = outdir_figures,
+  scale = 1,
+  width = 12,
+  height = 12,
+  units = "in",
+  dpi = 300
+)
+
+dev.off()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Ballon plots
+dataframe_rm_duplicates %>%
   dplyr::count(indication, generic_name) %>%  
-  dplyr::filter(n>= 20) %>%   
-  dplyr::arrange(desc(n))%>%  
-  dplyr::arrange(.,indication) %>%    
-  ggplot(aes(tidytext::reorder_within(indication, -n, generic_name), n))+
-  geom_bar(stat = "identity")+
-  labs(x = NULL, y = "n") +
-  facet_wrap(.~indication, scales = "free", ncol=3) +theme_bw()+theme()
-
-
-
-
-
+  dplyr::filter(n>= 50) %>%   
+  dplyr::arrange(desc(n))%>%
+  #pivot_wider(names_from = generic_name, values_from = n)%>% 
+  as.data.frame()%>%replace(is.na(.), "")%>% 
+  ggballoonplot( x = "indication", y = "generic_name", size = "n",
+                fill = "n", 
+                ggtheme = theme_bw()) +
+  scale_fill_viridis_c(option = "C")
+  
 
 
 

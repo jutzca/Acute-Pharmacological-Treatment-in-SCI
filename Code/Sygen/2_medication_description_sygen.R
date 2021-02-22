@@ -21,7 +21,7 @@
   ##
   ## load up the packages we will need:  
   ##
-  library("dplyr") 
+  library(dplyr) 
   library(tidyr)
   library(tidyverse)
   library(hrbrthemes)
@@ -143,6 +143,7 @@
   dev.off()
   
   
+
   #---------- Calculate and visualize number of drugs per patient with 7,14, and 30 days respectively ----------
   
   # Make copy of data file to work with
