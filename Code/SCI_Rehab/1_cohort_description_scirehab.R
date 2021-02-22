@@ -17,38 +17,37 @@
 ##
 ## Notes: This analysis is for the publication Jutzeler et al, 2021 published in XX
 ##   
-#### ---------------------------
-
-## set working directory
-
-setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
-
 ## ---------------------------
+##   
 ## load up the packages we will need:  
 library(data.table)
 library(table1)
-
+##   
 ## ----------------------------
+##   
 ## Install packages needed:  (uncomment as required)
-
+##
 #if(!require(data.table)){install.packages("data.table")}
 #if(!require(table1)){install.packages("table1")}
-
+##
 #### ---------------------------
-
+##
 # R Studio Clean-Up:
 cat("\014") # clear console
 rm(list=ls()) # clear workspace
 gc() # garbage collector
-
-
+##
 #### ---------------------------
-# Set output directorypaths
-
+##
+## Set working directory 
+setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
+##
+#### ---------------------------
+##
+## Set output directorypaths
 outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/SCI_Rehab'
 outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/SCI_Rehab'
-
-
+##
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 # Load data files
@@ -82,7 +81,6 @@ label(sci.rehab.cohort.admission$Cause) <- "Cause, n (%)"
 
 # 2. Create Table
 table1::table1(~ Sex+Age+AIS+NLI+Cause, data = sci.rehab.cohort.admission)
-
 
 
 #### -------------------------------------------------------------------------- CODE END ------------------------------------------------------------------------------------------------####
