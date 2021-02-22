@@ -1,22 +1,92 @@
-"","indication","n"
-"1","Infections and infestations",150
-"2","Surgical and medical procedures",137
-"3","Respiratory System",99
-"4","Gastrointestinal System",93
-"5","Metabolism and nutrition  ",88
-"6","Pain",82
-"7","General Disorders",73
-"8","Vascular System",73
-"9","Psychiatric Disorders",72
-"10","Skin and subcutaneous tissue  ",61
-"11","Nervous system  ",55
-"12","Cardiac System",45
-"13","Blood and lymphatic system  ",37
-"14","Renal and urinary system  ",29
-"15","Immune system  ",12
-"16","Eye  ",11
-"17","Musculoskeletal System",10
-"18","Ear and labyrinth  ",8
-"19","Reproductive system and breast  ",3
-"20","Endocrine System",2
-"21","Neoplasms",2
+"","ais1","indication","n"
+"1","AIS A","Infections and infestations",136
+"2","AIS A","Surgical and medical procedures",107
+"3","AIS A","Respiratory System",86
+"4","AIS A","Gastrointestinal System",76
+"5","AIS A","Metabolism and nutrition  ",76
+"6","AIS C","Infections and infestations",74
+"7","AIS C","Surgical and medical procedures",74
+"8","","Infections and infestations",71
+"9","AIS A","General Disorders",66
+"10","AIS B","Infections and infestations",64
+"11","AIS A","Pain",63
+"12","AIS A","Psychiatric Disorders",58
+"13","AIS A","Vascular System",55
+"14","","Surgical and medical procedures",53
+"15","AIS B","Surgical and medical procedures",46
+"16","AIS C","Gastrointestinal System",44
+"17","","Gastrointestinal System",43
+"18","AIS A","Nervous system  ",43
+"19","AIS C","Pain",43
+"20","","Pain",42
+"21","AIS B","Pain",42
+"22","AIS C","Psychiatric Disorders",42
+"23","AIS A","Skin and subcutaneous tissue  ",41
+"24","AIS C","Metabolism and nutrition  ",40
+"25","AIS B","Gastrointestinal System",38
+"26","AIS C","Vascular System",37
+"27","AIS C","Respiratory System",36
+"28","","Metabolism and nutrition  ",34
+"29","AIS C","General Disorders",34
+"30","","Psychiatric Disorders",33
+"31","AIS B","Psychiatric Disorders",33
+"32","","Respiratory System",31
+"33","AIS B","Respiratory System",30
+"34","","Vascular System",29
+"35","AIS B","Metabolism and nutrition  ",29
+"36","AIS D","Surgical and medical procedures",28
+"37","AIS D","Infections and infestations",27
+"38","AIS A","Blood and lymphatic system  ",26
+"39","AIS A","Cardiac System",26
+"40","AIS B","Vascular System",26
+"41","AIS D","Pain",26
+"42","","General Disorders",24
+"43","AIS C","Skin and subcutaneous tissue  ",24
+"44","AIS C","Cardiac System",22
+"45","AIS A","Renal and urinary system  ",21
+"46","AIS C","Nervous system  ",21
+"47","","Nervous system  ",20
+"48","AIS B","General Disorders",20
+"49","AIS B","Nervous system  ",19
+"50","AIS B","Skin and subcutaneous tissue  ",19
+"51","AIS D","Gastrointestinal System",19
+"52","AIS D","Psychiatric Disorders",18
+"53","","Cardiac System",16
+"54","AIS C","Blood and lymphatic system  ",14
+"55","","Skin and subcutaneous tissue  ",13
+"56","","Blood and lymphatic system  ",12
+"57","AIS B","Blood and lymphatic system  ",11
+"58","AIS D","Vascular System",11
+"59","AIS D","Metabolism and nutrition  ",10
+"60","AIS D","Respiratory System",9
+"61","AIS A","Immune system  ",8
+"62","AIS B","Cardiac System",8
+"63","AIS C","Renal and urinary system  ",8
+"64","","Renal and urinary system  ",7
+"65","AIS C","Eye  ",7
+"66","AIS D","Nervous system  ",7
+"67","AIS A","Eye  ",6
+"68","AIS D","Blood and lymphatic system  ",6
+"69","AIS A","Ear and labyrinth  ",5
+"70","AIS A","Musculoskeletal System",5
+"71","AIS B","Renal and urinary system  ",5
+"72","AIS C","Ear and labyrinth  ",5
+"73","AIS C","Immune system  ",5
+"74","AIS D","Skin and subcutaneous tissue  ",5
+"75","AIS B","Eye  ",4
+"76","AIS C","Musculoskeletal System",4
+"77","AIS D","General Disorders",4
+"78","","Ear and labyrinth  ",3
+"79","","Musculoskeletal System",3
+"80","AIS B","Musculoskeletal System",3
+"81","AIS A","Endocrine System",2
+"82","AIS A","Reproductive system and breast  ",2
+"83","AIS B","Immune system  ",2
+"84","AIS C","Neoplasms",2
+"85","AIS C","Reproductive system and breast  ",2
+"86","AIS D","Immune system  ",2
+"87","AIS D","Renal and urinary system  ",2
+"88","","Endocrine System",1
+"89","","Eye  ",1
+"90","","Immune system  ",1
+"91","AIS D","Eye  ",1

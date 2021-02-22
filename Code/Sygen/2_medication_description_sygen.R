@@ -45,19 +45,19 @@
   #if(!require(ggpubr)){install.packages("ggpubr")}
   #if(!require(naniar)){install.packages("naniar")}
   ##
-  #### ---------------------------
+  ## ---------------------------
   ##
   ## R Studio Clean-Up:
   cat("\014") # clear console
   rm(list=ls()) # clear workspace
   gc() # garbage collector
   ##
-  #### ---------------------------
+  ## ---------------------------
   ##
   ## Set working directory 
   setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
   ##
-  #### ---------------------------
+  ## ---------------------------
   ##
   ## Set output directorypaths
   outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
@@ -104,17 +104,27 @@
   # Replace 0s with na
   new_tab_pid_long_withna<- new_tab_pid_long %>% replace_with_na(replace = list(prevalence = 0))
   
+  # Add demographics and injury characteristics
+  demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics.csv", header=T, sep = ',')
+  
+  new_tab_pid_long_withna.extended <- merge(new_tab_pid_long_withna,demographics.data)
+  
   # Plot point prevalence
-  point.prevalence.sygen <-ggplot(data=new_tab_pid_long_withna, aes(x = day, y = NEW_ID, fill = prevalence)) +
+  point.prevalence.sygen <-ggplot(data=new_tab_pid_long_withna.extended, aes(x = day, y = NEW_ID, fill = prevalence)) +
     viridis::scale_fill_viridis(name="Number of \nMedications Administered",
                                 option = 'plasma',
                                 direction = 1,
                                 na.value = "white") +
-    geom_tile(color = 'white', size = 0.1) + scale_x_continuous(
-      expand = c(0, 0), breaks = c(0, 30,60)) +
-    ggtitle("Sygen trial (n=791)")+ labs(x="Days Post-Injury", y="")+ theme_classic()+
-    theme(plot.title = element_text(hjust = 0.5), panel.grid.major = element_blank(),axis.title.x = element_text(size = 10) ,axis.text.x = element_text(color="black", size=8),  axis.ticks.y =element_blank(),  axis.text.y = element_blank(), axis.title.y  = element_blank())
-  
+    geom_tile(color = 'white', size = 0.1) + scale_x_continuous(expand = c(0, 0), breaks = c(0, 15, 30, 45, 60)) +
+    theme_classic2()+
+    ggtitle("Sygen trial (n=791)")+ labs(x="Days Post-Injury", y="Patient IDs")+ 
+    theme(plot.title = element_text(hjust = 0.5), 
+          panel.grid.major = element_blank(),
+          axis.title.x = element_text(size = 10),
+          axis.text.x = element_text(color="black", size=10),  
+          axis.ticks.y =element_blank(),  
+          axis.text.y = element_blank(),
+          axis.title.y  = element_text(color="black", size=10))
   point.prevalence.sygen
   
   # Save plot
@@ -234,7 +244,7 @@
   max(x60_days_mean$Frequency.60days)
   
   #---------- Plot the average drugs per 7, 14, 30, and 60 days
-    sygen_medication.plot <-cbind(x7_days_mean,x14_days_mean[c(2)],x30_days_mean[c(2)],x60_days_mean[c(2)])
+sygen_medication.plot <-cbind(x7_days_mean,x14_days_mean[c(2)],x30_days_mean[c(2)],x60_days_mean[c(2)])
   
   # Wide to long format
   data_long <- gather(sygen_medication.plot, condition, measurement, Frequency.7days:Frequency.60days, factor_key=TRUE)

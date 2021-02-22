@@ -17,72 +17,95 @@
 ##
 ## Notes: This analysis is for the publication Jutzeler et al, 2021 published in XX
 ##   
-#### ---------------------------
-
-## set working directory
-
-setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
-
 ## ---------------------------
+##
 ## load up the packages we will need:  
 library(ggplot2)
 library(dplyr)
 library(easyGgplot2)
 library(tidytext)
-
-
+##
 ## ----------------------------
+##
 ## Install packages needed:  (uncomment as required)
-
-#if(!require(data.table)){install.packages("ggplot2")}
-
-
-#### ---------------------------
-#Clear working space
-
-rm(list = ls())
-
-#### ---------------------------
-#Set output directorypaths
-
+##
+#if(!require(ggplot2)){install.packages("ggplot2")}
+#if(!require(dplyr)){install.packages("dplyr")}
+#if(!require(easyGgplot2)){install.packages("easyGgplot2")}
+#if(!require(tidytext)){install.packages("tidytext")}
+##
+## ---------------------------
+##
+## R Studio Clean-Up:
+cat("\014") # clear console
+rm(list=ls()) # clear workspace
+gc() # garbage collector
+##
+## ---------------------------
+##
+## Set working directory 
+setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
+##
+## ---------------------------
+##
+## Set output directorypaths
 outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
 outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
-
-
+##
+##
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
-#load original dataset
-
-#load file
+# Load original dataset
 dataframe <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df2_drugs_freq_disorder.csv", sep = ',', header = T)
 
-#Remove Duplicates based on three rows
+# Remove Duplicates based on three rows
 dataframe_rm_duplicates <- dataframe[!duplicated(dataframe[c(2:4)]),]
 
-#Count number of drugs per indication
-df_1 <- dataframe_rm_duplicates %>%
-  dplyr::count(generic_name, indication, sort = TRUE) %>%
-  dplyr::count(indication, sort = TRUE) %>%
+# Add demographics and injury characteristics
+demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics.csv", header=T, sep = ',')
+dataframe_rm_duplicates.extended <- merge(dataframe_rm_duplicates,demographics.data)
+
+# Count number of drugs per indication overall
+number.of.drugs.per.indication.overall <- dataframe_rm_duplicates.extended %>%
+  dplyr::count(ais1, generic_name, indication, sort = TRUE) %>%
+  dplyr::count(ais1, indication, sort = TRUE) %>%
   as.data.frame()
+number.of.drugs.per.indication.overall
 
-write.csv(df_1, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3.csv")
+# Save table
+write.csv(number.of.drugs.per.indication.overall, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3_overall.csv", row.names = F)
 
-#Plot number of drugs per indication
-polar_plots.nr.medications.indication.sygen <-ggplot(data=df_1, aes(x=indication, y=n, fill=n)) +
-  geom_bar(stat='identity')+theme_light() +
-  scale_fill_gradient(low='red', high='blue', limits=c(0,150)) +
-  theme(axis.title.y=element_text(angle=0))+ coord_polar()+theme(axis.title.y=element_blank(), axis.title.x = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank())
-polar_plots.nr.medications.indication.sygen
+# Count number of drugs per indication stratified by AIS grades
+number.of.drugs.per.indication.stratified.by.ais.grades <- dataframe_rm_duplicates.extended %>%
+  dplyr::count(ais1, generic_name, indication, sort = TRUE) %>%
+  dplyr::count(ais1, indication, sort = TRUE) %>%
+  as.data.frame()
+number.of.drugs.per.indication.stratified.by.ais.grades
+
+# Save table
+write.csv(number.of.drugs.per.indication.stratified.by.ais.grades, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3_AIS_grades.csv", row.names = F)
+
+# Plot number of drugs per indication stratified by AIS grades
+polar_plots.nr.medications.indication.by.ais.grade.sygen <-ggplot(data=number.of.drugs.per.indication.stratified.by.ais.grades, aes(x=indication, y=n, fill=n)) +
+  geom_bar(stat='identity')+facet_wrap(.~ais1, nrow = 3)+
+  theme_light() +
+  scale_fill_gradient(low='red', high='blue', limits=c(0,140)) +
+  theme(axis.title.y=element_text(angle=0))+ coord_polar()+
+  theme(axis.title.y=element_blank(), 
+        axis.title.x = element_blank(), 
+        axis.ticks.y = element_blank(), 
+        axis.text.y = element_blank() )+force_panelsizes(cols = c(0.3, 1)) 
+polar_plots.nr.medications.indication.by.ais.grade.sygen
 
 ##Save plot
 ggsave(
-  "polar_plots.nr.medications.indication.sygen.pdf",
-  plot = polar_plots.nr.medications.indication.sygen,
+  "polar_plots.nr.medications.indication.by.ais.grade.sygen.pdf",
+  plot = polar_plots.nr.medications.indication.by.ais.grade.sygen,
   device = 'pdf',
   path = outdir_figures,
   scale = 1,
-  width = 8,
-  height = 8,
+  width = 15,
+  height = 15,
   units = "in",
   dpi = 300
 )
