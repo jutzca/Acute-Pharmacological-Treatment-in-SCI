@@ -89,7 +89,7 @@ label(sygen$Cause) <- "Cause, n (%)"
 # Assign units to Age at Injury and Year of Injury
 units(sygen$Age) <- "years"
 
-#2. Create table
+# 2. Create table
 table1::table1(~ Sex+Age+AIS+NLI+Cause, data = sygen)
 
 #### -------------------------------------------------------------------------- CODE END ------------------------------------------------------------------------------------------------####
