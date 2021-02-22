@@ -33,19 +33,19 @@ library(dplyr)
 #if(!require(table1)){install.packages("table1")}
 #if(!require(dplyr)){install.packages("dplyr")}
 ##
-#### ---------------------------
+## ---------------------------
 ##
 ## R Studio Clean-Up:
 cat("\014") # clear console
 rm(list=ls()) # clear workspace
 gc() # garbage collector
 ##
-#### ---------------------------
+## ---------------------------
 ##
 ## Set working directory 
 setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
 ##
-#### ---------------------------
+## ---------------------------
 ##
 ## Set output directorypaths
 outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
