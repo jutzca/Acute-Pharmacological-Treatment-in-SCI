@@ -17,59 +17,63 @@
 ##
 ## Notes: This analysis is for the publication Jutzeler et al, 2021 published in XX
 ##   
-#### ---------------------------
-
-## set working directory
-
-setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
-
 ## ---------------------------
+##
 ## load up the packages we will need:  
+##
 library(plyr)
 library(tidyr)
 library(ggplot2)
 library(dplyr)
 library(stringr)
-
+##
 ## ----------------------------
+##
 ## Install packages needed:  (uncomment as required)
-
+##
 #if(!require(plyr)){install.packages("plyr")}
 #if(!require(tidyr)){install.packages("tidyr")}
 #if(!require(ggplot2)){install.packages("ggplot2")}
-
-#### ---------------------------
-# R Studio Clean-Up:
+#if(!require(dplyr)){install.packages("dplyr")}
+#if(!require(stringr)){install.packages("stringr")}
+##
+## ---------------------------
+##
+## R Studio Clean-Up:
 cat("\014") # clear console
 rm(list=ls()) # clear workspace
 gc() # garbage collector
-
-
-#### ---------------------------
-#Set output directorypaths
-
+##
+## ---------------------------
+##
+## Set working directory 
+setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
+##
+## ---------------------------
+##
+## Set output directorypaths
 outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
 outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
-
-
+##
+##
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
-#load original sygen medication dataset
+# Load original sygen medication dataset
 masterfile.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_per_days.csv", sep=',', header = TRUE)
 
-#Create copy to work with
+# Create copy to work with
 
 medication.per.patient <- masterfile.medication.data
 
-#Assign new ID for the patients (for data protection reason)
+# Assign new ID for the patients (for data protection reason)
 medication.per.patient<-medication.per.patient %>% 
   dplyr::mutate(ID = group_indices_(medication.per.patient, .dots="NEW_ID")) 
 
-##Add the letter P in front of the newly created ID variable
+# Add the letter P in front of the newly created ID variable
 medication.per.patient$ID <- sub("^", "P", medication.per.patient$ID )
 medication.per.patient
 
-#Split the masterfile by pid
+# Split the masterfile by pid
 id <- medication.per.patient[order(medication.per.patient$ID),] 
 
 id_split <- split(id, id$ID)
@@ -82,7 +86,7 @@ for (i in 1:length(id_split)) {
 }
 
 
-#---- Plot drug exposure pattern for each patient#
+#---------- Plot drug exposure pattern for each patient ---------- 
 
 setwd("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/pid_graphs/")
 
