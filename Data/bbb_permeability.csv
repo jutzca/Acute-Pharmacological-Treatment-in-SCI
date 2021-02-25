@@ -1,0 +1,776 @@
+﻿Drug,BBB,Probability,Source
+Acarbose,No,0.9723,drugbank.ca
+Acetaminophen,Yes,0.9544,drugbank.ca
+Acetaminophen aspirin,Yes,,
+Acetaminophen aspirin caffeine,Yes,,
+Acetaminophen butalbital caffeine,Yes,,
+Acetaminophen caffeine,Yes,,
+Acetaminophen codeine,Yes,,
+Acetaminophen dexbrompheniramine pseudoephedrine,Yes,,
+Acetaminophen dichloralphenazone isometheptene,Yes,,
+Acetaminophen hydrocodone,Yes,,
+Acetaminophen isometheptene,Yes,,
+Acetaminophen methadone,Yes,,
+Acetaminophen oxycodone,Yes,,
+Acetaminophen propoxyphene,Yes,,
+Acetate,Yes,,PMID 19393008
+Acetazolamide,Yes,0.9382,drugbank.ca
+Acetic acid,Yes,0.9742,drugbank.ca
+Acetic acid hydrocortisone,Yes,0.9742,drugbank.ca
+Acetylcysteine,No,,drugbank.ca
+Acetylcysteine albuterol,Unknown,,
+Acetylsalicylic acid,Yes,0.9376,drugbank.ca
+Acetylsalicylic acid butalbital caffeine,Unknown,,
+Acetylsalicylic acid oxycodone,Yes,0.9885,drugbank.ca
+Acyclovir,Yes,,PMID: 12878501
+Adalimumab,No,,drugbank.ca
+Adapalene,Yes,0.7061,drugbank.ca
+Adenosine,Yes,0.9383,drugbank.ca
+Albumin,Yes,,drugbank.ca
+Albuterol,No,0.9659,drugbank.ca
+Albuterol ipratropium,Yes,,drugbank.ca
+Alendronate,Yes,0.7065,drugbank.ca
+Alfuzosin,Yes,0.6215,drugbank.ca
+Aliskiren,Unknown,,
+Allantoin camphor phenol,Unknown,,
+Allopurinol,Yes,0.9885,drugbank.ca
+Alpha d galactosidase,No,,drugbank.ca
+Alprazolam,Yes,0.9794,drugbank.ca
+Alteplase,Yes,,drugbank.ca
+Aluminum hydroxide,Yes,0.8181,drugbank.ca
+Aluminum magnesium,Yes,,drugbank.ca
+Aluminum magnesium simethicone,Unknown,,
+Amantadine,Yes,0.9769,drugbank.ca
+Amikacin,No,0.9659,drugbank.ca
+Amiloride,Yes,0.7193,drugbank.ca
+Amino acids,Yes,,PMID: 10736373 
+Aminocaproic acid,Yes,,PMID: 9298063 
+Aminophylline,Yes,0.5908,drugbank.ca
+Amiodarone,Yes,0.8615,drugbank.ca
+Amitriptyline,Yes,0.9512,drugbank.ca
+Amlodipine,No,0.7744,drugbank.ca
+Ammonium,Yes,,PMID: 20216550
+Ammonium chloride,Yes,,PMID: 13611039
+Ammonium lactate,Yes,0.7656,drugbank.ca
+Amoxicillin,No,0.9967,drugbank.ca
+Amoxicillin clavulanate,No,0.9967,drugbank.ca
+Amoxicillin clavulanate potassium,No,0.9967,drugbank.ca
+Amphetamine,Yes,0.9565,drugbank.ca
+Amphotericin b,No,0.9659,drugbank.ca
+Ampicillin,No,0.9961,drugbank.ca
+Ampicillin sulbactam,No,,drugbank.ca
+Amylase lipase protease,Unknown,,
+Anagrelide,Yes,0.848,drugbank.ca
+Anastrozole,Yes,0.9382,drugbank.ca
+Anidulafungin,No,0.9833,drugbank.ca
+Antipyrine benzocaine,Yes,0.9931,drugbank.ca
+Antipyrine benzocaine glycerin,Yes,0.9931,drugbank.ca
+Argatroban,No,0.8933,drugbank.ca
+Aripiprazole,Yes,0.992,drugbank.ca
+Astemizole,Yes,0.765,drugbank.ca
+Atenolol,No,0.9505,drugbank.ca
+Atorvastatin,No,0.7825,drugbank.ca
+Atracurium,Unknown,,
+Atropine,Yes,0.9569,drugbank.ca
+Azelastine,Yes,0.982,drugbank.ca
+Azithromycin,No,0.9739,drugbank.ca
+Aztreonam,No,0.9657,drugbank.ca
+Bacitracin,No,0.9943,drugbank.ca
+Bacitracin neomycin polymyxin b,No,0.9943,drugbank.ca
+Bacitracin polymyxin b,No,1.9943,drugbank.ca
+Baclofen,Yes,0.9339,drugbank.ca
+Barium sulfate,Unknown,,
+Becaplermin,Unknown,,
+Beclomethasone,Yes,0.9851,drugbank.ca
+Belladonna alkaloids opium,Yes,,https://doi.org/10.1016/B978-0-12-415813-9.00014-3
+Belladonna alkaloids phenobarbital,Yes,,https://doi.org/10.1016/B978-0-12-415813-9.00014-3
+Benazepril,No,0.7082,drugbank.ca
+Benzocaine,Yes,0.9609,drugbank.ca
+Benzocaine menthol,Yes,,drugbank.ca
+Benzonatate,Yes,0.9355,drugbank.ca
+Benzoyl peroxide,Unknown,,
+Benzquinamide hydrochloride,Yes,0.9383,drugbank.ca
+Benztropine,Yes,0.9929,drugbank.ca
+Betamethasone,Yes,0.9781,drugbank.ca
+Betamethasone clotrimazole,Unknown,,
+Bethanechol,Yes,0.9789,drugbank.ca
+Bicarbonate,Yes,0.936,drugbank.ca
+Bisacodyl,Yes,,drugbank.ca
+Bismuth subsalicylate,Yes,0.9387,drugbank.ca
+Bisoprolol,No,0.9077,drugbank.ca
+Botulinum toxin,Unknown,,
+Bretylium,Yes,0.9484,drugbank.ca
+Brimonidine,Yes,0.717,drugbank.ca
+Brinzolamide,Yes,0.8754,drugbank.ca
+Bromocriptine,No,0.9845,drugbank.ca
+Brompheniramine,Yes,0.9576,drugbank.ca
+Brompheniramine dextromethorphan pseudoephedrine,Yes,0.9576,drugbank.ca
+Brompheniramine pseudoephedrine,Yes,0.9576,drugbank.ca
+Budesonide,Yes,0.9533,drugbank.ca
+Bumetadine,No,0.6636,drugbank.ca
+Bupivacaine,Yes,0.936,drugbank.ca
+Bupivacaine hydrochloride epinephrine bitartrate,Yes,0.936,drugbank.ca
+Bupivacine epinephrine,Yes,0.936,drugbank.ca
+Buprenorphine,Yes,0.9401,drugbank.ca
+Bupropion,Yes,0.975,drugbank.ca
+Buspirone,Yes,0.9839,drugbank.ca
+Butamben tetracaine benzocaine,Unknown,,
+Butoconazole nitrate,Yes,0.9716,drugbank.ca
+Butorphanol,Yes,0.9463,drugbank.ca
+Butorphanol tartrate,Yes,0.9463,drugbank.ca
+Cabergoline,Yes,0.9383,drugbank.ca
+Calamine phenolate,Unknown,,
+Calcitriol,Yes,0.8524,drugbank.ca
+Calcium,Yes,,drugbank.ca
+Calcium acetate,Yes,0.9601,drugbank.ca
+Calcium carbonate,Unknown,,
+Calcium carbonate magnesium chloride,Unknown,,
+Calcium chloride,Yes,0.975,drugbank.ca
+Calcium cholecalciferol,Yes,0.959,drugbank.ca
+Calcium citrate,Unknown,,
+Calcium gluceptate,Yes,0.5646,drugbank.ca
+Calcium gluconate,Unknown,,
+Calcium gluconate sodium phosphate,Unknown,,
+Calcium polycarbophil,Unknown,,
+Calcium simethicone,Unknown,,
+Calcium vitamin d,Yes,,drugbank.ca
+Camphor menthol,Unknown,,
+Camphor phenol,Unknown,,
+Camphor pramoxine zinc,Unknown,,
+Candesartan,Unknown,,
+Capsaicin,No,,PMID:3696465
+Captopril,Yes,0.6467,drugbank.ca
+Carbamazepine,Yes,0.9958,drugbank.ca
+Carbamide peroxide,Yes,,PMID: 10882779
+Carbenicillin,No,0.9954,drugbank.ca
+Carbenicillin indanyl,No,0.9954,drugbank.ca
+Carbidopa,No,0.9659,drugbank.ca
+Carbidopa levodopa,Yes,,PMID: 29295587
+Carbonic acid,Yes,,
+Carboxymethylcellulose sodium,Unknown,,
+Carisoprodol,Yes,0.9679,drugbank.ca
+Carvedilol,No,0.9332,drugbank.ca
+Caspofungin,No,0.96,drugbank.ca
+Cefaclor,No,0.9817,drugbank.ca
+Cefadroxil,No,0.9966,drugbank.ca
+Cefamandole,No,0.9918,drugbank.ca
+Cefazolin,No,0.987,drugbank.ca
+Cefepime,No,0.9332,drugbank.ca
+Cefoperazone,No,0.9886,drugbank.ca
+Cefotaxime,No,0.9877,drugbank.ca
+Cefotetan,No,0.9903,drugbank.ca
+Cefoxitin,No,0.9952,drugbank.ca
+Cefpodoxime,No,0.984,drugbank.ca
+Ceftazidime,No,0.9857,drugbank.ca
+Ceftizoxime,No,0.9823,drugbank.ca
+Ceftriaxone,No,0.9748,drugbank.ca
+Cefuroxime,No,0.9863,drugbank.ca
+Celecoxib,Yes,0.9713,drugbank.ca
+Cephalexin,No,0.996,drugbank.ca
+Cephalosporin,No,0.9961,drugbank.ca
+Cephapirin,No,0.9971,drugbank.ca
+Cephradine,No,0.9942,drugbank.ca
+Cetirizine,Yes,0.7576,drugbank.ca
+Cetirizine pseudoephedrine,Unknown,,
+Chloral hydrate,Yes,0.9555,drugbank.ca
+Chloramphenicol,Yes,0.9366,drugbank.ca
+Chloraseptic,Unknown,,
+Chlordiazepoxide,Yes,0.9758,drugbank.ca
+Chlorhexidine,Yes,0.7872,drugbank.ca
+Chlorhexidine gluconate,Yes,0.7872,drugbank.ca
+Chloride,Unknown,,
+Chlorothiazide,No,0.9506,drugbank.ca
+Chlorpheniramine,Yes,0.962,drugbank.ca
+Chlorpheniramine  methscopolamine  phenylephrine,Yes,0.962,drugbank.ca
+Chlorpromazine,Yes,0.9795,drugbank.ca
+Chlorthalidone,Yes,0.5447,drugbank.ca
+Chlorzoxazone,Yes,0.991,drugbank.ca
+Cholecalciferol,Yes,0.959,drugbank.ca
+Cholestyramine,Unknown,,
+Choline magnesium,No,0.8993,drugbank.ca
+Choline magnesium trisalicylate,No,0.8993,drugbank.ca
+Ciclopirox,Yes,0.9892,drugbank.ca
+Cilostazol,Yes,0.9909,drugbank.ca
+Cimetidine,No,0.6782,drugbank.ca
+Ciprofloxacin,Yes,,drugbank.ca
+Ciprofloxacin hydrocortisone,Unknown,,
+Cisapride,Yes,0.9383,drugbank.ca
+Cisatracurium,Yes,0.9291,drugbank.ca
+Citalopram,Yes,0.9729,drugbank.ca
+Citric acid sodium citrate,Unknown,,
+Clarithromycin,No,0.987,drugbank.ca
+Clindamycin,No,0.9697,drugbank.ca
+Clobetasol,Unknown,,
+Clomipramine,Yes,0.9793,drugbank.ca
+Clonazepam,Yes,0.9718,drugbank.ca
+Clonidine,Yes,0.9402,drugbank.ca
+Clopidogrel,Yes,0.9847,drugbank.ca
+Clorazepate,Yes,0.8373,drugbank.ca
+Clotrimazole,Yes,0.9837,drugbank.ca
+Cloxacillin,No,0.9903,drugbank.ca
+Cocaine,Yes,0.8805,drugbank.ca
+Codeine,Yes,0.9979,drugbank.ca
+Colchicine,Yes,0.7865,drugbank.ca
+Colistimethate,No,0.8404,drugbank.ca
+Collagenase,Unknown,,
+Conivaptan,Yes,0.9522,drugbank.ca
+Conjugated estrogens,Yes,0.9486,drugbank.ca
+Corticosteroids,Unknown,,
+Cortisone,Unknown,,
+Cosyntropin,Unknown,,
+Cromolyn sodium,Yes,0.5988,drugbank.ca
+Cryoprecipitate,Unknown,,
+Cyclobenzaprine,Yes,0.9512,drugbank.ca
+Cyclophosphamide,Yes,0.971,drugbank.ca
+Cyproheptadine,Yes,0.986,drugbank.ca
+Cyto-zyme,Unknown,,
+Dalteparin,Unknown,,
+Dantrolene,Yes,0.9581,drugbank.ca
+Dapsone,Yes,0.9705,drugbank.ca
+Daptomycin,Unknown,,
+Darbepoetin,Unknown,,
+Darifenacin,Yes,0.9989,drugbank.ca
+Demeclocycline,No,0.9659,drugbank.ca
+Desflurane,Yes,0.9941,drugbank.ca
+Desipramine,Yes,0.9854,drugbank.ca
+Desmopressin,No,0.8866,drugbank.ca
+Desonide,Yes,0.9382,drugbank.ca
+Desvenlafaxine,Yes,0.7722,drugbank.ca
+Dexamethasone,Yes,0.9781,drugbank.ca
+Dexmedetomidine,Yes,0.9663,drugbank.ca
+Dextroamphetamine,Yes,0.9565,drugbank.ca
+Dextromethorphan,Yes,1.9565,drugbank.ca
+Dextromethorphan guaifenesin,Yes,2.9565,drugbank.ca
+Dextromethorphan guaifenesin pseudoephedrine,Yes,3.9565,drugbank.ca
+Dextrose,Yes,0.5569,drugbank.ca
+Dezocine,Yes,0.9403,drugbank.ca
+Diatrizoate meglumine diatrizoate sodium,Unknown,,
+Diazepam,Yes,0.9934,drugbank.ca
+Dibucaine,Yes,0.9876,drugbank.ca
+Diclofenac,Yes,0.9541,drugbank.ca
+Dicloxacillin,No,0.9903,drugbank.ca
+Dicyclomine,Yes,0.9769,drugbank.ca
+Digoxin,No,0.7241,drugbank.ca
+Diltiazem,Yes,0.506,drugbank.ca
+Dimenhydrinate,Yes,0.8551,drugbank.ca
+Diphenhydramine,Yes,0.9381,drugbank.ca
+Diphenoxylate atropine,Unknown,,
+Diptheria pertussis tetanus vaccine,Unknown,,
+Dipyridamole,No,0.6246,drugbank.ca
+Dobutamine,No,0.7448,drugbank.ca
+Docosanol,Yes,0.9579,drugbank.ca
+Docusate,Unknown,,
+Docusate benzocaine,Unknown,,
+Docusate glycerine,Unknown,,
+Docusate senna,Unknown,,
+Dolasetron,Yes,0.9403,drugbank.ca
+Donepezil,Yes,0.9953,drugbank.ca
+Dopamine,No,0.8414,drugbank.ca
+Doripenem,No,0.9633,drugbank.ca
+Dornase alfa,Unknown,,
+Dorzolamide,Yes,0.6697,drugbank.ca
+Doxacurium chloride,Yes,0.9419,drugbank.ca
+Doxazosin,Yes,0.9627,drugbank.ca
+Doxepin,Yes,0.9381,drugbank.ca
+Doxycycline,Yes,0.9881,drugbank.ca
+Dronabidol,Yes,0.9685,drugbank.ca
+Droperidol,Yes,0.9602,drugbank.ca
+Drospirenone,Yes,0.9383,drugbank.ca
+Duloxetine,Yes,0.9804,drugbank.ca
+Dutasteride,Yes,0.9884,drugbank.ca
+Econazole,Yes,0.9823,drugbank.ca
+Enalapril,No,0.9659,drugbank.ca
+Enalapril hydrochlorothiazide,No,0.9659,drugbank.ca
+Enalapril maleate,No,0.9659,drugbank.ca
+Enoxaparin,No,0.8366,drugbank.ca
+Entecavir,Yes,0.873,drugbank.ca
+Ephedrine,Yes,0.5638,drugbank.ca
+Epinephrine,No,0.966,drugbank.ca
+Epinephrine lidocaine,No,0.966,drugbank.ca
+Epinephrine sulfate,No,0.966,drugbank.ca
+Epoetin,Yes,,drugbank.ca
+Ergocalciferol,Yes,0.9428,drugbank.ca
+Ergotamine caffeine,No,0.9644,drugbank.ca
+Ertapenem,No,0.9811,drugbank.ca
+Erythromycin,No,0.9889,drugbank.ca
+Escitalopram,Yes,0.9729,drugbank.ca
+Esmolol,No,0.9645,drugbank.ca
+Esomeprazole,No,0.6326,drugbank.ca
+Estazolam,Yes,0.9796,drugbank.ca
+Estradiol,Yes,0.8917,drugbank.ca
+Estrogen,Yes,0.8917,drugbank.ca
+Eszopiclone,Yes,0.9382,drugbank.ca
+Ethanol,Yes,0.9539,drugbank.ca
+Etidronate,Yes,0.8901,drugbank.ca
+Etodolac,Yes,0.9065,drugbank.ca
+Etomidate,Yes,0.95,drugbank.ca
+Exenatide,Unknown,,
+Ezetimibe,Yes,0.9074,drugbank.ca
+Ezetimibe simvastatin,Yes,0.9074,drugbank.ca
+Famiciclovir,Yes,0.9429,drugbank.ca
+Famotidine,Yes,0.9382,drugbank.ca
+Felodipine,No,0.83,drugbank.ca
+Fenofibrate,Yes,0.9334,drugbank.ca
+Fentanyl,Yes,0.9901,drugbank.ca
+Ferrous sulfate,Unknown,,
+Fexofenadine,No,0.8574,drugbank.ca
+Filgrastim,Yes,,drugbank.ca
+Finasteride,Yes,0.9777,drugbank.ca
+Fluconazole,Yes,0.9382,drugbank.ca
+Fludrocortisone,Yes,0.9731,drugbank.ca
+Flumazenil,Yes,0.9382,drugbank.ca
+Fluocinolone,Unknown,,
+Fluocinonide,Yes,0.981,drugbank.ca
+Fluorometholone,Yes,0.9716,drugbank.ca
+Fluoxetine,Yes,0.983,drugbank.ca
+Fluphenazine,Yes,0.975,drugbank.ca
+Flurazepam,Yes,0.9898,drugbank.ca
+Fluticasone,Unknown,,
+Fluticasone salmeterol,Unknown,,
+Folic acid,Yes,0.7609,drugbank.ca
+Fondaparinux,No,0.8953,drugbank.ca
+Fosinopril,No,0.667,drugbank.ca
+Fosphenytoin,Yes,0.9215,drugbank.ca
+Framycetin,Unknown,,
+Furosemide,No,0.8833,drugbank.ca
+Fusidic acid,Yes,0.7909,drugbank.ca
+Gabapentin,Yes,0.9382,drugbank.ca
+Gatifloxacin,No,0.9869,drugbank.ca
+Gelatin,Unknown,,
+Gentamicin,No,0.9826,drugbank.ca
+Glimepiride,Yes,0.7322,drugbank.ca
+Glipizide,Yes,0.5599,drugbank.ca
+Glucagon,Unknown,,
+Glucosamine,No,0.9143,drugbank.ca
+Glucosamine chondroitin,No,0.9143,drugbank.ca
+Glucoscan,Unknown,,
+Glucose,No,0.5569,drugbank.ca
+Glutamine,Yes,0.9604,drugbank.ca
+Glyburide,No,0.6707,drugbank.ca
+Glycerine,Unknown,,
+Glycopyrrolate,Yes,0.8436,drugbank.ca
+Glycopyrronium,Yes,0.8436,drugbank.ca
+Griseofulvin,Yes,0.9208,drugbank.ca
+Guaifenesin,No,0.8631,drugbank.ca
+Guaifenesin codeine,Unknown,,
+Guaifenesin dextromethorphan,Unknown,,
+Guaifenesin phenylephrine,Unknown,,
+Guaifenesin potassium guaiacolsulfonate,No,,drugbank.ca
+Guaifenesin theophylline,Unknown,,
+Haloperidol,Yes,0.9465,drugbank.ca
+Heparin,Yes,,drugbank.ca
+Hetastarch,Unknown,,
+Hydralazine,Yes,0.9487,drugbank.ca
+Hydrochlorothiazide,Yes,0.9659,drugbank.ca
+Hydrochlorothiazide triamterene,No,0.9659,drugbank.ca
+Hydrocodone,Yes,0.9984,drugbank.ca
+Hydrocodone ibuprofen,Unknown,,
+Hydrocortisone,Yes,0.9383,drugbank.ca
+Hydrocortisone acetate,Unknown,,
+Hydrogen peroxide,Unknown,,
+Hydromorphone,Yes,0.9931,drugbank.ca
+Hydroxypropyl methylcellulose,Unknown,,
+Hydroxyurea,Yes,0.9382,drugbank.ca
+Hydroxyzine,Yes,0.9516,drugbank.ca
+Ibandronate sodium,No,0.5229,drugbank.ca
+Ibuprofen,Yes,0.9619,drugbank.ca
+Imipenem,Yes,0.9711,drugbank.ca
+Imipenem cilastatin,No,0.9711,drugbank.ca
+Imipramine,Yes,0.9865,drugbank.ca
+Imiquimod,Yes,0.955,drugbank.ca
+Immune globulin,Unknown,,
+Indapamide,Yes,0.8868,drugbank.ca
+Indomethacin,Yes,0.9381,drugbank.ca
+Influenza vaccine,Unknown,,
+Insulin,Unknown,,
+Iohexol,No,0.5082,drugbank.ca
+Iopamidol,Unknown,,
+Iothalamate meglumine,Unknown,,
+Ipratropium,Yes,0.8883,drugbank.ca
+Ipratropium albuterol,Unknown,,
+Ipratropium bromide,Yes,0.8883,drugbank.ca
+Irbesartan,Yes,0.9271,drugbank.ca
+Iron,Yes,0.9733,drugbank.ca
+Iron dextran,Unknown,,
+Iron vitamin c,Unknown,,
+Isoflurane,Yes,0.994,drugbank.ca
+Isometheptene dichloralphenazone acetaminophen,Unknown,,
+Isoniazid,Yes,0.9895,drugbank.ca
+Isopropyl alcohol,Yes,0.9694,drugbank.ca
+Isoproterenol,Yes,0.9705,drugbank.ca
+Isosorbide dinitrate,Yes,0.9559,drugbank.ca
+Isosorbide mononitrate,Yes,0.9355,drugbank.ca
+Ketamine,Yes,0.9826,drugbank.ca
+Ketoconazole,Yes,0.6704,drugbank.ca
+Ketoprofen,Yes,0.9382,drugbank.ca
+Ketorolac,Yes,0.7918,drugbank.ca
+Ketotifen,Yes,0.9923,drugbank.ca
+Labetalol,No,0.8313,drugbank.ca
+Lacosamide,Yes,0.7181,drugbank.ca
+Lactase,Unknown,,
+Lactobacillus,Unknown,,
+Lactulose,Yes,0.6609,drugbank.ca
+Lamotrigine,Yes,0.9382,drugbank.ca
+Lansoprazole,Yes,0.7007,drugbank.ca
+Lanthanum carbonate,Unknown,,
+Leuprolide acetate,Unknown,,
+Levalbuterol,Unknown,,
+Levetiracetam,Yes,0.9821,drugbank.ca
+Levocarnitine,Yes,0.8568,drugbank.ca
+Levodopa,No,0.9264,drugbank.ca
+Levofloxacin,Unknown,,
+Levomepromazine,Yes,0.9935,drugbank.ca
+Levorphanol,Yes,0.9953,drugbank.ca
+Levothyroxine,Yes,0.6886,drugbank.ca
+Lidocaine,Yes,,drugbank.ca
+Lidocaine epinephrine,Yes,,drugbank.ca
+Lidocaine prilocaine,Yes,,drugbank.ca
+Lindane,Yes,0.9862,drugbank.ca
+Linezolid,Yes,0.9363,drugbank.ca
+Liothyronine,No,0.6886,drugbank.ca
+Lipids,Unknown,,
+Lisinopril,No,0.8815,drugbank.ca
+Lithium,Yes,0.9708,drugbank.ca
+Loperamide,Yes,0.7709,drugbank.ca
+Loratadine,Yes,0.9754,drugbank.ca
+Loratadine pseudoephedrine,Yes,,drugbank.ca
+Lorazepam,Yes,0.9641,drugbank.ca
+Losartan,No,0.7812,drugbank.ca
+Losartan hydrochlorothiazide,No,,drugbank.ca
+Lovastatin,Yes,0.9287,drugbank.ca
+Lubiprostone,Yes,0.8984,drugbank.ca
+Mafenide,Unknown,,
+Magnesium,Unknown,,
+Magnesium chloride,Unknown,,
+Magnesium citrate,Yes,,PMID: 29920013
+Magnesium gluconate,Unknown,,
+Magnesium hydroxide,Unknown,,
+Magnesium oxide,Yes,0.9837,drugbank.ca
+Magnesium sulfate,Yes,0.9646,drugbank.ca
+Mannitol,No,0.5997,drugbank.ca
+Mecamylamine,Yes,0.9771,drugbank.ca
+Meclizine,Yes,0.9656,drugbank.ca
+Medroxyprogesterone acetate,Yes,0.9617,drugbank.ca
+Megestrol acetate,Yes,0.9617,drugbank.ca
+Melatonin,Yes,0.9928,drugbank.ca
+Meloxicam,No,0.9811,drugbank.ca
+Menthol,Yes,0.9408,drugbank.ca
+Meperidine,Yes,0.9876,drugbank.ca
+Meperidine hydroxyzine,Unknown,,
+Meperidine phenylephrine,Unknown,,
+Mepivacaine,Yes,0.9749,drugbank.ca
+Merbromin,Unknown,,
+Meropenem,No,0.9901,drugbank.ca
+Metacycline,Yes,0.9833,drugbank.ca
+Metaproterenol,No,0.951,drugbank.ca
+Metaxalone,Yes,0.9747,drugbank.ca
+Metformin,Yes,0.5868,drugbank.ca
+Methadone,Yes,0.9772,drugbank.ca
+Methenamine,Unknown,,
+Methocarbamol,Yes,0.5747,drugbank.ca
+Methotrexate,No,0.9467,drugbank.ca
+Methyl salicylate,Unknown,,
+Methylcellulose,Unknown,,
+Methyldopa,No,0.9276,drugbank.ca
+Methylnaltrexone,Yes,0.9268,drugbank.ca
+Methylphenidate,Yes,0.9663,drugbank.ca
+Methylprednisolone,Yes,0.9484,drugbank.ca
+Methylprednisolone sodium succinate,Unknown,,
+Metipranolol,No,0.9906,drugbank.ca
+Metoclopramide,Yes,0.9713,drugbank.ca
+Metocurine iodide,Yes,0.9374,drugbank.ca
+Metolazone,Yes,0.5944,drugbank.ca
+Metoprolol,No,0.8426,drugbank.ca
+Metoprolol hydrochlorothiazide,Unknown,,
+Metronidazole,Yes,0.9297,drugbank.ca
+Metubine,Unknown,,
+Mexiletine,Yes,0.9382,drugbank.ca
+Mezlocillin,No,0.9802,drugbank.ca
+Micafungin,No,0.8524,drugbank.ca
+Miconazole,Yes,0.9823,drugbank.ca
+Midazolam,Yes,0.9724,drugbank.ca
+Midodrine,No,0.856,drugbank.ca
+Milnacipran,Yes,0.9889,drugbank.ca
+Minocycline,No,0.9783,drugbank.ca
+Minoxidil,Yes,0.9496,drugbank.ca
+Mirtazapine,Yes,0.9855,drugbank.ca
+Misoprostol,Yes,0.938,drugbank.ca
+Mivacurium chloride,Yes,0.9465,drugbank.ca
+Modafinil,Yes,0.9947,drugbank.ca
+Mometasone,Yes,0.9721,drugbank.ca
+Montelukast,Yes,0.9311,drugbank.ca
+Morphine,Yes,0.9882,drugbank.ca
+Morphine sulfate,Yes,0.9882,drugbank.ca
+Moxifloxacin,No,0.9597,drugbank.ca
+Multivitamin folate,Unknown,,
+Multivitamin iron,Unknown,,
+Multivitamin minerals,Unknown,,
+Multivitamin zinc,Unknown,,
+Multivitamins,Unknown,,
+Mupirocin,No,0.5988,drugbank.ca
+Mycobacterium tuberculosis extract,Unknown,,
+Mycophenolate,Yes,0.5826,drugbank.ca
+Nabumetone,Yes,,drugbank.ca
+Nafcillin,No,0.9938,drugbank.ca
+Nalbuphine,Yes,0.9642,drugbank.ca
+Naloxone,Yes,0.9787,drugbank.ca
+Naphazoline,Yes,0.9693,drugbank.ca
+Naproxen,Yes,0.6881,drugbank.ca
+Nefazodone,Yes,0.9744,drugbank.ca
+Neomycin,No,0.9659,drugbank.ca
+Neostigmine,Yes,0.9583,drugbank.ca
+Niacin,Yes,0.9648,drugbank.ca
+Nicardipine,No,0.9549,drugbank.ca
+Nicotine,Yes,0.9748,drugbank.ca
+Nifedipine,No,0.9536,drugbank.ca
+Nisoldipine,No,0.947,drugbank.ca
+Nitazoxanide,Yes,0.7175,drugbank.ca
+Nitrofurantoin,Yes,0.958,drugbank.ca
+Nitroglycerin,Yes,0.9113,drugbank.ca
+Nitroprusside,Yes,0.9314,drugbank.ca
+Nitrous oxide,Yes,0.9872,drugbank.ca
+Nizatidine,Yes,0.5,drugbank.ca
+Norepinephrine,Yes,0.9762,drugbank.ca
+Norfloxacin,No,0.9824,drugbank.ca
+Nortriptyline,Yes,0.9478,drugbank.ca
+Nutritional supplement,Unknown,,
+Nystatin,Yes,0.9581,drugbank.ca
+Nystatin triamcinolone,Yes,,drugbank.ca
+Octreotide,No,0.8738,drugbank.ca
+Ofloxacin,No,0.9659,drugbank.ca
+Olanzapine,Yes,0.9652,drugbank.ca
+Olmesartan medoxomil,No,0.8719,drugbank.ca
+Olopatadine,Yes,0.6925,drugbank.ca
+Omega 3,Unknown,,
+Omeprazole,No,0.6326,drugbank.ca
+Ondansetron,Yes,0.9882,drugbank.ca
+Oseltamivir,No,0.9535,drugbank.ca
+Oxacillin,No,0.9923,drugbank.ca
+Oxandrolone,Yes,0.9537,drugbank.ca
+Oxaprozin,Yes,0.9512,drugbank.ca
+Oxazepam,Yes,0.9641,drugbank.ca
+Oxcarbazepine,Yes,0.9975,drugbank.ca
+Oxybutynin,Yes,0.9418,drugbank.ca
+Oxychlorosene powder,Unknown,,
+Oxycodone,Yes,0.9885,drugbank.ca
+Oxymetazoline,No,0.5388,drugbank.ca
+Oxymorphone,Yes,0.9382,drugbank.ca
+Pamidronate,Yes,0.6175,drugbank.ca
+Pamipril,No,0.5777,drugbank.ca
+Pancrelipase,No,,drugbank.ca
+Pancuronium bromide,Yes,0.878,drugbank.ca
+Pantoprazole,Yes,0.795,drugbank.ca
+Paricalcitol,Yes,0.795,drugbank.ca
+Paroxetine,Yes,0.9869,drugbank.ca
+Pemoline,Yes,0.983,drugbank.ca
+Penciclovir,Yes,0.9386,drugbank.ca
+Penicillin,No,0.9954,drugbank.ca
+Pentobarbital,Yes,0.9713,drugbank.ca
+Permethrin,Yes,0.8736,drugbank.ca
+Phenazopyridine,Yes,0.874,drugbank.ca
+Phenobarbital,Yes,0.9736,drugbank.ca
+Phenol,Yes,0.9076,drugbank.ca
+Phenothiazines,Unknown,,
+Phenoxybenzamine,Yes,0.9629,drugbank.ca
+Phenylephrine,No,0.9115,drugbank.ca
+Phenylpropanolamine,Yes,0.5843,drugbank.ca
+Phenytoin,Yes,0.976,drugbank.ca
+Phosphate,Unknown,,
+Physostigmine,Yes,0.9975,drugbank.ca
+Phytonadione,Yes,0.8941,drugbank.ca
+Pimecrolimus,No,0.9554,drugbank.ca
+Pioglitazone,Yes,0.8753,drugbank.ca
+Pipecuronium,Yes,0.6351,drugbank.ca
+Piperacillin,No,0.9958,drugbank.ca
+Piperacillin tazobactam,No,,drugbank.ca
+Pirbuterol,Yes,0.9442,drugbank.ca
+Piroxicam,No,0.9659,drugbank.ca
+Plasma,Unknown,,
+Platelets,Unknown,,
+Pneumococcal vaccine,Unknown,,
+Podofilox,No,0.5388,drugbank.ca
+Polycarbophil,Unknown,,
+Polyethylene glycol,Unknown,,
+Polyethylene glycol electrolyte solution,Unknown,,
+Polymyxin b,Yes,Drubank,drugbank.ca
+Posaconazole,No,0.5499,drugbank.ca
+Potassium,Unknown,,
+Potassium acetate,Unknown,,
+Potassium chloride,Yes,0.975,drugbank.ca
+Potassium iodide,Yes,0.9702,drugbank.ca
+Potassium permanganate,Unknown,,
+Potassium phosphate,Unknown,,
+Povidone iodine,Unknown,,
+Pramipexole,Unknown,,
+Pramoxine,Unknown,,
+Pramoxine phenylephrine glycerin petrolatum,Unknown,,
+Pravastatin,Unknown,,
+Prazosin,Yes,0.9479,drugbank.ca
+Prednisolone,Yes,0.9383,drugbank.ca
+Prednisolone acetate,Yes,,drugbank.ca
+Prednisone,Yes,0.9383,drugbank.ca
+Pregabalin,Yes,0.9382,drugbank.ca
+Prilocaine,Yes,0.9285,drugbank.ca
+Probenecid,Yes,0.5486,drugbank.ca
+Prochlorperazine,Yes,0.9781,drugbank.ca
+Prochlorperazine maleate,Yes,,drugbank.ca
+Progesterone,Yes,0.982,drugbank.ca
+Promazine,Yes,0.987,drugbank.ca
+Promethazine,Yes,0.9855,drugbank.ca
+Propafenone,Yes,0.958,drugbank.ca
+Propantheline,Yes,0.9012,drugbank.ca
+Propofol,Yes,0.9381,drugbank.ca
+Propoxyphene,Yes,0.9503,drugbank.ca
+Propranolol,No,0.9031,drugbank.ca
+Propylene glycol,Yes,0.7184,drugbank.ca
+Protamine,Unknown,,
+Pseudoephedrine,Yes,0.5638,drugbank.ca
+Pseudoephedrine cetirizine,Unknown,,
+Pseudoephedrine hydrochlorothiazide,Unknown,,
+Pseudoephedrine loratadine,Unknown,,
+Pseudoephedrine triprolidine,Unknown,,
+Psyllium,Unknown,,
+Pyridostigamine,Yes,0.9818,drugbank.ca
+Pyridoxine,Yes,0.6889,drugbank.ca
+Quazepam,Yes,0.9789,drugbank.ca
+Quetiapine,Yes,0.9906,drugbank.ca
+Quinapril,No,0.9409,drugbank.ca
+Quinine sulfate,Yes,0.9382,drugbank.ca
+Rabeprazole,Yes,0.6469,drugbank.ca
+Ramelteon,Yes,0.9934,drugbank.ca
+Ramipril,No,0.8726,drugbank.ca
+Ranitidine,No,0.8783,drugbank.ca
+Ranolazine,No,0.5334,drugbank.ca
+Red blood cells,Unknown,,
+Remifentanil,Yes,0.9381,drugbank.ca
+Repaglinide,No,0.7101,drugbank.ca
+Rifampin,No,0.974,drugbank.ca
+Rifaximin,No,0.973,drugbank.ca
+Ringers lactate,No,,drugbank.ca
+Risedronate,Yes,0.9172,drugbank.ca
+Risperidone,Yes,0.9925,drugbank.ca
+Rizatriptan,Yes,0.9406,drugbank.ca
+Rocuronium,Yes,0.8569,drugbank.ca
+Ropinirole,Yes,0.9971,drugbank.ca
+Rosuvastatin,No,0.6815,drugbank.ca
+Salicylic acid,Yes,0.6165,drugbank.ca
+Salicylic acid sulfur,Unknown,,
+Saline,Unknown,,
+Salmeterol ,Yes,0.8862,drugbank.ca
+Salsalate,Yes,0.8946,drugbank.ca
+Scopolamine,Yes,0.8218,drugbank.ca
+Selegiline,Yes,0.9809,drugbank.ca
+Selenium,Unknown,,
+Selenium sulfide,Yes,0.9786,drugbank.ca
+Sennosides,Unknown,,
+Sertraline,Yes,0.9713,drugbank.ca
+Sevelamer,Yes,0.9723,drugbank.ca
+Sevoflurane,Yes,0.9941,drugbank.ca
+Sildenafil,Yes,0.6461,drugbank.ca
+Silver nitrate,Unknown,,
+Silver sulfadiazine,Yes,0.9438,drugbank.ca
+Simethicone,No,,drugbank.ca
+Simvastatin,Yes,0.9422,drugbank.ca
+Sitagliptin,Yes,0.9438,drugbank.ca
+Sodium,Unknown,,
+Sodium acetate,Unknown,,
+Sodium bicarbonate,Yes,0.936,drugbank.ca
+Sodium chloride,Unknown,,
+Sodium citrate,Unknown,,
+Sodium ferric gluconate complex,Unknown,,
+Sodium hypochlorite,Unknown,,
+Sodium phosphate,Unknown,,
+Sodium polystyrene sulfonate,Unknown,,
+Solifenacin,Yes,0.6159,drugbank.ca
+Sorbitol,No,0.5997,drugbank.ca
+Spironolactone,Yes,0.932,drugbank.ca
+Succinylcholine,Yes,0.7717,drugbank.ca
+Sucralfate,Yes,0.8803,drugbank.ca
+Sufentanil,Yes,0.9886,drugbank.ca
+Sulfacetamide,Yes,0.9881,drugbank.ca
+Sulfacetamide sodium urea,Yes,0.9881,drugbank.ca
+Sulfamethoxazole,Yes,0.9382,drugbank.ca
+Sulindac,Yes,0.8325,drugbank.ca
+Sumatriptan,Yes,0.9626,drugbank.ca
+Tacrolimus,Yes,0.9659,drugbank.ca
+Tadalafil,Yes,0.7821,drugbank.ca
+Tamoxifen,Yes,0.5838,drugbank.ca
+Tamsulosin,Yes,0.5915,drugbank.ca
+Telmisartan,Yes,0.8794,drugbank.ca
+Temazepam,Yes,0.9745,drugbank.ca
+Terazosin,Yes,0.9646,drugbank.ca
+Terbinafine,Yes,0.9381,drugbank.ca
+Terbutaline,No,0.9355,drugbank.ca
+Terconazole,Yes,0.6657,drugbank.ca
+Terfenadine,Yes,0.5319,drugbank.ca
+Teriparatide,Unknown,,
+Testosterone,Yes,0.973,drugbank.ca
+Tetanus vaccine,Unknown,,
+Tetracycline,No,0.9841,drugbank.ca
+Theophylline,Yes,0.9902,drugbank.ca
+Thiamine,Yes,0.933,drugbank.ca
+Thiopental,Yes,0.9505,drugbank.ca
+Thioridazine,Yes,0.9901,drugbank.ca
+Thrombin,Yes,,drugbank.ca
+Tiagabine,Yes,0.9382,drugbank.ca
+Ticarcillin,No,0.9921,drugbank.ca
+Ticarcillin potassium clavulanate,No,0.9921,drugbank.ca
+Tigecycline,No,0.9836,drugbank.ca
+Tinzaparin,Unknown,,
+Tiotropium,Yes,0.5208,drugbank.ca
+Tizanidine,Yes,0.8592,drugbank.ca
+Tobramycin,No,0.9794,drugbank.ca
+Tobramycin dexamethasone,No,,drugbank.ca
+Tolbutamide,Yes,0.9321,drugbank.ca
+Tolnaftate,Yes,0.9689,drugbank.ca
+Tolterodine,Yes,0.9194,drugbank.ca
+Topiramate,Yes,0.9382,drugbank.ca
+Torasemide,Yes,0.6871,drugbank.ca
+Tramadol,Yes,0.9382,drugbank.ca
+Trazodone,Yes,0.9829,drugbank.ca
+Triamcinolone,Yes,0.9528,drugbank.ca
+Triamterene hydrochlorothiazide,Yes,0.8735,drugbank.ca
+Triazolam,Yes,0.9719,drugbank.ca
+Triethanolamine polypeptide,Unknown,,
+Trifluoperazine ,Yes,0.9814,drugbank.ca
+Trimethobenzamide,Yes,0.8121,drugbank.ca
+Trimethoprim,Yes,0.9381,drugbank.ca
+Trimethoprim polymyxin b,Unknown,,
+Trimethoprim sulfamethoxazole,Unknown,,
+Trolamine salicylate,Unknown,,
+Tropicamide,Yes,0.9777,drugbank.ca
+Ubiquinone,Yes,,PMID: 27383171
+Urea,Unknown,,
+Urokinase,Unknown,,
+Ursodiol,Yes,0.9288,drugbank.ca
+Valacyclovir,Yes,0.9389,drugbank.ca
+Valganciclovir,Yes,0.9383,drugbank.ca
+Valproic acid,Yes,0.9626,drugbank.ca
+Valsartan,No,0.8032,drugbank.ca
+Vancomycin,No,0.991,drugbank.ca
+Varenicline,Yes,0.9908,drugbank.ca
+Vasopressin,Unknown,,
+Vecuronium bromide,Yes,0.878,drugbank.ca
+Venlafaxine,Yes,0.9382,drugbank.ca
+Verapamil,Yes,0.6323,drugbank.ca
+Vitamin a,Yes,0.9665,drugbank.ca
+Vitamin a d,Yes,0.9665,drugbank.ca
+Vitamin b,Yes,,drugbank.ca
+Vitamin b c,Yes,0.8532,drugbank.ca
+Vitamin b1,Yes,0.933,drugbank.ca
+Vitamin b12,No,0.7447,drugbank.ca
+Vitamin c,Yes,0.8532,drugbank.ca
+Vitamin d,Yes,,PMID: 21872806
+Vitamin e,Yes,0.9767,drugbank.ca
+Vitamin k,Yes,0.8941,drugbank.ca
+Vitamin k3,Yes,0.8265,drugbank.ca
+Voriconazole,Yes,0.9047,drugbank.ca
+Warfarin,Yes,0.9124,drugbank.ca
+Xylometazoline hcl,Yes,0.7293,drugbank.ca
+Zaleplon,Yes,0.9751,drugbank.ca
+Zinc,Yes,0.9733,drugbank.ca
+Zinc oxide,Yes,,drugbank.ca
+Zinc sulfate monohydrate,Yes,,drugbank.ca
+Ziprasidone,Yes,0.9759,drugbank.ca
+Zolpidem,Yes,0.9392,drugbank.ca
+Zonisamide,Yes,0.9755,drugbank.ca
