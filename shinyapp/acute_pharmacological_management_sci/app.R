@@ -44,7 +44,9 @@ library(sna)
 library(shinyjs)
 library(metathis)
 library(r2d3)
-library(useShinyalert)
+library(shinyalert)
+library(shinyBS)
+library(devtools)
 ##
 ## ----------------------------
 ##
@@ -52,11 +54,28 @@ library(useShinyalert)
 ##
 # if(!require(shiny)){install.packages("shiny")}
 # if(!require(shinydashboard)){install.packages("shinydashboard")}
+# if(!require(shinythemes)){install.packages("shinythemes")}
 # if(!require(dplyr)){install.packages("dplyr")}
 # if(!require(tidyr)){install.packages("tidyr")}
 # if(!require(ggplot2)){install.packages("ggplot2")}
 # if(!require(stats)){install.packages("stats")}
-# if(!require(ggthemes)){install.packages("ggthemes")}
+# if(!require(DT)){install.packages("DT")}
+# if(!require(shinyWidgets)){install.packages("shinyWidgets")}
+# if(!require(png)){install.packages("png")}
+# if(!require(plotly)){install.packages("plotly")}
+# if(!require(splitstackshape)){install.packages("splitstackshape")}
+# if(!require(RColorBrewer)){install.packages("RColorBrewer")}
+# if(!require(stringr)){install.packages("stringr")}
+# # if(!require(ggnetwork)){install.packages("ggnetwork")}
+# if(!require(igraph)){install.packages("igraph")}
+# if(!require(intergraph)){install.packages("intergraph")}
+# if(!require(sna)){install.packages("sna")}
+# if(!require(shinyjs)){install.packages("shinyjs")}
+# if(!require(metathis)){install.packages("metathis")}
+# if(!require(r2d3)){install.packages("r2d3")}
+# if(!require(Shinyalert)){install.packages("Shinyalert")}
+# if(!require(bsAlert)){install.packages("bsAlert")}
+# if(!require(devtools)){install.packages("devtools")}
 ##
 ## ---------------------------
 ##
@@ -68,13 +87,13 @@ gc() # garbage collector
 ## ---------------------------
 ##
 ## Set working directory 
-setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
+setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
 ##
 ## ---------------------------
 ##
 ## Set output directorypaths
-outdir_figures='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures'
-outdir_tables='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables'
+outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures'
+outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables'
 ##
 ## ---------------------------
 ##
@@ -101,7 +120,114 @@ source("helper_functions_2.R")
 #load("data/shinyDataLongitudinal.RData")
 
 # Load data
-sygen_summary_stats<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app.csv", sep = ',', header = T)
+sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app.csv", sep = ',', header = T)
+
+
+
+
+
+updateMultiInput_2 <- function (session, inputId, label = NULL, selected = NULL, choices = NULL, choiceValues = NULL, choiceNames = NULL) {
+  if (is.null(choices)) {
+    if (is.null(choiceValues))
+      stop("If choices = NULL, choiceValues must be not NULL")
+    if (length(choiceNames) != length(choiceValues)) {
+      stop("`choiceNames` and `choiceValues` must have the same length.")
+    }
+    choiceValues <- as.list(choiceValues)
+    choiceNames <- as.list(choiceNames)
+    choices_2 <- tagList(
+      lapply(
+        X = seq_along(choiceNames),
+        FUN = function(i) {
+          htmltools::tags$option(value = choiceValues[[i]], as.character(choiceNames[[i]]),
+                                 selected = if(choiceValues[[i]] %in% selected) "selected")
+        }
+      )
+    )
+  }
+  else {
+    choices_2 <- if (!is.null(choices))
+      choicesWithNames(choices_2)
+  }
+  if (!is.null(selected))
+    selected <- validateSelected(selected, choices_2, inputId)
+  options <- as.character(makeChoices(choices = choices, choiceValues = choiceValues, choiceNames = choiceNames, selected = selected))
+  message <- dropNulls(list(label = label, options = options, value = selected))
+  session$sendInputMessage(inputId, message)
+}
+
+
+r2d3_script <- "
+// !preview r2d3 data= data.frame(y = 0.1, ylabel = '1%', fill = '#E69F00', mouseover = 'green', label = 'one', id = 1)
+function svg_height() {return parseInt(svg.style('height'))}
+function svg_width()  {return parseInt(svg.style('width'))}
+function col_top()  {return svg_height() * 0.05; }
+function col_left() {return svg_width()  * 0.25;} 
+function actual_max() {return d3.max(data, function (d) {return d.y; }); }
+function col_width()  {return (svg_width() / actual_max()) * 0.60; }
+function col_heigth() {return svg_height() / data.length * 0.95; }
+var bars = svg.selectAll('rect').data(data);
+bars.enter().append('rect')
+.attr('x',      170)
+.attr('y',      function(d, i) { return i * col_heigth() + col_top(); })
+.attr('width',  function(d) { return d.y * col_width(); })
+.attr('height', col_heigth() * 0.9)
+.attr('fill',   function(d) {return d.fill; })
+.attr('id',     function(d) {return (d.label); })
+.on('click', function(){
+Shiny.setInputValue('bar_clicked', d3.select(this).attr('id'), {priority: 'event'});
+})
+.on('mouseover', function(){
+d3.select(this).attr('fill', function(d) {return d.mouseover; });
+})
+.on('mouseout', function(){
+d3.select(this).attr('fill', function(d) {return d.fill; });
+});
+bars.transition()
+.duration(500)
+.attr('x',      170)
+.attr('y',      function(d, i) { return i * col_heigth() + col_top(); })
+.attr('width',  function(d) { return d.y * col_width(); })
+.attr('height', col_heigth() * 0.9)
+.attr('fill',   function(d) {return d.fill; })
+.attr('id',     function(d) {return d.label; });
+bars.exit().remove();
+
+// Identity labels
+var txt = svg.selectAll('text').data(data);
+txt.enter().append('text')
+.attr('x', width * 0.01)
+.attr('y', function(d, i) { return i * col_heigth() + (col_heigth() / 2) + col_top(); })
+.text(function(d) {return d.label; })
+.style('font-family', 'sans-serif');
+txt.transition()
+.duration(1000)
+.attr('x', width * 0.01)
+.attr('y', function(d, i) { return i * col_heigth() + (col_heigth() / 2) + col_top(); })
+.text(function(d) {return d.label; });
+txt.exit().remove();
+
+// Numeric labels
+var totals = svg.selectAll().data(data);
+totals.enter().append('text')
+.attr('x', function(d) { return ((d.y * col_width()) + 170) * 1.01; })
+.attr('y', function(d, i) { return i * col_heigth() + (col_heigth() / 2) + col_top(); })
+.style('font-family', 'sans-serif')
+.text(function(d) {return d.ylabel; });
+totals.transition()
+.duration(1000)
+.attr('x', function(d) { return ((d.y * col_width()) + 170) * 1.01; })
+.attr('y', function(d, i) { return i * col_heigth() + (col_heigth() / 2) + col_top(); })
+.attr('d', function(d) { return d.x; })
+.text(function(d) {return d.ylabel; });
+totals.exit().remove();
+"
+
+
+r2d3_file <- tempfile()
+writeLines(r2d3_script, r2d3_file)
+
+
 
 
 
@@ -120,10 +246,7 @@ ui <- dashboardPage(
   # Select 'skin' color: blue, black, green, purple, red, yellow
   skin = "purple",
   
-  
-  
-  
-  
+
   #----Dashboard sidebar----
   # Set up the sidebar of the dashboard
   dashboardSidebar(width = 350,
@@ -403,36 +526,40 @@ ui <- dashboardPage(
               )
            ),
       
-      
+    # Tab: Sygen Cohort  
     tabItem(tabName = "cohort_sygen",
-            useShinyalert(),
-            h3("Description of Sygen Trial Cohort"),
-            bsAlert("dataAlert"),
             
-            
-                        fluidRow(
-                         box(width = 12,
-                         div(style="display:inline-block;width:100%;text-align:center;",
+            # # Create alert
+            # shinyalert::useShinyalert(),
+            # h3("Description of Sygen Trial Cohort"),
+            # shinyBS::bsAlert("dataAlert"),
+            # 
+            fluidRow(
+                  box(width = 12,
+                      div(style="display:inline-block;width:100%;text-align:center;",
                           radioGroupButtons(
                           inputId = "var", 
                           label = "Patient characteristics:", 
-                          selected = "languages",
+                          selected = "sex",
                           status = "success",
                           #justified = T, #if true, all boxes have the same length
                           individual = T, #if false, then the boxes are connected
-                          choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- or paraplegia"),
-                          choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia")
-                          #checkIcon = list(yes = icon("ok", lib = "glyphicon"), no = icon("remove", lib = "glyphicon"))
-                        )
-                  ),
-                  h3(textOutput("sample.bar.NA"), align = "center"),
-                  r2d3::d3Output("d3.bar"),
-                  textOutput("SampleTxt"), align = "center")
-              #)
-            )
-            
-            
-    ),    tabItem(tabName = "cohort_scirehab",
+                          choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Etiology"),
+                          choiceValues = c("sex", "age", "baseline.ais", "nli", "etiology")
+                          ) # Close radioGroupButtons bracket
+                  ), # Close div bracket
+                  
+                  div(plotlyOutput("bar.plot.baseline.characteristic.sygen", width = "50%",
+                                             height = "600px",
+                                           inline = FALSE), align='center')
+                
+             
+                  ) #close box bracket
+              )  #close fluid row
+            ),   #close tabitem
+    
+    
+    tabItem(tabName = "cohort_scirehab",
                   h3("Description of SCIRehab Study Cohort"),
                   fluidRow(
                     box(width = 12,
@@ -446,27 +573,21 @@ ui <- dashboardPage(
                               individual = T, #if false, then the boxes are connected
                               choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- or paraplegia"),
                               choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia")
-                              #checkIcon = list(yes = icon("ok", lib = "glyphicon"), no = icon("remove", lib = "glyphicon"))
-                            )
-                        ),
-                        h3(textOutput("sample.bar.NA"), align = "center"),
-                        r2d3::d3Output("d3.bar"),
-                        textOutput("SampleTxt"), align = "center")
-                    #)
-                  )
-    )
+                                                          ) #close box bracket
+                        ) #close divstyle
+                   ) #close box bracket
+               ) #close fluid row
     
-    )
-  )
-)
-                  
-
+          ) #close tabitem
+        ) # close tabitems
+    ) # close dashboard body
+) # close ui
     
     
 
 
 
-server <- function(input, output) {
+server <- function(input, output, session) {
 
   
   output$cohort <- renderMenu({
@@ -475,35 +596,129 @@ server <- function(input, output) {
     )
   })
   
+# Create Data Alert
+  createAlert(session = session,
+              anchorId = "dataAlert",
+              #alertId="a1",
+              title = paste(icon("warning"),"Data Notification"),
+              content="To protect the privacy of all patients, this application only uses aggregate, anonymized data (i.e., no individual person is identifiable). 
+              For further information, see our <a href='#' onclick=\"openTab('data')\">data description section</a>.",
+              style = "warning")
   
+  # Plot sex distribution in Sygen 
   
-  # Gender 
-  output$d3.bar <- renderD3({
-    #input <- list(var = "language", sample_country_selection = c("France", "Germany"))
-    #input <- list(var = "gender", sample_country_selection = c("Poland", "Romania", "Albania"))
+  output$bar.plot.baseline.characteristic.sygen <- renderPlotly({
     
-    dem <- reactive_ctry.scales() %>%
-      filter(coded_country %in% input$sample_country_selection) %>%
-      select(starts_with(input$var)) %>%
-      t() %>%
-      as.data.frame()
-    # colnames(dem) <- input$sample_country_selection
-    dem %>%
-      mutate(n = rowSums(., na.rm=TRUE),
-             label = str_replace(rownames(.), ".*_", "")) %>%
-      arrange(desc(n)) %>%
-      filter(n > 0,
-             label != "<NA>") %>%
-      mutate(y = n,
-             ylabel = scales::percent(n/sum(n), accuracy = 0.01), #prettyNum(n/sum(n)*100, big.mark = ",", format = "f", digits = 2),
-             fill = "#3b738f", #ifelse(label != input$val, "#E69F00", "red"),
-             mouseover = "#2a5674") %>%
-      r2d3(r2d3_file)
+    if (input$var == "sex")  {
+
+    width = c(0.8, 0.8)
+    
+    baseline.sex <- sygen_baseline%>%
+      dplyr::count(Sex)%>% 
+      dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+      as.data.frame()%>%
+      plotly::plot_ly(y = ~Sex,
+                      x =  ~as.numeric(frequency))%>%
+      plotly::add_bars(
+        marker = list(color = 'rgb(96,92,168)'),
+        width = ~width,
+        text = ~paste("Sex:", Sex,
+                      '</br></br>', "N:", n,
+                      '</br>', "Frequency:", frequency, '%'),
+        #text = ~n,
+        hoverinfo = "text")%>%
+      layout(title = '', font=list(size = 12)) %>%
+      layout(xaxis = list(title = 'Proportion [%]')) %>%
+      layout( xaxis = list(titlefont = list(size = 16), tickfont = list(size = 14)),
+              yaxis = list(titlefont = list(size = 16), tickfont = list(size = 14)) )
+    baseline.sex}
+    
+   
+     else if (input$var == "age")  {p2}  
+    
+    
+    else if (input$var == "baseline.ais")  {
+    
+              width.ais = c(0.8, 0.8, 0.8, 0.8, 0.8)
+              
+              sygen_baseline$AIS=factor(sygen_baseline$AIS, levels = c('Unknown', "AIS D", 'AIS C', "AIS B", "AIS A"))
+              
+              baseline.ais <- sygen_baseline%>%
+                dplyr::count(AIS)%>% 
+                dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+                as.data.frame()%>%
+                plotly::plot_ly(y = ~AIS,
+                                x =  ~as.numeric(frequency))%>%
+                plotly::add_bars(
+                  marker = list(color = 'rgb(96,92,168)'),
+                  width = ~width.ais,
+                  text = ~paste("Injury Severity:", AIS,
+                                '</br></br>', "N:", n,
+                                '</br>', "Frequency:", frequency, '%'),
+                  hoverinfo = "text")%>%
+                plotly::layout(xaxis = list(title = "Proportion [%]"),
+                               yaxis = list(title = ""))
+              baseline.ais}  
+   
+    
+    else if (input$var == "nli")  {width.nli = c(0.8, 0.8)
+    
+    sygen_baseline$NLI=factor(sygen_baseline$NLI, levels = c('Thoracic', "Cervical"))
+  
+    baseline.nli <- sygen_baseline%>%
+      dplyr::count(NLI)%>% 
+      dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+      as.data.frame()%>%
+      plotly::plot_ly(y = ~NLI,
+                      x =  ~as.numeric(frequency))%>%
+      plotly::add_bars(
+        marker = list(color = 'rgb(96,92,168)'),
+        width = ~width.nli,
+        text = ~paste("Injury Level:", NLI,
+                      '</br></br>', "N:", n,
+                      '</br>', "Frequency:", frequency, '%'),
+        hoverinfo = "text")%>%
+      plotly::layout(xaxis = list(title = "Proportion [%]"),
+                     yaxis = list(title = ""))
+    baseline.nli}
+    
+    
+    else if (input$var == "etiology")  {
+      
+      width.cause = c(0.8, 0.8, 0.8, 0.8,0.8, 0.8, 0.8, 0.8, 0.8)
+    
+      sygen_baseline$Cause=factor(sygen_baseline$Cause, levels = c('Others', "Water related", "Pedestrian", "Other sports", "Motorcycle", "Gun shot wound", "Fall", "Blunt trauma", "Automobile" ))
+      
+      baseline.cause<- sygen_baseline%>%
+        dplyr::count(Cause)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~Cause,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width.cause,
+          text = ~paste("Etiology:", Cause,
+                        '</br></br>', "N:", n,
+                        '</br>', "Frequency:", frequency, '%'),
+          hoverinfo = "text")%>%
+        plotly::layout(xaxis = list(title = "Proportion [%]"),
+                       yaxis = list(title = ""))
+      baseline.cause}
+    
+    
+    
   })
   
   
   
-
+  shinyjs::onclick("menu",
+                   shinyjs::toggle(id = "sideFooter", anim = F))
+  
+  shiny:::flushReact()
+  
 }
 
-shinyApp(ui, server)
+# Run the application 
+shinyApp(ui = ui, server = server)
+
