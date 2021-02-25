@@ -17,64 +17,60 @@
   ##
   ## Notes: For the publication in XXX
   ##   
-  #### ---------------------------
-  
-  ## set working directory for Mac and PC
-  
-  setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
-  
-  Sys.setlocale(category = "LC_CTYPE", locale = "C")
-  
-  
   ## ---------------------------
+  ##
   ## load up the packages we will need:  
-  
+  ##
   library(dplyr)
   library(tidyr)
   library(tibble)
   library(tidyverse)
   #install.packages("GGally")
   library(GGally)
-  
   #devtools::install_github("briatte/ggnet")
   library(ggnet)
-  
-  
   library(network)
   library(sna)
   library(ggplot2)
-  
-  
-  
+  ##
   ## ----------------------------
+  ##
   ## Install packages needed:  (uncomment as required)
-  
+  ##
   ##if(!require(dplyr)){install.packages("dplyr")}
   ##if(!require(tidyr)){install.packages("tidyr")}
   ##if(!require(tibble)){install.packages("tibble")}
-  
-  #### ---------------------------
-  #Clear working space
-  
-  rm(list = ls())
-  
-  #### ---------------------------
-  #Set output directorypaths
+  ##
+  ## ---------------------------
+  ##
+  ## R Studio Clean-Up:
+  cat("\014") # clear console
+  rm(list=ls()) # clear workspace
+  gc() # garbage collector
+  ##
+  ## ---------------------------
+  ##
+  ## Set working directory 
+  setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
+  ##
+  ## ---------------------------
+  ##
+  ## Set output directorypaths
   outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
   outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
-  
-  
+  ##
+  ##
   #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
   
-  #Lod original data
+  # Lod original data
   sygen.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/masterfile.csv", header = T, sep = ',')
   names(sygen.medication.data)
   
-  #Make copy of data file to work with
+  # Make copy of data file to work with
   sygen.medication.data.network <- sygen.medication.data
   
   
-  #Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
+  # Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
   sygen.medication.data.network[sygen.medication.data.network>0] <- 1
   sygen.medication.data.network[is.na(sygen.medication.data.network)] <- 0 
   
@@ -148,65 +144,7 @@
   edge_df<-df_all_days_pooled %>% separate(Pair, c("Source", "Target"), ", ")
   
   #Write file
-  write.csv(edge_df, '/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Network_graph/edges_for_graph.csv')
+  write.csv(edge_df, '/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Network_graph/edges_for_graph.csv', row.names = F)
   
-  
-  #----Plotting network
-  
-  # Lod data
-  #e1 = read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Network_graph/edges_for_graph.csv", header = T, sep = ',')
-  
-  e<-edge_df
-  
-  #Subset to day of interest
-  e1 <- subset(e, day == 'X7' & value > 20)
-  names(e1)
-  
-  # Create network object
-  e2 <- e1[,-c(3,4)]
-  
-  net = network(e2, directed = FALSE)
-  
-  #----Calcualte the edge weight----#
-  edge_weight<- dplyr:: mutate(e1, 
-                    edge_weight_pct = (100/791*value)/10)
-  
-  
-  #----Calculate the node size----
-  
-  #Subset the data_long file: Remove all the lines with empty cells in column 'measurement'
-  data_long_subset_rm_na <- subset(data_long, (!(measurement == '')) )
-  
-  #Count number of patients that received a certain drug per day
-  drugs_per_day <- data_long_subset_rm_na %>%
-    group_by(measurement,day, generic_name) %>%
-    summarise(count=n())
-    
-  drugs_per_day_X <- subset(drugs_per_day, day == 'X7')
-  
-  node_size<-e2 %>% 
-    select(Target, Source) %>% 
-    t %>% c %>% unique
-  
-  node_size2 <-drugs_per_day_X[drugs_per_day_X$generic_name %in% node_size, ]
-  
-  # network plot
-  
-  set.seed(200)
-  ggnet2(net, 
-         node.size =node_size2$count, 
-         node.color = "darkorange",
-         edge.size = edge_weight$edge_weight_pct,
-         edge.alpha = 0.6,
-         edge.color = 'lightgray',
-         label.color = "black",
-         label = TRUE, legend.position = "none")+
-    theme_light()+theme(axis.title = element_blank())+ggtitle('Day 7 Post-Injury')+
-    guides(color = FALSE, size = FALSE)
-  
-  
-  
-  
-  
-  
+
   #### -------------------------------------------------------------------------- CODE END ------------------------------------------------------------------------------------------------####

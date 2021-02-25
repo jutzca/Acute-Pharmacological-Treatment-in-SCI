@@ -44,6 +44,7 @@ library(sna)
 library(shinyjs)
 library(metathis)
 library(r2d3)
+library(useShinyalert)
 ##
 ## ----------------------------
 ##
@@ -83,9 +84,11 @@ Sys.setlocale('LC_ALL','C')
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 
-#---------- Source helper functions ----------# 
+#---------- Add sources ----------# 
 source("helper_functions_2.R")
-
+# source("R/dependencies.R")
+# source("R/input-multi.R")
+# source("R/utils.R")
 
 #### ---------------------------
 # load data:
@@ -402,7 +405,11 @@ ui <- dashboardPage(
       
       
     tabItem(tabName = "cohort_sygen",
+            useShinyalert(),
             h3("Description of Sygen Trial Cohort"),
+            bsAlert("dataAlert"),
+            
+            
                         fluidRow(
                          box(width = 12,
                          div(style="display:inline-block;width:100%;text-align:center;",
@@ -467,6 +474,8 @@ server <- function(input, output) {
       menuItem("Cohort description", icon = icon("users"))
     )
   })
+  
+  
   
   # Gender 
   output$d3.bar <- renderD3({
