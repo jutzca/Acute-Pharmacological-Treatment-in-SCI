@@ -98,7 +98,7 @@ source("helper_functions_2.R")
 #load("data/shinyDataLongitudinal.RData")
 
 # Load data
-sygen_baseline<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app.csv", sep = ',', header = T)
+sygen_summary_stats<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app.csv", sep = ',', header = T)
 
 
 
@@ -109,11 +109,12 @@ ui <- dashboardPage(
 
   #----Dashboard header----
   
+  # Define title, icon, and width of titel
   title = "Pharmacological Management of Spinal Cord Injury Project",
   dashboardHeader(title=span(icon("prescription"), "Pharmacological Management of Spinal Cord Injury"),
                   titleWidth = 500), #HTML(paste(icon("virus"), "PsyCorona Data Tool"))
  
-   #Select 'skin' color: blue, black, green, purple, red, yellow
+  # Select 'skin' color: blue, black, green, purple, red, yellow
   skin = "purple",
   
   
@@ -121,6 +122,7 @@ ui <- dashboardPage(
   
   
   #----Dashboard sidebar----
+  # Set up the sidebar of the dashboard
   dashboardSidebar(width = 350,
     sidebarMenu(id = "sidebarMenu",
                 menuItem("About", tabName = "about", icon = icon("info-circle")),
@@ -135,7 +137,7 @@ ui <- dashboardPage(
                          menuSubItem("Medications", tabName = "medication_scirehab", icon = icon("prescription")),
                          menuSubItem("Polypharmacy", tabName = "polypharmacy_scirehab", icon = icon("dice-d20")),
                          menuSubItem("Drug administration pattern", tabName = "drug_pattern_scirehab", icon = icon("chart-bar"))),
-                menuItem(HTML(paste0("Take the survey now ", icon("external-link"))), icon=icon("signature"), href = "https://nyu.qualtrics.com/jfe/form/SV_6svo6J4NF7wE6tD", newtab = T),
+                menuItem(HTML(paste0("Contact for collaborations ", icon("external-link"))), icon=icon("envelope"), href = "mailto:catherine.jutzeler@bsse.ethz.ch"),
                 uiOutput("dynamic_content")),
     shinyjs::useShinyjs(),
     tags$footer(HTML("<strong>Copyright &copy; 2020 <a href=\"Dr. Catherine Jutzeler\" target=\"_blank\">Data Science for Health Lab</a>.</strong> 
@@ -154,6 +156,8 @@ ui <- dashboardPage(
   ),
   
   #----Dashboard body----
+  
+  # Set up the body of the dashboard
   dashboardBody(
     tags$script(HTML("$('body').addClass('sidebar-mini');")),
     tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "style.css")),
