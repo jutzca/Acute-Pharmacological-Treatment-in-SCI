@@ -270,6 +270,7 @@ ui <- dashboardPage(
                          menuSubItem("Medications", tabName = "medication_scirehab", icon = icon("prescription")),
                          menuSubItem("Polypharmacy", tabName = "polypharmacy_scirehab", icon = icon("dice-d20")),
                          menuSubItem("Drug administration pattern", tabName = "drug_pattern_scirehab", icon = icon("chart-bar"))),
+                menuItem("Abbreviations", tabName = "abbreviations", icon = icon("language")),
                 menuItem(HTML(paste0("Contact for collaborations ", icon("external-link"))), icon=icon("envelope"), href = "mailto:catherine.jutzeler@bsse.ethz.ch"),
                 uiOutput("dynamic_content")),
     shinyjs::useShinyjs(),
@@ -658,7 +659,7 @@ ui <- dashboardPage(
                 solidHeader = TRUE,
                 
                 h4("Objectives"),
-                "In an effort to understand the relationship between the rehabilitation process and outcomes, the SCIRehab study collected data about rehabilitation interventions across 7 disciplines during the inpatient rehabilitation of 1,376 people with spinal cord injury. 
+                "In an effort to understand the relationship between the rehabilitation process and outcomes, the SCIRehab study collected data about rehabilitation interventions across 7 disciplines during the inpatient rehabilitation of over 1200 people with spinal cord injury. 
                 This study used practice-based evidence methods to relate the details of the rehabilitation process to outcomes after controlling for 
                 individual demographic and injury characteristics",
                 br(),
@@ -666,10 +667,10 @@ ui <- dashboardPage(
                 strong("Study design."), "Longitudinal, observational, prospective event-based cohort study.",
                 br(),
                 br(),
-                strong("Inclusion/ exlusion criteria"), "The SCIRehab facilities enrolled all patients who were 12 years of age or older, gave (or whose parent/guardian gave) informed consent, and were admitted to the facility's SCI unit for initial rehabilitation following traumatic SCI. 
+                strong("Inclusion/ exlusion criteria."), "The SCIRehab facilities enrolled all patients who were 12 years of age or older, gave (or whose parent/guardian gave) informed consent, and were admitted to the facility's SCI unit for initial rehabilitation following traumatic SCI. 
                 Duration of the acute-hospital inpatient admission preceding rehabilitation was not an enrollment criterion. Patients requiring transfer to acute care units or facilities during their rehabilitation program were retained in the study, no matter how long they spent in acute 
                 care before returning to the rehabilitation unit, but their acute care days were not counted as part of the rehabilitation stay. To restrict the study to initial rehabilitation cases, a small number of patients were excluded who spent more than 2 weeks in another rehabilitation 
-                center prior to admission to the SCIRehab facility. To ensure complete rehabilitation data, patients who spent more than a week of their rehabilitation stay on a non-SCI rehabilitation unit in the SCIRehab facility (staff of the non-SCI units were not trained in the data collection methods)
+                center prior to admission to the SCIRehab facility. To ensure complete rehabilitation data, patients who spent more than a week of their rehabilitation stay on a non-spinal cord injury rehabilitation unit in the SCIRehab facility (staff of the non-SCI units were not trained in the data collection methods)
                 also were excluded. There were no other exclusion criteria.",
                 br(),
                 br(),
@@ -677,7 +678,7 @@ ui <- dashboardPage(
                 "Patients were followed for first year 
                 post-injury and were excluded if they spent two or more weeks at a non-participating rehabilitation center. Patient demographics and injury characteristics were extracted from the patient medical record (part of the National Institute on Disability and Rehabilitation 
                 Research Spinal Cord Injury Model Systems Form I). The International Standards of Neurological Classification of SCI (ISNCSCI) and its American Spinal Injury Association Impairment Scale (AIS) were used to describe the neurologic level and completeness of injury; the Functional Independence Measure (FIM)
-                served to describe a patient's functional independence in motor and cognitive tasks at admission and discharge, and monitor functional gains; and the Comprehensive Severity Index (CSI) was used to provide an overall summary measure of how ill (extent of deviation from normal)
+                served to describe a patient's functional independence in motor and cognitive tasks at admission and discharge, and monitor functional gains; and the Comprehensive Severity Index (CSI) was used to provide an overall summary measure of how ill (i.e., extent of deviation from normal)
                 a patient was over time during the stay in the center.",
                 br(),
                 br(),
@@ -742,12 +743,70 @@ ui <- dashboardPage(
                    ) #close box bracket
                ) #close fluid row
     
-          ) #close tabitem
+          ), #close tabitem
+    
+    tabItem(tabName = "abbreviations",
+            titlePanel(strong("Dictionary of abbreviations")),
+            fluidRow(
+              column(width = 6,
+                     box(width = NULL, status = "primary",
+                         h4(strong('General')),
+                         p(strong('SCI'), 'spinal cord injury'),
+                         p(strong(a('ASIA', href ="https://asia-spinalinjury.org/", target="_blank")), 'american spinal injury association'),
+                         p(strong(a('EMSCI', href ="https://www.emsci.org/", target="_blank")), 'european multicenter study about spinal cord injury'),
+                         p(strong('PBE'), 'practice-based evidence')
+                     ),
+                     
+                     box(width = NULL, status = "primary",
+                         h4(strong('Functional outcomes')),
+                         p(strong(a('WISCI', href = "http://www.spinalcordcenter.org/research/wisci_guide.pdf", target="_blank")), 'walking index for spinal cord injury'),
+                         p(strong(a('test_6min', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), '6 minutes walking test'),
+                         p(strong(a('test_10m', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), '10 meters walking test'),
+                         p(strong(a('TUG', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), 'timed up and go test'),
+                         p(strong(a('SCIM2', href = "https://www.emsci.org/index.php/project/the-assessments/independence", target="_blank")), 'spinal cord independence measure type 2'),
+                         p(strong(a('SCIM3', href = "https://www.emsci.org/index.php/project/the-assessments/independence", target="_blank")), 'spinal cord independence measure type 3'),
+                         p(strong('benzel'), 'modified benzel classification')
+                     )
+                     
+              ), # end column
+              
+              column(width = 6,
+                     box(width = NULL, status = "primary",
+                         h4(strong(a('Neurological outcomes', href ="https://asia-spinalinjury.org/wp-content/uploads/2016/02/International_Stds_Diagram_Worksheet.pdf", target="_blank"))),
+                         p(strong(a('AIS', href ='https://www.icf-casestudies.org/introduction/spinal-cord-injury-sci/american-spinal-injury-association-asia-impairment-scale#:~:text=The%20American%20Spinal%20Injury%20Association,both%20sides%20of%20the%20body', target="_blank")), 'ASIA impairment scale'),
+                         p(strong('UEMS'), 'upper extremity motor score'),
+                         p(strong('RUEMS'), 'right upper extremity motor score'),
+                         p(strong('LUEMS'), 'left upper extremity motor score'),
+                         p(strong('LEMS'), 'lower extremity motor score'),
+                         p(strong('RLEMS'), 'right lower extremity motor score'),
+                         p(strong('LLEMS'), 'left lower extremity motor score'),
+                         p(strong('RMS'), 'right motor score'),
+                         p(strong('LMS'), 'left motor score'),
+                         p(strong('TMS'), 'total motor score'),
+                         p(strong('RPP'), 'right pin prick'),
+                         p(strong('LPP'), 'left pin prick'),
+                         p(strong('TPP'), 'total pin prick'),
+                         p(strong('RLT'), 'right light touch'),
+                         p(strong('LLT'), 'left light touch'),
+                         p(strong('TLT'), 'total light touch')
+                     )
+                     
+              ) # end column
+            ) # end fluidRow
+    ) # end tabItem
+    
+    
         ) # close tabitems
     ) # close dashboard body
 ) # close ui
     
     
+
+
+
+
+
+
 
 
 
