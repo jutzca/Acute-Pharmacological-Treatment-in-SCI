@@ -530,7 +530,7 @@ ui <- dashboardPage(
                          "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
                 ),
                 #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
-                valueBox("XX", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
+                valueBox("34", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
                 #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
               )
            ),
@@ -557,7 +557,7 @@ ui <- dashboardPage(
                       strong("Study design."), "Randomized, double-blind, sequential,
                       multicenter clinical trial of two doses Sygen (i.e., low-dose GM-1: 300 mg intravenous loading dose followed by 100 mg/d x 56 days or high-dose GM-1:00 mg intravenous loading dose followed by 200 mg/d x 56 days) versus
                       placebo. All patients received the National Acute Spinal Cord Injury Study (NASCIS-2) protocol dosage of methylprednisolone. Based on a potential adverse interaction between concomitant MPSS and GM-1 administration, 
-                      the initial dose of GM-1 was delayed until after the steroids were given (mean onset of study drug, 54.9 hours).",
+                      the initial dose of GM-1 was delayed until after the steroids were given (mean onset of study medication, 54.9 hours).",
                       br(),
                       br(),
                       strong("Inclusion/exclusion criteria."), "For inclusion in Sygen, patients were required to have at least one lower extremity with a substantial motor deficit. Patients with spinal cord transection 
@@ -578,7 +578,7 @@ ui <- dashboardPage(
                       br(),
                       br(),
                       strong("Concomitant medications."), "The use of medications delivered alongside the study medication (i.e., GM-1) was rigorously tracked. 
-                      For each concomitant drug administered during the trial, the dosage, reason for administration, and the timing of administration were recorded.",
+                      For each concomitant medication administered during the trial, the dosage, reason for administration, and the timing of administration were recorded.",
                       br(),
                       br(),
                       strong("Results."), "Of 797 patients recruited, 760 were included in the analysis. The prospectively planned analysis at the prespecified endpoint time for all patients was negative.
@@ -592,7 +592,7 @@ ui <- dashboardPage(
                       valueBox(prettyNum(797, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
                       valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant medication", icon = icon("pills"), width = 3,  color = "purple"),
                       valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
-                               "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
+                               "Prophylactic medication use", icon = icon("prescription"),  width = 3,  color = "purple"
                       ),
                       #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
                       valueBox("28", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
@@ -677,18 +677,18 @@ ui <- dashboardPage(
                 "Patients were followed for first year 
                 post-injury and were excluded if they spent two or more weeks at a non-participating rehabilitation center. Patient demographics and injury characteristics were extracted from the patient medical record (part of the National Institute on Disability and Rehabilitation 
                 Research Spinal Cord Injury Model Systems Form I). The International Standards of Neurological Classification of SCI (ISNCSCI) and its American Spinal Injury Association Impairment Scale (AIS) were used to describe the neurologic level and completeness of injury; the Functional Independence Measure (FIM)
-                served to describe a patient's functional independence in motor and cognitive tasks at admission and discharge, and monitor functional gains; and the Comprehensive Severity Index (CSI) was used to provide an overall summary measure of how ill (extent of deviation from ‘normal’)
-                a patient was over time during the stay in the center",
+                served to describe a patient's functional independence in motor and cognitive tasks at admission and discharge, and monitor functional gains; and the Comprehensive Severity Index (CSI) was used to provide an overall summary measure of how ill (extent of deviation from normal)
+                a patient was over time during the stay in the center.",
                 br(),
                 br(),
-                strong("Concomitant medications."), "The SCIRehab study rigorously tracked the use of all commonly administered drugs. For each drug administered, route, dosage and dosing 
-                                   (i.e., start and end date, frequency) were abstracted directly from medical records. However, drug indication was not recorded. The drug data has not been published."
+                strong("Commonly administered medications."), "The SCIRehab study rigorously tracked the use of all commonly administered medications. For each medication administered, route, dosage and dosing 
+                                   (i.e., start and end date, frequency) were abstracted directly from medical records. However, medication indication was not recorded. The medication data has not been published."
               
                ), # close box
               
               fluidRow(
                 valueBox(prettyNum(1225, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-                valueBox(prettyNum(575, big.mark=" ", scientific=FALSE), "Unique concomittant medication", icon = icon("pills"), width = 3,  color = "purple"),
+                valueBox(prettyNum(575, big.mark=" ", scientific=FALSE), "Unique medications to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
                 #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
                 valueBox("6", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
                 valueBox("2007-2010", "Running time", icon = icon("calendar-alt"), width = 3,  color = "purple")#,
@@ -700,6 +700,10 @@ ui <- dashboardPage(
                 width = 8, 
                 heigth = "500px",
                 solidHeader = TRUE,
+                h4('Website'),
+                tags$a("ADDEP SCIRehab Data Source", href="https://www.icpsr.umich.edu/web/ADDEP/studies/36724", 
+                       target="_blank",
+                       icon("external-link")),
                 h4("References"),
                 tags$ul(
                   tags$li(a('Whiteneck et al, 2009; ', href = 'https://pubmed.ncbi.nlm.nih.gov/19810627/', target="_blank"), "New approach to study the contents and outcomes of spinal cord injury rehabilitation: the SCIRehab Project. J Spinal Cord Med."),
