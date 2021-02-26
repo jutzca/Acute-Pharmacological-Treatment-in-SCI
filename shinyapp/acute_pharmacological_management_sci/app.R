@@ -119,12 +119,16 @@ source("helper_functions_2.R")
 #load("data/shinyDataAggregated.RData")
 #load("data/shinyDataLongitudinal.RData")
 
-# Load data
-sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app.csv", sep = ',', header = T)
+########## Data sets ##########
 
+#---------- Data set #1: Sygen baseline characteristics ---------- 
+sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T)
 
+#---------- Data set #2: SCIRehab baseline characteristics ---------- 
 
+scirehab_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T)
 
+#---------- updateMultiInput_2 function ---------- 
 
 updateMultiInput_2 <- function (session, inputId, label = NULL, selected = NULL, choices = NULL, choiceValues = NULL, choiceNames = NULL) {
   if (is.null(choices)) {
@@ -232,7 +236,8 @@ writeLines(r2d3_script, r2d3_file)
 
 
 
-# Default
+
+#----------  Shiny app ui  ---------- 
 
 ui <- dashboardPage(
 
@@ -565,16 +570,20 @@ ui <- dashboardPage(
                     box(width = 12,
                         div(style="display:inline-block;width:100%;text-align:center;",
                             radioGroupButtons(
-                              inputId = "var", 
+                              inputId = "var1", 
                               label = "Patient characteristics:", 
-                              selected = "languages",
+                              selected = "sex",
                               status = "success",
                               #justified = T, #if true, all boxes have the same length
                               individual = T, #if false, then the boxes are connected
-                              choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- or paraplegia"),
-                              choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia")
+                              choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Etiology"),
+                              choiceValues = c("sex", "age", "baseline.ais", "nli", "etiology")
                                                           ) #close box bracket
-                        ) #close divstyle
+                        ), #close divstyle
+                        
+                        div(plotlyOutput("bar.plot.baseline.characteristic.scirehab", width = "50%",
+                                         height = "600px",
+                                         inline = FALSE), align='center')
                    ) #close box bracket
                ) #close fluid row
     
@@ -605,7 +614,7 @@ server <- function(input, output, session) {
               For further information, see our <a href='#' onclick=\"openTab('data')\">data description section</a>.",
               style = "warning")
   
-  # Plot sex distribution in Sygen 
+#------- Plot baseline characteristics of Sygen patients ----------
   
   output$bar.plot.baseline.characteristic.sygen <- renderPlotly({
     
@@ -634,7 +643,27 @@ server <- function(input, output, session) {
     baseline.sex}
     
    
-     else if (input$var == "age")  {p2}  
+     else if (input$var == "age")  {
+       width.age.group = c(0.8, 0.8, 0.8, 0.8)
+     
+     sygen_baseline$agegroup=factor(sygen_baseline$agegroup, levels = c("60+ yrs", "41-60 yrs", "21-40 yrs", "0-20 yrs" ))
+     
+     baseline.age.grp<- sygen_baseline%>%
+       dplyr::count(agegroup)%>% 
+       dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+       as.data.frame()%>%
+       plotly::plot_ly(y = ~ agegroup,
+                       x =  ~as.numeric(frequency))%>%
+       plotly::add_bars(
+         marker = list(color = 'rgb(96,92,168)'),
+         width = ~width.age.group,
+         text = ~paste("Age Group:", agegroup,
+                       '</br></br>', "N:", n,
+                       '</br>', "Frequency:", frequency, '%'),
+         hoverinfo = "text")%>%
+       plotly::layout(xaxis = list(title = "Proportion [%]"),
+                      yaxis = list(title = ""))
+     baseline.age.grp}  
     
     
     else if (input$var == "baseline.ais")  {
@@ -710,7 +739,134 @@ server <- function(input, output, session) {
     
   })
   
+#------- Plot baseline characteristics of SCIRehab patients ----------
   
+  output$bar.plot.baseline.characteristic.scirehab <- renderPlotly({
+    
+    if (input$var1 == "sex")  {
+      
+      width = c(0.8, 0.8)
+      
+      baseline.sex <- scirehab_baseline%>%
+        dplyr::count(Sex)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~Sex,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width,
+          text = ~paste("Sex:", Sex,
+                        '</br></br>', "N:", n,
+                        '</br>', "Percentage:", frequency, '%'),
+          #text = ~n,
+          hoverinfo = "text")%>%
+        layout(title = '', font=list(size = 12)) %>%
+        layout(xaxis = list(title = 'Percentage [%]')) %>%
+        layout( xaxis = list(titlefont = list(size = 16), tickfont = list(size = 14)),
+                yaxis = list(titlefont = list(size = 16), tickfont = list(size = 14)) )
+      baseline.sex}
+    
+    
+    else if (input$var1 == "age")  {
+      width.age.group = c(0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8)
+      
+      scirehab_baseline$Age=factor(scirehab_baseline$Age, levels = c("80+ yrs", "70-79 yrs", "60-69 yrs", "50-59 yrs", "40-49 yrs", "30-39 yrs", "20-29 yrs", "0-19 yrs" ))
+      
+      baseline.age<- scirehab_baseline%>%
+        dplyr::count(Age)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~ Age,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width.age.group,
+          text = ~paste("Age Group:", Age,
+                        '</br></br>', "N:", n,
+                        '</br>', "Percentage:", frequency, '%'),
+          hoverinfo = "text")%>%
+        plotly::layout(xaxis = list(title = "Percentage [%]"),
+                       yaxis = list(title = ""))
+      baseline.age}  
+    
+    
+    else if (input$var1 == "baseline.ais")  {
+      
+      width.ais = c(0.8, 0.8, 0.8, 0.8, 0.8)
+      
+      scirehab_baseline$AIS=factor(scirehab_baseline$AIS, levels = c('Unknown', "AIS D", 'AIS C', "AIS B", "AIS A"))
+      
+      baseline.ais <- scirehab_baseline%>%
+        dplyr::count(AIS)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~AIS,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width.ais,
+          text = ~paste("Injury Severity:", AIS,
+                        '</br></br>', "N:", n,
+                        '</br>', "Percentage:", frequency, '%'),
+          hoverinfo = "text")%>%
+        plotly::layout(xaxis = list(title = "Percentage [%]"),
+                       yaxis = list(title = ""))
+      baseline.ais}  
+    
+    
+    else if (input$var1 == "nli")  {
+      
+      width.nli = c(0.8, 0.8, 0.8, 0.8)
+      
+      scirehab_baseline$NLI=factor(scirehab_baseline$NLI, levels = c('Unknown',"Lumbar", 'Thoracic', "Cervical"))
+      
+      baseline.nli <- scirehab_baseline%>%
+        dplyr::count(NLI)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~NLI,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width.nli,
+          text = ~paste("Injury Level:", NLI,
+                        '</br></br>', "N:", n,
+                        '</br>', "Percentage:", frequency, '%'),
+          hoverinfo = "text")%>%
+        plotly::layout(xaxis = list(title = "Percentage [%]"),
+                       yaxis = list(title = ""))
+      baseline.nli}
+    
+    
+    else if (input$var1 == "etiology")  {
+      
+      width.cause = c(0.8, 0.8, 0.8, 0.8,0.8, 0.8, 0.8, 0.8, 0.8)
+      
+      scirehab_baseline$Cause=factor(scirehab_baseline$Cause, levels = c("Others", "Water related","Person-to-person contact", "Pedestrian", "Other sports", "Motorcycle", "Gun shot wound", "Fall", "Automobile" ))
+      
+      baseline.cause<- scirehab_baseline%>%
+        dplyr::count(Cause)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~Cause,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width.cause,
+          text = ~paste("Etiology:", Cause,
+                        '</br></br>', "N:", n,
+                        '</br>', "Percentage:", frequency, '%'),
+          hoverinfo = "text")%>%
+        plotly::layout(xaxis = list(title = "Percentage [%]"),
+                       yaxis = list(title = ""))
+      baseline.cause}
+    
+  })
+  
+  
+  
+  #------- other ----------- 
   
   shinyjs::onclick("menu",
                    shinyjs::toggle(id = "sideFooter", anim = F))
