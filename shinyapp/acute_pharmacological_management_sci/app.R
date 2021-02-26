@@ -466,6 +466,14 @@ ui <- dashboardPage(
                             ),
                     tags$li("Dr. Jacquelyn Cragg, Faculty of Pharmaceutical Sciences, University of British Columbia, Vancouver, Canada."
                     )),
+                  strong("Collaborators:"), 
+                  tags$ul(
+                    tags$li("Dr. Lukas Grassner"
+                    ),
+                    tags$li("Dr. Fred Geisler"
+                    ),
+                    tags$li("Dr. Fred Geisler"
+                    )),
                   br(),
                   h4("Ethics statement"),
                   "Approval for this study (secondary analysis) was received by an institutional ethical standards committee on human experimentation at the University of 
