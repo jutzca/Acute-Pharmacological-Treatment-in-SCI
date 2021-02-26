@@ -259,11 +259,13 @@ ui <- dashboardPage(
                 menuItem("About", tabName = "about", icon = icon("info-circle")),
                 #menuItem("Cohorts", tabName = "cohort", icon = icon("users"),
                 menuItem('Sygen Trial', tabName = 'sygentrial', icon = icon("hospital-user"), 
+                         menuSubItem("About", tabName = "about_sygen", icon = icon("info-circle")),
                          menuSubItem("Cohort", tabName = "cohort_sygen", icon = icon("users")), 
                          menuSubItem("Medications", tabName = "medication_sygen", icon = icon("prescription")),
                          menuSubItem("Polypharmacy", tabName = "polypharmacy_sygen", icon = icon("dice-d20")),
                          menuSubItem("Drug administration pattern", tabName = "drug_pattern_sygen", icon = icon("chart-bar"))),
                 menuItem('SCIRehab', tabName = 'scirehab', icon=icon("database"),
+                         menuSubItem("About", tabName = "about_scirehab", icon = icon("info-circle")),
                          menuSubItem("Cohort", tabName = "cohort_scirehab", icon = icon("users")), 
                          menuSubItem("Medications", tabName = "medication_scirehab", icon = icon("prescription")),
                          menuSubItem("Polypharmacy", tabName = "polypharmacy_scirehab", icon = icon("dice-d20")),
@@ -419,9 +421,11 @@ ui <- dashboardPage(
                      });
                      ")),
     
+    
+    
     shinyjs::useShinyjs(),
     tabItems(
-      tabItem(tabName = "about",
+          tabItem(tabName = "about",
               h3("Welcome to the",strong("Pharmacological Management of Spinal Cord Injury"), "Project"),
               br(),
               fluidRow(
@@ -530,7 +534,88 @@ ui <- dashboardPage(
                 #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
               )
            ),
-      
+          
+          tabItem(tabName = "about_sygen",
+                  h3(strong("The Sygen Clinical Trial")),
+                  br(),
+                  fluidRow(
+                    box(#title = "Explore The Data", 
+                      width = 8, 
+                      heigth = "500px",
+                      solidHeader = TRUE,
+                      
+                      h4("Objectives of original study"),
+                      "To determine efficacy and safety of monosialotetrahexosylganglioside GM1 (i.e., Sygen) in acute spinal cord injury.",
+                      br(),
+                      h4("Methods"),
+                      strong("Monosialotetrahexosylganglioside GM1"),
+                      "Sygen (monosialotetrahexosylganglioside GM1 sodium salt) is a naturally occurring compound in cell membranes of mammals and is especially abundant in the membranes of the central nervous system. 
+                      Acute neuroprotective and longer-term regenerative effects in multiple experimental models of ischemia and injury have been reported. The proposed mechanisms of action of GM1 include 
+                      anti-excitotoxic activity, apoptosis prevention, and potentiation of neuritic sprouting and the effects of nerve growth factors.",
+                      br(),
+                      br(),
+                      strong("Study design."), "Randomized, double-blind, sequential,
+                      multicenter clinical trial of two doses Sygen (i.e., low-dose GM-1: 300 mg intravenous loading dose followed by 100 mg/d x 56 days or high-dose GM-1:00 mg intravenous loading dose followed by 200 mg/d x 56 days) versus
+                      placebo. All patients received the National Acute Spinal Cord Injury Study (NASCIS-2) protocol dosage of methylprednisolone. Based on a potential adverse interaction between concomitant MPSS and GM-1 administration, 
+                      the initial dose of GM-1 was delayed until after the steroids were given (mean onset of study drug, 54.9 hours).",
+                      br(),
+                      br(),
+                      strong("Inclusion/exclusion criteria."), "For inclusion in Sygen, patients were required to have at least one lower extremity with a substantial motor deficit. Patients with spinal cord transection 
+                      or penetration were excluded, as were patients with a cauda equina, brachial or lumbosacral plexus, or peripheral nerve injury. Multiple trauma cases were included as long as they were not so severe
+                      as to preclude neurologic evaluation. It is notable that this requirement of participating in a detailed neurologic exam excluded major head trauma cases and also intubated 
+                      chest trauma cases.",
+                      br(),
+                      br(),
+                      strong("Assessments."), "Baseline neurologic assessment included both the AIS and detailed American Spinal Injury Association (ASIA) motor and
+                      sensory examinations. Additionally, the Modified Benzel Classification and the ASIA motor and
+                      sensory examinations were performed at 4, 8, 16, 26, and 52 weeks after injury. The Modified Benzel Classification was used for post-baseline measurement because it rates walking
+                      ability and, in effect, subdivides the broad D category of the AIS. Because most patients have an unstable spinal fracture at
+                      baseline, it is not possible to assess walking ability at that time; hence the use of different baseline and follow-up scales.
+                      Marked recovery was defined as at least a two-grade equivalent improvement in the Modified Benzel Classification from the
+                      baseline AIS. The primary efficacy assessment was the proportion of patients with marked recovery at week 26. The secondary efficacy assessments included the time course of marked recovery and
+                      other established measures of spinal cord function (the ASIA motor and sensory scores, relative and absolute sensory levels of impairment, and assessments of bladder and bowel
+                      function).",
+                      br(),
+                      br(),
+                      strong("Concomitant medications."), "The use of medications delivered alongside the study medication (i.e., GM-1) was rigorously tracked. 
+                      For each concomitant drug administered during the trial, the dosage, reason for administration, and the timing of administration were recorded.",
+                      br(),
+                      br(),
+                      strong("Results."), "Of 797 patients recruited, 760 were included in the analysis. The prospectively planned analysis at the prespecified endpoint time for all patients was negative.
+                      The negative finding of the Sygen study is considered Class I Medical Evidence by the spinal cord injury Committee of the 
+                      American Association of Neurological Surgeons (AANS) and the Congress of Neurological Surgeons (CNS). Subsequent analyses of the Sygen 
+                      data have been performed to characterize the trajectory and extent of spontaneous recovery from acute spinal cord injury.",
+                      br()
+                       ), # close box
+                    
+                    fluidRow(
+                      valueBox(prettyNum(797, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                      valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant medication", icon = icon("pills"), width = 3,  color = "purple"),
+                      valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
+                               "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
+                      ),
+                      #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
+                      valueBox("28", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
+                      valueBox("1991-1997", "Running time", icon = icon("calendar-alt"), width = 3,  color = "purple")#,
+                      #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
+                    )
+                  ), # close fluid row
+                  fluidRow(
+                    box(#title = "Explore The Data", 
+                      width = 8, 
+                      heigth = "500px",
+                      solidHeader = TRUE,
+                      
+                      h4("References"),
+                      
+                      tags$ul(
+                        tags$li(a('Geisler et al, 2001', href = 'https://europepmc.org/article/med/11805612', target="_blank"), "Recruitment and early treatment in a multicenter study of acute spinal cord injury. Spine (Phila Pa 1976)."),
+                        tags$li(a('Geisler et al, 2001', href = 'https://journals.lww.com/spinejournal/Fulltext/2001/12151/The_Sygen_R__Multicenter_Acute_Spinal_Cord_Injury.15.aspx', target="_blank"), "The Sygen multicenter acute spinal cord injury study. Spine (Phila Pa 1976)")
+                        ) # close tags
+                        ) # close box
+                    ) # close fluid row
+                 
+          ), # close tab item
     # Tab: Sygen Cohort  
     tabItem(tabName = "cohort_sygen",
             
@@ -562,6 +647,72 @@ ui <- dashboardPage(
                   ) #close box bracket
               )  #close fluid row
             ),   #close tabitem
+    
+    tabItem(tabName = "about_scirehab",
+            h3(strong("Spinal Cord Injury Rehabilitation Study")),
+            br(),
+            fluidRow(
+              box(#title = "Explore The Data", 
+                width = 8, 
+                heigth = "300px",
+                solidHeader = TRUE,
+                
+                h4("Objectives"),
+                "In an effort to understand the relationship between the rehabilitation process and outcomes, the SCIRehab study collected data about rehabilitation interventions across 7 disciplines during the inpatient rehabilitation of 1,376 people with spinal cord injury. 
+                This study used practice-based evidence methods to relate the details of the rehabilitation process to outcomes after controlling for 
+                individual demographic and injury characteristics",
+                br(),
+                h4("Methods"),
+                strong("Study design."), "Longitudinal, observational, prospective event-based cohort study.",
+                br(),
+                br(),
+                strong("Inclusion/ exlusion criteria"), "The SCIRehab facilities enrolled all patients who were 12 years of age or older, gave (or whose parent/guardian gave) informed consent, and were admitted to the facility's SCI unit for initial rehabilitation following traumatic SCI. 
+                Duration of the acute-hospital inpatient admission preceding rehabilitation was not an enrollment criterion. Patients requiring transfer to acute care units or facilities during their rehabilitation program were retained in the study, no matter how long they spent in acute 
+                care before returning to the rehabilitation unit, but their acute care days were not counted as part of the rehabilitation stay. To restrict the study to initial rehabilitation cases, a small number of patients were excluded who spent more than 2 weeks in another rehabilitation 
+                center prior to admission to the SCIRehab facility. To ensure complete rehabilitation data, patients who spent more than a week of their rehabilitation stay on a non-SCI rehabilitation unit in the SCIRehab facility (staff of the non-SCI units were not trained in the data collection methods)
+                also were excluded. There were no other exclusion criteria.",
+                br(),
+                br(),
+                strong("Assessments."),
+                "Patients were followed for first year 
+                post-injury and were excluded if they spent two or more weeks at a non-participating rehabilitation center. Patient demographics and injury characteristics were extracted from the patient medical record (part of the National Institute on Disability and Rehabilitation 
+                Research Spinal Cord Injury Model Systems Form I). The International Standards of Neurological Classification of SCI (ISNCSCI) and its American Spinal Injury Association Impairment Scale (AIS) were used to describe the neurologic level and completeness of injury; the Functional Independence Measure (FIM)
+                served to describe a patient's functional independence in motor and cognitive tasks at admission and discharge, and monitor functional gains; and the Comprehensive Severity Index (CSI) was used to provide an overall summary measure of how ill (extent of deviation from ‘normal’)
+                a patient was over time during the stay in the center",
+                br(),
+                br(),
+                strong("Concomitant medications."), "The SCIRehab study rigorously tracked the use of all commonly administered drugs. For each drug administered, route, dosage and dosing 
+                                   (i.e., start and end date, frequency) were abstracted directly from medical records. However, drug indication was not recorded. The drug data has not been published."
+              
+               ), # close box
+              
+              fluidRow(
+                valueBox(prettyNum(1225, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                valueBox(prettyNum(575, big.mark=" ", scientific=FALSE), "Unique concomittant medication", icon = icon("pills"), width = 3,  color = "purple"),
+                #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
+                valueBox("6", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
+                valueBox("2007-2010", "Running time", icon = icon("calendar-alt"), width = 3,  color = "purple")#,
+                #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
+              )
+            ), # close fluid row
+            fluidRow(
+              box(#title = "Explore The Data", 
+                width = 8, 
+                heigth = "500px",
+                solidHeader = TRUE,
+                h4("References"),
+                tags$ul(
+                  tags$li(a('Whiteneck et al, 2009; ', href = 'https://pubmed.ncbi.nlm.nih.gov/19810627/', target="_blank"), "New approach to study the contents and outcomes of spinal cord injury rehabilitation: the SCIRehab Project. J Spinal Cord Med."),
+                  tags$li(a('Whiteneck et al, 2011', href = 'https://pubmed.ncbi.nlm.nih.gov/21675353/', target="_blank"), "Inpatient treatment time across disciplines in spinal cord injury rehabilitation. J Spinal Cord Med")
+                ) # close tags
+              ) # close box
+            ) # close fluid row
+            
+    ),
+    
+    
+    
+    
     
     
     tabItem(tabName = "cohort_scirehab",
@@ -613,6 +764,14 @@ server <- function(input, output, session) {
               content="To protect the privacy of all patients, this application only uses aggregate, anonymized data (i.e., no individual person is identifiable). 
               For further information, see our <a href='#' onclick=\"openTab('data')\">data description section</a>.",
               style = "warning")
+  
+  
+# #------- Plot GM1---------- 
+#   output$gm1 <- renderImage({
+#     return(list(src = "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/www/gm1.png",
+#                 type = "image/png",alt = "gm1", width = "200ptx"))
+#   }, deleteFile = FALSE) #where the src is wherever you have the picture
+#   
   
 #------- Plot baseline characteristics of Sygen patients ----------
   
