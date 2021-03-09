@@ -62,23 +62,35 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 masterfile.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_per_days.csv", sep=',', header = TRUE)
 
 # Create copy to work with
-
 medication.per.patient <- masterfile.medication.data
 
-# Assign new ID for the patients (for data protection reason)
-medication.per.patient<-medication.per.patient %>% 
-  dplyr::mutate(ID = group_indices_(medication.per.patient, .dots="NEW_ID")) 
+#----------  Add the injury characteristics and demographics ---------- 
+sygen.original<- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Data/Sygen/Original_data/df_sygen_formatted.csv", sep = ',', header = T,  na.strings=c("","NA"))
+
+# Select columns to be used
+sygen.original.subset <- sygen.original[,c(2:10,25:27)]
+
+# Subset data to only patients with valid entry at Time 0 or Time 1 and remove duplicate patient numbers
+sygen.original.subset1 <- distinct(subset(sygen.original.subset, Time==0 | Time==1) , ID, .keep_all = TRUE)
+
+# Merge medication file and demographics file
+joined_mediction.df <- merge(medication.per.patient, sygen.original.subset1, by.x = "NEW_ID", 
+                   by.y = "ID", all.x = TRUE, all.y = FALSE)
+
+#---------- Assign new ID for the patients (for data protection reason) ---------- 
+joined_mediction.df.new.id<-joined_mediction.df %>% 
+  dplyr::mutate(ID = group_indices(joined_mediction.df, n_groups=NEW_ID)) 
 
 # Add the letter P in front of the newly created ID variable
-medication.per.patient$ID <- sub("^", "P", medication.per.patient$ID )
-medication.per.patient
+joined_mediction.df.new.id$ID <- sub("^", "P", joined_mediction.df.new.id$ID)
+joined_mediction.df.new.id
 
 # Split the masterfile by pid
-id <- medication.per.patient[order(medication.per.patient$ID),] 
+id <- joined_mediction.df.new.id[order(joined_mediction.df.new.id$ID),] 
 
 id_split <- split(id, id$ID)
 
-new_names <- as.character(unique(medication.per.patient$ID))
+new_names <- as.character(unique(joined_mediction.df.new.id$ID))
 
 for (i in 1:length(id_split)) {
   id_split[[i]]
