@@ -44,19 +44,19 @@ gc() # garbage collector
 ## ---------------------------
 ##
 ## Set working directory 
-setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
+setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
 ##
 ## ---------------------------
 ##
 ## Set output directorypaths
-outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
-outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
+outdir_figures='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
+outdir_tables='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
 ##
 ##
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 # Load original sygen medication dataset
-bbb.sygen<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Data/bbb_permeability.csv", header = T, sep = ',')
+bbb.sygen<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Data/bbb_permeability.csv", header = T, sep = ',')
 names(bbb.sygen)
 
 # Reoder the factors of variable BBB
