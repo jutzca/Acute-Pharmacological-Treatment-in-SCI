@@ -45,7 +45,7 @@ library(shinyjs)
 library(metathis)
 library(r2d3)
 library(shinyalert)
-library(shinyBS)
+alibrary(shinyBS)
 library(devtools)
 ##
 ## ----------------------------
@@ -87,13 +87,13 @@ gc() # garbage collector
 ## ---------------------------
 ##
 ## Set working directory 
-setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
+setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
 ##
 ## ---------------------------
 ##
 ## Set output directorypaths
-outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures'
-outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables'
+outdir_figures='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures'
+outdir_tables='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables'
 ##
 ## ---------------------------
 ##
@@ -122,11 +122,11 @@ source("helper_functions_2.R")
 ########## Data sets ##########
 
 #---------- Data set #1: Sygen baseline characteristics ---------- 
-sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T)
+sygen_baseline<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T)
 
 #---------- Data set #2: SCIRehab baseline characteristics ---------- 
 
-scirehab_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T)
+scirehab_baseline<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T)
 
 #---------- updateMultiInput_2 function ---------- 
 
@@ -529,7 +529,7 @@ ui <- dashboardPage(
                     '.', align = "justify")
                     ),
                 box(width = 4,
-                    HTML("<a class=\"twitter-timeline\" data-height=\"600\" href=\"https://twitter.com/DatSci_4_health\">A Twitter List by FortuneMagazine</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
+                    HTML("<a class=\"twitter-timeline\" data-height=\"600\" href=\"https://twitter.com/DatSci_4_health\">A Twitter List by Data Science for Health Research Group</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
                 )
                     ),
               fluidRow(
@@ -599,7 +599,7 @@ ui <- dashboardPage(
                     
                     fluidRow(
                       valueBox(prettyNum(797, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-                      valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant medication", icon = icon("pills"), width = 3,  color = "purple"),
+                      valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant medication to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
                       valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
                                "Prophylactic medication use", icon = icon("prescription"),  width = 3,  color = "purple"
                       ),
@@ -828,14 +828,14 @@ server <- function(input, output, session) {
   })
   
 # Create Data Alert
-  createAlert(session = session,
-              anchorId = "dataAlert",
-              #alertId="a1",
-              title = paste(icon("warning"),"Data Notification"),
-              content="To protect the privacy of all patients, this application only uses aggregate, anonymized data (i.e., no individual person is identifiable). 
-              For further information, see our <a href='#' onclick=\"openTab('data')\">data description section</a>.",
-              style = "warning")
-  
+  # createAlert(session = session,
+  #             anchorId = "dataAlert",
+  #             #alertId="a1",
+  #             title = paste(icon("warning"),"Data Notification"),
+  #             content="To protect the privacy of all patients, this application only uses aggregate, anonymized data (i.e., no individual person is identifiable). 
+  #             For further information, see our <a href='#' onclick=\"openTab('data')\">data description section</a>.",
+  #             style = "warning")
+  # 
   
 # #------- Plot GM1---------- 
 #   output$gm1 <- renderImage({
