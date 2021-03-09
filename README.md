@@ -11,12 +11,14 @@ Descriptive statistics were used to describe the medications administered within
 Our study revealed a high degree of polypharmacy in the acute stages of spinal cord injury, with potential to both positively and negatively impact neurological recovery.
 
 
+## External resources
+
 **Link to paper**: [Preprint](https://www.sciencedirect.com/science/article/pii/S1477893920303215?via%3Dihub)
 
 **Link to web application**: [Neuropharmacovigilance Platform](https://jutzelec.shinyapps.io/neurosurveillance/)
 
-## External resources
 
+**Link to web application**:
 * [SCIRehab Study](https://www.icpsr.umich.edu/web/ADDEP/studies/36724)
 * [Sygen Trial](https://journals.lww.com/spinejournal/Fulltext/2001/12151/The_Sygen__Multicenter_Acute_Spinal_Cord_Injury.15.aspx)
 
