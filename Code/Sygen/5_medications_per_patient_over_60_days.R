@@ -59,7 +59,7 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 # Load original sygen medication dataset
-masterfile.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_per_days.csv", sep=',', header = TRUE)
+masterfile.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/drugs_per_day_shiny_app.csv", sep=',', header = TRUE)
 
 # Create copy to work with
 medication.per.patient <- masterfile.medication.data
@@ -107,43 +107,40 @@ file_list <- list.files()
 for(file in file_list)    #repeat for all files in dir folder
 {
   data <- read.csv(file, header=TRUE, sep=',')
+  
+  data<- read.csv(file.choose())
+  data1 <- data
 
-  data.select <-dplyr::select(data,-c(1,2)) #remove first column as it is not needed
-  
-  cols_to_change = c(2:367)    #change columns 4:368 to numerics class format
+  cols_to_change = c(5:368)    #change columns 4:368 to numerics class format
   for(i in cols_to_change){
-    class(data.select[, i]) = "numeric"
-  }
+    data1[, i][(data1[, i]>0)] <- 1
+    class(data1[, i]) = "numeric"
+    }
   
-  data.select [data.select>0] <- 1
-  data.select  <-  data.select [c(1:62,368)]
-  
-  
-  datan<-ddply(data.select,.(generic_name), function(x) colSums(x[,-c(1,63)], na.rm = TRUE))
+
+  datan<-plyr::ddply(data1,.(ID, generic_name, indication,Sex, Age, AIS, Cause, NLI, NLI_raw, YEARDOI,Time_wks, New_timeline ), function(x) colSums(x[,-c(1,2,3,4,66:382)], na.rm = TRUE))
   
   data_long<-datan%>%
-    gather(time, dose, X0:X60)
-  
-  colnames(data_long)[2] <- "time"
-  colnames(data_long)[3] <- "daily_dose"
-  data_long$time<- sub("X","",data_long$time)
-  data_long$time<- as.numeric(data_long$time)
+    gather(day, daily_dose, X0:X60)
+
+  data_long$day<- sub("X","",data_long$day)
+  data_long$day<- as.numeric(data_long$day)
   data_long$daily_dose<- as.numeric(data_long$daily_dose)
   
   
   
   
-  myplot1<- ggplot(data_long, aes(time, generic_name, fill=daily_dose))+geom_tile(color = "white") +
+  myplot1<- ggplot(data_long, aes(day, generic_name, fill=daily_dose))+geom_tile(color = "white") +
         scale_fill_gradient(low = "white", high="black") +
     theme_linedraw()+scale_x_continuous(expand = c(0, 0), breaks = c(0,10,20,30,60))+ 
-    ggtitle(stringr::str_sub(file, end=-5))+
+    # ggtitle(stringr::str_sub(file, end=-5))+
      #ggtitle(paste(file))+ 
     labs(x="Days Post-Injury")+ 
     theme(panel.grid.major = element_blank(),axis.title.x = element_text(size = 12),
           axis.text.x = element_text(color="black", size=10), 
           axis.text.y = element_text( color="gray28", size=9), 
           axis.title.y  = element_blank(), legend.position = "none")
-  
+  myplot1
   
   ggsave(myplot1,filename=paste(stringr::str_sub(file, end=-5),".pdf",sep=""),path='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen/Polypharmacy')
   
