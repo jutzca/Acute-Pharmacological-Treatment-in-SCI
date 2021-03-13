@@ -59,7 +59,7 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 # Load original sygen medication dataset
-masterfile.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/drugs_per_day_shiny_app.csv", sep=',', header = TRUE)
+masterfile.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/drugs_per_day_shiny_app.csv", sep=',', header = TRUE, stringsAsFactors = F)
 
 # Create copy to work with
 medication.per.patient <- masterfile.medication.data
@@ -132,10 +132,11 @@ for(file in file_list)    #repeat for all files in dir folder
 
 # Reformat data from wide to long
   data_long<-datan%>%
-    gather(day, daily_dose, X0:X60)
+    gather(Day, daily_dose, X0:X60)
 
-  data_long$day<- sub("X","",data_long$day)
-  data_long$day<- as.numeric(data_long$day)
+  data_long$Day<- sub("X","",data_long$Day)
+  data_long$Day<- as.numeric(data_long$Day)
+
 
   ais.grade.plot <-unique(data_long$AIS)
   sex.plot <-unique(data_long$Sex)
@@ -144,11 +145,10 @@ for(file in file_list)    #repeat for all files in dir folder
   nli.plot <-unique(data_long$NLI_raw)
   
   # colors <- colorRampPalette(c("white", "#bca0dc", "#b491c8", "#663a82", "#3c1361"))(8)
-  
-  colors <- colorRampPalette(c("white", "#0000ff"))(7)
+    colors <- colorRampPalette(c("white", "#0000ff"))(7)
   
 # Create plot  
-myplot1<- ggplot(data_long, aes(day, generic.name, fill=as.factor(daily_dose)))+geom_tile(color = "white") +
+myplot1<- ggplot(data_long, aes(Day, generic.name, fill=as.factor(daily_dose)))+geom_tile(color = "white") +
   scale_fill_manual(values=colors)+theme_linedraw()+scale_x_continuous(expand = c(0, 0), breaks = c(0,15,30,45,60))+ 
     ggtitle(paste(sex.plot,", ",ais.grade.plot,", ",plegia.plot," (",nli.plot,"), ",cause.plot, sep = ""))+ 
     labs(x="Days Post-Injury", fill = "Number of\n Doses")+ 
