@@ -19,8 +19,8 @@ Our study revealed a high degree of polypharmacy in the acute stages of spinal c
 
 
 **Link to web application**:
-* [SCIRehab Study](https://www.icpsr.umich.edu/web/ADDEP/studies/36724)
-* [Sygen Trial](https://journals.lww.com/spinejournal/Fulltext/2001/12151/The_Sygen__Multicenter_Acute_Spinal_Cord_Injury.15.aspx)
+* :link: [SCIRehab Study](https://www.icpsr.umich.edu/web/ADDEP/studies/36724)
+* :link: [Sygen Trial](https://journals.lww.com/spinejournal/Fulltext/2001/12151/The_Sygen__Multicenter_Acute_Spinal_Cord_Injury.15.aspx)
 
 ## Contact
 Questions or comments related to the manuscript:
