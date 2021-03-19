@@ -24,11 +24,11 @@ Our study revealed a high degree of polypharmacy in the acute stages of spinal c
 
 ## Contact
 Questions or comments related to the manuscript:
-* [Dr. Catherine Jutzeler](mailto:catherine.jutzeler@bsse.ethz.ch?subject=[GitHub]%20Source%20Han%20Sans)
-* [Prof. Dr. John Kramer](mailto:kramer@icord.org?subject=[GitHub]%20Source%20Han%20Sans)
+* :e-mail: [Dr. Catherine Jutzeler](mailto:catherine.jutzeler@bsse.ethz.ch?subject=[GitHub]%20Source%20Han%20Sans)
+* :e-mail: [Prof. Dr. John Kramer](mailto:kramer@icord.org?subject=[GitHub]%20Source%20Han%20Sans)
 
 This repository is maintained by:
-* [Dr. Catherine Jutzeler](https://github.com/jutzca)
+* :e-mail: [Dr. Catherine Jutzeler](https://github.com/jutzca)
 
 ## Funding
 
