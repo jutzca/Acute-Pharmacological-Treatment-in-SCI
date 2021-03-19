@@ -1,0 +1,12 @@
+name: Neuropharmacovigilance
+title: Neuropharmacovigilance
+username:
+account: jutzelec
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3760238
+bundleId: 4321194
+url: https://jutzelec.shinyapps.io/Neuropharmacovigilance/
+when: 1615300255.44285
+asMultiple: FALSE
+asStatic: FALSE

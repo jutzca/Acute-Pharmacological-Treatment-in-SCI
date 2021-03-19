@@ -45,8 +45,9 @@ library(shinyjs)
 library(metathis)
 library(r2d3)
 library(shinyalert)
-alibrary(shinyBS)
+library(shinyBS)
 library(devtools)
+library(testthat)
 ##
 ## ----------------------------
 ##
@@ -66,7 +67,7 @@ library(devtools)
 # if(!require(splitstackshape)){install.packages("splitstackshape")}
 # if(!require(RColorBrewer)){install.packages("RColorBrewer")}
 # if(!require(stringr)){install.packages("stringr")}
-# # if(!require(ggnetwork)){install.packages("ggnetwork")}
+# if(!require(ggnetwork)){install.packages("ggnetwork")}
 # if(!require(igraph)){install.packages("igraph")}
 # if(!require(intergraph)){install.packages("intergraph")}
 # if(!require(sna)){install.packages("sna")}
@@ -87,14 +88,10 @@ gc() # garbage collector
 ## ---------------------------
 ##
 ## Set working directory 
-setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
-##
-## ---------------------------
-##
-## Set output directorypaths
-outdir_figures='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures'
-outdir_tables='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables'
-##
+#setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
+dirname <-  '/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/'
+if (!dir.exists(dirname))dir.create(dirname,recursive=TRUE)
+
 ## ---------------------------
 ##
 #Set local system
@@ -122,11 +119,19 @@ source("helper_functions_2.R")
 ########## Data sets ##########
 
 #---------- Data set #1: Sygen baseline characteristics ---------- 
-sygen_baseline<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T)
+
+#sygen_baseline<- read.csv("/Users/jutzelec/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
+#save(sygen_baseline, file = "sygen_baseline.RData")
+setwd('/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/')
+
+load("data/sygen_baseline.RData")
+
 
 #---------- Data set #2: SCIRehab baseline characteristics ---------- 
+# scirehab_baseline<- read.csv("/Users/jutzelec/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
+# save(scirehab_baseline, file = "scirehab_baseline.RData")
+load("data/scirehab_baseline.RData")
 
-scirehab_baseline<- read.csv("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T)
 
 #---------- updateMultiInput_2 function ---------- 
 
@@ -230,8 +235,6 @@ totals.exit().remove();
 
 r2d3_file <- tempfile()
 writeLines(r2d3_script, r2d3_file)
-
-
 
 
 
@@ -599,7 +602,7 @@ ui <- dashboardPage(
                     
                     fluidRow(
                       valueBox(prettyNum(797, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-                      valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant medication to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
+                      valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant medications to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
                       valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
                                "Prophylactic medication use", icon = icon("prescription"),  width = 3,  color = "purple"
                       ),
@@ -625,6 +628,7 @@ ui <- dashboardPage(
                     ) # close fluid row
                  
           ), # close tab item
+    
     # Tab: Sygen Cohort  
     tabItem(tabName = "cohort_sygen",
             
@@ -655,7 +659,25 @@ ui <- dashboardPage(
              
                   ) #close box bracket
               )  #close fluid row
-            ),   #close tabitem
+            ),   #close tabitem (cohort sygen)
+    
+    # Tab: Sygen Medication
+    tabItem(tabName = "medication_sygen",
+            fluidRow(
+              box(title = "Explore The Data", 
+                width = 8, 
+                heigth = "300px",
+                solidHeader = TRUE,
+              sliderInput("obs", "Number of observations:",
+                          min = 0, max = 365, value = 1
+              ),
+                          plotOutput("distPlot")
+            
+              )  #close box
+            )#close fluid row
+            
+    ), # Close tab item (Sygen Medication)
+    
     
     tabItem(tabName = "about_scirehab",
             h3(strong("Spinal Cord Injury Rehabilitation Study")),
@@ -722,9 +744,6 @@ ui <- dashboardPage(
             ) # close fluid row
             
     ),
-    
-    
-    
     
     
     
@@ -826,6 +845,9 @@ server <- function(input, output, session) {
       menuItem("Cohort description", icon = icon("users"))
     )
   })
+  
+  output$distPlot <- renderPlot({
+    hist(rnorm(input$obs))})
   
 # Create Data Alert
   # createAlert(session = session,
@@ -1091,6 +1113,8 @@ server <- function(input, output, session) {
         plotly::layout(xaxis = list(title = "Percentage [%]"),
                        yaxis = list(title = ""))
       baseline.cause}
+    
+    
     
   })
   

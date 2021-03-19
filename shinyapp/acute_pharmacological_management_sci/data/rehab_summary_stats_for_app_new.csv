@@ -1,0 +1,1226 @@
+ID,Sex,Age,AIS,Cause,NLI,Time
+C03,Male,20-29 yrs,AIS C,Fall,Cervical,Admission
+C19,Male,50-59 yrs,AIS A,Motorcycle,Cervical,Admission
+C25,Female,70-79 yrs,AIS A,Fall,Cervical,Admission
+C34,Male,60-69 yrs,AIS D,Automobile,Cervical,Admission
+C56,Male,50-59 yrs,AIS D,Fall,Cervical,Admission
+C59,Male,60-69 yrs,AIS C,Fall,Cervical,Admission
+C64,Female,50-59 yrs,AIS D,Automobile,Cervical,Admission
+C76,Male,60-69 yrs,AIS D,Fall,Cervical,Admission
+C78,Male,20-29 yrs,AIS D,Automobile,Cervical,Admission
+C94,Female,20-29 yrs,AIS A,Pedestrian,Cervical,Admission
+C118,Male,0-19 yrs,AIS D,Automobile,Cervical,Admission
+C125,Male,30-39 yrs,AIS A,Automobile,Cervical,Admission
+C147,Male,50-59 yrs,AIS A,Other sports,Cervical,Admission
+C152,Male,20-29 yrs,AIS C,Water related,Cervical,Admission
+C198,Male,0-19 yrs,AIS D,Other sports,Cervical,Admission
+C199,Male,20-29 yrs,AIS A,Gun shot wound,Cervical,Admission
+C228,Female,70-79 yrs,AIS B,Fall,Cervical,Admission
+C231,Male,40-49 yrs,AIS A,Other sports,Cervical,Admission
+C244,Male,0-19 yrs,AIS B,Other sports,Cervical,Admission
+C248,Male,20-29 yrs,AIS B,Other sports,Cervical,Admission
+C251,Male,50-59 yrs,AIS B,Other sports,Cervical,Admission
+C252,Male,50-59 yrs,AIS D,Other sports,Cervical,Admission
+C254,Male,0-19 yrs,AIS A,Automobile,Cervical,Admission
+C257,Female,20-29 yrs,AIS A,Automobile,Cervical,Admission
+C269,Male,20-29 yrs,AIS A,Fall,Cervical,Admission
+C280,Female,50-59 yrs,AIS B,Automobile,Cervical,Admission
+C288,Male,20-29 yrs,AIS A,Water related,Cervical,Admission
+C291,Male,20-29 yrs,AIS A,Automobile,Cervical,Admission
+C298,Male,60-69 yrs,AIS D,Others,Cervical,Admission
+C300,Male,0-19 yrs,AIS C,Automobile,Cervical,Admission
+C303,Male,60-69 yrs,AIS A,Fall,Cervical,Admission
+C309,Male,60-69 yrs,AIS D,Fall,Cervical,Admission
+C324,Male,60-69 yrs,AIS D,Automobile,Cervical,Admission
+C326,Male,60-69 yrs,AIS D,Automobile,Cervical,Admission
+C594,Male,70-79 yrs,AIS C,Fall,Cervical,Admission
+C598,Male,40-49 yrs,AIS C,Fall,Cervical,Admission
+C602,Male,40-49 yrs,AIS D,Fall,Cervical,Admission
+C612,Male,20-29 yrs,AIS A,Gun shot wound,Cervical,Admission
+C616,Male,50-59 yrs,AIS C,Automobile,Cervical,Admission
+C634,Male,40-49 yrs,AIS C,Automobile,Cervical,Admission
+C640,Female,60-69 yrs,AIS C,Fall,Cervical,Admission
+C665,Male,40-49 yrs,AIS C,Pedestrian,Cervical,Admission
+C685,Male,50-59 yrs,AIS C,Fall,Cervical,Admission
+C701,Male,20-29 yrs,AIS C,Automobile,Cervical,Admission
+C714,Male,20-29 yrs,AIS D,Automobile,Cervical,Admission
+C723,Male,50-59 yrs,AIS D,Others,Cervical,Admission
+C731,Female,30-39 yrs,AIS A,Fall,Cervical,Admission
+C733,Male,40-49 yrs,AIS C,Fall,Cervical,Admission
+C738,Male,0-19 yrs,AIS A,Gun shot wound,Cervical,Admission
+C768,Female,50-59 yrs,AIS A,Fall,Cervical,Admission
+C770,Male,20-29 yrs,AIS A,Water related,Cervical,Admission
+C859,Male,40-49 yrs,AIS A,Other sports,Cervical,Admission
+C903,Male,20-29 yrs,AIS A,Automobile,Cervical,Admission
+C920,Male,30-39 yrs,AIS C,Others,Cervical,Admission
+C978,Male,20-29 yrs,AIS C,Automobile,Cervical,Admission
+C1225,Male,20-29 yrs,AIS C,Fall,Cervical,Discharge
+C77,Male,0-19 yrs,AIS A,Other sports,Lumbar,Admission
+C249,Female,20-29 yrs,AIS C,Fall,Lumbar,Admission
+C621,Male,30-39 yrs,AIS C,Gun shot wound,Lumbar,Admission
+C698,Male,20-29 yrs,AIS D,Gun shot wound,Lumbar,Admission
+C741,Male,20-29 yrs,AIS C,Gun shot wound,Lumbar,Admission
+C786,Male,20-29 yrs,AIS D,Automobile,Lumbar,Admission
+C24,Male,20-29 yrs,AIS B,Others,Thoracic,Admission
+C26,Male,20-29 yrs,AIS B,Motorcycle,Thoracic,Admission
+C35,Male,60-69 yrs,AIS A,Others,Thoracic,Admission
+C47,Female,30-39 yrs,AIS A,Automobile,Thoracic,Admission
+C51,Male,0-19 yrs,AIS A,Automobile,Thoracic,Admission
+C65,Male,20-29 yrs,AIS A,Gun shot wound,Thoracic,Admission
+C99,Female,0-19 yrs,AIS D,Other sports,Thoracic,Admission
+C132,Male,20-29 yrs,AIS A,Others,Thoracic,Admission
+C144,Male,0-19 yrs,AIS A,Automobile,Thoracic,Admission
+C177,Female,0-19 yrs,AIS A,Automobile,Thoracic,Admission
+C221,Male,30-39 yrs,AIS C,Fall,Thoracic,Admission
+C236,Female,20-29 yrs,AIS A,Other sports,Thoracic,Admission
+C241,Male,40-49 yrs,AIS B,Other sports,Thoracic,Admission
+C287,Male,0-19 yrs,AIS A,Automobile,Thoracic,Admission
+C313,Female,30-39 yrs,AIS A,Automobile,Thoracic,Admission
+C597,Male,20-29 yrs,AIS A,Gun shot wound,Thoracic,Admission
+C607,Male,0-19 yrs,AIS B,Gun shot wound,Thoracic,Admission
+C628,Male,20-29 yrs,AIS C,Gun shot wound,Thoracic,Admission
+C643,Male,20-29 yrs,AIS C,Gun shot wound,Thoracic,Admission
+C652,Female,20-29 yrs,AIS A,Automobile,Thoracic,Admission
+C659,Male,20-29 yrs,AIS A,Gun shot wound,Thoracic,Admission
+C660,Male,20-29 yrs,AIS A,Gun shot wound,Thoracic,Admission
+C696,Male,30-39 yrs,AIS A,Fall,Thoracic,Admission
+C697,Male,20-29 yrs,AIS A,Gun shot wound,Thoracic,Admission
+C727,Female,60-69 yrs,AIS A,Others,Thoracic,Admission
+C736,Male,60-69 yrs,AIS C,Others,Thoracic,Admission
+C759,Male,40-49 yrs,AIS A,Other sports,Thoracic,Admission
+C767,Male,40-49 yrs,AIS A,Gun shot wound,Thoracic,Admission
+C777,Male,30-39 yrs,AIS A,Fall,Thoracic,Admission
+C01,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C02,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C04,Male,0-19 yrs,Unknown,Fall,Unknown,Admission
+C05,Female,30-39 yrs,Unknown,Others,Unknown,Admission
+C06,Male,0-19 yrs,Unknown,Motorcycle,Unknown,Admission
+C07,Male,40-49 yrs,Unknown,Motorcycle,Unknown,Admission
+C08,Male,40-49 yrs,AIS C,Other sports,Unknown,Admission
+C09,Female,30-39 yrs,Unknown,Water related,Unknown,Admission
+C10,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C11,Female,30-39 yrs,AIS A,Others,Unknown,Admission
+C12,Male,70-79 yrs,AIS C,Others,Unknown,Admission
+C13,Male,20-29 yrs,Unknown,Other sports,Unknown,Admission
+C14,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C15,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C16,Female,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C17,Male,50-59 yrs,AIS B,Other sports,Unknown,Admission
+C18,Male,40-49 yrs,Unknown,Motorcycle,Unknown,Admission
+C20,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C21,Male,60-69 yrs,AIS A,Fall,Unknown,Admission
+C22,Male,60-69 yrs,Unknown,Automobile,Unknown,Admission
+C23,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C27,Male,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C28,Male,40-49 yrs,AIS A,Others,Unknown,Admission
+C29,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C30,Male,20-29 yrs,AIS C,Others,Unknown,Admission
+C31,Female,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C32,Male,30-39 yrs,AIS B,Automobile,Unknown,Admission
+C33,Male,50-59 yrs,AIS C,Automobile,Unknown,Admission
+C36,Male,50-59 yrs,AIS A,Motorcycle,Unknown,Admission
+C37,Male,70-79 yrs,AIS D,Others,Unknown,Admission
+C38,Male,40-49 yrs,AIS C,Others,Unknown,Admission
+C39,Female,40-49 yrs,AIS A,Fall,Unknown,Admission
+C40,Male,20-29 yrs,AIS C,Others,Unknown,Admission
+C41,Male,30-39 yrs,AIS D,Automobile,Unknown,Admission
+C42,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C43,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C44,Male,30-39 yrs,AIS B,Water related,Unknown,Admission
+C45,Male,60-69 yrs,AIS A,Fall,Unknown,Admission
+C46,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C48,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C49,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C50,Male,50-59 yrs,Unknown,Person-to-person contact,Unknown,Admission
+C52,Female,0-19 yrs,Unknown,Fall,Unknown,Admission
+C53,Male,40-49 yrs,Unknown,Water related,Unknown,Admission
+C54,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C55,Male,40-49 yrs,Unknown,Water related,Unknown,Admission
+C57,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C58,Male,20-29 yrs,Unknown,Other sports,Unknown,Admission
+C60,Female,50-59 yrs,Unknown,Other sports,Unknown,Admission
+C61,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C62,Male,40-49 yrs,Unknown,Other sports,Unknown,Admission
+C63,Female,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C66,Female,60-69 yrs,Unknown,Fall,Unknown,Admission
+C67,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C68,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C69,Female,0-19 yrs,Unknown,Pedestrian,Unknown,Admission
+C70,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C71,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C72,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C73,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C74,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C75,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C79,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C80,Female,30-39 yrs,Unknown,Others,Unknown,Admission
+C81,Female,50-59 yrs,Unknown,Others,Unknown,Admission
+C82,Male,40-49 yrs,Unknown,Motorcycle,Unknown,Admission
+C83,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C84,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C85,Female,40-49 yrs,Unknown,Others,Unknown,Admission
+C86,Female,30-39 yrs,Unknown,Other sports,Unknown,Admission
+C87,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C88,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C89,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C90,Male,50-59 yrs,Unknown,Gun shot wound,Unknown,Admission
+C91,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C92,Male,30-39 yrs,Unknown,Pedestrian,Unknown,Admission
+C93,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C95,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C96,Male,40-49 yrs,AIS D,Automobile,Unknown,Admission
+C97,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C98,Female,50-59 yrs,Unknown,Others,Unknown,Admission
+C100,Male,30-39 yrs,Unknown,Other sports,Unknown,Admission
+C101,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C102,Male,20-29 yrs,Unknown,Other sports,Unknown,Admission
+C103,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C104,Male,60-69 yrs,Unknown,Other sports,Unknown,Admission
+C105,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C106,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C107,Male,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C108,Male,20-29 yrs,Unknown,Other sports,Unknown,Admission
+C109,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C110,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C111,Female,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C112,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C113,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C114,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C115,Female,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C116,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C117,Female,60-69 yrs,Unknown,Automobile,Unknown,Admission
+C119,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C120,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C121,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C122,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C123,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C124,Male,30-39 yrs,Unknown,Water related,Unknown,Admission
+C126,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C127,Female,30-39 yrs,Unknown,Others,Unknown,Admission
+C128,Male,60-69 yrs,Unknown,Other sports,Unknown,Admission
+C129,Female,40-49 yrs,Unknown,Other sports,Unknown,Admission
+C130,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C131,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C133,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C134,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C135,Male,60-69 yrs,Unknown,Others,Unknown,Admission
+C136,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C137,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C138,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C139,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C140,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C141,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C142,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C143,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C145,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C146,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C148,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C149,Female,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C150,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C151,Male,60-69 yrs,Unknown,Others,Unknown,Admission
+C153,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C154,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C155,Female,40-49 yrs,Unknown,Others,Unknown,Admission
+C156,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C157,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C158,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C159,Male,0-19 yrs,Unknown,Water related,Unknown,Admission
+C160,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C161,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C162,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C163,Female,40-49 yrs,Unknown,Fall,Unknown,Admission
+C164,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C165,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C166,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C167,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C168,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C169,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C170,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C171,Female,40-49 yrs,Unknown,Pedestrian,Unknown,Admission
+C172,Male,30-39 yrs,Unknown,Water related,Unknown,Admission
+C173,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C174,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C175,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C176,Male,50-59 yrs,AIS C,Fall,Unknown,Admission
+C178,Female,20-29 yrs,Unknown,Fall,Unknown,Admission
+C179,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C180,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C181,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C182,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C183,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C184,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C185,Female,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C186,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C187,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C188,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C189,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C190,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C191,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C192,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C193,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C194,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C195,Male,60-69 yrs,AIS A,Automobile,Unknown,Admission
+C196,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C197,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C200,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C201,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C202,Female,0-19 yrs,AIS B,Automobile,Unknown,Admission
+C203,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C204,Male,50-59 yrs,AIS A,Fall,Unknown,Admission
+C205,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C206,Male,40-49 yrs,AIS B,Motorcycle,Unknown,Admission
+C207,Female,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C208,Male,50-59 yrs,AIS B,Fall,Unknown,Admission
+C209,Female,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C210,Female,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C211,Female,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C212,Female,0-19 yrs,AIS A,Person-to-person contact,Unknown,Admission
+C213,Female,0-19 yrs,AIS B,Water related,Unknown,Admission
+C214,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C215,Male,30-39 yrs,AIS B,Automobile,Unknown,Admission
+C216,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C217,Male,50-59 yrs,AIS A,Other sports,Unknown,Admission
+C218,Male,30-39 yrs,AIS C,Automobile,Unknown,Admission
+C219,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C220,Male,30-39 yrs,AIS C,Fall,Unknown,Admission
+C222,Male,40-49 yrs,AIS C,Motorcycle,Unknown,Admission
+C223,Male,30-39 yrs,AIS A,Other sports,Unknown,Admission
+C224,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C225,Male,60-69 yrs,AIS D,Fall,Unknown,Admission
+C226,Male,20-29 yrs,AIS C,Other sports,Unknown,Admission
+C227,Male,0-19 yrs,AIS D,Automobile,Unknown,Admission
+C229,Male,40-49 yrs,AIS A,Others,Unknown,Admission
+C230,Male,30-39 yrs,AIS C,Fall,Unknown,Admission
+C232,Male,50-59 yrs,AIS A,Others,Unknown,Admission
+C233,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C234,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C235,Female,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C237,Male,0-19 yrs,AIS B,Other sports,Unknown,Admission
+C238,Female,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C239,Male,20-29 yrs,AIS B,Automobile,Unknown,Admission
+C240,Male,40-49 yrs,AIS A,Pedestrian,Unknown,Admission
+C242,Female,20-29 yrs,AIS C,Automobile,Unknown,Admission
+C243,Male,60-69 yrs,AIS B,Others,Unknown,Admission
+C245,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C246,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C247,Male,0-19 yrs,AIS A,Other sports,Unknown,Admission
+C250,Male,50-59 yrs,AIS C,Other sports,Unknown,Admission
+C253,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C255,Male,20-29 yrs,AIS B,Automobile,Unknown,Admission
+C256,Male,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C258,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C259,Male,0-19 yrs,AIS A,Others,Unknown,Admission
+C260,Male,60-69 yrs,AIS A,Gun shot wound,Unknown,Admission
+C261,Female,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C262,Female,20-29 yrs,AIS A,Pedestrian,Unknown,Admission
+C263,Female,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C264,Male,60-69 yrs,AIS C,Others,Unknown,Admission
+C265,Male,50-59 yrs,AIS B,Fall,Unknown,Admission
+C266,Male,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C267,Male,30-39 yrs,AIS B,Others,Unknown,Admission
+C268,Male,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C270,Male,40-49 yrs,AIS A,Other sports,Unknown,Admission
+C271,Female,0-19 yrs,AIS B,Automobile,Unknown,Admission
+C272,Male,40-49 yrs,AIS B,Others,Unknown,Admission
+C273,Male,50-59 yrs,AIS B,Motorcycle,Unknown,Admission
+C274,Male,60-69 yrs,AIS B,Others,Unknown,Admission
+C275,Male,30-39 yrs,AIS D,Fall,Unknown,Admission
+C276,Male,40-49 yrs,AIS A,Others,Unknown,Admission
+C277,Male,20-29 yrs,AIS B,Motorcycle,Unknown,Admission
+C278,Female,50-59 yrs,AIS A,Fall,Unknown,Admission
+C279,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C281,Male,0-19 yrs,AIS A,Other sports,Unknown,Admission
+C282,Male,20-29 yrs,AIS B,Water related,Unknown,Admission
+C283,Male,0-19 yrs,AIS A,Motorcycle,Unknown,Admission
+C284,Male,30-39 yrs,AIS A,Others,Unknown,Admission
+C285,Male,30-39 yrs,AIS B,Automobile,Unknown,Admission
+C286,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C289,Female,50-59 yrs,AIS C,Fall,Unknown,Admission
+C290,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C292,Male,0-19 yrs,AIS D,Others,Unknown,Admission
+C293,Male,20-29 yrs,AIS B,Fall,Unknown,Admission
+C294,Male,20-29 yrs,AIS C,Automobile,Unknown,Admission
+C295,Male,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C296,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C297,Male,30-39 yrs,AIS C,Motorcycle,Unknown,Admission
+C299,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C301,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C302,Male,30-39 yrs,AIS B,Automobile,Unknown,Admission
+C304,Male,50-59 yrs,AIS C,Others,Unknown,Admission
+C305,Female,60-69 yrs,AIS D,Fall,Unknown,Admission
+C306,Male,20-29 yrs,AIS A,Water related,Unknown,Admission
+C307,Male,20-29 yrs,AIS A,Water related,Unknown,Admission
+C308,Male,20-29 yrs,AIS B,Fall,Unknown,Admission
+C310,Male,40-49 yrs,AIS A,Motorcycle,Unknown,Admission
+C311,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C312,Male,40-49 yrs,AIS C,Others,Unknown,Admission
+C314,Male,50-59 yrs,AIS D,Others,Unknown,Admission
+C315,Male,50-59 yrs,AIS D,Automobile,Unknown,Admission
+C316,Female,20-29 yrs,AIS A,Water related,Unknown,Admission
+C317,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C318,Male,30-39 yrs,AIS B,Water related,Unknown,Admission
+C319,Male,0-19 yrs,AIS A,Motorcycle,Unknown,Admission
+C320,Male,40-49 yrs,AIS C,Automobile,Unknown,Admission
+C321,Male,40-49 yrs,AIS D,Other sports,Unknown,Admission
+C322,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C323,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C325,Male,0-19 yrs,AIS A,Water related,Unknown,Admission
+C327,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C328,Female,50-59 yrs,AIS C,Others,Unknown,Admission
+C329,Male,40-49 yrs,AIS A,Other sports,Unknown,Admission
+C330,Male,40-49 yrs,AIS D,Motorcycle,Unknown,Admission
+C331,Female,20-29 yrs,AIS A,Pedestrian,Unknown,Admission
+C332,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C333,Male,40-49 yrs,AIS D,Automobile,Unknown,Admission
+C334,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C335,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C336,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C337,Male,60-69 yrs,AIS D,Fall,Unknown,Admission
+C338,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C339,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C340,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C341,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C342,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C343,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C344,Male,30-39 yrs,AIS A,Gun shot wound,Unknown,Admission
+C345,Female,60-69 yrs,AIS C,Automobile,Unknown,Admission
+C346,Male,60-69 yrs,AIS D,Others,Unknown,Admission
+C347,Male,30-39 yrs,AIS B,Automobile,Unknown,Admission
+C348,Male,50-59 yrs,AIS C,Automobile,Unknown,Admission
+C349,Male,70-79 yrs,AIS D,Automobile,Unknown,Admission
+C350,Male,20-29 yrs,AIS A,Fall,Unknown,Admission
+C351,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C352,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C353,Male,60-69 yrs,AIS D,Others,Unknown,Admission
+C354,Male,40-49 yrs,AIS A,Others,Unknown,Admission
+C355,Male,40-49 yrs,AIS D,Fall,Unknown,Admission
+C356,Male,50-59 yrs,AIS B,Fall,Unknown,Admission
+C357,Male,40-49 yrs,AIS C,Others,Unknown,Admission
+C358,Male,30-39 yrs,AIS D,Others,Unknown,Admission
+C359,Male,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C360,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C361,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C362,Male,70-79 yrs,AIS A,Automobile,Unknown,Admission
+C363,Male,40-49 yrs,AIS B,Gun shot wound,Unknown,Admission
+C364,Male,20-29 yrs,AIS B,Gun shot wound,Unknown,Admission
+C365,Male,40-49 yrs,AIS D,Motorcycle,Unknown,Admission
+C366,Male,0-19 yrs,AIS B,Gun shot wound,Unknown,Admission
+C367,Male,70-79 yrs,AIS D,Fall,Unknown,Admission
+C368,Male,20-29 yrs,AIS B,Automobile,Unknown,Admission
+C369,Female,60-69 yrs,AIS A,Others,Unknown,Admission
+C370,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C371,Male,60-69 yrs,AIS B,Fall,Unknown,Admission
+C372,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C373,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C374,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C375,Male,40-49 yrs,AIS D,Others,Unknown,Admission
+C376,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C377,Male,20-29 yrs,AIS B,Others,Unknown,Admission
+C378,Male,40-49 yrs,AIS C,Others,Unknown,Admission
+C379,Male,70-79 yrs,AIS D,Fall,Unknown,Admission
+C380,Male,30-39 yrs,AIS A,Others,Unknown,Admission
+C381,Female,40-49 yrs,AIS D,Automobile,Unknown,Admission
+C382,Female,50-59 yrs,AIS A,Gun shot wound,Unknown,Admission
+C383,Male,30-39 yrs,AIS C,Automobile,Unknown,Admission
+C384,Female,20-29 yrs,AIS D,Automobile,Unknown,Admission
+C385,Male,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C386,Male,50-59 yrs,AIS D,Others,Unknown,Admission
+C387,Male,60-69 yrs,AIS C,Fall,Unknown,Admission
+C388,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C389,Female,20-29 yrs,AIS B,Automobile,Unknown,Admission
+C390,Female,20-29 yrs,AIS D,Automobile,Unknown,Admission
+C391,Male,20-29 yrs,AIS D,Water related,Unknown,Admission
+C392,Male,60-69 yrs,AIS C,Others,Unknown,Admission
+C393,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C394,Male,50-59 yrs,AIS A,Others,Unknown,Admission
+C395,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C396,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C397,Male,30-39 yrs,AIS D,Motorcycle,Unknown,Admission
+C398,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C399,Male,40-49 yrs,AIS A,Other sports,Unknown,Admission
+C400,Male,30-39 yrs,AIS D,Motorcycle,Unknown,Admission
+C401,Male,50-59 yrs,AIS C,Motorcycle,Unknown,Admission
+C402,Male,40-49 yrs,AIS D,Gun shot wound,Unknown,Admission
+C403,Male,40-49 yrs,AIS C,Fall,Unknown,Admission
+C404,Female,60-69 yrs,AIS D,Fall,Unknown,Admission
+C405,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C406,Male,70-79 yrs,AIS C,Motorcycle,Unknown,Admission
+C407,Male,30-39 yrs,AIS D,Fall,Unknown,Admission
+C408,Male,40-49 yrs,AIS D,Motorcycle,Unknown,Admission
+C409,Male,70-79 yrs,AIS A,Fall,Unknown,Admission
+C410,Male,20-29 yrs,AIS A,Fall,Unknown,Admission
+C411,Male,40-49 yrs,AIS A,Motorcycle,Unknown,Admission
+C412,Male,40-49 yrs,AIS C,Automobile,Unknown,Admission
+C413,Female,60-69 yrs,AIS D,Fall,Unknown,Admission
+C414,Male,60-69 yrs,AIS D,Others,Unknown,Admission
+C415,Female,50-59 yrs,AIS D,Others,Unknown,Admission
+C416,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C417,Female,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C418,Male,40-49 yrs,AIS A,Gun shot wound,Unknown,Admission
+C419,Male,30-39 yrs,AIS A,Gun shot wound,Unknown,Admission
+C420,Male,60-69 yrs,AIS A,Fall,Unknown,Admission
+C421,Male,40-49 yrs,AIS D,Fall,Unknown,Admission
+C422,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C423,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C424,Male,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C425,Male,40-49 yrs,AIS C,Fall,Unknown,Admission
+C426,Female,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C427,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C428,Male,30-39 yrs,AIS A,Gun shot wound,Unknown,Admission
+C429,Female,30-39 yrs,AIS C,Automobile,Unknown,Admission
+C430,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C431,Male,30-39 yrs,AIS D,Fall,Unknown,Admission
+C432,Male,70-79 yrs,AIS D,Fall,Unknown,Admission
+C433,Male,60-69 yrs,AIS A,Motorcycle,Unknown,Admission
+C434,Female,40-49 yrs,AIS A,Motorcycle,Unknown,Admission
+C435,Male,80+ yrs,AIS B,Fall,Unknown,Admission
+C436,Male,30-39 yrs,AIS C,Fall,Unknown,Admission
+C437,Male,40-49 yrs,AIS C,Automobile,Unknown,Admission
+C438,Female,60-69 yrs,AIS A,Gun shot wound,Unknown,Admission
+C439,Female,30-39 yrs,AIS B,Automobile,Unknown,Admission
+C440,Male,70-79 yrs,AIS C,Fall,Unknown,Admission
+C441,Female,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C442,Male,40-49 yrs,AIS A,Motorcycle,Unknown,Admission
+C443,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C444,Male,20-29 yrs,AIS C,Others,Unknown,Admission
+C445,Male,40-49 yrs,AIS A,Motorcycle,Unknown,Admission
+C446,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C447,Male,40-49 yrs,AIS D,Others,Unknown,Admission
+C448,Male,30-39 yrs,AIS B,Gun shot wound,Unknown,Admission
+C449,Male,40-49 yrs,AIS D,Automobile,Unknown,Admission
+C450,Male,70-79 yrs,AIS B,Fall,Unknown,Admission
+C451,Male,70-79 yrs,AIS D,Fall,Unknown,Admission
+C452,Male,40-49 yrs,AIS D,Motorcycle,Unknown,Admission
+C453,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C454,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C455,Male,20-29 yrs,AIS B,Motorcycle,Unknown,Admission
+C456,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C457,Male,40-49 yrs,AIS D,Others,Unknown,Admission
+C458,Male,80+ yrs,AIS D,Automobile,Unknown,Admission
+C459,Male,30-39 yrs,AIS A,Gun shot wound,Unknown,Admission
+C460,Male,20-29 yrs,AIS A,Fall,Unknown,Admission
+C461,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C462,Male,60-69 yrs,AIS B,Fall,Unknown,Admission
+C463,Female,50-59 yrs,AIS A,Automobile,Unknown,Admission
+C464,Male,20-29 yrs,AIS B,Gun shot wound,Unknown,Admission
+C465,Female,40-49 yrs,AIS B,Others,Unknown,Admission
+C466,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C467,Male,20-29 yrs,AIS C,Automobile,Unknown,Admission
+C468,Male,40-49 yrs,AIS D,Fall,Unknown,Admission
+C469,Female,60-69 yrs,AIS D,Fall,Unknown,Admission
+C470,Female,50-59 yrs,AIS C,Fall,Unknown,Admission
+C471,Male,40-49 yrs,AIS A,Person-to-person contact,Unknown,Admission
+C472,Male,50-59 yrs,AIS A,Motorcycle,Unknown,Admission
+C473,Female,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C474,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C475,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C476,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C477,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C478,Male,70-79 yrs,Unknown,Automobile,Unknown,Admission
+C479,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C480,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C481,Female,20-29 yrs,Unknown,Fall,Unknown,Admission
+C482,Female,30-39 yrs,Unknown,Fall,Unknown,Admission
+C483,Male,30-39 yrs,Unknown,Water related,Unknown,Admission
+C484,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C485,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C486,Female,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C487,Male,60-69 yrs,Unknown,Others,Unknown,Admission
+C488,Female,50-59 yrs,Unknown,Other sports,Unknown,Admission
+C489,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C490,Female,50-59 yrs,Unknown,Other sports,Unknown,Admission
+C491,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C492,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C493,Female,20-29 yrs,Unknown,Others,Unknown,Admission
+C494,Female,60-69 yrs,AIS C,Others,Unknown,Admission
+C495,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C496,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C497,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C498,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C499,Male,40-49 yrs,AIS D,Others,Unknown,Admission
+C500,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C501,Female,70-79 yrs,Unknown,Others,Unknown,Admission
+C502,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C503,Male,0-19 yrs,Unknown,Motorcycle,Unknown,Admission
+C504,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C505,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C506,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C507,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C508,Female,40-49 yrs,Unknown,Fall,Unknown,Admission
+C509,Male,40-49 yrs,Unknown,Water related,Unknown,Admission
+C510,Female,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C511,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C512,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C513,Female,50-59 yrs,Unknown,Others,Unknown,Admission
+C514,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C515,Female,60-69 yrs,AIS A,Others,Unknown,Admission
+C516,Female,60-69 yrs,AIS C,Automobile,Unknown,Admission
+C517,Male,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C518,Male,30-39 yrs,AIS A,Other sports,Unknown,Admission
+C519,Male,20-29 yrs,AIS A,Water related,Unknown,Admission
+C520,Male,30-39 yrs,AIS B,Motorcycle,Unknown,Admission
+C521,Male,40-49 yrs,AIS D,Others,Unknown,Admission
+C522,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C523,Male,70-79 yrs,AIS C,Fall,Unknown,Admission
+C524,Male,70-79 yrs,AIS C,Fall,Unknown,Admission
+C525,Male,80+ yrs,AIS D,Fall,Unknown,Admission
+C526,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C527,Female,50-59 yrs,Unknown,Others,Unknown,Admission
+C528,Female,70-79 yrs,AIS A,Fall,Unknown,Admission
+C529,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C530,Male,20-29 yrs,AIS A,Other sports,Unknown,Admission
+C531,Male,70-79 yrs,AIS C,Fall,Unknown,Admission
+C532,Male,60-69 yrs,AIS A,Automobile,Unknown,Admission
+C533,Male,20-29 yrs,AIS C,Automobile,Unknown,Admission
+C534,Female,70-79 yrs,AIS B,Automobile,Unknown,Admission
+C535,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C536,Female,20-29 yrs,AIS C,Others,Unknown,Admission
+C537,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C538,Female,70-79 yrs,AIS D,Fall,Unknown,Admission
+C539,Male,30-39 yrs,AIS A,Gun shot wound,Unknown,Admission
+C540,Male,60-69 yrs,AIS A,Others,Unknown,Admission
+C541,Male,80+ yrs,AIS D,Others,Unknown,Admission
+C542,Female,40-49 yrs,AIS C,Fall,Unknown,Admission
+C543,Male,60-69 yrs,AIS D,Fall,Unknown,Admission
+C544,Male,50-59 yrs,AIS D,Automobile,Unknown,Admission
+C545,Male,50-59 yrs,AIS C,Automobile,Unknown,Admission
+C546,Male,80+ yrs,AIS D,Fall,Unknown,Admission
+C547,Female,40-49 yrs,AIS B,Pedestrian,Unknown,Admission
+C548,Male,30-39 yrs,AIS A,Gun shot wound,Unknown,Admission
+C549,Male,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C550,Female,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C551,Female,60-69 yrs,AIS D,Fall,Unknown,Admission
+C552,Male,60-69 yrs,Unknown,Others,Unknown,Admission
+C553,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C554,Male,0-19 yrs,AIS C,Gun shot wound,Unknown,Admission
+C555,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C556,Female,60-69 yrs,AIS C,Pedestrian,Unknown,Admission
+C557,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C558,Male,70-79 yrs,AIS D,Others,Unknown,Admission
+C559,Male,20-29 yrs,AIS D,Others,Unknown,Admission
+C560,Male,0-19 yrs,AIS B,Gun shot wound,Unknown,Admission
+C561,Male,20-29 yrs,AIS B,Gun shot wound,Unknown,Admission
+C562,Male,50-59 yrs,AIS D,Others,Unknown,Admission
+C563,Male,40-49 yrs,AIS A,Other sports,Unknown,Admission
+C564,Female,70-79 yrs,AIS B,Others,Unknown,Admission
+C565,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C566,Male,80+ yrs,AIS C,Fall,Unknown,Admission
+C567,Male,20-29 yrs,AIS B,Motorcycle,Unknown,Admission
+C568,Male,20-29 yrs,AIS C,Fall,Unknown,Admission
+C569,Male,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C570,Male,50-59 yrs,AIS D,Pedestrian,Unknown,Admission
+C571,Male,50-59 yrs,AIS D,Others,Unknown,Admission
+C572,Male,30-39 yrs,AIS B,Pedestrian,Unknown,Admission
+C573,Male,60-69 yrs,AIS C,Fall,Unknown,Admission
+C574,Male,0-19 yrs,AIS B,Gun shot wound,Unknown,Admission
+C575,Female,60-69 yrs,AIS C,Others,Unknown,Admission
+C576,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C577,Male,50-59 yrs,AIS D,Others,Unknown,Admission
+C578,Male,60-69 yrs,AIS D,Others,Unknown,Admission
+C579,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C580,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C581,Male,30-39 yrs,AIS C,Fall,Unknown,Admission
+C582,Male,50-59 yrs,AIS C,Fall,Unknown,Admission
+C583,Male,50-59 yrs,AIS C,Others,Unknown,Admission
+C584,Male,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C585,Male,40-49 yrs,AIS D,Gun shot wound,Unknown,Admission
+C586,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C587,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C588,Female,80+ yrs,AIS D,Fall,Unknown,Admission
+C589,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C590,Male,20-29 yrs,AIS D,Motorcycle,Unknown,Admission
+C591,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C592,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C593,Male,80+ yrs,Unknown,Fall,Unknown,Admission
+C595,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C596,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C599,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C600,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C601,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C603,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C604,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C605,Female,50-59 yrs,Unknown,Others,Unknown,Admission
+C606,Male,20-29 yrs,AIS D,Gun shot wound,Unknown,Admission
+C608,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C609,Male,20-29 yrs,Unknown,Other sports,Unknown,Admission
+C610,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C611,Male,70-79 yrs,Unknown,Automobile,Unknown,Admission
+C613,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C614,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C615,Male,0-19 yrs,Unknown,Water related,Unknown,Admission
+C617,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C618,Male,60-69 yrs,Unknown,Automobile,Unknown,Admission
+C619,Female,30-39 yrs,Unknown,Others,Unknown,Admission
+C620,Male,40-49 yrs,Unknown,Water related,Unknown,Admission
+C622,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C623,Male,60-69 yrs,Unknown,Automobile,Unknown,Admission
+C624,Male,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C625,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C626,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C627,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C629,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C630,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C631,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C632,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C633,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C635,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C636,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C637,Male,60-69 yrs,AIS D,Fall,Unknown,Admission
+C638,Female,50-59 yrs,Unknown,Others,Unknown,Admission
+C639,Female,20-29 yrs,AIS B,Fall,Unknown,Admission
+C641,Female,40-49 yrs,Unknown,Fall,Unknown,Admission
+C642,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C644,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C645,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C646,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C647,Female,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C648,Male,40-49 yrs,AIS D,Other sports,Unknown,Admission
+C649,Male,70-79 yrs,AIS C,Automobile,Unknown,Admission
+C650,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C651,Male,80+ yrs,AIS D,Fall,Unknown,Admission
+C653,Male,60-69 yrs,AIS D,Automobile,Unknown,Admission
+C654,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C655,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C656,Male,70-79 yrs,AIS D,Fall,Unknown,Admission
+C657,Male,60-69 yrs,AIS C,Automobile,Unknown,Admission
+C658,Male,0-19 yrs,AIS C,Gun shot wound,Unknown,Admission
+C661,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C662,Female,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C663,Male,50-59 yrs,AIS A,Automobile,Unknown,Admission
+C664,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C666,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C667,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C668,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C669,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C670,Female,70-79 yrs,AIS D,Fall,Unknown,Admission
+C671,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C672,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C673,Male,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C674,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C675,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C676,Male,60-69 yrs,Unknown,Others,Unknown,Admission
+C677,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C678,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C679,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C680,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C681,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C682,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C683,Male,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C684,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C686,Male,30-39 yrs,AIS A,Gun shot wound,Unknown,Admission
+C687,Male,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C688,Male,80+ yrs,AIS C,Fall,Unknown,Admission
+C689,Male,60-69 yrs,Unknown,Automobile,Unknown,Admission
+C690,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C691,Male,50-59 yrs,Unknown,Motorcycle,Unknown,Admission
+C692,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C693,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C694,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C695,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C699,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C700,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C702,Male,60-69 yrs,Unknown,Other sports,Unknown,Admission
+C703,Male,30-39 yrs,Unknown,Other sports,Unknown,Admission
+C704,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C705,Female,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C706,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C707,Male,20-29 yrs,AIS D,Water related,Unknown,Admission
+C708,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C709,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C710,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C711,Male,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C712,Male,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C713,Male,20-29 yrs,AIS A,Water related,Unknown,Admission
+C715,Male,40-49 yrs,AIS D,Automobile,Unknown,Admission
+C716,Male,20-29 yrs,AIS A,Fall,Unknown,Admission
+C717,Male,20-29 yrs,AIS D,Others,Unknown,Admission
+C718,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C719,Male,40-49 yrs,AIS C,Automobile,Unknown,Admission
+C720,Male,50-59 yrs,AIS A,Fall,Unknown,Admission
+C721,Male,50-59 yrs,AIS A,Fall,Unknown,Admission
+C722,Male,60-69 yrs,Unknown,Pedestrian,Unknown,Admission
+C724,Female,60-69 yrs,Unknown,Fall,Unknown,Admission
+C725,Female,20-29 yrs,Unknown,Pedestrian,Unknown,Admission
+C726,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C728,Female,70-79 yrs,Unknown,Fall,Unknown,Admission
+C729,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C730,Female,50-59 yrs,AIS C,Fall,Unknown,Admission
+C732,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C734,Male,20-29 yrs,AIS C,Others,Unknown,Admission
+C735,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C737,Male,20-29 yrs,Unknown,Person-to-person contact,Unknown,Admission
+C739,Male,30-39 yrs,AIS D,Others,Unknown,Admission
+C740,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C742,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C743,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C744,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C745,Male,60-69 yrs,AIS D,Other sports,Unknown,Admission
+C746,Male,50-59 yrs,AIS A,Gun shot wound,Unknown,Admission
+C747,Male,70-79 yrs,AIS A,Fall,Unknown,Admission
+C748,Male,60-69 yrs,AIS D,Automobile,Unknown,Admission
+C749,Female,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C750,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C751,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C752,Male,60-69 yrs,AIS B,Fall,Unknown,Admission
+C753,Male,80+ yrs,AIS B,Automobile,Unknown,Admission
+C754,Male,20-29 yrs,AIS B,Motorcycle,Unknown,Admission
+C755,Male,30-39 yrs,AIS C,Gun shot wound,Unknown,Admission
+C756,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C757,Male,50-59 yrs,AIS B,Automobile,Unknown,Admission
+C758,Male,20-29 yrs,AIS B,Water related,Unknown,Admission
+C760,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C761,Female,20-29 yrs,AIS D,Automobile,Unknown,Admission
+C762,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C763,Male,20-29 yrs,AIS B,Water related,Unknown,Admission
+C764,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C765,Male,50-59 yrs,AIS C,Water related,Unknown,Admission
+C766,Male,50-59 yrs,AIS C,Motorcycle,Unknown,Admission
+C769,Male,0-19 yrs,AIS B,Water related,Unknown,Admission
+C771,Male,30-39 yrs,AIS B,Water related,Unknown,Admission
+C772,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C773,Male,20-29 yrs,AIS B,Gun shot wound,Unknown,Admission
+C774,Male,20-29 yrs,AIS B,Other sports,Unknown,Admission
+C775,Male,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C776,Male,20-29 yrs,AIS C,Automobile,Unknown,Admission
+C778,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C779,Male,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C780,Male,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C781,Male,40-49 yrs,AIS D,Fall,Unknown,Admission
+C782,Male,40-49 yrs,AIS C,Fall,Unknown,Admission
+C783,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C784,Male,40-49 yrs,AIS C,Automobile,Unknown,Admission
+C785,Female,50-59 yrs,AIS B,Others,Unknown,Admission
+C787,Male,50-59 yrs,AIS A,Others,Unknown,Admission
+C788,Male,60-69 yrs,AIS A,Others,Unknown,Admission
+C789,Female,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C790,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C791,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C792,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C793,Male,40-49 yrs,Unknown,Other sports,Unknown,Admission
+C794,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C795,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C796,Male,50-59 yrs,Unknown,Water related,Unknown,Admission
+C797,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C798,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C799,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C800,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C801,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C802,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C803,Male,30-39 yrs,Unknown,Water related,Unknown,Admission
+C804,Female,50-59 yrs,Unknown,Fall,Unknown,Admission
+C805,Female,40-49 yrs,Unknown,Motorcycle,Unknown,Admission
+C806,Female,0-19 yrs,Unknown,Fall,Unknown,Admission
+C807,Male,60-69 yrs,Unknown,Others,Unknown,Admission
+C808,Male,30-39 yrs,Unknown,Water related,Unknown,Admission
+C809,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C810,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C811,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C812,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C813,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C814,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C815,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C816,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C817,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C818,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C819,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C820,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C821,Female,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C822,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C823,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C824,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C825,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C826,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C827,Male,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C828,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C829,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C830,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C831,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C832,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C833,Female,30-39 yrs,Unknown,Others,Unknown,Admission
+C834,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C835,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C836,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C837,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C838,Male,50-59 yrs,Unknown,Motorcycle,Unknown,Admission
+C839,Male,40-49 yrs,Unknown,Motorcycle,Unknown,Admission
+C840,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C841,Female,0-19 yrs,Unknown,Water related,Unknown,Admission
+C842,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C843,Female,30-39 yrs,Unknown,Others,Unknown,Admission
+C844,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C845,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C846,Male,40-49 yrs,Unknown,Motorcycle,Unknown,Admission
+C847,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C848,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C849,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C850,Female,50-59 yrs,Unknown,Other sports,Unknown,Admission
+C851,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C852,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C853,Female,70-79 yrs,Unknown,Fall,Unknown,Admission
+C854,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C855,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C856,Male,30-39 yrs,Unknown,Pedestrian,Unknown,Admission
+C857,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C858,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C860,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C861,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C862,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C863,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C864,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C865,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C866,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C867,Female,40-49 yrs,Unknown,Fall,Unknown,Admission
+C868,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C869,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C870,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C871,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C872,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C873,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C874,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C875,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C876,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C877,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C878,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C879,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C880,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C881,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C882,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C883,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C884,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C885,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C886,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C887,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C888,Male,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C889,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C890,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C891,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C892,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C893,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C894,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C895,Female,40-49 yrs,Unknown,Fall,Unknown,Admission
+C896,Male,20-29 yrs,Unknown,Pedestrian,Unknown,Admission
+C897,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C898,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C899,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C900,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C901,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C902,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C904,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C905,Male,0-19 yrs,Unknown,Fall,Unknown,Admission
+C906,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C907,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C908,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C909,Male,0-19 yrs,Unknown,Person-to-person contact,Unknown,Admission
+C910,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C911,Female,40-49 yrs,Unknown,Fall,Unknown,Admission
+C912,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C913,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C914,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C915,Female,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C916,Male,40-49 yrs,Unknown,Motorcycle,Unknown,Admission
+C917,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C918,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C919,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C921,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C922,Female,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C923,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C924,Male,0-19 yrs,Unknown,Motorcycle,Unknown,Admission
+C925,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C926,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C927,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C928,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C929,Male,60-69 yrs,Unknown,Others,Unknown,Admission
+C930,Male,80+ yrs,Unknown,Fall,Unknown,Admission
+C931,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C932,Male,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C933,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C934,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C935,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C936,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C937,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C938,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C939,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C940,Male,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C941,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C942,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C943,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C944,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C945,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C946,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C947,Male,50-59 yrs,AIS A,Automobile,Unknown,Admission
+C948,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C949,Male,0-19 yrs,Unknown,Motorcycle,Unknown,Admission
+C950,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C951,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C952,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C953,Male,50-59 yrs,Unknown,Motorcycle,Unknown,Admission
+C954,Male,0-19 yrs,Unknown,Motorcycle,Unknown,Admission
+C955,Male,0-19 yrs,Unknown,Other sports,Unknown,Admission
+C956,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C957,Male,80+ yrs,Unknown,Automobile,Unknown,Admission
+C958,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C959,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C960,Male,40-49 yrs,Unknown,Motorcycle,Unknown,Admission
+C961,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C962,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C963,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C964,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C965,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C966,Male,60-69 yrs,Unknown,Automobile,Unknown,Admission
+C967,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C968,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C969,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C970,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C971,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C972,Male,40-49 yrs,Unknown,Person-to-person contact,Unknown,Admission
+C973,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C974,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C975,Male,50-59 yrs,Unknown,Pedestrian,Unknown,Admission
+C976,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C977,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C979,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C980,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C981,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C982,Male,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C983,Male,0-19 yrs,Unknown,Water related,Unknown,Admission
+C984,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C985,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C986,Female,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C987,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C988,Male,60-69 yrs,Unknown,Gun shot wound,Unknown,Admission
+C989,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C990,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C991,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C992,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C993,Male,20-29 yrs,AIS A,Water related,Unknown,Admission
+C994,Male,60-69 yrs,Unknown,Automobile,Unknown,Admission
+C995,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C996,Male,50-59 yrs,Unknown,Motorcycle,Unknown,Admission
+C997,Male,50-59 yrs,AIS A,Motorcycle,Unknown,Admission
+C998,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C999,Male,0-19 yrs,Unknown,Motorcycle,Unknown,Admission
+C1000,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C1001,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C1002,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C1003,Male,40-49 yrs,AIS A,Motorcycle,Unknown,Admission
+C1004,Male,70-79 yrs,Unknown,Fall,Unknown,Admission
+C1005,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C1006,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C1007,Male,0-19 yrs,Unknown,Person-to-person contact,Unknown,Admission
+C1008,Male,40-49 yrs,AIS C,Pedestrian,Unknown,Admission
+C1009,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C1010,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C1011,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C1012,Male,30-39 yrs,Unknown,Gun shot wound,Unknown,Admission
+C1013,Female,0-19 yrs,Unknown,Water related,Unknown,Admission
+C1014,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C1015,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C1016,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C1017,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C1018,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C1019,Male,20-29 yrs,Unknown,Gun shot wound,Unknown,Admission
+C1020,Male,40-49 yrs,Unknown,Others,Unknown,Admission
+C1021,Male,30-39 yrs,Unknown,Others,Unknown,Admission
+C1022,Male,30-39 yrs,Unknown,Motorcycle,Unknown,Admission
+C1023,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C1024,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C1025,Male,50-59 yrs,Unknown,Fall,Unknown,Admission
+C1026,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C1027,Female,50-59 yrs,AIS C,Fall,Unknown,Admission
+C1028,Male,60-69 yrs,Unknown,Fall,Unknown,Admission
+C1029,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C1030,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C1031,Female,60-69 yrs,Unknown,Other sports,Unknown,Admission
+C1032,Male,40-49 yrs,Unknown,Other sports,Unknown,Admission
+C1033,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C1034,Male,0-19 yrs,Unknown,Others,Unknown,Admission
+C1035,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C1036,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C1037,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C1038,Male,0-19 yrs,Unknown,Water related,Unknown,Admission
+C1039,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C1040,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C1041,Male,50-59 yrs,Unknown,Others,Unknown,Admission
+C1042,Male,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C1043,Female,40-49 yrs,Unknown,Automobile,Unknown,Admission
+C1044,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C1045,Male,0-19 yrs,Unknown,Water related,Unknown,Admission
+C1046,Female,30-39 yrs,Unknown,Automobile,Unknown,Admission
+C1047,Female,40-49 yrs,Unknown,Fall,Unknown,Admission
+C1048,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C1049,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C1050,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C1051,Male,50-59 yrs,Unknown,Automobile,Unknown,Admission
+C1052,Male,30-39 yrs,Unknown,Fall,Unknown,Admission
+C1053,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C1054,Male,0-19 yrs,Unknown,Gun shot wound,Unknown,Admission
+C1055,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C1056,Female,40-49 yrs,Unknown,Gun shot wound,Unknown,Admission
+C1057,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C1058,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C1059,Female,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1060,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1061,Male,40-49 yrs,AIS A,Others,Unknown,Admission
+C1062,Male,0-19 yrs,AIS C,Automobile,Unknown,Admission
+C1063,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C1064,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1065,Male,0-19 yrs,AIS C,Water related,Unknown,Admission
+C1066,Male,20-29 yrs,AIS B,Motorcycle,Unknown,Admission
+C1067,Male,60-69 yrs,AIS D,Others,Unknown,Admission
+C1068,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C1069,Male,20-29 yrs,AIS D,Fall,Unknown,Admission
+C1070,Male,50-59 yrs,AIS C,Other sports,Unknown,Admission
+C1071,Male,30-39 yrs,AIS B,Fall,Unknown,Admission
+C1072,Male,20-29 yrs,AIS C,Motorcycle,Unknown,Admission
+C1073,Male,20-29 yrs,Unknown,Water related,Unknown,Admission
+C1074,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C1075,Male,20-29 yrs,AIS B,Others,Unknown,Admission
+C1076,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1077,Male,20-29 yrs,AIS C,Pedestrian,Unknown,Admission
+C1078,Male,20-29 yrs,AIS C,Water related,Unknown,Admission
+C1079,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1080,Male,50-59 yrs,AIS B,Fall,Unknown,Admission
+C1081,Male,20-29 yrs,AIS B,Automobile,Unknown,Admission
+C1082,Male,30-39 yrs,AIS B,Fall,Unknown,Admission
+C1083,Female,0-19 yrs,AIS A,Water related,Unknown,Admission
+C1084,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1085,Male,60-69 yrs,AIS C,Fall,Unknown,Admission
+C1086,Female,20-29 yrs,AIS D,Other sports,Unknown,Admission
+C1087,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C1088,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C1089,Male,20-29 yrs,AIS A,Water related,Unknown,Admission
+C1090,Male,20-29 yrs,AIS C,Fall,Unknown,Admission
+C1091,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1092,Male,50-59 yrs,AIS D,Others,Unknown,Admission
+C1093,Male,20-29 yrs,Unknown,Automobile,Unknown,Admission
+C1094,Male,0-19 yrs,AIS C,Automobile,Unknown,Admission
+C1095,Male,40-49 yrs,AIS A,Others,Unknown,Admission
+C1096,Female,40-49 yrs,AIS A,Motorcycle,Unknown,Admission
+C1097,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C1098,Male,40-49 yrs,AIS B,Automobile,Unknown,Admission
+C1099,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1100,Male,30-39 yrs,Unknown,Water related,Unknown,Admission
+C1101,Male,0-19 yrs,AIS A,Motorcycle,Unknown,Admission
+C1102,Male,50-59 yrs,AIS A,Motorcycle,Unknown,Admission
+C1103,Male,40-49 yrs,AIS A,Others,Unknown,Admission
+C1104,Male,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C1105,Female,40-49 yrs,AIS A,Fall,Unknown,Admission
+C1106,Female,0-19 yrs,AIS A,Others,Unknown,Admission
+C1107,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C1108,Male,20-29 yrs,Unknown,Others,Unknown,Admission
+C1109,Female,20-29 yrs,AIS B,Automobile,Unknown,Admission
+C1110,Male,0-19 yrs,AIS A,Water related,Unknown,Admission
+C1111,Male,0-19 yrs,AIS C,Water related,Unknown,Admission
+C1112,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C1113,Female,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1114,Male,0-19 yrs,AIS B,Automobile,Unknown,Admission
+C1115,Male,20-29 yrs,AIS A,Water related,Unknown,Admission
+C1116,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1117,Male,50-59 yrs,AIS A,Others,Unknown,Admission
+C1118,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C1119,Male,30-39 yrs,AIS A,Water related,Unknown,Admission
+C1120,Male,70-79 yrs,AIS B,Fall,Unknown,Admission
+C1121,Male,50-59 yrs,AIS B,Others,Unknown,Admission
+C1122,Male,20-29 yrs,AIS B,Water related,Unknown,Admission
+C1123,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C1124,Male,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1125,Male,40-49 yrs,AIS C,Person-to-person contact,Unknown,Admission
+C1126,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1127,Male,0-19 yrs,AIS A,Motorcycle,Unknown,Admission
+C1128,Male,50-59 yrs,AIS C,Gun shot wound,Unknown,Admission
+C1129,Male,30-39 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1130,Male,0-19 yrs,AIS C,Water related,Unknown,Admission
+C1131,Male,0-19 yrs,AIS C,Automobile,Unknown,Admission
+C1132,Female,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C1133,Male,40-49 yrs,AIS B,Water related,Unknown,Admission
+C1134,Female,20-29 yrs,AIS A,Water related,Unknown,Admission
+C1135,Male,50-59 yrs,AIS A,Motorcycle,Unknown,Admission
+C1136,Male,30-39 yrs,AIS C,Automobile,Unknown,Admission
+C1137,Male,40-49 yrs,AIS A,Other sports,Unknown,Admission
+C1138,Female,20-29 yrs,AIS B,Automobile,Unknown,Admission
+C1139,Male,0-19 yrs,AIS B,Water related,Unknown,Admission
+C1140,Male,20-29 yrs,AIS B,Water related,Unknown,Admission
+C1141,Male,40-49 yrs,Unknown,Fall,Unknown,Admission
+C1142,Male,20-29 yrs,AIS B,Fall,Unknown,Admission
+C1143,Male,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C1144,Male,40-49 yrs,AIS D,Other sports,Unknown,Admission
+C1145,Male,0-19 yrs,AIS B,Water related,Unknown,Admission
+C1146,Male,30-39 yrs,Unknown,Pedestrian,Unknown,Admission
+C1147,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1148,Male,30-39 yrs,AIS B,Fall,Unknown,Admission
+C1149,Female,20-29 yrs,AIS D,Gun shot wound,Unknown,Admission
+C1150,Male,50-59 yrs,AIS A,Water related,Unknown,Admission
+C1151,Male,60-69 yrs,AIS B,Automobile,Unknown,Admission
+C1152,Male,30-39 yrs,AIS C,Fall,Unknown,Admission
+C1153,Male,20-29 yrs,Unknown,Motorcycle,Unknown,Admission
+C1154,Male,0-19 yrs,AIS A,Fall,Unknown,Admission
+C1155,Male,20-29 yrs,Unknown,Fall,Unknown,Admission
+C1156,Male,60-69 yrs,AIS B,Others,Unknown,Admission
+C1157,Male,0-19 yrs,AIS B,Automobile,Unknown,Admission
+C1158,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1159,Male,0-19 yrs,AIS C,Water related,Unknown,Admission
+C1160,Male,20-29 yrs,AIS B,Water related,Unknown,Admission
+C1161,Female,30-39 yrs,AIS A,Automobile,Unknown,Admission
+C1162,Female,20-29 yrs,AIS B,Automobile,Unknown,Admission
+C1163,Male,20-29 yrs,AIS D,Other sports,Unknown,Admission
+C1164,Male,50-59 yrs,AIS A,Others,Unknown,Admission
+C1165,Male,0-19 yrs,AIS B,Other sports,Unknown,Admission
+C1166,Male,40-49 yrs,AIS A,Water related,Unknown,Admission
+C1167,Male,40-49 yrs,AIS D,Motorcycle,Unknown,Admission
+C1168,Male,50-59 yrs,AIS D,Automobile,Unknown,Admission
+C1169,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1170,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1171,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1172,Female,50-59 yrs,AIS D,Fall,Unknown,Admission
+C1173,Male,60-69 yrs,Unknown,Automobile,Unknown,Admission
+C1174,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1175,Female,0-19 yrs,Unknown,Automobile,Unknown,Admission
+C1176,Male,20-29 yrs,AIS A,Motorcycle,Unknown,Admission
+C1177,Male,60-69 yrs,AIS B,Motorcycle,Unknown,Admission
+C1178,Male,30-39 yrs,AIS C,Others,Unknown,Admission
+C1179,Male,50-59 yrs,AIS C,Others,Unknown,Admission
+C1180,Male,50-59 yrs,AIS C,Fall,Unknown,Admission
+C1181,Male,40-49 yrs,AIS A,Automobile,Unknown,Admission
+C1182,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1183,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1184,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1185,Male,20-29 yrs,AIS A,Others,Unknown,Admission
+C1186,Male,60-69 yrs,AIS D,Automobile,Unknown,Admission
+C1187,Male,50-59 yrs,AIS D,Fall,Unknown,Admission
+C1188,Male,30-39 yrs,AIS A,Motorcycle,Unknown,Admission
+C1189,Male,50-59 yrs,AIS C,Motorcycle,Unknown,Admission
+C1190,Male,60-69 yrs,AIS A,Others,Unknown,Admission
+C1191,Male,30-39 yrs,AIS A,Fall,Unknown,Admission
+C1192,Male,20-29 yrs,AIS C,Automobile,Unknown,Admission
+C1193,Male,20-29 yrs,AIS A,Water related,Unknown,Admission
+C1194,Female,30-39 yrs,AIS C,Automobile,Unknown,Admission
+C1195,Male,40-49 yrs,AIS C,Automobile,Unknown,Admission
+C1196,Male,40-49 yrs,AIS C,Others,Unknown,Admission
+C1197,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1198,Male,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1199,Male,0-19 yrs,AIS A,Motorcycle,Unknown,Admission
+C1200,Male,70-79 yrs,AIS D,Automobile,Unknown,Admission
+C1201,Male,30-39 yrs,AIS A,Others,Unknown,Admission
+C1202,Male,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1203,Female,0-19 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1204,Male,20-29 yrs,AIS B,Gun shot wound,Unknown,Admission
+C1205,Male,40-49 yrs,AIS C,Fall,Unknown,Admission
+C1206,Female,0-19 yrs,AIS B,Automobile,Unknown,Admission
+C1207,Female,50-59 yrs,AIS A,Motorcycle,Unknown,Admission
+C1208,Male,20-29 yrs,AIS C,Automobile,Unknown,Admission
+C1209,Female,50-59 yrs,AIS A,Automobile,Unknown,Admission
+C1210,Female,50-59 yrs,AIS B,Automobile,Unknown,Admission
+C1211,Male,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1212,Female,0-19 yrs,AIS A,Automobile,Unknown,Admission
+C1213,Male,20-29 yrs,AIS D,Automobile,Unknown,Admission
+C1214,Female,0-19 yrs,AIS C,Others,Unknown,Admission
+C1215,Male,40-49 yrs,AIS A,Fall,Unknown,Admission
+C1216,Male,20-29 yrs,AIS A,Fall,Unknown,Admission
+C1217,Female,20-29 yrs,AIS A,Automobile,Unknown,Admission
+C1218,Female,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1219,Female,60-69 yrs,AIS C,Fall,Unknown,Admission
+C1220,Female,40-49 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1221,Male,60-69 yrs,AIS A,Others,Unknown,Admission
+C1222,Female,20-29 yrs,AIS A,Gun shot wound,Unknown,Admission
+C1223,Male,30-39 yrs,AIS A,Automobile,Unknown,Discharge
+C1224,Female,20-29 yrs,Unknown,Automobile,Unknown,Discharge
