@@ -2,7 +2,7 @@
 
 ## Abstract
 
-**Authors**: 
+:man_scientist: 👩‍🔬**Authors**:  
 Catherine R. Jutzeler, Bobo Tong, Lucie Bourguignon, Elias Ronca, Eric Bailey, Noam Y. Harel, Fred Geisler, Adam R. Ferguson, Brian K. Kwon, Jacquelyn J. Cragg, Lukas Grassner, and John L.K. Kramer
 
 **Short summary:** Nearly every individual sustaining spinal cord injury receives multiple types and classes of medications to manage a litany of secondary complications. Prior clinical studies and evidence from animal models suggest that several of these medications could enhance or impede endogenous neurological recovery. However, there is a knowledge gap surrounding the acute pharmacological management of spinal cord injury. 
@@ -13,9 +13,9 @@ Our study revealed a high degree of polypharmacy in the acute stages of spinal c
 
 ## External resources
 
-**Link to paper**: [Preprint](https://www.sciencedirect.com/science/article/pii/S1477893920303215?via%3Dihub)
+**Link to paper**: :link: [Preprint](https://www.sciencedirect.com/science/article/pii/S1477893920303215?via%3Dihub)
 
-**Link to web application**: [Neuropharmacovigilance Platform](https://jutzelec.shinyapps.io/neurosurveillance/)
+**Link to web application**: :link: [Neuropharmacovigilance Platform](https://jutzelec.shinyapps.io/neurosurveillance/)
 
 
 **Link to web application**:
