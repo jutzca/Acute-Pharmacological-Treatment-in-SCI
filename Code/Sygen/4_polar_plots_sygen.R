@@ -61,9 +61,41 @@ dataframe <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfil
 # Remove Duplicates based on three rows
 dataframe_rm_duplicates <- dataframe[!duplicated(dataframe[c(2:4)]),]
 
+
+#---------- List all medications per indication  ---------- 
+drugs.per.indication <- dataframe_rm_duplicates %>%
+  dplyr::select(indication, generic_name)%>%
+  dplyr::group_by(indication)%>%
+  dplyr::distinct()%>%
+  summarise(
+    allindication = paste(generic_name, collapse=", ")
+  )%>%
+  as.data.frame()
+drugs.per.indication
+
+# Save table
+write.csv(drugs.per.indication, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/All_medications_per_organ_system.csv", row.names = F)
+
+
+
+#---------- List all indications per medication ---------- 
+indications.per.medication <- dataframe_rm_duplicates %>%
+  dplyr::select(generic_name, indication)%>%
+  dplyr::group_by(generic_name)%>%
+  dplyr::distinct()%>%
+  summarise(
+    allindication = paste(indication, collapse=", ")
+  )%>%
+  as.data.frame()
+indications.per.medication
+
+# Save table
+write.csv(indications.per.medication, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/indications.per.medication.csv", row.names = F)
+
+
 #---------- Number of drugs per indication overall ---------- 
 # Count number of drugs per indication
-number.of.drugs.per.indication.overall <- dataframe_rm_duplicates.extended %>%
+number.of.drugs.per.indication.overall <- dataframe_rm_duplicates %>%
   dplyr::count( generic_name, indication, sort = TRUE) %>%
   dplyr::count(indication, sort = TRUE) %>%
   as.data.frame()
@@ -238,32 +270,24 @@ ggsave(
 dev.off()
 
 
+#---------- Determine the medications that were most frequently administred ---------- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-# Ballon plots
-dataframe_rm_duplicates %>%
-  dplyr::count(indication, generic_name) %>%  
-  dplyr::filter(n>= 50) %>%   
-  dplyr::arrange(desc(n))%>%
-  #pivot_wider(names_from = generic_name, values_from = n)%>% 
-  as.data.frame()%>%replace(is.na(.), "")%>% 
-  ggballoonplot( x = "indication", y = "generic_name", size = "n",
-                fill = "n", 
-                ggtheme = theme_bw()) +
-  scale_fill_viridis_c(option = "C")
+#Count number of patients per indication
+medications.frequency <- dataframe_rm_duplicates %>%
+  dplyr::count(generic_name, sort = TRUE)%>%
+  dplyr::top_n(20)%>%
+  as.data.frame()%>%
+  ggplot2::ggplot(aes(x=reorder(generic_name, -n), y=n))+geom_bar(stat = 'identity')
   
 
+medications.frequency
+
+
+
+
+
+# Save table
+write.csv(medications.frequency, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/medications.frequency.csv")
 
 
 
