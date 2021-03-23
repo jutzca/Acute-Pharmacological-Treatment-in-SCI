@@ -89,7 +89,7 @@ gc() # garbage collector
 ##
 ## Set working directory 
 #setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
-dirname <-  '/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/'
+dirname <-  '/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/'
 if (!dir.exists(dirname))dir.create(dirname,recursive=TRUE)
 
 ## ---------------------------
@@ -122,7 +122,7 @@ source("helper_functions_2.R")
 
 #sygen_baseline<- read.csv("/Users/jutzelec/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
 #save(sygen_baseline, file = "sygen_baseline.RData")
-setwd('/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/')
+setwd('/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/')
 
 load("data/sygen_baseline.RData")
 
@@ -475,8 +475,17 @@ ui <- dashboardPage(
                     ),
                     tags$li("Dr. Fred Geisler"
                     ),
-                    tags$li("Dr. Fred Geisler"
-                    )),
+                    tags$li("Lucie Bourguignon"
+                    ),
+                    tags$li("Bobo Tong"
+                    ),
+                    tags$li("Elias Ronca"
+                    ),
+                    tags$li("Noam Y. Harel"
+                    ),
+                    tags$li("Adam Ferguson"
+                    ),
+                    tags$li("Brian Kwon")),
                   br(),
                   h4("Ethics statement"),
                   "Approval for this study (secondary analysis) was received by an institutional ethical standards committee on human experimentation at the University of 
@@ -527,8 +536,8 @@ ui <- dashboardPage(
                     a('Swiss National Science Foundation', href = 'http://p3.snf.ch/project-186101', target="_blank"),
                     ' (Ambizione Grant, #PZ00P3_186101), ',
                     a('Wings for Life Research Foundation', href = 'https://www.wingsforlife.com/en/', target="_blank"),
-                    ' (#2017_044), the ',
-                    a('Craig H Neilsen', href = 'https://chnfoundation.org/', target="_blank"),
+                    ' (#2017_044), and the ',
+                    a('Craig H Neilsen Foundation', href = 'https://chnfoundation.org/', target="_blank"),
                     '.', align = "justify")
                     ),
                 box(width = 4,
