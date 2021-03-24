@@ -44,13 +44,13 @@ gc() # garbage collector
 ## ---------------------------
 ##
 ## Set working directory 
-setwd("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
+setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/")
 ##
 ## ---------------------------
 ##
 ## Set output directorypaths
-outdir_figures='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
-outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
+outdir_figures='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Figures/Sygen'
+outdir_tables='/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen'
 ##
 ##
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
@@ -74,7 +74,7 @@ drugs.per.indication <- dataframe_rm_duplicates %>%
 drugs.per.indication
 
 # Save table
-write.csv(drugs.per.indication, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/All_medications_per_organ_system.csv", row.names = F)
+#write.csv(drugs.per.indication, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/All_medications_per_organ_system.csv", row.names = F)
 
 
 
@@ -102,7 +102,7 @@ number.of.drugs.per.indication.overall <- dataframe_rm_duplicates %>%
 number.of.drugs.per.indication.overall
 
 # Save table
-write.csv(number.of.drugs.per.indication.overall, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3_overall.csv", row.names = F)
+#write.csv(number.of.drugs.per.indication.overall, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3_overall.csv", row.names = F)
 
 # Plot number of drugs per indication overall
 number.of.drugs.per.indication.overall.sygen <-ggplot(data=number.of.drugs.per.indication.overall, aes(x=indication, y=n, fill=n)) +
@@ -148,7 +148,7 @@ number.of.drugs.per.indication.stratified.by.ais.grades <- dataframe_rm_duplicat
 number.of.drugs.per.indication.stratified.by.ais.grades
 
 # Save table
-write.csv(number.of.drugs.per.indication.stratified.by.ais.grades, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3_AIS_grades.csv", row.names = F)
+#write.csv(number.of.drugs.per.indication.stratified.by.ais.grades, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_3_AIS_grades.csv", row.names = F)
 
 # Plot number of drugs per indication stratified by AIS grades
 polar_plots.nr.medications.indication.by.ais.grade.sygen <-ggplot(data=number.of.drugs.per.indication.stratified.by.ais.grades, aes(x=indication, y=n, fill=n)) +
@@ -190,7 +190,7 @@ number.of.patient.per.indication <- dataframe_rm_duplicates %>%
 number.of.patient.per.indication
 
 # Save table
-write.csv(number.of.patient.per.indication, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_2_overall.csv")
+#write.csv(number.of.patient.per.indication, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_2_overall.csv")
 
 # Plot number of patients per indication
 polar_plots.nr.patient.indication.sygen <- ggplot(data=number.of.patient.per.indication, aes(x=indication, y=n, fill=n)) +
@@ -237,7 +237,7 @@ number.of.patient.per.indication.per.ais.grades <- dataframe_rm_duplicates.exten
 number.of.patient.per.indication.per.ais.grades
 
 # Save table
-write.csv(number.of.patient.per.indication.per.ais.grades, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_2_per_ais_grade.csv")
+#write.csv(number.of.patient.per.indication.per.ais.grades, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/Supplementary_Table_2_per_ais_grade.csv")
 
 
 # Plot number of patients per indication
@@ -275,21 +275,31 @@ dev.off()
 #Count number of patients per indication
 medications.frequency <- dataframe_rm_duplicates %>%
   dplyr::count(generic_name, sort = TRUE)%>%
+  dplyr::mutate(proportion=n/791*100)%>%
   dplyr::top_n(20)%>%
   as.data.frame()%>%
-  ggplot2::ggplot(aes(x=reorder(generic_name, -n), y=n))+geom_bar(stat = 'identity')
-  
-
+  ggplot2::ggplot(aes(x=reorder(generic_name, n), y=n))+geom_bar(stat = 'identity', fill='black')+
+  coord_flip()+ylab("Number of Patients")+
+  geom_text(aes(label = round(n, 1)), vjust = 0.5,hjust = -0.2, size=3)+
+  theme_bw()+theme(axis.title.y = element_blank(), 
+                   axis.text.y = element_text(size = 10, color = 'black', family = 'Times'),
+                   axis.text.x = element_text(size = 10, color = 'black', family = 'Times'),
+                   axis.title.x = element_text(size = 12, color = 'black', family = 'Times'))
 medications.frequency
 
 
+# Save plot
+ggsave(
+  "medications.frequency.pdf",
+  plot = medications.frequency,
+  device = 'pdf',
+  path = outdir_figures,
+  scale = 1,
+  width = 10,
+  height = 6,
+  units = "in",
+  dpi = 300
+)
 
-
-
-# Save table
-write.csv(medications.frequency, "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/medications.frequency.csv")
-
-
-
-
+dev.off()
 
