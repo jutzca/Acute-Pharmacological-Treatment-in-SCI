@@ -30,6 +30,7 @@
   library(ggplot2)
   library(ggpubr)
   library(naniar)
+  library(survminer)
   ##
   ## ----------------------------
   ##
@@ -44,6 +45,7 @@
   #if(!require(ggplot2)){install.packages("ggplot2")}
   #if(!require(ggpubr)){install.packages("ggpubr")}
   #if(!require(naniar)){install.packages("naniar")}
+  #if(!require(survminer)){install.packages("survminer")}
   ##
   ## ---------------------------
   ##
@@ -73,11 +75,13 @@
   #---------- Calculate and visualize point prevalance of medication administration (i.e., number of medications administered per day per patient) ----------
   
   # Make copy of data file to work with
-  sygen.medication.data.2 <- sygen.medication.data
+  sygen.medication.data.1 <- sygen.medication.data
   
   # Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
-  sygen.medication.data.2[sygen.medication.data.2>0] <- 1
-  sygen.medication.data.2[is.na(sygen.medication.data.2)] <- 0 
+  sygen.medication.data.2<-sygen.medication.data.1 %>%
+    mutate_if(is.numeric, ~1 * (. != 0)) %>% 
+    mutate_if(is.numeric, ~replace_na(., 0))
+
   
   # Change columns to numerics class format
   cols_to_change = c(4:6)    
@@ -102,21 +106,21 @@
   }
   
   # Replace 0s with na
-  new_tab_pid_long_withna<- new_tab_pid_long %>% replace_with_na(replace = list(prevalence = 0))
+  new_tab_pid_long_withna<- new_tab_pid_long %>% naniar::replace_with_na(replace = list(prevalence = 0))
   
   # Add demographics and injury characteristics
   demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics.csv", header=T, sep = ',')
   
-  new_tab_pid_long_withna.extended <- merge(new_tab_pid_long_withna,demographics.data)
+  new_tab_pid_long_withna.extended <- merge(new_tab_pid_long_withna,demographics.data, by="NEW_ID")
   
   # Plot point prevalence
-  point.prevalence.sygen <-ggplot(data=new_tab_pid_long_withna.extended, aes(x = day, y = NEW_ID, fill = prevalence)) +
+  point.prevalence.sygen.plot <-ggplot(data=new_tab_pid_long_withna.extended, aes(x = day, y = NEW_ID, fill = prevalence)) +
     viridis::scale_fill_viridis(name="Number of \nMedications Administered",
                                 option = 'plasma',
                                 direction = 1,
                                 na.value = "white") +
     geom_tile(color = 'white', size = 0.1) + scale_x_continuous(expand = c(0, 0), breaks = c(0, 15, 30, 45, 60)) +
-    theme_classic2()+
+    theme_classic()+
     ggtitle("Sygen trial (n=791)")+ labs(x="Days Post-Injury", y="Patient IDs")+ 
     theme(plot.title = element_text(hjust = 0.5), 
           panel.grid.major = element_blank(),
@@ -125,12 +129,12 @@
           axis.ticks.y =element_blank(),  
           axis.text.y = element_blank(),
           axis.title.y  = element_text(color="black", size=10))
-  point.prevalence.sygen
+  point.prevalence.sygen.plot
   
   # Save plot
   ggsave(
-    "point.prevalence.sygen.pdf",
-    plot = point.prevalence.sygen,
+    "point.prevalence.sygen.plot.pdf",
+    plot = point.prevalence.sygen.plot,
     device = 'pdf',
     path = outdir_figures,
     scale = 1,
@@ -144,6 +148,34 @@
   
   
 
+  
+  
+  # Count number of medications per day per patients
+point.prevalence.sygen <- new_tab_pid_long_withna.extended %>%
+    dplyr::group_by(day, ais1) %>%
+    dplyr::mutate(n = n(),
+              mean = mean(prevalence,na.rm=TRUE),
+              median = median(prevalence, na.rm=TRUE),
+              sd = sd(prevalence,na.rm=TRUE),
+              max = max(prevalence, na.rm=TRUE),
+              min = min(prevalence, na.rm=TRUE)
+              ) %>%
+    dplyr::mutate(sem = sd / sqrt(n - 1),
+           CI_lower = mean + qt((1-0.95)/2, n - 1) * sem,
+           CI_upper = mean - qt((1-0.95)/2, n - 1) * sem)
+  point.prevalence.sygen
+  
+  color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
+  
+  
+  ggplot(point.prevalence.sygen, aes(x=day, y=mean, color = ais1))+
+    geom_line(aes(x=day, y=mean, color=ais1), size=1)+
+    geom_ribbon(aes(ymin=min,ymax=max,fill=ais1),color="grey",alpha=0.4) +  theme_light(base_size = 16) + xlim(1,60) +
+    scale_fill_manual(values=color_list) + scale_color_manual(values=color_list) +
+    facet_grid(ais1~.)+ theme(legend.position="none")
+    
+   
+  
   #---------- Calculate and visualize number of drugs per patient with 7,14, and 30 days respectively ----------
   
   # Make copy of data file to work with
