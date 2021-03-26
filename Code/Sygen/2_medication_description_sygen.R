@@ -82,7 +82,6 @@
     mutate_if(is.numeric, ~1 * (. != 0)) %>% 
     mutate_if(is.numeric, ~replace_na(., 0))
 
-  
   # Change columns to numerics class format
   cols_to_change = c(4:6)    
   for(i in cols_to_change){
@@ -109,7 +108,7 @@
   new_tab_pid_long_withna<- new_tab_pid_long %>% naniar::replace_with_na(replace = list(prevalence = 0))
   
   # Add demographics and injury characteristics
-  demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics.csv", header=T, sep = ',')
+  demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics2.csv", header=T, sep = ',')
   
   new_tab_pid_long_withna.extended <- merge(new_tab_pid_long_withna,demographics.data, by="NEW_ID")
   
@@ -147,11 +146,8 @@
   dev.off()
   
   
-
-  
-  
-  # Count number of medications per day per patients
-point.prevalence.sygen <- new_tab_pid_long_withna.extended %>%
+#---------- Count number of medications per day per patients  ---------- 
+number.of.drug.perday.sygen <- new_tab_pid_long_withna.extended %>%
     dplyr::group_by(day, ais1) %>%
     dplyr::mutate(n = n(),
               mean = mean(prevalence,na.rm=TRUE),
@@ -163,18 +159,36 @@ point.prevalence.sygen <- new_tab_pid_long_withna.extended %>%
     dplyr::mutate(sem = sd / sqrt(n - 1),
            CI_lower = mean + qt((1-0.95)/2, n - 1) * sem,
            CI_upper = mean - qt((1-0.95)/2, n - 1) * sem)
-  point.prevalence.sygen
+number.of.drug.perday.sygen
   
-  color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
+# Create color list  
+color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
   
-  
-  ggplot(point.prevalence.sygen, aes(x=day, y=mean, color = ais1))+
+# Create plot  
+ number.of.drug.perday.sygen.plot <- ggplot(point.prevalence.sygen, aes(x=day, y=mean, color = ais1))+
     geom_line(aes(x=day, y=mean, color=ais1), size=1)+
-    geom_ribbon(aes(ymin=min,ymax=max,fill=ais1),color="grey",alpha=0.4) +  theme_light(base_size = 16) + xlim(1,60) +
+    geom_ribbon(aes(ymin=min,ymax=max,fill=ais1),color="grey",alpha=0.4) +  theme_bw(base_size = 12, base_family = "Times") + xlim(1,60) +
     scale_fill_manual(values=color_list) + scale_color_manual(values=color_list) +
-    facet_grid(ais1~.)+ theme(legend.position="none")
-    
+    facet_wrap(.~ais1, ncol = 1)+ theme(legend.position="none", axis.text = element_text(color = 'black'), axis.title = element_text(color = 'black'), strip.text = element_text(color = 'black'))
+ number.of.drug.perday.sygen.plot
    
+  
+# Save plot
+  ggsave(
+    "number.of.drug.perday.sygen.plot.pdf",
+    plot = number.of.drug.perday.sygen.plot,
+    device = 'pdf',
+    path = outdir_figures,
+    scale = 1,
+    width = 3,
+    height = 6,
+    units = "in",
+    dpi = 300
+  )
+  
+  dev.off()
+  
+  
   
   #---------- Calculate and visualize number of drugs per patient with 7,14, and 30 days respectively ----------
   
