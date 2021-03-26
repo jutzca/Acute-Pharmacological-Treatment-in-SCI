@@ -62,8 +62,6 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
-#-------------------------SCIRehab Data------------------------------------------------------------------------------------------------------
-
 #load original scirehab medication dataset
 scirehab.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/drug_addep/masterfile/masterfile.csv", header = T, sep = ',')
 names(scirehab.medication.data)
@@ -71,26 +69,27 @@ names(scirehab.medication.data)
 #-------------------------Calculate and visualize point prevalance of medication administration (i.e., number of medications administered per day per patient)-----------------
 
 #Make copy of data file to work with
-scirehab.medication.data.2 <- scirehab.medication.data
+scirehab.medication.data.1 <- scirehab.medication.data
 
 #Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
-scirehab.medication.data.2[scirehab.medication.data.2>0] <- 1
-scirehab.medication.data.2[is.na(scirehab.medication.data.2)] <- 0 
-
+scirehab.medication.data.2<-scirehab.medication.data.1 %>%
+  dplyr::mutate_if(is.numeric, ~1 * (. != 0)) %>% 
+  dplyr::mutate_if(is.numeric, ~replace_na(., 0))
+  
 #change columns to numerics class format
-cols_to_change = c(4:6)    
-for(i in cols_to_change){
-  aggregate(scirehab.medication.data.2[,i], by=list(Category=scirehab.medication.data.2$generic_name), FUN=sum)
-}
+# cols_to_change = c(4:6)    
+# for(i in cols_to_change){
+#   aggregate(scirehab.medication.data.2[,i], by=list(Category=scirehab.medication.data.2$generic_name), FUN=sum)
+# }
 
 #Subset Data 
-scirehab.medication.data.2.subset <- scirehab.medication.data.2[c(4:64)]
+scirehab.medication.data.2.subset <- scirehab.medication.data.2[c(2:63)]
 
 #Aggregate data: Number of medications per day for each patient
 new_tab_pid.scirehab<-aggregate(scirehab.medication.data.2.subset[-1], scirehab.medication.data.2["newid"], FUN=sum)
 
 #Reformat data from wide to long
-new_tab_pid_long.scirehab <- gather(new_tab_pid.scirehab, day, prevalence, X1:X60, factor_key=TRUE)
+new_tab_pid_long.scirehab <- gather(new_tab_pid.scirehab, day, prevalence, X0:X60, factor_key=TRUE)
 new_tab_pid_long.scirehab 
 
 
@@ -118,6 +117,66 @@ point.prevalence.scirehab <-ggplot(data=new_tab_pid_long_withna.scirehab, aes(x 
   theme(plot.title = element_text(hjust = 0.5), panel.grid.major = element_blank(),axis.title.x = element_text(size = 10) ,axis.text.x = element_text(color="black", size=8),  axis.ticks.y =element_blank(),  axis.text.y = element_blank(), axis.title.y  = element_blank())
 
 point.prevalence.scirehab
+
+
+#---------- Calculate and visualize the number of medications per day per patients  ---------- 
+
+demographics.scirehab <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/drug_addep/df_rehab_formatted.csv")
+
+demographics.scirehab.admission <- subset(demographics.scirehab, Time=="admission")
+
+new_tab_pid_long.scirehab.extended <-merge(new_tab_pid_long.scirehab, demographics.scirehab.admission[,c(2:5)], by="newid" )
+
+
+number.of.drug.perday.scirehab <- new_tab_pid_long.scirehab.extended %>%
+  dplyr::group_by(day, AIS) %>%
+  dplyr::mutate(n = n(),
+                mean = mean(prevalence,na.rm=TRUE),
+                median = median(prevalence, na.rm=TRUE),
+                sd = sd(prevalence,na.rm=TRUE),
+                max = max(prevalence, na.rm=TRUE),
+                min = min(prevalence, na.rm=TRUE)
+  ) %>%
+  dplyr::mutate(sem = sd / sqrt(n - 1),
+                CI_lower = mean + qt((1-0.95)/2, n - 1) * sem,
+                CI_upper = mean - qt((1-0.95)/2, n - 1) * sem)
+number.of.drug.perday.scirehab
+
+# Create color list  
+color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
+
+# Create plot  
+number.of.drug.perday.scirehab.plot <- ggplot(number.of.drug.perday.scirehab, aes(x=as.numeric(day), y=mean, color = AIS))+
+  geom_line(aes(x=as.numeric(day), y=mean, color=AIS), size=1)+
+  geom_ribbon(aes(ymin=min,ymax=max,fill=AIS),color="grey",alpha=0.4) +  theme_bw(base_size = 12, base_family = "Times") + xlim(1,60) +
+  scale_fill_manual(values=color_list) + scale_color_manual(values=color_list) +
+  facet_wrap(.~AIS, ncol = 1)+ theme(legend.position="none", axis.text = element_text(color = 'black'), axis.title = element_text(color = 'black'), strip.text = element_text(color = 'black'))
+number.of.drug.perday.scirehab.plot
+
+
+# Save plot
+ggsave(
+  "number.of.drug.perday.scirehab.plot.pdf",
+  plot = number.of.drug.perday.scirehab.plot,
+  device = 'pdf',
+  path = outdir_figures,
+  scale = 1,
+  width = 3,
+  height = 6,
+  units = "in",
+  dpi = 300
+)
+
+dev.off()
+
+
+
+
+
+
+
+
+
 
 
 #-------------------------Calculate and visualize number of medications per patient with 7,14, and 30 days respectively-----------------

@@ -146,7 +146,7 @@
   dev.off()
   
   
-#---------- Count number of medications per day per patients  ---------- 
+#---------- Calculate and visualize the number of medications per day per patients  ---------- 
 number.of.drug.perday.sygen <- new_tab_pid_long_withna.extended %>%
     dplyr::group_by(day, ais1) %>%
     dplyr::mutate(n = n(),
