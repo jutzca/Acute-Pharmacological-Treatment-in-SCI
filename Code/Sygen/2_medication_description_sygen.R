@@ -82,11 +82,11 @@
     mutate_if(is.numeric, ~1 * (. != 0)) %>% 
     mutate_if(is.numeric, ~replace_na(., 0))
 
-  # Change columns to numerics class format
-  cols_to_change = c(4:6)    
-  for(i in cols_to_change){
-    aggregate(sygen.medication.data.2[,i], by=list(Category=sygen.medication.data.2$generic_name), FUN=sum)
-  }
+  # # Change columns to numerics class format
+  # cols_to_change = c(4:6)    
+  # for(i in cols_to_change){
+  #   aggregate(sygen.medication.data.2[,i], by=list(Category=sygen.medication.data.2$generic_name), FUN=sum)
+  # }
   
   # Subset Data 
   sygen.medication.data.2.subset <- sygen.medication.data.2[c(4:64)]
@@ -111,6 +111,8 @@
   demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics2.csv", header=T, sep = ',')
   
   new_tab_pid_long_withna.extended <- merge(new_tab_pid_long_withna,demographics.data, by="NEW_ID")
+  
+  # write.csv(new_tab_pid_long_withna.extended,"/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/drug_demogrpahics_longformat.csv", row.names = F)
   
   # Plot point prevalence
   point.prevalence.sygen.plot <-ggplot(data=new_tab_pid_long_withna.extended, aes(x = day, y = NEW_ID, fill = prevalence)) +

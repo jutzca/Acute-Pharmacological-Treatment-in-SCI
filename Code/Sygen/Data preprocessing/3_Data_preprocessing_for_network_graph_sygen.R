@@ -69,7 +69,6 @@
   # Make copy of data file to work with
   sygen.medication.data.network <- sygen.medication.data
   
-  
   # Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
   sygen.medication.data.network[sygen.medication.data.network>0] <- 1
   sygen.medication.data.network[is.na(sygen.medication.data.network)] <- 0 
