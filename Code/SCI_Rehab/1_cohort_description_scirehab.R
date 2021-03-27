@@ -51,14 +51,7 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 # Load data files
-scirehab.drug.df <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/masterfile/masterfile.csv", sep = ',', header = T,  na.strings=c("","NA"))
-scirehab.demographics.df <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/df_rehab_formatted.csv", sep = ',', header = T,  na.strings=c("","NA"))
-
-# Subset scirehab.demographics.df based on the variable newid from the scirehab.drug.df
-sci.rehab.cohort <- subset(scirehab.demographics.df, unique(NEWID) %in% scirehab.drug.df$newid)
-
-# Subset the cohort for admission
-sci.rehab.cohort.admission <- subset(sci.rehab.cohort, Time=='admission')
+sci.rehab.cohort.admission <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/rehab_summary_stats_for_app_new.csv", sep = ',', header = T,  na.strings=c("","NA"))
 
 
 #-----------Create Table of Included Cohort for Publication
