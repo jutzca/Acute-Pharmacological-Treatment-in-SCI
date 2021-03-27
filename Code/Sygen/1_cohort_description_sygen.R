@@ -57,15 +57,16 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 # Load original dataset
 sygen.original<- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Data/Sygen/Original_data/df_sygen_formatted.csv", sep = ',', header = T,  na.strings=c("","NA"))
 
-sygen.pid <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Data/Sygen/PID/pid_sygen.csv", sep = ',', header = T,  na.strings=c("","NA"))
+demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics_injury_characteristics2.csv", header=T, sep = ',')
 
-joined_df <- merge(sygen.pid, sygen.original, by.x = "NEW_ID", 
+
+joined_df <- merge(demographics.data, sygen.original, by.x = "NEW_ID", 
                    by.y = "ID", all.x = TRUE, all.y = FALSE)
 
 
-joined_df2 <- subset(joined_df, Time==4)
 sygen<-distinct(joined_df, NEW_ID, .keep_all = TRUE)
 
+write.csv(sygen, '/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/demographics.all.csv', row.names = F)
 
 sygen$YEARDOI <- as.factor(sygen$YEARDOI)
 

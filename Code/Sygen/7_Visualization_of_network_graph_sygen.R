@@ -177,7 +177,7 @@ edges$weight.grp <- cut(edges$weight, c(-1,50,100,150),
                         labels=c("0-50", "51-100","l"))
 
 # 3. Creating network objects
-set.seed(10)
+set.seed(100)
 
 igraph_layouts <- c('star', 'circle', 'gem', 'dh', 'graphopt', 'grid', 'mds', 
                     'randomly', 'fr', 'kk', 'drl', 'lgl')
@@ -193,16 +193,19 @@ g <- tbl_graph(nodes2, edges, directed = FALSE)%>%
   #                alpha = 0.8,
   #                # colour = 'gray', 
   #                arrow = NULL) +
-  geom_edge_link2(aes(#edge_colour = weight,
+  geom_edge_link2(aes(
                       width = weight),
-                  alpha = 0.6)+
+                  color='gray',
+                  alpha = 0.8)+
   scale_edge_width(range = c(0.1, 2)) +
   # scale_edge_colour_brewer(palette = "Set1")+
   geom_node_point(aes(size = degree),color='red') +
   geom_node_text(aes(#size = n.source, 
-                     label = label), repel = TRUE, max.overlaps = getOption("ggrepel.max.overlaps", default = 100), family = "Times") +
-  theme_graph()
-
+                     label = label), repel = TRUE, 
+                 max.overlaps = getOption("ggrepel.max.overlaps", default = 100), family = "Times") +  ggtitle('Day 7')+
+  theme_graph(title_size = 18,
+              title_face = "bold",
+              title_margin = 10)
 g
 
 

@@ -120,8 +120,9 @@ source("helper_functions_2.R")
 
 #---------- Data set #1: Sygen baseline characteristics ---------- 
 
-#sygen_baseline<- read.csv("/Users/jutzelec/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
-#save(sygen_baseline, file = "sygen_baseline.RData")
+
+# sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_summary_stats_for_app.csv", sep = ',', header = T, stringsAsFactors = F)
+# save(sygen_baseline, file = "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_baseline.RData")
 setwd('/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/')
 
 load("data/sygen_baseline.RData")
@@ -470,12 +471,12 @@ ui <- dashboardPage(
                     tags$li("Dr. Jacquelyn Cragg, Faculty of Pharmaceutical Sciences, University of British Columbia, Vancouver, Canada."
                     )),
                   strong("Collaborators:"), 
-                  tags$ul(
-                    tags$li("Dr. Lukas Grassner"
+                   tags$ul(
+                     tags$li("Lucie Bourguignon"
+                     ),
+                     tags$li("Dr. Lukas Grassner"
                     ),
                     tags$li("Dr. Fred Geisler"
-                    ),
-                    tags$li("Lucie Bourguignon"
                     ),
                     tags$li("Bobo Tong"
                     ),
@@ -545,7 +546,7 @@ ui <- dashboardPage(
                 )
                     ),
               fluidRow(
-                valueBox(prettyNum(1895, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                valueBox(prettyNum(2022, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
                 valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
                 valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
                          "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
@@ -881,7 +882,9 @@ server <- function(input, output, session) {
     
     if (input$var == "sex")  {
 
-    width = c(0.8, 0.8)
+    width = c(0.8, 0.8, 0.8)
+    
+    sygen_baseline$Sex=factor(sygen_baseline$Sex, levels = c("Unknown", "Male", "Female" ))
     
     baseline.sex <- sygen_baseline%>%
       dplyr::count(Sex)%>% 
@@ -905,9 +908,9 @@ server <- function(input, output, session) {
     
    
      else if (input$var == "age")  {
-       width.age.group = c(0.8, 0.8, 0.8, 0.8)
+       width.age.group = c(0.8, 0.8, 0.8, 0.8, 0.8)
      
-     sygen_baseline$agegroup=factor(sygen_baseline$agegroup, levels = c("60+ yrs", "41-60 yrs", "21-40 yrs", "0-20 yrs" ))
+     sygen_baseline$agegroup=factor(sygen_baseline$agegroup, levels = c("Unknown", "61+ yrs", "41-60 yrs", "21-40 yrs", "0-20 yrs" ))
      
      baseline.age.grp<- sygen_baseline%>%
        dplyr::count(agegroup)%>% 
@@ -951,9 +954,9 @@ server <- function(input, output, session) {
               baseline.ais}  
    
     
-    else if (input$var == "nli")  {width.nli = c(0.8, 0.8)
+    else if (input$var == "nli")  {width.nli = c(0.8, 0.8, 0.8)
     
-    sygen_baseline$NLI=factor(sygen_baseline$NLI, levels = c('Thoracic', "Cervical"))
+    sygen_baseline$NLI=factor(sygen_baseline$NLI, levels = c('Unknown','Thoracic', "Cervical"))
   
     baseline.nli <- sygen_baseline%>%
       dplyr::count(NLI)%>% 
@@ -975,9 +978,9 @@ server <- function(input, output, session) {
     
     else if (input$var == "etiology")  {
       
-      width.cause = c(0.8, 0.8, 0.8, 0.8,0.8, 0.8, 0.8, 0.8, 0.8)
+      width.cause = c(0.8, 0.8, 0.8, 0.8, 0.8,0.8, 0.8, 0.8, 0.8, 0.8)
     
-      sygen_baseline$Cause=factor(sygen_baseline$Cause, levels = c('Others', "Water related", "Pedestrian", "Other sports", "Motorcycle", "Gun shot wound", "Fall", "Blunt trauma", "Automobile" ))
+      sygen_baseline$Cause=factor(sygen_baseline$Cause, levels = c('Unknown','Others', "Water related", "Pedestrian", "Other sports", "Motorcycle", "Gun shot wound", "Fall", "Blunt trauma", "Automobile" ))
       
       baseline.cause<- sygen_baseline%>%
         dplyr::count(Cause)%>% 
