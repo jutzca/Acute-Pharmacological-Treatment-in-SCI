@@ -162,6 +162,17 @@ number.of.drug.perday.sygen <- new_tab_pid_long_withna.extended %>%
            CI_lower = mean + qt((1-0.95)/2, n - 1) * sem,
            CI_upper = mean - qt((1-0.95)/2, n - 1) * sem)
 number.of.drug.perday.sygen
+
+
+number.of.drug.perday.sygen2 <- number.of.drug.perday.sygen %>%
+  select(mean, median, sd, max, min, day, ais1) %>%
+  distinct() %>%
+  arrange(day)%>%
+  arrange(ais1)
+number.of.drug.perday.sygen2
+
+#write.csv(number.of.drug.perday.sygen2, '/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/number.of.drug.perday.sygen2.csv')
+
   
 # Create color list  
 color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")

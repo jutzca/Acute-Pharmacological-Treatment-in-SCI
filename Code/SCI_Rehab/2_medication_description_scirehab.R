@@ -142,6 +142,18 @@ number.of.drug.perday.scirehab <- new_tab_pid_long.scirehab.extended %>%
                 CI_upper = mean - qt((1-0.95)/2, n - 1) * sem)
 number.of.drug.perday.scirehab
 
+
+
+number.of.drug.perday.scirehab2 <- number.of.drug.perday.scirehab %>%
+  select(mean, median, sd, max, min, day, AIS) %>%
+  distinct() %>%
+  arrange(day)%>%
+  arrange(AIS)
+number.of.drug.perday.scirehab2
+
+#write.csv(number.of.drug.perday.scirehab2, '/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/SCI_Rehab/number.of.drug.perday.scirehab2.csv')
+
+
 # Create color list  
 color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
 

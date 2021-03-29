@@ -25,7 +25,7 @@ library(dplyr)
 library(tidyr)
 library(tibble)
 library(tidyverse)
-library(ggnet)
+# library(ggnet)
 library(network)
 library(sna)
 library(ggplot2)
@@ -34,7 +34,6 @@ library(tidygraph)
 library(ggraph)
 library(visNetwork)
 library(networkD3)
-library(ggrepel)
 
 ##
 ## ----------------------------
@@ -51,7 +50,7 @@ library(ggrepel)
 # if(!require(ggplot2)){install.packages("ggplot2")}
 # if(!require(igraph)){install.packages("igraph")}
 # if(!require(tidygraph)){install.packages("tidygraph")}
-# if(!require(ggraph)){install.packages("ggraph")}
+devtools::install_github("thomasp85/ggraph", dependencies=TRUE)
 # if(!require(visNetwork)){install.packages("visNetwork")}
 # if(!require(networkD3)){install.packages("networkD3")}
 # devtools::install_github('slowkow/ggrepel')
@@ -128,7 +127,7 @@ nr.of.patients.per.drug.per.day.per.indiction <- information.on.medication.long2
 nr.of.patients.per.drug.per.day.per.indiction
 
 
-nr.of.patients.per.drug.per.day.X7 <- nr.of.patients.per.drug.per.day%>% subset(day=="X7")%>%
+nr.of.patients.per.drug.per.day.X7 <- nr.of.patients.per.drug.per.day%>% subset(day=="X60")%>%
   as.data.frame()%>%
   select(-c("day", "dose"))
 
@@ -136,13 +135,13 @@ nr.of.patients.per.drug.per.day.X7 <- nr.of.patients.per.drug.per.day%>% subset(
 # 1. Node list
 
 # Create source
-source <- network_data %>% subset(day=="X7" & value >20 )%>% 
+source <- network_data %>% subset(day=="X60" & value >10 )%>% 
   distinct(Source) %>%
   dplyr::rename(label = Source)
 head(source)
 
 # Create target
-target <- network_data %>%subset(day=="X7" & value >20 )%>% 
+target <- network_data %>%subset(day=="X60" & value >20 )%>% 
   distinct(Target) %>%
   dplyr::rename(label = Target)
 names(target)
@@ -159,7 +158,7 @@ nodes2 <- merge(nodes, nr.of.patients.per.drug.per.day.X7, by.x = "label", by.y 
 nodes2
 
 # 2. Edge list
-edge.data <- network_data %>%  subset(day=="X7" & value >20 )%>% 
+edge.data <- network_data %>%  subset(day=="X60" & value >20 )%>% 
   group_by(Source, Target) %>%
   dplyr::summarise(weight = value) %>% 
   ungroup()
@@ -202,7 +201,7 @@ g <- tbl_graph(nodes2, edges, directed = FALSE)%>%
   geom_node_point(aes(size = degree),color='red') +
   geom_node_text(aes(#size = n.source, 
                      label = label), repel = TRUE, 
-                 max.overlaps = getOption("ggrepel.max.overlaps", default = 100), family = "Times") +  ggtitle('Day 7')+
+                 max.overlaps = getOption("ggrepel.max.overlaps", default = 100), family = "Times") +  ggtitle('Day 60')+
   theme_graph(title_size = 18,
               title_face = "bold",
               title_margin = 10)
