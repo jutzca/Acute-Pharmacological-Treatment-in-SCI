@@ -1,0 +1,798 @@
+NEWID,Death,Sex,Age,agegroup,AIS,Cause,NLI,NLI_raw,Plegia
+C50,0,Male,19,0-20 yrs,Unknown,Automobile,Cervical,C01,Tetraplegia
+C235,1,Female,69,61+ yrs,AIS A,Automobile,Cervical,C01,Tetraplegia
+C275,0,Male,19,0-20 yrs,Unknown,Motorcycle,Cervical,C01,Tetraplegia
+C315,0,Male,59,41-60 yrs,AIS C,Other sports,Cervical,C01,Tetraplegia
+C04,0,Female,11,0-20 yrs,AIS C,Automobile,Cervical,C02,Tetraplegia
+C22,0,Male,33,21-40 yrs,AIS A,Automobile,Cervical,C02,Tetraplegia
+C39,0,Male,39,21-40 yrs,AIS A,Gun shot wound,Cervical,C02,Tetraplegia
+C92,1,Male,66,61+ yrs,AIS A,Water related,Cervical,C02,Tetraplegia
+C111,0,Male,63,61+ yrs,AIS A,Other sports,Cervical,C02,Tetraplegia
+C137,0,Male,65,61+ yrs,AIS A,Others,Cervical,C02,Tetraplegia
+C216,0,Male,20,0-20 yrs,AIS D,Automobile,Cervical,C02,Tetraplegia
+C299,0,Male,64,61+ yrs,AIS A,Other sports,Cervical,C02,Tetraplegia
+C301,0,Female,53,41-60 yrs,AIS A,Fall,Cervical,C02,Tetraplegia
+C308,1,Male,31,21-40 yrs,AIS A,Automobile,Cervical,C02,Tetraplegia
+C317,0,Male,18,0-20 yrs,AIS C,Automobile,Cervical,C02,Tetraplegia
+C334,0,Male,21,21-40 yrs,AIS A,Fall,Cervical,C02,Tetraplegia
+C352,0,Male,47,41-60 yrs,AIS B,Fall,Cervical,C02,Tetraplegia
+C361,0,Female,22,21-40 yrs,AIS C,Water related,Cervical,C02,Tetraplegia
+C456,0,Male,16,0-20 yrs,AIS C,Automobile,Cervical,C02,Tetraplegia
+C471,0,Male,24,21-40 yrs,AIS C,Automobile,Cervical,C02,Tetraplegia
+C510,0,Male,28,21-40 yrs,AIS A,Others,Cervical,C02,Tetraplegia
+C560,0,Male,37,21-40 yrs,AIS A,Water related,Cervical,C02,Tetraplegia
+C637,0,Male,15,0-20 yrs,AIS A,Automobile,Cervical,C02,Tetraplegia
+C638,0,Male,37,21-40 yrs,Unknown,Other sports,Cervical,C02,Tetraplegia
+C709,0,Male,18,0-20 yrs,AIS C,Automobile,Cervical,C02,Tetraplegia
+C765,0,Male,47,41-60 yrs,AIS D,Others,Cervical,C02,Tetraplegia
+C29,0,Male,60,41-60 yrs,AIS C,Fall,Cervical,C03,Tetraplegia
+C41,0,Male,27,21-40 yrs,AIS A,Automobile,Cervical,C03,Tetraplegia
+C47,0,Male,18,0-20 yrs,AIS B,Automobile,Cervical,C03,Tetraplegia
+C51,0,Female,17,0-20 yrs,AIS C,Automobile,Cervical,C03,Tetraplegia
+C76,0,Male,43,41-60 yrs,AIS A,Blunt trauma,Cervical,C03,Tetraplegia
+C86,0,Male,59,41-60 yrs,AIS C,Others,Cervical,C03,Tetraplegia
+C93,0,Male,42,41-60 yrs,AIS A,Fall,Cervical,C03,Tetraplegia
+C136,0,Male,38,21-40 yrs,AIS A,Fall,Cervical,C03,Tetraplegia
+C155,0,Male,41,41-60 yrs,AIS C,Water related,Cervical,C03,Tetraplegia
+C169,0,Male,23,21-40 yrs,AIS A,Fall,Cervical,C03,Tetraplegia
+C178,0,Male,21,21-40 yrs,AIS A,Motorcycle,Cervical,C03,Tetraplegia
+C184,0,Male,19,0-20 yrs,AIS A,Gun shot wound,Cervical,C03,Tetraplegia
+C190,0,Male,38,21-40 yrs,AIS A,Pedestrian,Cervical,C03,Tetraplegia
+C191,0,Male,60,41-60 yrs,AIS A,Automobile,Cervical,C03,Tetraplegia
+C211,0,Male,18,0-20 yrs,Unknown,Automobile,Cervical,C03,Tetraplegia
+C251,0,Male,22,21-40 yrs,AIS C,Motorcycle,Cervical,C03,Tetraplegia
+C265,0,Male,31,21-40 yrs,AIS A,Gun shot wound,Cervical,C03,Tetraplegia
+C350,0,Female,34,21-40 yrs,AIS A,Automobile,Cervical,C03,Tetraplegia
+C358,0,Male,31,21-40 yrs,AIS A,Motorcycle,Cervical,C03,Tetraplegia
+C360,0,Male,51,41-60 yrs,AIS D,Automobile,Cervical,C03,Tetraplegia
+C395,0,Male,23,21-40 yrs,AIS C,Others,Cervical,C03,Tetraplegia
+C396,0,Male,16,0-20 yrs,AIS C,Automobile,Cervical,C03,Tetraplegia
+C434,0,Male,28,21-40 yrs,AIS A,Fall,Cervical,C03,Tetraplegia
+C451,0,Male,23,21-40 yrs,AIS A,Automobile,Cervical,C03,Tetraplegia
+C462,0,Male,64,61+ yrs,AIS D,Fall,Cervical,C03,Tetraplegia
+C543,1,Male,28,21-40 yrs,AIS A,Water related,Cervical,C03,Tetraplegia
+C544,0,Female,19,0-20 yrs,AIS A,Automobile,Cervical,C03,Tetraplegia
+C558,1,Male,52,41-60 yrs,AIS A,Fall,Cervical,C03,Tetraplegia
+C563,0,Male,37,21-40 yrs,AIS C,Automobile,Cervical,C03,Tetraplegia
+C573,0,Male,63,61+ yrs,AIS A,Fall,Cervical,C03,Tetraplegia
+C580,0,Male,59,41-60 yrs,AIS A,Fall,Cervical,C03,Tetraplegia
+C582,0,Female,54,41-60 yrs,AIS A,Automobile,Cervical,C03,Tetraplegia
+C645,1,Male,69,61+ yrs,AIS C,Automobile,Cervical,C03,Tetraplegia
+C652,0,Female,65,61+ yrs,AIS C,Fall,Cervical,C03,Tetraplegia
+C750,0,Male,29,21-40 yrs,AIS C,Fall,Cervical,C03,Tetraplegia
+C06,0,Male,35,21-40 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C15,0,Female,15,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C16,0,Female,17,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C23,0,Male,49,41-60 yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C26,0,Male,60,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C30,0,Male,66,61+ yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C31,0,Male,22,21-40 yrs,AIS A,Other sports,Cervical,C04,Tetraplegia
+C35,1,Male,18,0-20 yrs,Unknown,Water related,Cervical,C04,Tetraplegia
+C36,0,Male,16,0-20 yrs,AIS C,Water related,Cervical,C04,Tetraplegia
+C44,0,Male,43,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C45,0,Male,49,41-60 yrs,AIS D,Motorcycle,Cervical,C04,Tetraplegia
+C49,0,Male,62,61+ yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C52,0,Female,29,21-40 yrs,AIS D,Automobile,Cervical,C04,Tetraplegia
+C62,0,Male,17,0-20 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C63,0,Male,16,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C64,0,Male,19,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C74,1,Male,43,41-60 yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C75,0,Male,45,41-60 yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C77,1,Female,60,41-60 yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C79,0,Male,57,41-60 yrs,AIS B,Automobile,Cervical,C04,Tetraplegia
+C80,0,Male,38,21-40 yrs,AIS B,Fall,Cervical,C04,Tetraplegia
+C81,0,Male,53,41-60 yrs,AIS B,Fall,Cervical,C04,Tetraplegia
+C83,0,Male,37,21-40 yrs,AIS B,Gun shot wound,Cervical,C04,Tetraplegia
+C84,1,Male,60,41-60 yrs,AIS C,Motorcycle,Cervical,C04,Tetraplegia
+C94,0,Male,20,0-20 yrs,AIS B,Water related,Cervical,C04,Tetraplegia
+C105,0,Male,31,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C110,0,Male,21,21-40 yrs,Unknown,Other sports,Cervical,C04,Tetraplegia
+C117,0,Male,20,0-20 yrs,Unknown,Automobile,Cervical,C04,Tetraplegia
+C118,0,Male,19,0-20 yrs,Unknown,Fall,Cervical,C04,Tetraplegia
+C133,0,Male,39,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C141,1,Male,46,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C158,0,Female,26,21-40 yrs,AIS A,Blunt trauma,Cervical,C04,Tetraplegia
+C159,0,Female,34,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C160,0,Male,35,21-40 yrs,AIS A,Gun shot wound,Cervical,C04,Tetraplegia
+C167,0,Male,26,21-40 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C168,0,Male,41,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C170,0,Male,25,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C185,1,Male,22,21-40 yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C194,0,Male,18,0-20 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C195,0,Male,32,21-40 yrs,AIS B,Automobile,Cervical,C04,Tetraplegia
+C197,0,Male,21,21-40 yrs,AIS B,Others,Cervical,C04,Tetraplegia
+C202,0,Male,14,0-20 yrs,AIS C,Water related,Cervical,C04,Tetraplegia
+C204,0,Male,22,21-40 yrs,AIS B,Automobile,Cervical,C04,Tetraplegia
+C205,0,Male,23,21-40 yrs,AIS B,Other sports,Cervical,C04,Tetraplegia
+C206,0,Male,24,21-40 yrs,AIS D,Water related,Cervical,C04,Tetraplegia
+C208,0,Male,21,21-40 yrs,Unknown,Automobile,Cervical,C04,Tetraplegia
+C209,0,Male,38,21-40 yrs,AIS C,Fall,Cervical,C04,Tetraplegia
+C214,0,Male,40,21-40 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C219,0,Male,49,41-60 yrs,AIS C,Others,Cervical,C04,Tetraplegia
+C230,0,Female,44,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C239,0,Male,29,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C242,0,Male,21,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C243,0,Male,19,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C245,0,Male,15,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C260,0,Male,30,21-40 yrs,Unknown,Automobile,Cervical,C04,Tetraplegia
+C262,0,Male,48,41-60 yrs,AIS B,Automobile,Cervical,C04,Tetraplegia
+C266,0,Male,31,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C270,0,Male,35,21-40 yrs,Unknown,Motorcycle,Cervical,C04,Tetraplegia
+C272,0,Male,50,41-60 yrs,AIS C,Others,Cervical,C04,Tetraplegia
+C276,0,Male,17,0-20 yrs,Unknown,Automobile,Cervical,C04,Tetraplegia
+C277,0,Male,28,21-40 yrs,Unknown,Automobile,Cervical,C04,Tetraplegia
+C304,1,Male,45,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C305,0,Male,21,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C318,0,Female,17,0-20 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C336,0,Male,23,21-40 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C337,0,Male,25,21-40 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C338,0,Male,15,0-20 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C341,0,Female,25,21-40 yrs,AIS C,Blunt trauma,Cervical,C04,Tetraplegia
+C349,0,Male,55,41-60 yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C353,0,Male,45,41-60 yrs,AIS B,Water related,Cervical,C04,Tetraplegia
+C355,1,Male,43,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C357,0,Male,24,21-40 yrs,Unknown,Automobile,Cervical,C04,Tetraplegia
+C368,0,Male,16,0-20 yrs,Unknown,Other sports,Cervical,C04,Tetraplegia
+C369,0,Female,53,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C375,0,Male,43,41-60 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C386,0,Male,25,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C390,0,Male,15,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C391,0,Male,20,0-20 yrs,AIS A,Gun shot wound,Cervical,C04,Tetraplegia
+C408,0,Male,64,61+ yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C413,0,Female,38,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C416,1,Male,39,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C428,0,Male,17,0-20 yrs,AIS A,Gun shot wound,Cervical,C04,Tetraplegia
+C439,0,Female,49,41-60 yrs,Unknown,Automobile,Cervical,C04,Tetraplegia
+C441,0,Female,49,41-60 yrs,AIS C,Fall,Cervical,C04,Tetraplegia
+C443,0,Male,53,41-60 yrs,AIS A,Motorcycle,Cervical,C04,Tetraplegia
+C444,1,Male,43,41-60 yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C450,1,Female,64,61+ yrs,AIS A,Fall,Cervical,C04,Tetraplegia
+C460,0,Male,53,41-60 yrs,AIS C,Fall,Cervical,C04,Tetraplegia
+C461,0,Male,63,61+ yrs,AIS C,Fall,Cervical,C04,Tetraplegia
+C468,0,Male,18,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C474,0,Male,34,21-40 yrs,AIS B,Motorcycle,Cervical,C04,Tetraplegia
+C475,0,Male,60,41-60 yrs,AIS B,Fall,Cervical,C04,Tetraplegia
+C484,0,Male,30,21-40 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C486,0,Male,26,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C487,0,Male,19,0-20 yrs,AIS A,Motorcycle,Cervical,C04,Tetraplegia
+C488,0,Male,33,21-40 yrs,AIS A,Motorcycle,Cervical,C04,Tetraplegia
+C492,0,Male,15,0-20 yrs,AIS A,Other sports,Cervical,C04,Tetraplegia
+C494,0,Male,32,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C498,0,Female,41,41-60 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C523,0,Female,35,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C540,0,Male,32,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C546,0,Male,14,0-20 yrs,Unknown,Water related,Cervical,C04,Tetraplegia
+C549,0,Male,26,21-40 yrs,AIS B,Automobile,Cervical,C04,Tetraplegia
+C557,0,Male,46,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C561,0,Male,40,21-40 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C567,0,Female,46,41-60 yrs,AIS D,Automobile,Cervical,C04,Tetraplegia
+C574,0,Male,17,0-20 yrs,AIS B,Other sports,Cervical,C04,Tetraplegia
+C581,0,Male,46,41-60 yrs,AIS A,Pedestrian,Cervical,C04,Tetraplegia
+C584,1,Male,58,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C591,0,Male,26,21-40 yrs,AIS A,Others,Cervical,C04,Tetraplegia
+C598,0,Male,58,41-60 yrs,AIS A,Others,Cervical,C04,Tetraplegia
+C601,0,Male,35,21-40 yrs,AIS C,Fall,Cervical,C04,Tetraplegia
+C602,1,Male,63,61+ yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C607,0,Male,48,41-60 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C613,1,Male,39,21-40 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C618,0,Male,26,21-40 yrs,Unknown,Motorcycle,Cervical,C04,Tetraplegia
+C621,1,Male,53,41-60 yrs,Unknown,Fall,Cervical,C04,Tetraplegia
+C633,0,Male,17,0-20 yrs,AIS A,Gun shot wound,Cervical,C04,Tetraplegia
+C634,0,Male,41,41-60 yrs,AIS A,Blunt trauma,Cervical,C04,Tetraplegia
+C636,0,Male,41,41-60 yrs,AIS A,Motorcycle,Cervical,C04,Tetraplegia
+C648,0,Male,28,21-40 yrs,Unknown,Fall,Cervical,C04,Tetraplegia
+C651,1,Male,41,41-60 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C668,0,Male,36,21-40 yrs,AIS A,Other sports,Cervical,C04,Tetraplegia
+C672,0,Female,30,21-40 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C678,0,Male,19,0-20 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C692,0,Female,32,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C694,0,Male,60,41-60 yrs,AIS A,Others,Cervical,C04,Tetraplegia
+C696,0,Female,40,21-40 yrs,AIS B,Automobile,Cervical,C04,Tetraplegia
+C702,0,Male,37,21-40 yrs,Unknown,Automobile,Cervical,C04,Tetraplegia
+C706,0,Male,20,0-20 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C713,0,Male,14,0-20 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C723,0,Male,33,21-40 yrs,Unknown,Water related,Cervical,C04,Tetraplegia
+C733,0,Male,15,0-20 yrs,AIS A,Water related,Cervical,C04,Tetraplegia
+C746,1,Male,28,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C747,0,Male,21,21-40 yrs,AIS B,Water related,Cervical,C04,Tetraplegia
+C761,0,Female,45,41-60 yrs,AIS B,Others,Cervical,C04,Tetraplegia
+C767,0,Male,36,21-40 yrs,AIS C,Automobile,Cervical,C04,Tetraplegia
+C788,0,Female,39,21-40 yrs,AIS A,Automobile,Cervical,C04,Tetraplegia
+C02,0,Male,49,41-60 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C14,0,Male,16,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C18,0,Male,18,0-20 yrs,AIS A,Others,Cervical,C05,Tetraplegia
+C24,0,Male,49,41-60 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C25,0,Male,51,41-60 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C34,0,Male,30,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C40,0,Female,31,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C42,0,Female,45,41-60 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C65,0,Male,15,0-20 yrs,AIS A,Other sports,Cervical,C05,Tetraplegia
+C66,1,Male,26,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C67,0,Female,19,0-20 yrs,AIS B,Automobile,Cervical,C05,Tetraplegia
+C73,0,Male,54,41-60 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C82,0,Male,33,21-40 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C85,0,Male,42,41-60 yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C88,0,Male,16,0-20 yrs,AIS C,Water related,Cervical,C05,Tetraplegia
+C96,0,Male,42,41-60 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C97,0,Male,63,61+ yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C104,0,Male,39,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C106,0,Male,20,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C116,0,Male,26,21-40 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C123,0,Male,16,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C125,0,Male,21,21-40 yrs,AIS A,Other sports,Cervical,C05,Tetraplegia
+C135,1,Male,63,61+ yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C143,0,Male,69,61+ yrs,AIS B,Automobile,Cervical,C05,Tetraplegia
+C144,0,Male,50,41-60 yrs,AIS C,Others,Cervical,C05,Tetraplegia
+C148,0,Male,16,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C149,0,Male,18,0-20 yrs,AIS C,Other sports,Cervical,C05,Tetraplegia
+C151,0,Male,31,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C161,0,Male,17,0-20 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C162,0,Male,22,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C164,0,Male,53,41-60 yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C173,0,Male,27,21-40 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C174,0,Male,31,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C175,0,Male,13,0-20 yrs,AIS B,Others,Cervical,C05,Tetraplegia
+C179,0,Male,28,21-40 yrs,Unknown,Water related,Cervical,C05,Tetraplegia
+C183,0,Male,22,21-40 yrs,AIS A,Others,Cervical,C05,Tetraplegia
+C188,0,Male,40,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C189,1,Male,20,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C193,0,Female,30,21-40 yrs,AIS B,Automobile,Cervical,C05,Tetraplegia
+C196,0,Male,19,0-20 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C198,0,Male,22,21-40 yrs,AIS C,Water related,Cervical,C05,Tetraplegia
+C200,0,Male,29,21-40 yrs,Unknown,Water related,Cervical,C05,Tetraplegia
+C203,0,Male,25,21-40 yrs,AIS C,Water related,Cervical,C05,Tetraplegia
+C210,0,Male,27,21-40 yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C212,0,Male,19,0-20 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C213,0,Male,36,21-40 yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C215,0,Male,38,21-40 yrs,AIS C,Others,Cervical,C05,Tetraplegia
+C218,0,Male,58,41-60 yrs,AIS D,Automobile,Cervical,C05,Tetraplegia
+C231,0,Male,39,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C232,0,Male,41,41-60 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C233,0,Male,30,21-40 yrs,Unknown,Motorcycle,Cervical,C05,Tetraplegia
+C238,0,Female,16,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C241,0,Male,17,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C244,0,Male,23,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C249,0,Male,27,21-40 yrs,AIS C,Water related,Cervical,C05,Tetraplegia
+C250,0,Male,19,0-20 yrs,AIS C,Others,Cervical,C05,Tetraplegia
+C252,0,Male,17,0-20 yrs,AIS B,Automobile,Cervical,C05,Tetraplegia
+C263,0,Female,45,41-60 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C269,0,Female,46,41-60 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C282,0,Female,40,21-40 yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C283,0,Male,20,0-20 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C292,0,Male,33,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C300,0,Male,39,21-40 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C303,0,Male,49,41-60 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C306,0,Female,33,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C307,0,Male,26,21-40 yrs,AIS A,Motorcycle,Cervical,C05,Tetraplegia
+C309,0,Male,37,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C310,0,Male,25,21-40 yrs,AIS D,Automobile,Cervical,C05,Tetraplegia
+C311,0,Male,15,0-20 yrs,Unknown,Water related,Cervical,C05,Tetraplegia
+C314,0,Male,64,61+ yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C354,0,Male,33,21-40 yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C370,0,Male,25,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C378,0,Male,29,21-40 yrs,Unknown,Blunt trauma,Cervical,C05,Tetraplegia
+C385,0,Male,18,0-20 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C392,0,Female,18,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C402,0,Male,30,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C407,0,Male,40,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C409,0,Male,50,41-60 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C411,0,Male,29,21-40 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C414,0,Male,40,21-40 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C415,0,Male,33,21-40 yrs,AIS A,Motorcycle,Cervical,C05,Tetraplegia
+C418,1,Male,37,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C419,0,Female,34,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C420,0,Male,54,41-60 yrs,AIS C,Water related,Cervical,C05,Tetraplegia
+C429,0,Male,36,21-40 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C432,0,Male,25,21-40 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C433,0,Male,19,0-20 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C442,0,Female,50,41-60 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C445,0,Male,29,21-40 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C446,0,Female,27,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C448,1,Female,28,21-40 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C470,0,Male,23,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C472,0,Male,22,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C478,0,Male,34,21-40 yrs,AIS D,Others,Cervical,C05,Tetraplegia
+C485,0,Male,34,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C490,0,Male,20,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C491,0,Male,36,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C493,0,Male,24,21-40 yrs,AIS A,Other sports,Cervical,C05,Tetraplegia
+C500,0,Male,38,21-40 yrs,AIS C,Motorcycle,Cervical,C05,Tetraplegia
+C507,0,Male,25,21-40 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C508,0,Male,16,0-20 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C512,0,Male,18,0-20 yrs,AIS C,Water related,Cervical,C05,Tetraplegia
+C514,0,Male,22,21-40 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C518,0,Female,23,21-40 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C519,0,Male,17,0-20 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C521,0,Female,30,21-40 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C528,0,Male,36,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C529,0,Male,35,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C530,0,Male,52,41-60 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C532,0,Male,44,41-60 yrs,AIS B,Others,Cervical,C05,Tetraplegia
+C541,0,Male,24,21-40 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C547,0,Male,20,0-20 yrs,AIS C,Other sports,Cervical,C05,Tetraplegia
+C550,1,Male,27,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C551,0,Male,29,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C559,0,Male,49,41-60 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C564,0,Male,44,41-60 yrs,AIS B,Automobile,Cervical,C05,Tetraplegia
+C565,0,Male,56,41-60 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C566,0,Male,43,41-60 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C575,0,Male,27,21-40 yrs,AIS A,Other sports,Cervical,C05,Tetraplegia
+C576,0,Male,14,0-20 yrs,Unknown,Other sports,Cervical,C05,Tetraplegia
+C577,0,Male,18,0-20 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C588,0,Male,23,21-40 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C589,0,Male,53,41-60 yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C594,0,Female,21,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C603,0,Female,39,21-40 yrs,Unknown,Blunt trauma,Cervical,C05,Tetraplegia
+C604,0,Male,29,21-40 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C605,0,Male,16,0-20 yrs,AIS A,Other sports,Cervical,C05,Tetraplegia
+C608,0,Male,54,41-60 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C609,0,Male,35,21-40 yrs,AIS D,Automobile,Cervical,C05,Tetraplegia
+C611,0,Male,20,0-20 yrs,AIS A,Pedestrian,Cervical,C05,Tetraplegia
+C622,0,Male,16,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C624,0,Male,47,41-60 yrs,Unknown,Fall,Cervical,C05,Tetraplegia
+C628,0,Male,19,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C635,0,Male,15,0-20 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C639,0,Male,25,21-40 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C640,0,Male,23,21-40 yrs,AIS D,Automobile,Cervical,C05,Tetraplegia
+C643,0,Male,57,41-60 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C649,0,Male,61,61+ yrs,AIS D,Automobile,Cervical,C05,Tetraplegia
+C654,0,Male,22,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C658,0,Male,47,41-60 yrs,AIS C,Others,Cervical,C05,Tetraplegia
+C677,0,Male,26,21-40 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C679,0,Male,17,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C680,0,Male,18,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C681,0,Male,20,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C682,0,Male,20,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C691,0,Male,42,41-60 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C698,0,Male,64,61+ yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C701,0,Male,32,21-40 yrs,AIS C,Motorcycle,Cervical,C05,Tetraplegia
+C710,0,Male,28,21-40 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C712,0,Female,42,41-60 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C717,1,Male,23,21-40 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C718,0,Male,21,21-40 yrs,AIS C,Blunt trauma,Cervical,C05,Tetraplegia
+C721,0,Female,50,41-60 yrs,AIS A,Pedestrian,Cervical,C05,Tetraplegia
+C722,0,Male,37,21-40 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C726,0,Male,28,21-40 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C728,0,Male,18,0-20 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C729,0,Male,31,21-40 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C732,0,Female,50,41-60 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C734,0,Female,15,0-20 yrs,AIS A,Others,Cervical,C05,Tetraplegia
+C736,0,Male,66,61+ yrs,AIS B,Fall,Cervical,C05,Tetraplegia
+C737,0,Male,19,0-20 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C738,0,Female,18,0-20 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C744,0,Male,23,21-40 yrs,AIS A,Blunt trauma,Cervical,C05,Tetraplegia
+C745,0,Male,21,21-40 yrs,AIS A,Pedestrian,Cervical,C05,Tetraplegia
+C749,0,Male,23,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C757,0,Male,17,0-20 yrs,AIS A,Fall,Cervical,C05,Tetraplegia
+C762,0,Male,38,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C764,0,Female,35,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C766,0,Male,25,21-40 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C773,0,Female,23,21-40 yrs,AIS A,Water related,Cervical,C05,Tetraplegia
+C777,0,Male,19,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C778,0,Male,25,21-40 yrs,Unknown,Automobile,Cervical,C05,Tetraplegia
+C779,0,Female,17,0-20 yrs,AIS A,Automobile,Cervical,C05,Tetraplegia
+C787,1,Female,34,21-40 yrs,Unknown,Fall,Cervical,C05,Tetraplegia
+C790,0,Female,32,21-40 yrs,AIS B,Water related,Cervical,C05,Tetraplegia
+C791,0,Female,66,61+ yrs,AIS B,Automobile,Cervical,C05,Tetraplegia
+C793,0,Male,57,41-60 yrs,AIS C,Fall,Cervical,C05,Tetraplegia
+C795,0,Male,43,41-60 yrs,AIS C,Automobile,Cervical,C05,Tetraplegia
+C796,0,Male,34,21-40 yrs,AIS D,Water related,Cervical,C05,Tetraplegia
+C03,0,Male,16,0-20 yrs,Unknown,Other sports,Cervical,C06,Tetraplegia
+C17,0,Male,24,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C19,0,Male,29,21-40 yrs,AIS C,Pedestrian,Cervical,C06,Tetraplegia
+C27,0,Male,34,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C32,0,Female,50,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C37,0,Female,29,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C38,0,Male,27,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C43,0,Male,23,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C55,0,Male,24,21-40 yrs,AIS A,Gun shot wound,Cervical,C06,Tetraplegia
+C87,0,Male,49,41-60 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C89,0,Male,22,21-40 yrs,AIS C,Water related,Cervical,C06,Tetraplegia
+C90,0,Female,15,0-20 yrs,AIS C,Fall,Cervical,C06,Tetraplegia
+C108,0,Male,18,0-20 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C109,0,Female,42,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C112,0,Male,24,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C113,0,Male,23,21-40 yrs,Unknown,Other sports,Cervical,C06,Tetraplegia
+C114,0,Male,27,21-40 yrs,AIS A,Water related,Cervical,C06,Tetraplegia
+C115,0,Male,21,21-40 yrs,AIS B,Automobile,Cervical,C06,Tetraplegia
+C119,0,Female,39,21-40 yrs,AIS C,Other sports,Cervical,C06,Tetraplegia
+C124,0,Male,28,21-40 yrs,AIS A,Other sports,Cervical,C06,Tetraplegia
+C126,0,Male,17,0-20 yrs,Unknown,Other sports,Cervical,C06,Tetraplegia
+C127,0,Male,26,21-40 yrs,AIS D,Other sports,Cervical,C06,Tetraplegia
+C132,0,Male,15,0-20 yrs,Unknown,Other sports,Cervical,C06,Tetraplegia
+C138,0,Male,49,41-60 yrs,AIS A,Others,Cervical,C06,Tetraplegia
+C140,0,Female,27,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C142,0,Female,38,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C150,0,Male,30,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C152,0,Male,67,61+ yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C153,0,Male,30,21-40 yrs,AIS C,Others,Cervical,C06,Tetraplegia
+C172,0,Male,25,21-40 yrs,AIS A,Fall,Cervical,C06,Tetraplegia
+C176,0,Male,29,21-40 yrs,AIS A,Fall,Cervical,C06,Tetraplegia
+C177,0,Male,25,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C180,0,Male,35,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C181,0,Male,26,21-40 yrs,AIS A,Others,Cervical,C06,Tetraplegia
+C187,0,Male,30,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C192,0,Male,29,21-40 yrs,AIS B,Fall,Cervical,C06,Tetraplegia
+C199,0,Male,26,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C201,0,Female,18,0-20 yrs,AIS B,Automobile,Cervical,C06,Tetraplegia
+C207,1,Male,37,21-40 yrs,AIS C,Fall,Cervical,C06,Tetraplegia
+C217,0,Female,39,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C229,0,Male,30,21-40 yrs,AIS A,Fall,Cervical,C06,Tetraplegia
+C234,0,Male,39,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C236,0,Female,32,21-40 yrs,AIS B,Water related,Cervical,C06,Tetraplegia
+C237,0,Male,28,21-40 yrs,AIS A,Water related,Cervical,C06,Tetraplegia
+C248,0,Male,24,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C258,0,Female,32,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C259,0,Male,37,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C261,0,Male,32,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C264,0,Female,31,21-40 yrs,AIS B,Pedestrian,Cervical,C06,Tetraplegia
+C267,0,Male,42,41-60 yrs,AIS B,Automobile,Cervical,C06,Tetraplegia
+C271,0,Female,49,41-60 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C281,0,Female,64,61+ yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C291,0,Male,22,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C294,0,Female,59,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C302,0,Female,31,21-40 yrs,AIS A,Gun shot wound,Cervical,C06,Tetraplegia
+C312,0,Male,22,21-40 yrs,AIS B,Water related,Cervical,C06,Tetraplegia
+C316,0,Male,31,21-40 yrs,AIS D,Water related,Cervical,C06,Tetraplegia
+C335,0,Male,21,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C340,0,Female,15,0-20 yrs,Unknown,Water related,Cervical,C06,Tetraplegia
+C356,0,Male,16,0-20 yrs,Unknown,Automobile,Cervical,C06,Tetraplegia
+C367,0,Female,22,21-40 yrs,Unknown,Automobile,Cervical,C06,Tetraplegia
+C377,0,Male,38,21-40 yrs,AIS C,Motorcycle,Cervical,C06,Tetraplegia
+C387,0,Male,25,21-40 yrs,AIS A,Other sports,Cervical,C06,Tetraplegia
+C388,0,Female,16,0-20 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C403,0,Female,51,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C404,0,Male,30,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C405,0,Female,43,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C406,0,Male,42,41-60 yrs,AIS A,Others,Cervical,C06,Tetraplegia
+C410,0,Male,30,21-40 yrs,AIS A,Others,Cervical,C06,Tetraplegia
+C412,0,Male,31,21-40 yrs,AIS A,Fall,Cervical,C06,Tetraplegia
+C417,0,Male,31,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C430,0,Male,17,0-20 yrs,AIS C,Others,Cervical,C06,Tetraplegia
+C431,0,Male,22,21-40 yrs,AIS D,Automobile,Cervical,C06,Tetraplegia
+C437,0,Male,37,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C438,0,Male,52,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C440,0,Male,34,21-40 yrs,AIS D,Motorcycle,Cervical,C06,Tetraplegia
+C447,0,Male,35,21-40 yrs,AIS B,Fall,Cervical,C06,Tetraplegia
+C452,0,Male,41,41-60 yrs,Unknown,Automobile,Cervical,C06,Tetraplegia
+C455,0,Male,67,61+ yrs,AIS C,Water related,Cervical,C06,Tetraplegia
+C458,0,Female,41,41-60 yrs,AIS D,Automobile,Cervical,C06,Tetraplegia
+C467,0,Male,24,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C469,0,Female,24,21-40 yrs,AIS B,Others,Cervical,C06,Tetraplegia
+C473,0,Male,29,21-40 yrs,AIS A,Water related,Cervical,C06,Tetraplegia
+C476,0,Male,37,21-40 yrs,AIS B,Water related,Cervical,C06,Tetraplegia
+C477,0,Male,64,61+ yrs,AIS B,Fall,Cervical,C06,Tetraplegia
+C479,0,Male,41,41-60 yrs,AIS C,Others,Cervical,C06,Tetraplegia
+C489,0,Male,19,0-20 yrs,AIS A,Water related,Cervical,C06,Tetraplegia
+C496,0,Female,36,21-40 yrs,AIS B,Automobile,Cervical,C06,Tetraplegia
+C497,0,Male,38,21-40 yrs,AIS A,Others,Cervical,C06,Tetraplegia
+C499,0,Male,22,21-40 yrs,AIS C,Water related,Cervical,C06,Tetraplegia
+C509,0,Female,24,21-40 yrs,AIS B,Automobile,Cervical,C06,Tetraplegia
+C511,0,Male,16,0-20 yrs,AIS A,Other sports,Cervical,C06,Tetraplegia
+C515,0,Female,47,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C524,0,Female,33,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C525,0,Male,36,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C527,0,Female,34,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C533,0,Female,38,21-40 yrs,AIS A,Others,Cervical,C06,Tetraplegia
+C542,0,Male,16,0-20 yrs,AIS A,Water related,Cervical,C06,Tetraplegia
+C548,0,Male,23,21-40 yrs,AIS B,Others,Cervical,C06,Tetraplegia
+C583,0,Male,48,41-60 yrs,AIS A,Fall,Cervical,C06,Tetraplegia
+C585,0,Male,55,41-60 yrs,Unknown,Automobile,Cervical,C06,Tetraplegia
+C586,0,Male,46,41-60 yrs,AIS C,Fall,Cervical,C06,Tetraplegia
+C592,0,Male,21,21-40 yrs,AIS B,Water related,Cervical,C06,Tetraplegia
+C593,0,Male,21,21-40 yrs,Unknown,Gun shot wound,Cervical,C06,Tetraplegia
+C600,0,Male,60,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C610,0,Male,47,41-60 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C616,0,Male,22,21-40 yrs,AIS A,Fall,Cervical,C06,Tetraplegia
+C617,0,Female,24,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C623,0,Female,43,41-60 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C630,0,Male,19,0-20 yrs,AIS A,Gun shot wound,Cervical,C06,Tetraplegia
+C632,0,Male,38,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C642,0,Female,67,61+ yrs,AIS D,Automobile,Cervical,C06,Tetraplegia
+C644,0,Female,21,21-40 yrs,AIS D,Automobile,Cervical,C06,Tetraplegia
+C647,0,Male,56,41-60 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C655,0,Male,28,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C656,0,Female,18,0-20 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C663,0,Male,34,21-40 yrs,Unknown,Water related,Cervical,C06,Tetraplegia
+C664,0,Male,28,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C665,0,Male,32,21-40 yrs,AIS A,Motorcycle,Cervical,C06,Tetraplegia
+C666,1,Male,35,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C667,0,Male,36,21-40 yrs,AIS C,Water related,Cervical,C06,Tetraplegia
+C670,0,Male,52,41-60 yrs,AIS C,Fall,Cervical,C06,Tetraplegia
+C671,0,Female,42,41-60 yrs,AIS B,Fall,Cervical,C06,Tetraplegia
+C683,0,Female,22,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C684,0,Male,21,21-40 yrs,AIS B,Automobile,Cervical,C06,Tetraplegia
+C690,0,Male,53,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C697,0,Male,31,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C700,0,Female,30,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C707,0,Female,16,0-20 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C715,0,Male,16,0-20 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C719,0,Male,22,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C725,0,Male,50,41-60 yrs,AIS A,Fall,Cervical,C06,Tetraplegia
+C727,0,Male,35,21-40 yrs,AIS A,Water related,Cervical,C06,Tetraplegia
+C731,0,Female,21,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C748,0,Female,45,41-60 yrs,AIS B,Automobile,Cervical,C06,Tetraplegia
+C751,0,Male,55,41-60 yrs,AIS C,Fall,Cervical,C06,Tetraplegia
+C756,0,Male,16,0-20 yrs,AIS A,Gun shot wound,Cervical,C06,Tetraplegia
+C763,0,Male,39,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C774,0,Male,23,21-40 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C781,0,Male,29,21-40 yrs,AIS B,Fall,Cervical,C06,Tetraplegia
+C785,0,Male,37,21-40 yrs,AIS A,Pedestrian,Cervical,C06,Tetraplegia
+C786,0,Male,51,41-60 yrs,AIS A,Automobile,Cervical,C06,Tetraplegia
+C789,0,Male,42,41-60 yrs,AIS A,Fall,Cervical,C06,Tetraplegia
+C792,0,Male,39,21-40 yrs,AIS C,Fall,Cervical,C06,Tetraplegia
+C794,0,Female,39,21-40 yrs,AIS C,Automobile,Cervical,C06,Tetraplegia
+C797,0,Male,57,41-60 yrs,AIS C,Fall,Cervical,C06,Tetraplegia
+C05,1,Male,31,21-40 yrs,AIS B,Water related,Cervical,C07,Tetraplegia
+C07,0,Male,51,41-60 yrs,AIS C,Others,Cervical,C07,Tetraplegia
+C33,0,Male,18,0-20 yrs,AIS A,Water related,Cervical,C07,Tetraplegia
+C46,0,Male,38,21-40 yrs,AIS B,Automobile,Cervical,C07,Tetraplegia
+C48,0,Male,26,21-40 yrs,AIS C,Gun shot wound,Cervical,C07,Tetraplegia
+C78,0,Male,34,21-40 yrs,AIS B,Automobile,Cervical,C07,Tetraplegia
+C91,0,Male,17,0-20 yrs,AIS D,Water related,Cervical,C07,Tetraplegia
+C95,0,Male,35,21-40 yrs,Unknown,Others,Cervical,C07,Tetraplegia
+C107,0,Male,22,21-40 yrs,AIS A,Fall,Cervical,C07,Tetraplegia
+C134,0,Male,56,41-60 yrs,AIS A,Fall,Cervical,C07,Tetraplegia
+C154,0,Male,47,41-60 yrs,Unknown,Automobile,Cervical,C07,Tetraplegia
+C163,0,Male,54,41-60 yrs,AIS C,Fall,Cervical,C07,Tetraplegia
+C171,0,Male,18,0-20 yrs,AIS A,Fall,Cervical,C07,Tetraplegia
+C182,1,Male,60,41-60 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C240,0,Male,17,0-20 yrs,Unknown,Automobile,Cervical,C07,Tetraplegia
+C246,0,Female,24,21-40 yrs,AIS B,Fall,Cervical,C07,Tetraplegia
+C268,0,Male,38,21-40 yrs,AIS C,Automobile,Cervical,C07,Tetraplegia
+C273,0,Male,56,41-60 yrs,AIS C,Fall,Cervical,C07,Tetraplegia
+C279,0,Female,17,0-20 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C280,0,Male,34,21-40 yrs,AIS A,Fall,Cervical,C07,Tetraplegia
+C293,0,Male,28,21-40 yrs,AIS A,Water related,Cervical,C07,Tetraplegia
+C313,0,Female,37,21-40 yrs,AIS B,Automobile,Cervical,C07,Tetraplegia
+C348,0,Female,58,41-60 yrs,AIS C,Automobile,Cervical,C07,Tetraplegia
+C351,0,Male,38,21-40 yrs,AIS B,Fall,Cervical,C07,Tetraplegia
+C371,1,Female,37,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C374,1,Male,46,41-60 yrs,AIS A,Gun shot wound,Cervical,C07,Tetraplegia
+C376,0,Male,30,21-40 yrs,AIS D,Automobile,Cervical,C07,Tetraplegia
+C389,0,Male,25,21-40 yrs,AIS A,Motorcycle,Cervical,C07,Tetraplegia
+C394,0,Male,21,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C435,0,Female,20,0-20 yrs,AIS C,Automobile,Cervical,C07,Tetraplegia
+C449,0,Male,25,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C453,0,Male,66,61+ yrs,AIS B,Fall,Cervical,C07,Tetraplegia
+C454,0,Female,24,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C457,0,Female,58,41-60 yrs,AIS C,Automobile,Cervical,C07,Tetraplegia
+C459,0,Male,25,21-40 yrs,AIS D,Motorcycle,Cervical,C07,Tetraplegia
+C516,0,Male,18,0-20 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C517,0,Male,21,21-40 yrs,AIS A,Water related,Cervical,C07,Tetraplegia
+C522,0,Male,60,41-60 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C526,0,Male,51,41-60 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C531,0,Female,38,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C534,0,Female,35,21-40 yrs,AIS C,Automobile,Cervical,C07,Tetraplegia
+C537,0,Male,64,61+ yrs,AIS C,Automobile,Cervical,C07,Tetraplegia
+C545,0,Male,18,0-20 yrs,AIS C,Automobile,Cervical,C07,Tetraplegia
+C555,0,Male,24,21-40 yrs,AIS C,Automobile,Cervical,C07,Tetraplegia
+C578,0,Male,26,21-40 yrs,Unknown,Automobile,Cervical,C07,Tetraplegia
+C587,0,Male,34,21-40 yrs,AIS C,Water related,Cervical,C07,Tetraplegia
+C599,0,Female,35,21-40 yrs,AIS A,Water related,Cervical,C07,Tetraplegia
+C612,0,Male,48,41-60 yrs,AIS A,Water related,Cervical,C07,Tetraplegia
+C629,1,Male,43,41-60 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C631,0,Male,35,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C641,0,Male,32,21-40 yrs,AIS B,Others,Cervical,C07,Tetraplegia
+C646,0,Male,33,21-40 yrs,Unknown,Automobile,Cervical,C07,Tetraplegia
+C650,0,Male,33,21-40 yrs,AIS D,Fall,Cervical,C07,Tetraplegia
+C653,0,Male,29,21-40 yrs,AIS D,Other sports,Cervical,C07,Tetraplegia
+C657,0,Male,34,21-40 yrs,Unknown,Others,Cervical,C07,Tetraplegia
+C662,0,Male,29,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C669,0,Male,33,21-40 yrs,AIS B,Fall,Cervical,C07,Tetraplegia
+C693,0,Male,43,41-60 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C695,0,Female,43,41-60 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C699,0,Female,32,21-40 yrs,AIS B,Automobile,Cervical,C07,Tetraplegia
+C705,0,Male,36,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C708,0,Male,19,0-20 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C711,0,Male,36,21-40 yrs,Unknown,Fall,Cervical,C07,Tetraplegia
+C716,0,Female,18,0-20 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C735,0,Male,42,41-60 yrs,AIS A,Fall,Cervical,C07,Tetraplegia
+C739,0,Male,37,21-40 yrs,AIS B,Automobile,Cervical,C07,Tetraplegia
+C754,0,Male,23,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C755,0,Male,29,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C760,0,Female,31,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C775,0,Female,18,0-20 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C776,1,Male,25,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C780,0,Male,23,21-40 yrs,AIS A,Automobile,Cervical,C07,Tetraplegia
+C247,0,Male,22,21-40 yrs,AIS B,Automobile,Cervical,C08,Tetraplegia
+C274,0,Male,28,21-40 yrs,AIS A,Water related,Cervical,C08,Tetraplegia
+C730,0,Male,26,21-40 yrs,AIS A,Water related,Cervical,C08,Tetraplegia
+C319,0,Male,17,0-20 yrs,AIS A,Others,Thoracic,T01,Tetraplegia
+C332,0,Male,20,0-20 yrs,AIS C,Fall,Thoracic,T01,Tetraplegia
+C373,0,Male,41,41-60 yrs,AIS D,Gun shot wound,Thoracic,T01,Tetraplegia
+C427,0,Male,26,21-40 yrs,AIS A,Others,Thoracic,T01,Tetraplegia
+C464,0,Female,62,61+ yrs,AIS A,Water related,Thoracic,T01,Tetraplegia
+C660,0,Male,39,21-40 yrs,AIS A,Fall,Thoracic,T01,Tetraplegia
+C740,0,Male,37,21-40 yrs,AIS C,Others,Thoracic,T01,Tetraplegia
+C57,0,Female,45,41-60 yrs,AIS A,Automobile,Thoracic,T02,Paraplegia
+C69,0,Female,23,21-40 yrs,AIS A,Automobile,Thoracic,T02,Paraplegia
+C130,0,Male,17,0-20 yrs,AIS A,Other sports,Thoracic,T02,Paraplegia
+C225,0,Male,40,21-40 yrs,AIS A,Gun shot wound,Thoracic,T02,Paraplegia
+C331,0,Male,30,21-40 yrs,AIS C,Automobile,Thoracic,T02,Paraplegia
+C422,0,Male,21,21-40 yrs,AIS A,Gun shot wound,Thoracic,T02,Paraplegia
+C465,0,Female,40,21-40 yrs,AIS A,Automobile,Thoracic,T02,Paraplegia
+C466,0,Male,20,0-20 yrs,AIS A,Automobile,Thoracic,T02,Paraplegia
+C504,0,Male,26,21-40 yrs,AIS A,Automobile,Thoracic,T02,Paraplegia
+C619,0,Male,20,0-20 yrs,Unknown,Motorcycle,Thoracic,T02,Paraplegia
+C56,0,Male,48,41-60 yrs,AIS A,Others,Thoracic,T03,Paraplegia
+C186,0,Male,44,41-60 yrs,AIS B,Others,Thoracic,T03,Paraplegia
+C253,0,Male,18,0-20 yrs,AIS A,Fall,Thoracic,T03,Paraplegia
+C255,0,Female,24,21-40 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C289,0,Male,20,0-20 yrs,Unknown,Motorcycle,Thoracic,T03,Paraplegia
+C297,0,Male,51,41-60 yrs,AIS A,Fall,Thoracic,T03,Paraplegia
+C347,0,Female,28,21-40 yrs,AIS C,Automobile,Thoracic,T03,Paraplegia
+C359,0,Male,21,21-40 yrs,Unknown,Automobile,Thoracic,T03,Paraplegia
+C363,0,Male,29,21-40 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C383,0,Male,21,21-40 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C463,0,Female,17,0-20 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C480,0,Male,34,21-40 yrs,AIS A,Motorcycle,Thoracic,T03,Paraplegia
+C513,0,Male,17,0-20 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C553,0,Male,20,0-20 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C595,1,Male,27,21-40 yrs,AIS A,Gun shot wound,Thoracic,T03,Paraplegia
+C673,0,Male,19,0-20 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C674,0,Male,39,21-40 yrs,AIS A,Fall,Thoracic,T03,Paraplegia
+C689,0,Female,16,0-20 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C770,0,Male,39,21-40 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C784,0,Female,25,21-40 yrs,AIS A,Automobile,Thoracic,T03,Paraplegia
+C09,0,Male,61,61+ yrs,AIS A,Fall,Thoracic,T04,Paraplegia
+C20,0,Male,20,0-20 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C28,0,Female,32,21-40 yrs,AIS D,Others,Thoracic,T04,Paraplegia
+C59,0,Male,20,0-20 yrs,AIS A,Automobile,Thoracic,T04,Paraplegia
+C68,0,Male,26,21-40 yrs,AIS A,Gun shot wound,Thoracic,T04,Paraplegia
+C71,0,Male,27,21-40 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C99,0,Male,27,21-40 yrs,AIS A,Automobile,Thoracic,T04,Paraplegia
+C131,0,Male,17,0-20 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C157,0,Male,35,21-40 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C166,0,Male,30,21-40 yrs,Unknown,Fall,Thoracic,T04,Paraplegia
+C285,0,Male,17,0-20 yrs,AIS A,Gun shot wound,Thoracic,T04,Paraplegia
+C288,0,Male,16,0-20 yrs,AIS A,Gun shot wound,Thoracic,T04,Paraplegia
+C295,0,Male,41,41-60 yrs,AIS A,Automobile,Thoracic,T04,Paraplegia
+C296,0,Female,47,41-60 yrs,AIS A,Fall,Thoracic,T04,Paraplegia
+C320,0,Male,44,41-60 yrs,Unknown,Automobile,Thoracic,T04,Paraplegia
+C323,0,Male,19,0-20 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C325,1,Female,34,21-40 yrs,AIS A,Others,Thoracic,T04,Paraplegia
+C330,0,Female,47,41-60 yrs,AIS A,Fall,Thoracic,T04,Paraplegia
+C333,0,Male,25,21-40 yrs,AIS C,Other sports,Thoracic,T04,Paraplegia
+C339,0,Male,28,21-40 yrs,AIS C,Motorcycle,Thoracic,T04,Paraplegia
+C345,0,Male,21,21-40 yrs,Unknown,Automobile,Thoracic,T04,Paraplegia
+C380,0,Male,20,0-20 yrs,AIS A,Automobile,Thoracic,T04,Paraplegia
+C381,0,Male,30,21-40 yrs,AIS A,Gun shot wound,Thoracic,T04,Paraplegia
+C384,0,Male,44,41-60 yrs,AIS C,Gun shot wound,Thoracic,T04,Paraplegia
+C425,0,Male,25,21-40 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C436,0,Male,17,0-20 yrs,Unknown,Automobile,Thoracic,T04,Paraplegia
+C481,0,Male,37,21-40 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C552,0,Female,26,21-40 yrs,Unknown,Automobile,Thoracic,T04,Paraplegia
+C569,0,Male,39,21-40 yrs,Unknown,Others,Thoracic,T04,Paraplegia
+C571,0,Female,48,41-60 yrs,Unknown,Automobile,Thoracic,T04,Paraplegia
+C661,0,Male,44,41-60 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C688,0,Male,18,0-20 yrs,AIS A,Automobile,Thoracic,T04,Paraplegia
+C703,0,Male,40,21-40 yrs,AIS A,Motorcycle,Thoracic,T04,Paraplegia
+C714,0,Female,17,0-20 yrs,AIS A,Automobile,Thoracic,T04,Paraplegia
+C742,0,Female,32,21-40 yrs,AIS A,Automobile,Thoracic,T04,Paraplegia
+C58,0,Male,48,41-60 yrs,AIS A,Others,Thoracic,T05,Paraplegia
+C60,0,Male,24,21-40 yrs,AIS A,Others,Thoracic,T05,Paraplegia
+C70,0,Male,20,0-20 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C100,0,Male,43,41-60 yrs,AIS A,Fall,Thoracic,T05,Paraplegia
+C122,0,Male,17,0-20 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C145,0,Male,13,0-20 yrs,AIS A,Others,Thoracic,T05,Paraplegia
+C222,0,Male,38,21-40 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C224,0,Male,25,21-40 yrs,AIS A,Gun shot wound,Thoracic,T05,Paraplegia
+C254,0,Male,24,21-40 yrs,Unknown,Automobile,Thoracic,T05,Paraplegia
+C257,0,Female,17,0-20 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C343,0,Male,21,21-40 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C364,0,Male,32,21-40 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C366,0,Female,33,21-40 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C382,0,Male,26,21-40 yrs,AIS A,Gun shot wound,Thoracic,T05,Paraplegia
+C393,0,Male,16,0-20 yrs,AIS B,Gun shot wound,Thoracic,T05,Paraplegia
+C398,0,Male,21,21-40 yrs,AIS A,Motorcycle,Thoracic,T05,Paraplegia
+C483,0,Male,44,41-60 yrs,AIS A,Motorcycle,Thoracic,T05,Paraplegia
+C502,0,Male,31,21-40 yrs,AIS A,Motorcycle,Thoracic,T05,Paraplegia
+C505,0,Male,26,21-40 yrs,AIS A,Fall,Thoracic,T05,Paraplegia
+C536,0,Female,37,21-40 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C570,0,Male,41,41-60 yrs,Unknown,Motorcycle,Thoracic,T05,Paraplegia
+C579,0,Female,23,21-40 yrs,AIS A,Fall,Thoracic,T05,Paraplegia
+C614,1,Male,37,21-40 yrs,AIS A,Others,Thoracic,T05,Paraplegia
+C620,0,Male,17,0-20 yrs,AIS B,Fall,Thoracic,T05,Paraplegia
+C625,0,Male,27,21-40 yrs,AIS C,Motorcycle,Thoracic,T05,Paraplegia
+C626,0,Male,17,0-20 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C676,0,Male,29,21-40 yrs,AIS B,Automobile,Thoracic,T05,Paraplegia
+C743,0,Male,17,0-20 yrs,AIS A,Other sports,Thoracic,T05,Paraplegia
+C752,0,Male,36,21-40 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C768,0,Male,21,21-40 yrs,AIS A,Automobile,Thoracic,T05,Paraplegia
+C771,0,Female,32,21-40 yrs,AIS D,Automobile,Thoracic,T05,Paraplegia
+C53,0,Male,28,21-40 yrs,AIS A,Motorcycle,Thoracic,T06,Paraplegia
+C156,0,Male,38,21-40 yrs,AIS A,Automobile,Thoracic,T06,Paraplegia
+C321,0,Male,25,21-40 yrs,AIS A,Other sports,Thoracic,T06,Paraplegia
+C322,0,Male,31,21-40 yrs,AIS A,Others,Thoracic,T06,Paraplegia
+C329,0,Male,32,21-40 yrs,AIS A,Other sports,Thoracic,T06,Paraplegia
+C344,0,Female,28,21-40 yrs,AIS A,Gun shot wound,Thoracic,T06,Paraplegia
+C365,0,Male,33,21-40 yrs,AIS A,Blunt trauma,Thoracic,T06,Paraplegia
+C379,0,Male,38,21-40 yrs,AIS A,Fall,Thoracic,T06,Paraplegia
+C424,0,Male,17,0-20 yrs,AIS A,Fall,Thoracic,T06,Paraplegia
+C495,0,Male,54,41-60 yrs,AIS C,Motorcycle,Thoracic,T06,Paraplegia
+C535,0,Male,38,21-40 yrs,AIS A,Fall,Thoracic,T06,Paraplegia
+C590,0,Male,40,21-40 yrs,AIS A,Fall,Thoracic,T06,Paraplegia
+C659,0,Female,40,21-40 yrs,AIS A,Automobile,Thoracic,T06,Paraplegia
+C11,0,Male,33,21-40 yrs,AIS A,Motorcycle,Thoracic,T07,Paraplegia
+C61,0,Male,28,21-40 yrs,AIS B,Automobile,Thoracic,T07,Paraplegia
+C120,0,Male,39,21-40 yrs,AIS A,Automobile,Thoracic,T07,Paraplegia
+C128,0,Female,18,0-20 yrs,AIS A,Fall,Thoracic,T07,Paraplegia
+C146,0,Male,47,41-60 yrs,Unknown,Automobile,Thoracic,T07,Paraplegia
+C165,0,Male,48,41-60 yrs,AIS B,Gun shot wound,Thoracic,T07,Paraplegia
+C221,0,Male,28,21-40 yrs,Unknown,Others,Thoracic,T07,Paraplegia
+C227,0,Male,40,21-40 yrs,AIS A,Automobile,Thoracic,T07,Paraplegia
+C228,0,Male,40,21-40 yrs,Unknown,Others,Thoracic,T07,Paraplegia
+C256,0,Male,24,21-40 yrs,AIS A,Automobile,Thoracic,T07,Paraplegia
+C290,0,Male,51,41-60 yrs,AIS A,Gun shot wound,Thoracic,T07,Paraplegia
+C342,0,Female,16,0-20 yrs,AIS A,Automobile,Thoracic,T07,Paraplegia
+C397,0,Male,16,0-20 yrs,Unknown,Automobile,Thoracic,T07,Paraplegia
+C399,0,Male,26,21-40 yrs,AIS A,Gun shot wound,Thoracic,T07,Paraplegia
+C501,0,Female,44,41-60 yrs,AIS A,Others,Thoracic,T07,Paraplegia
+C503,0,Male,20,0-20 yrs,AIS A,Automobile,Thoracic,T07,Paraplegia
+C520,0,Male,23,21-40 yrs,AIS A,Automobile,Thoracic,T07,Paraplegia
+C562,0,Female,46,41-60 yrs,Unknown,Automobile,Thoracic,T07,Paraplegia
+C596,0,Male,29,21-40 yrs,AIS A,Automobile,Thoracic,T07,Paraplegia
+C597,0,Male,21,21-40 yrs,AIS C,Gun shot wound,Thoracic,T07,Paraplegia
+C759,0,Male,30,21-40 yrs,AIS D,Others,Thoracic,T07,Paraplegia
+C782,0,Male,19,0-20 yrs,AIS A,Automobile,Thoracic,T07,Paraplegia
+C08,0,Male,16,0-20 yrs,AIS A,Automobile,Thoracic,T08,Paraplegia
+C12,1,Male,49,41-60 yrs,AIS A,Fall,Thoracic,T08,Paraplegia
+C98,0,Male,32,21-40 yrs,AIS A,Fall,Thoracic,T08,Paraplegia
+C102,0,Male,16,0-20 yrs,AIS A,Automobile,Thoracic,T08,Paraplegia
+C129,0,Male,19,0-20 yrs,AIS A,Others,Thoracic,T08,Paraplegia
+C223,0,Male,20,0-20 yrs,AIS A,Automobile,Thoracic,T08,Paraplegia
+C226,0,Male,46,41-60 yrs,AIS A,Fall,Thoracic,T08,Paraplegia
+C286,0,Male,29,21-40 yrs,Unknown,Automobile,Thoracic,T08,Paraplegia
+C326,1,Male,14,0-20 yrs,AIS A,Fall,Thoracic,T08,Paraplegia
+C346,0,Male,19,0-20 yrs,AIS C,Automobile,Thoracic,T08,Paraplegia
+C426,0,Male,23,21-40 yrs,AIS A,Fall,Thoracic,T08,Paraplegia
+C482,0,Male,31,21-40 yrs,AIS A,Motorcycle,Thoracic,T08,Paraplegia
+C539,0,Male,44,41-60 yrs,AIS C,Automobile,Thoracic,T08,Paraplegia
+C568,0,Male,41,41-60 yrs,AIS A,Fall,Thoracic,T08,Paraplegia
+C687,0,Male,16,0-20 yrs,AIS A,Motorcycle,Thoracic,T08,Paraplegia
+C720,0,Male,15,0-20 yrs,AIS A,Automobile,Thoracic,T08,Paraplegia
+C724,0,Male,64,61+ yrs,Unknown,Fall,Thoracic,T08,Paraplegia
+C758,1,Male,32,21-40 yrs,AIS C,Fall,Thoracic,T08,Paraplegia
+C772,0,Male,48,41-60 yrs,AIS C,Fall,Thoracic,T08,Paraplegia
+C72,0,Male,13,0-20 yrs,AIS A,Others,Thoracic,T09,Paraplegia
+C103,0,Male,17,0-20 yrs,Unknown,Pedestrian,Thoracic,T09,Paraplegia
+C147,0,Female,28,21-40 yrs,AIS A,Automobile,Thoracic,T09,Paraplegia
+C220,0,Female,19,0-20 yrs,AIS A,Automobile,Thoracic,T09,Paraplegia
+C324,0,Female,18,0-20 yrs,AIS A,Automobile,Thoracic,T09,Paraplegia
+C362,0,Male,39,21-40 yrs,AIS A,Motorcycle,Thoracic,T09,Paraplegia
+C372,0,Male,39,21-40 yrs,Unknown,Automobile,Thoracic,T09,Paraplegia
+C572,0,Male,30,21-40 yrs,Unknown,Automobile,Thoracic,T09,Paraplegia
+C606,0,Male,24,21-40 yrs,AIS A,Fall,Thoracic,T09,Paraplegia
+C675,0,Male,24,21-40 yrs,Unknown,Pedestrian,Thoracic,T09,Paraplegia
+C704,0,Male,45,41-60 yrs,AIS A,Others,Thoracic,T09,Paraplegia
+C783,0,Male,20,0-20 yrs,AIS A,Automobile,Thoracic,T09,Paraplegia
+C21,0,Male,16,0-20 yrs,AIS A,Others,Thoracic,T10,Paraplegia
+C54,0,Female,27,21-40 yrs,AIS A,Automobile,Thoracic,T10,Paraplegia
+C101,0,Male,31,21-40 yrs,Unknown,Fall,Thoracic,T10,Paraplegia
+C121,0,Male,49,41-60 yrs,AIS A,Fall,Thoracic,T10,Paraplegia
+C139,0,Female,46,41-60 yrs,AIS A,Fall,Thoracic,T10,Paraplegia
+C287,0,Male,25,21-40 yrs,Unknown,Gun shot wound,Thoracic,T10,Paraplegia
+C298,0,Male,40,21-40 yrs,Unknown,Fall,Thoracic,T10,Paraplegia
+C327,0,Male,30,21-40 yrs,AIS A,Fall,Thoracic,T10,Paraplegia
+C328,0,Male,16,0-20 yrs,AIS A,Other sports,Thoracic,T10,Paraplegia
+C400,0,Male,20,0-20 yrs,AIS A,Gun shot wound,Thoracic,T10,Paraplegia
+C421,0,Male,37,21-40 yrs,AIS A,Automobile,Thoracic,T10,Paraplegia
+C423,0,Male,17,0-20 yrs,AIS A,Gun shot wound,Thoracic,T10,Paraplegia
+C538,0,Male,37,21-40 yrs,AIS B,Gun shot wound,Thoracic,T10,Paraplegia
+C556,0,Male,17,0-20 yrs,AIS C,Automobile,Thoracic,T10,Paraplegia
+C615,0,Male,34,21-40 yrs,Unknown,Others,Thoracic,T10,Paraplegia
+C627,0,Female,33,21-40 yrs,Unknown,Automobile,Thoracic,T10,Paraplegia
+C685,0,Male,19,0-20 yrs,AIS A,Automobile,Thoracic,T10,Paraplegia
+C686,0,Male,21,21-40 yrs,AIS A,Automobile,Thoracic,T10,Paraplegia
+C741,0,Male,26,21-40 yrs,AIS A,Others,Thoracic,T10,Paraplegia
+C769,0,Male,26,21-40 yrs,AIS A,Automobile,Thoracic,T10,Paraplegia
+C01,0,Female,45,41-60 yrs,AIS A,Automobile,Thoracic,T11,Paraplegia
+C401,0,Male,20,0-20 yrs,AIS B,Motorcycle,Thoracic,T11,Paraplegia
+C10,0,Male,30,21-40 yrs,Unknown,Automobile,Thoracic,T12,Paraplegia
+C13,0,Male,46,41-60 yrs,Unknown,Others,Thoracic,T12,Paraplegia
+C506,0,Male,38,21-40 yrs,Unknown,Fall,Thoracic,T12,Paraplegia
+C554,0,Female,17,0-20 yrs,Unknown,Automobile,Thoracic,T12,Paraplegia
+C753,0,Male,31,21-40 yrs,Unknown,Automobile,Thoracic,T12,Paraplegia
+C278,1,Unknown,Unknown,Unknown,Unknown,Unknown,Unknown,Unknown,Unknown
+C284,1,Unknown,Unknown,Unknown,Unknown,Unknown,Unknown,Unknown,Unknown

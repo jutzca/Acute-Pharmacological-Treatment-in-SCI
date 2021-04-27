@@ -50,7 +50,7 @@ library(networkD3)
 # if(!require(ggplot2)){install.packages("ggplot2")}
 # if(!require(igraph)){install.packages("igraph")}
 # if(!require(tidygraph)){install.packages("tidygraph")}
-devtools::install_github("thomasp85/ggraph", dependencies=TRUE)
+# devtools::install_github("thomasp85/ggraph", dependencies=TRUE)
 # if(!require(visNetwork)){install.packages("visNetwork")}
 # if(!require(networkD3)){install.packages("networkD3")}
 # devtools::install_github('slowkow/ggrepel')

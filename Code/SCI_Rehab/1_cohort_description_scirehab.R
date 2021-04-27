@@ -51,8 +51,7 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 # Load data files
-sci.rehab.cohort.admission <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/rehab_summary_stats_for_app_new.csv", sep = ',', header = T,  na.strings=c("","NA"))
-
+sci.rehab.cohort.admission <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/Demographics_injury_charact/rehab_summary_stats_patients_with_C0_to_L2_injuries.csv", sep = ',', header = T,  na.strings=c("","NA"))
 
 #-----------Create Table of Included Cohort for Publication
 

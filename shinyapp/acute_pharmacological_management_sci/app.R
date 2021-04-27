@@ -121,16 +121,16 @@ source("helper_functions_2.R")
 #---------- Data set #1: Sygen baseline characteristics ---------- 
 
 
-# sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_summary_stats_for_app.csv", sep = ',', header = T, stringsAsFactors = F)
-# save(sygen_baseline, file = "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_baseline.RData")
+#sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
+#save(sygen_baseline, file = "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_baseline.RData")
 setwd('/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/')
 
 load("data/sygen_baseline.RData")
 
 
 #---------- Data set #2: SCIRehab baseline characteristics ---------- 
-# scirehab_baseline<- read.csv("/Users/jutzelec/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
-# save(scirehab_baseline, file = "scirehab_baseline.RData")
+#scirehab_baseline<- read.csv("/Users/jutzca/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
+#save(scirehab_baseline, file = "data/scirehab_baseline.RData")
 load("data/scirehab_baseline.RData")
 
 
@@ -458,35 +458,36 @@ ui <- dashboardPage(
                   br(),
                   br(),
                   h4("Study team"),
-                  strong("Principal Investigator:"), 
+                  h5("Principal Investigator:"), 
                   tags$ul(
-                    tags$li("Dr. Catherine Jutzeler, Research Group Leader, Department of Biosystems Science and Engineering, Swiss Federal Institute of Technology (ETH Zurich).",
+                    tags$li(strong("Dr. Catherine Jutzeler,"), "Research Group Leader, Department of Biosystems Science and Engineering, Swiss Federal Institute of Technology (ETH Zurich).",
                             tags$a(href="mailto:Catherine.Jutzeler@bsse.ethz.ch", 
                             target="_blank",
                             icon("envelope")))),
-                  strong("Co-investigators:"), 
+                  h5("Co-investigators:"), 
                   tags$ul(
-                    tags$li("Dr. John Kramer, Department of Anesthesiology, Pharmacology, and Therapeutics, Faculty of Medicine, University of British Columbia, Canada."
+                    tags$li(strong("Lucie Bourguignon,"), "Department of Biosystems Science and Engineering, ETH Zurich and SIB Swiss Institute of Bioinformatics, Basel, Switzerland."
+                    ),
+                    tags$li(strong("Prof. John Kramer, "), "Department of Anesthesiology, Pharmacology, and Therapeutics, Faculty of Medicine, University of British Columbia, Canada."
                             ),
-                    tags$li("Dr. Jacquelyn Cragg, Faculty of Pharmaceutical Sciences, University of British Columbia, Vancouver, Canada."
+                    tags$li(strong("Prof. Jacquelyn Cragg,"), "Faculty of Pharmaceutical Sciences, University of British Columbia, Vancouver, Canada."
                     )),
-                  strong("Collaborators:"), 
+                  h5("Collaborators:"), 
                    tags$ul(
-                     tags$li("Lucie Bourguignon"
-                     ),
-                     tags$li("Dr. Lukas Grassner"
+            
+                     tags$li(strong("Dr. Lukas Grassner,"), "Department of Neurosurgery, Medical University Innsbruck, Innsbruck, Austria."
                     ),
-                    tags$li("Dr. Fred Geisler"
+                    tags$li(strong("Dr. Fred Geisler,"), "University of Saskatchewan, Saskatoon, Saskatchewan, Canada"
                     ),
-                    tags$li("Bobo Tong"
+                    tags$li(strong("Bobo Tong,"), "International Collaboration on Repair Discoveries (ICORD), University of British Columbia, Vancouver, Canada."
                     ),
-                    tags$li("Elias Ronca"
+                    tags$li(strong("Dr. Elias Ronca,"), "Swiss Paraplegic Research, Notwil, Switzerland."
                     ),
-                    tags$li("Noam Y. Harel"
+                    tags$li(strong("Dr. Noam Y. Harel,"), "James J Peters Veterans Affairs Medical Center, Bronx, New York; Icahn School of Medicine at Mount Sinai, New York,  USA."
                     ),
-                    tags$li("Adam Ferguson"
+                    tags$li(strong("Prof. Adam Ferguson,"), "Brain and Spinal Injury Center, Weill Institute for Neurosciences, University of California San Francisco (UCSF), San Francisco, USA."
                     ),
-                    tags$li("Brian Kwon")),
+                    tags$li(strong("Prof. Brian Kwon,"), "International Collaboration on Repair Discoveries (ICORD), University of British Columbia, Vancouver, Canada.")),
                   br(),
                   h4("Ethics statement"),
                   "Approval for this study (secondary analysis) was received by an institutional ethical standards committee on human experimentation at the University of 
@@ -546,7 +547,7 @@ ui <- dashboardPage(
                 )
                     ),
               fluidRow(
-                valueBox(prettyNum(2022, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                valueBox(prettyNum(2040, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
                 valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
                 valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
                          "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
@@ -641,7 +642,7 @@ ui <- dashboardPage(
     
     # Tab: Sygen Cohort  
     tabItem(tabName = "cohort_sygen",
-            
+            h3("Description of Sygen Study Cohort"),
             # # Create alert
             # shinyalert::useShinyalert(),
             # h3("Description of Sygen Trial Cohort"),
@@ -657,8 +658,8 @@ ui <- dashboardPage(
                           status = "success",
                           #justified = T, #if true, all boxes have the same length
                           individual = T, #if false, then the boxes are connected
-                          choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Etiology"),
-                          choiceValues = c("sex", "age", "baseline.ais", "nli", "etiology")
+                          choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- and paraplegia", "Etiology"),
+                          choiceValues = c("sex", "age", "baseline.ais", "nli", 'plegia',"etiology")
                           ) # Close radioGroupButtons bracket
                   ), # Close div bracket
                   
@@ -728,7 +729,7 @@ ui <- dashboardPage(
                ), # close box
               
               fluidRow(
-                valueBox(prettyNum(1225, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                valueBox(prettyNum(1243, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
                 valueBox(prettyNum(575, big.mark=" ", scientific=FALSE), "Unique medications to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
                 #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
                 valueBox("6", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
@@ -769,8 +770,8 @@ ui <- dashboardPage(
                               status = "success",
                               #justified = T, #if true, all boxes have the same length
                               individual = T, #if false, then the boxes are connected
-                              choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Etiology"),
-                              choiceValues = c("sex", "age", "baseline.ais", "nli", "etiology")
+                              choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- and paraplegia", "Etiology"),
+                              choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia", "etiology")
                                                           ) #close box bracket
                         ), #close divstyle
                         
@@ -888,7 +889,7 @@ server <- function(input, output, session) {
     
     baseline.sex <- sygen_baseline%>%
       dplyr::count(Sex)%>% 
-      dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+      dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
       as.data.frame()%>%
       plotly::plot_ly(y = ~Sex,
                       x =  ~as.numeric(frequency))%>%
@@ -914,7 +915,7 @@ server <- function(input, output, session) {
      
      baseline.age.grp<- sygen_baseline%>%
        dplyr::count(agegroup)%>% 
-       dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+       dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
        as.data.frame()%>%
        plotly::plot_ly(y = ~ agegroup,
                        x =  ~as.numeric(frequency))%>%
@@ -938,7 +939,7 @@ server <- function(input, output, session) {
               
               baseline.ais <- sygen_baseline%>%
                 dplyr::count(AIS)%>% 
-                dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+                dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
                 as.data.frame()%>%
                 plotly::plot_ly(y = ~AIS,
                                 x =  ~as.numeric(frequency))%>%
@@ -960,7 +961,7 @@ server <- function(input, output, session) {
   
     baseline.nli <- sygen_baseline%>%
       dplyr::count(NLI)%>% 
-      dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+      dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
       as.data.frame()%>%
       plotly::plot_ly(y = ~NLI,
                       x =  ~as.numeric(frequency))%>%
@@ -974,6 +975,30 @@ server <- function(input, output, session) {
       plotly::layout(xaxis = list(title = "Proportion [%]"),
                      yaxis = list(title = ""))
     baseline.nli}
+    
+    
+    else if (input$var == "plegia")  {
+    
+    width.plegia = c(0.8, 0.8,0.8)
+    
+    sygen_baseline$Plegia=factor(sygen_baseline$Plegia, levels = c("Unknown",'Paraplegia','Tetraplegia'))
+    
+    baseline.plegia <- sygen_baseline%>%
+      dplyr::count(Plegia)%>% 
+      dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
+      as.data.frame()%>%
+      plotly::plot_ly(y = ~Plegia,
+                      x =  ~as.numeric(frequency))%>%
+      plotly::add_bars(
+        marker = list(color = 'rgb(96,92,168)'),
+        width = ~width.plegia,
+        text = ~paste("Para- and Tetraplegia:", Plegia,
+                      '</br></br>', "N:", n,
+                      '</br>', "Frequency:", frequency, '%'),
+        hoverinfo = "text")%>%
+      plotly::layout(xaxis = list(title = "Proportion [%]"),
+                     yaxis = list(title = ""))
+    baseline.plegia}
     
     
     else if (input$var == "etiology")  {
@@ -1013,7 +1038,7 @@ server <- function(input, output, session) {
       
       baseline.sex <- scirehab_baseline%>%
         dplyr::count(Sex)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~Sex,
                         x =  ~as.numeric(frequency))%>%
@@ -1039,7 +1064,7 @@ server <- function(input, output, session) {
       
       baseline.age<- scirehab_baseline%>%
         dplyr::count(Age)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~ Age,
                         x =  ~as.numeric(frequency))%>%
@@ -1057,13 +1082,13 @@ server <- function(input, output, session) {
     
     else if (input$var1 == "baseline.ais")  {
       
-      width.ais = c(0.8, 0.8, 0.8, 0.8, 0.8)
+      width.ais = c(0.8, 0.8, 0.8, 0.8)
       
-      scirehab_baseline$AIS=factor(scirehab_baseline$AIS, levels = c('Unknown', "AIS D", 'AIS C', "AIS B", "AIS A"))
+      scirehab_baseline$AIS=factor(scirehab_baseline$AIS, levels = c("AIS D", "AIS C", "AIS B", "AIS A"))
       
       baseline.ais <- scirehab_baseline%>%
         dplyr::count(AIS)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~AIS,
                         x =  ~as.numeric(frequency))%>%
@@ -1081,13 +1106,13 @@ server <- function(input, output, session) {
     
     else if (input$var1 == "nli")  {
       
-      width.nli = c(0.8, 0.8, 0.8, 0.8)
+      width.nli = c(0.8, 0.8, 0.8)
       
-      scirehab_baseline$NLI=factor(scirehab_baseline$NLI, levels = c('Unknown',"Lumbar", 'Thoracic', "Cervical"))
+      scirehab_baseline$NLI=factor(scirehab_baseline$NLI, levels = c("Lumbar", 'Thoracic', "Cervical"))
       
       baseline.nli <- scirehab_baseline%>%
         dplyr::count(NLI)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~NLI,
                         x =  ~as.numeric(frequency))%>%
@@ -1103,15 +1128,40 @@ server <- function(input, output, session) {
       baseline.nli}
     
     
+    else if (input$var1 == "plegia")  {
+      
+      width.plegia = c(0.8, 0.8)
+      
+      scirehab_baseline$Plegia=factor(scirehab_baseline$Plegia, levels = c('Paraplegia', "Tetraplegia"))
+      
+      baseline.plegia <- scirehab_baseline%>%
+        dplyr::count(Plegia)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~Plegia,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width.plegia,
+          text = ~paste("Para- and Tetraplegia:", Plegia,
+                        '</br></br>', "N:", n,
+                        '</br>', "Percentage:", frequency, '%'),
+          hoverinfo = "text")%>%
+        plotly::layout(xaxis = list(title = "Percentage [%]"),
+                       yaxis = list(title = ""))
+      baseline.plegia}
+    
+    
+    
     else if (input$var1 == "etiology")  {
       
       width.cause = c(0.8, 0.8, 0.8, 0.8,0.8, 0.8, 0.8, 0.8, 0.8)
       
-      scirehab_baseline$Cause=factor(scirehab_baseline$Cause, levels = c("Others", "Water related","Person-to-person contact", "Pedestrian", "Other sports", "Motorcycle", "Gun shot wound", "Fall", "Automobile" ))
+      scirehab_baseline$Cause=factor(scirehab_baseline$Cause, levels = c("Other", "Water related","Person-to-person contact", "Pedestrian", "Sports", "Motorcycle", "Gun shot", "Fall", "Automobile" ))
       
       baseline.cause<- scirehab_baseline%>%
         dplyr::count(Cause)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~Cause,
                         x =  ~as.numeric(frequency))%>%
