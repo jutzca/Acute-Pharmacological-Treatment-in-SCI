@@ -60,7 +60,8 @@ sci.rehab.cohort.admission <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3
 levels(sci.rehab.cohort.admission$Sex) <- c("Female", "Male")
 levels(sci.rehab.cohort.admission$AIS) <- c("A", "B", "C", "D")
 levels(sci.rehab.cohort.admission$NLI) <- c("Cervical", "Thoracic", 'Lumbar')
-levels(sci.rehab.cohort.admission$Cause) <- c("Automobile", "Fall", "Gunshot wound", "Motorcycle", "Other sports", "Others", "Pedestrian", 'person-to-person contac', "Water-related")
+#levels(sci.rehab.cohort.admission$Plegia)<- c("Paraplegia", "Tetraplegia")
+levels(sci.rehab.cohort.admission$Cause) <- c("Automobile", "Fall", "Gun shot", "Motorcycle", "Sports", "Others", "Pedestrian", 'Person-to-person contact', "Water-related")
 
 # Relable variables
 label(sci.rehab.cohort.admission$Sex) <- "Sex, n (%)"
@@ -72,7 +73,7 @@ label(sci.rehab.cohort.admission$Cause) <- "Cause, n (%)"
 
 
 # 2. Create Table
-table1::table1(~ Sex+Age+AIS+NLI+Cause, data = sci.rehab.cohort.admission)
+table1::table1(~ Sex+Age+AIS+NLI+Cause+Plegia, data = sci.rehab.cohort.admission)
 
 
 #### -------------------------------------------------------------------------- CODE END ------------------------------------------------------------------------------------------------####

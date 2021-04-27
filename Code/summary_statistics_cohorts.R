@@ -56,7 +56,7 @@ sygen.original<- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Data/
 sygen.pid <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Data/Sygen/PID/pid_sygen.csv", sep = ',', header = T,  na.strings=c("","NA"))
 
 joined_df <- merge(sygen.pid, sygen.original, by.x = "NEW_ID", 
-                   by.y = "ID", all.x = TRUE, all.y = FALSE)
+                   by.y = "ID", all.x = TRUE, all.y = TRUE)
 
 
 joined_df2 <- subset(joined_df, Time==4)
@@ -86,7 +86,7 @@ label(sygen$Cause) <- "Cause, n (%)"
 units(sygen$Age) <- "years"
 
 #Print table
-table1::table1(~ Sex+Age+AIS+NLI+Cause, data = sygen)
+table1::table1(~ Sex+Age+AIS+NLI+Cause+Plegia, data = sygen)
 
 #### -------------------------------------------------------------------------- CODE END ------------------------------------------------------------------------------------------------####
 
