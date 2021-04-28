@@ -189,129 +189,93 @@ dev.off()
 
 
 
-
-
-
-
-
-
-
-
 #-------------------------Calculate and visualize number of medications per patient with 7,14, and 30 days respectively-----------------
 
-#Make copy of data file to work with
+# Make copy of data file to work with
 scirehab.medication.data.3 <- scirehab.medication.data
 
-#Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
-scirehab.medication.data.3[scirehab.medication.data.3>0] <- 1
-scirehab.medication.data.3[is.na(scirehab.medication.data.3)] <- 0 
+# Replace all values greater than 0 with a 1 and all NA's will be replaced with a 0
+scirehab.medication.data.3.without.na<-scirehab.medication.data.3%>% 
+  dplyr::mutate_if(is.numeric, ~1 * (. > 0))%>% 
+  replace(is.na(.), 0)
 
-#change columns to numerics class format
-cols_to_change = c(4:6)    
-for(i in cols_to_change){
-  aggregate(scirehab.medication.data.3[,i], by=list(Category=scirehab.medication.data.3$generic_name), FUN=sum)
-}
+# Subset Data for 60 days post injury
+scirehab.medication.data.3.without.na.subset <- scirehab.medication.data.3.without.na[c(1:63)]
 
-#Subset Data for 60 days post injury
-scirehab.medication.data.3.subset <- scirehab.medication.data.3[c(4:64)]
+# Calculate number of patients
+scirehab_medication_wide.sum = scirehab.medication.data.3.without.na.subset%>%
+  rowwise%>% 
+  dplyr::mutate(sum_7_days = sum(c(X0,X1,X2,X3,X4,X5,X6)))
 
-#Aggregate data: Number of medications per day for each patient
-scirehab_medication_wide<-aggregate(scirehab.medication.data.3.subset[-1],by=list(scirehab.medication.data.3$generic_name, scirehab.medication.data.3$newid), FUN=sum)
-
-####------ Calcualte number of patients
-scirehab_medication_wide.sum = scirehab_medication_wide%>%rowwise%>% dplyr::mutate(sum_7_days = sum(c(X1,X2,X3,X4,X5,X6,X7)))
-scirehab_medication_wide.sum =scirehab_medication_wide.sum %>% rowwise%>% dplyr::mutate(sum_14_days = sum(c(X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14)))
-scirehab_medication_wide.sum =scirehab_medication_wide.sum %>% rowwise%>% dplyr::mutate(sum_30_days = sum(c(X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14,X15,X16,X17,X18,X19,X20,X21,X22,X23,X24,X25,X26,X27,X28,X29,X30)))
-scirehab_medication_wide.sum =scirehab_medication_wide.sum %>% rowwise%>% dplyr::mutate(sum_60_days = sum(c(X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14,X15,X16,X1,
+scirehab_medication_wide.sum = scirehab_medication_wide.sum %>% rowwise%>% dplyr::mutate(sum_14_days = sum(c(X0,X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13)))
+scirehab_medication_wide.sum = scirehab_medication_wide.sum %>% rowwise%>% dplyr::mutate(sum_30_days = sum(c(X0,X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14,X15,X16,X17,X18,X19,X20,X21,X22,X23,X24,X25,X26,X27,X28,X29)))
+scirehab_medication_wide.sum = scirehab_medication_wide.sum %>% rowwise%>% dplyr::mutate(sum_60_days = sum(c(X0,X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14,X15,X16,X17,
                                                                                                       X18,X19,X20,X21,X22,X23,X24,X25,X26,X27,X28,X29,X30,X31,X32,X33,X34,X35,X36,X37,X38,X39,X40,X41,X42,X43,X44,X45,X46,X47,X48,
-                                                                                                      X49,X50,X51,X52,X53,X54,X55,X56,X57,X58,X59,X60)))
-
-
-#Covert all numbers greater than 1 to 1
+                                                                                                                                                                                              X49,X50,X51,X52,X53,X54,X55,X56,X57,X58,X59)))
+# Covert all numbers greater than 1 to 1
 scirehab_medication_wide.sum$sum_7_days[scirehab_medication_wide.sum$sum_7_days>0] <- 1
-scirehab_medication_wide.sum$sum_7_days[scirehab_medication_wide.sum$sum_7_days<0] <- 0
 scirehab_medication_wide.sum$sum_14_days[scirehab_medication_wide.sum$sum_14_days>0] <- 1
-scirehab_medication_wide.sum$sum_14_days[scirehab_medication_wide.sum$sum_14_days<0] <- 0
 scirehab_medication_wide.sum$sum_30_days[scirehab_medication_wide.sum$sum_30_days>0] <- 1
-scirehab_medication_wide.sum$sum_30_days[scirehab_medication_wide.sum$sum_30_days<0] <- 0
 scirehab_medication_wide.sum$sum_60_days[scirehab_medication_wide.sum$sum_60_days>0] <- 1
-scirehab_medication_wide.sum$sum_60_days[scirehab_medication_wide.sum$sum_60_days<0] <- 0
-
-####------ 7-day average and standard deviation
-#Subset data
-scirehab_medication_wide.sum.subset.7d <- scirehab_medication_wide.sum[c(1,2,63)]
-
-#Calcualte number of unique medications given per patient within first 7 days post injury
-x7_days_mean <- scirehab_medication_wide.sum.subset.7d%>%
-  dplyr::group_by(Group.2)%>% 
-  summarise(Frequency.7days = sum(sum_7_days))
-
-#Calculate mean and sd for 7 days
-mean(x7_days_mean$Frequency.7days)
-sd(x7_days_mean$Frequency.7days)
-min(x7_days_mean$Frequency.7days)
-max(x7_days_mean$Frequency.7days)
-
-####------ 14-day average and standard deviation
-
-#Subset data
-scirehab_medication_wide.sum.subset.14d <- scirehab_medication_wide.sum[c(1,2,64)]
-
-#Calcualte number of unique medications given per patient within first 14 days post injury
-x14_days_mean <- scirehab_medication_wide.sum.subset.14d %>% 
-  group_by(Group.2)%>% 
-  summarise(Frequency.14days = sum(sum_14_days))
-
-#Calculate mean and sd for 14 days
-mean(x14_days_mean$Frequency.14days)
-sd(x14_days_mean$Frequency.14days)
-min(x14_days_mean$Frequency.14days)
-max(x14_days_mean$Frequency.14days)
 
 
-####------ 30-day average and standard deviation
+####------ 7-day average, standard deviation, min,and max
+d7_data <-scirehab_medication_wide.sum %>%
+  dplyr::group_by(newid) %>% 
+  dplyr::summarise(final.sum.7d= sum(sum_7_days))
+d7_data
 
-#Subset data
-scirehab_medication_wide.sum.subset.30d <- scirehab_medication_wide.sum[c(1,2,65)]
+mean(d7_data$final.sum.7d)
+sd(d7_data$final.sum.7d)
+min(d7_data$final.sum.7d)
+max(d7_data$final.sum.7d)
 
-#Calcualte number of unique medications given per patient within first 30 days post injury
-x30_days_mean <- scirehab_medication_wide.sum.subset.30d %>% 
-  group_by(Group.2)%>% 
-  summarise(Frequency.30days = sum(sum_30_days))
 
-#Calculate mean and sd for 30 days
-mean(x30_days_mean$Frequency.30days)
-sd(x30_days_mean$Frequency.30days)
-min(x30_days_mean$Frequency.30days)
-max(x30_days_mean$Frequency.30days)
+####------ 14-day average, standard deviation, min,and max
+d14_data <-scirehab_medication_wide.sum %>%
+  dplyr::group_by(newid) %>% 
+  dplyr::summarise(final.sum.14d= sum(sum_14_days))
+d14_data
+
+mean(d14_data$final.sum.14d)
+sd(d14_data$final.sum.14d)
+min(d14_data$final.sum.14d)
+max(d14_data$final.sum.14d)
+
+####------ 30-day average, standard deviation, min,and max
+d30_data <-scirehab_medication_wide.sum %>%
+  dplyr::group_by(newid) %>% 
+  dplyr::summarise(final.sum.30d= sum(sum_30_days))
+d30_data
+
+mean(d30_data$final.sum.30d)
+sd(d30_data$final.sum.30d)
+min(d30_data$final.sum.30d)
+max(d30_data$final.sum.30d)
 
 ####------ 60-day average and standard deviation
+d60_data <-scirehab_medication_wide.sum %>%
+  dplyr::group_by(newid) %>% 
+  dplyr::summarise(final.sum.60d= sum(sum_60_days))
+d60_data
 
-#Subset data
-scirehab_medication_wide.sum.subset.60d <- scirehab_medication_wide.sum[c(1,2,66)]
+mean(d60_data$final.sum.60d)
+sd(d60_data$final.sum.60d)
+min(d60_data$final.sum.60d)
+max(d60_data$final.sum.60d)
 
-#Calcualte number of unique medications given per patient within first 60 days post injury
-x60_days_mean <- scirehab_medication_wide.sum.subset.60d %>% 
-  group_by(Group.2)%>% 
-  summarise(Frequency.60days = sum(sum_60_days))
-
-#Calculate mean and sd for 60 days
-mean(x60_days_mean$Frequency.60days)
-sd(x60_days_mean$Frequency.60days)
-min(x60_days_mean$Frequency.60days)
-max(x60_days_mean$Frequency.60days)
 
 ####------ Plot the average medications per 7, 14, 30, and 60 days
 
+scirehab_medication.plot<-cbind(d7_data,d14_data[-1],d30_data[-1], d60_data[-1])
 
-scirehab_medication.plot <-cbind(x7_days_mean,x14_days_mean[c(2)],x30_days_mean[c(2)],x60_days_mean[c(2)])
 
 #Wide to long format
-data_long <- gather(scirehab_medication.plot, condition, measurement, Frequency.7days:Frequency.60days, factor_key=TRUE)
+data_long <- gather(scirehab_medication.plot, condition, measurement, final.sum.7d:final.sum.60d, factor_key=TRUE)
 data_long
 
 library(plyr)
-data_long$condition<-revalue(data_long$condition, c("Frequency.7days"="7 Days", "Frequency.14days"="14 Days","Frequency.30days"="30 Days","Frequency.60days"="60 Days"))
+data_long$condition<-revalue(data_long$condition, c("final.sum.7d"="7 Days", "final.sum.14d"="14 Days","final.sum.30d"="30 Days","final.sum.60d"="60 Days"))
 
 
 prevalence.plot.scirehab <- data_long%>%ggplot( aes(x=condition, y=measurement, fill=condition)) +
