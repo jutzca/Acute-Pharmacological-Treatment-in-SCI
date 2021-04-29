@@ -207,70 +207,67 @@ g <- tbl_graph(nodes2, edges, directed = FALSE)%>%
               title_margin = 10)
 g
 
-
-
-
-
-#---------- network graph ---------- 
-# Create network
-routes_network <- network::network(edges, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
-routes_network
-
-# Class network
-class(routes_network)
-
-# Plot network
-plot(routes_network, vertex.cex = 3)        # or plot(routes_network, vertex.cex = 3, mode = "circle")
-
-#---------- igraph ---------- 
-detach(package:network)
-rm(routes_network)
-
-# Create igraph
-routes_igraph <- igraph::graph_from_data_frame(d = edges, vertices = nodes, directed = TRUE)
-
-# Plot igraph
-plot(routes_igraph, edge.arrow.size = 0.2)
-
-
-#---------- tidygraph and ggraph ---------- 
-# To create a network object 
-routes_tidy <- tidygraph::tbl_graph(nodes = nodes, edges = edges, directed = TRUE)
-
-# To convert an igraph or network object
-routes_igraph_tidy <- tidygraph::as_tbl_graph(routes_igraph)
-
-# To verify the classes of objects
-class(routes_tidy)
-class(routes_igraph_tidy)
-class(routes_igraph)
-
-# To print out the tbl_graph object
-routes_tidy
-
-# The nodes tibble is activated by default, but you can change which tibble is active with the activate() function.
-routes_tidy %>% 
-  tidygraph::activate(edges) %>% 
-  arrange(desc(weight)) # to rearrange the rows in the edges tibble to list those with the highest “weight” first
-
-# Plot the graph
-library(ggplot2)
-ggraph::ggraph(routes_tidy) + ggraph::geom_edge_link(aes(alpha = weight)) + ggraph::geom_node_point(aes(color = "red",
-                                                                                                        size = "weight")) + ggraph::theme_graph()
-
-
-#---------- networkD3 ---------- 
-# To recreate the current columns, while subtracting 1 from each ID
-nodes_d3 <- dplyr::mutate(nodes, id = id - 1)
-edges_d3 <- dplyr::mutate(edges, from = from - 1, to = to - 1)
-
-
-# Create network graph
-networkD3::forceNetwork(Links = edges_d3, Nodes = nodes_d3, Source = "from", Target = "to", 
-             NodeID = "label", Group = "id", Value = "weight", linkDistance=150,linkColour="lightgray",
-             opacity = 1, charge=-300,fontSize = 16, zoom = TRUE, opacityNoHover=1, width = 1000, height = 800)
-
-#---------- sankeyNetwork ---------- 
-sankeyNetwork(Links = edges_d3, Nodes = nodes_d3, Source = "from", Target = "to", 
-              NodeID = "label", Value = "weight", fontSize = 16, unit = "Drugs", nodeWidth = 10)
-
+# 
+# #---------- network graph ---------- 
+# # Create network
+# routes_network <- network::network(edges, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
+# routes_network
+# 
+# # Class network
+# class(routes_network)
+# 
+# # Plot network
+# plot(routes_network, vertex.cex = 3)        # or plot(routes_network, vertex.cex = 3, mode = "circle")
+# 
+# #---------- igraph ---------- 
+# detach(package:network)
+# rm(routes_network)
+# 
+# # Create igraph
+# routes_igraph <- igraph::graph_from_data_frame(d = edges, vertices = nodes, directed = TRUE)
+# 
+# # Plot igraph
+# plot(routes_igraph, edge.arrow.size = 0.2)
+# 
+# 
+# #---------- tidygraph and ggraph ---------- 
+# # To create a network object 
+# routes_tidy <- tidygraph::tbl_graph(nodes = nodes, edges = edges, directed = TRUE)
+# 
+# # To convert an igraph or network object
+# routes_igraph_tidy <- tidygraph::as_tbl_graph(routes_igraph)
+# 
+# # To verify the classes of objects
+# class(routes_tidy)
+# class(routes_igraph_tidy)
+# class(routes_igraph)
+# 
+# # To print out the tbl_graph object
+# routes_tidy
+# 
+# # The nodes tibble is activated by default, but you can change which tibble is active with the activate() function.
+# routes_tidy %>% 
+#   tidygraph::activate(edges) %>% 
+#   arrange(desc(weight)) # to rearrange the rows in the edges tibble to list those with the highest “weight” first
+# 
+# # Plot the graph
+# library(ggplot2)
+# ggraph::ggraph(routes_tidy) + ggraph::geom_edge_link(aes(alpha = weight)) + ggraph::geom_node_point(aes(color = "red",
+#                                                                                                         size = "weight")) + ggraph::theme_graph()
+# 
+# 
+# #---------- networkD3 ---------- 
+# # To recreate the current columns, while subtracting 1 from each ID
+# nodes_d3 <- dplyr::mutate(nodes, id = id - 1)
+# edges_d3 <- dplyr::mutate(edges, from = from - 1, to = to - 1)
+# 
+# 
+# # Create network graph
+# networkD3::forceNetwork(Links = edges_d3, Nodes = nodes_d3, Source = "from", Target = "to", 
+#              NodeID = "label", Group = "id", Value = "weight", linkDistance=150,linkColour="lightgray",
+#              opacity = 1, charge=-300,fontSize = 16, zoom = TRUE, opacityNoHover=1, width = 1000, height = 800)
+# 
+# #---------- sankeyNetwork ---------- 
+# sankeyNetwork(Links = edges_d3, Nodes = nodes_d3, Source = "from", Target = "to", 
+#               NodeID = "label", Value = "weight", fontSize = 16, unit = "Drugs", nodeWidth = 10)
+# 

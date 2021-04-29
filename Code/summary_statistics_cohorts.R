@@ -58,26 +58,25 @@ sygen.pid <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Data/Syge
 joined_df <- merge(sygen.pid, sygen.original, by.x = "NEW_ID", 
                    by.y = "ID", all.x = TRUE, all.y = TRUE)
 
-
-joined_df2 <- subset(joined_df, Time==4)
 sygen<-distinct(joined_df, NEW_ID, .keep_all = TRUE)
 
-
-sygen$YEARDOI <- as.factor(sygen$YEARDOI)
 
 #-----------Create Table of Included Cohort for Publication
 
 # 1. Format Table: Customize levels, labels, and units of listed variables
-#Change names of levels of variables
+
+# Change year of YEARDOI to factor
+sygen$YEARDOI <- as.factor(sygen$YEARDOI)
+
+# Change names of levels of variables
 levels(sygen$Sex) <- c("Female", "Male")
 levels(sygen$AIS) <- c("A", "B", "C", "D")
 levels(sygen$NLI) <- c("Cervical", "Thoracic")
 levels(sygen$Cause) <- c("Automobile", "Blunt trauma", "Fall", "Gunshot wound", "Motorcycle", "Other sports", "Others", "Pedestrian", "Water-related")
 
-#Relable variables
+# Relable variables
 label(sygen$Sex) <- "Sex, n (%)"
 label(sygen$Age) <- "Age"
-# label(emsci.trauma.sex.va.a1$NLI_level)<- "Neurological level of injury"
 label(sygen$AIS) <- "AIS, n (%)"
 label(sygen$NLI) <- "Neurological level of injury, n (%)"
 label(sygen$Cause) <- "Cause, n (%)"
