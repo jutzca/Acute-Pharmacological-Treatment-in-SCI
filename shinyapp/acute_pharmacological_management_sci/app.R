@@ -132,6 +132,10 @@ load("data/sygen_baseline.RData")
 # Sygen pharmacological management
 acute_pharmacol_management.data.sygen <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/information.on.medication.for.shiny.csv", stringsAsFactors = F)
 
+# Sygen pharmacological management per patient
+# acute_pharmacol_management.data.ind.sygen <-read.csv("data/number.of.drug.perday.sygen.for.shiny.csv", stringsAsFactors = F)
+# save(acute_pharmacol_management.data.ind.sygen, file = "data/sygen_acute_pharmacol_management.data.ind.sygen.RData")
+load("data/sygen_acute_pharmacol_management.data.ind.sygen.RData")
 
 #---------- Data sets for SCIRehab ---------- 
 #scirehab_baseline<- read.csv("/Users/jutzca/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
@@ -310,13 +314,13 @@ ui <- dashboardPage(
                 menuItem('Sygen Trial', tabName = 'sygentrial', icon = icon("hospital-user"), 
                          menuSubItem("About", tabName = "about_sygen", icon = icon("info-circle")),
                          menuSubItem("Cohort", tabName = "cohort_sygen", icon = icon("users")), 
-                         menuSubItem("Medications", tabName = "medication_sygen", icon = icon("prescription")),
+                         menuSubItem("Drugs", tabName = "drug_sygen", icon = icon("prescription")),
                          menuSubItem("Polypharmacy", tabName = "polypharmacy_sygen", icon = icon("dice-d20")),
                          menuSubItem("Drug administration pattern", tabName = "drug_pattern_sygen", icon = icon("chart-bar"))),
                 menuItem('SCIRehab', tabName = 'scirehab', icon=icon("database"),
                          menuSubItem("About", tabName = "about_scirehab", icon = icon("info-circle")),
                          menuSubItem("Cohort", tabName = "cohort_scirehab", icon = icon("users")), 
-                         menuSubItem("Medications", tabName = "medication_scirehab", icon = icon("prescription")),
+                         menuSubItem("Drugs", tabName = "drug_scirehab", icon = icon("prescription")),
                          menuSubItem("Polypharmacy", tabName = "polypharmacy_scirehab", icon = icon("dice-d20")),
                          menuSubItem("Drug administration pattern", tabName = "drug_pattern_scirehab", icon = icon("chart-bar"))),
                 menuItem("Abbreviations", tabName = "abbreviations", icon = icon("language")),
@@ -489,16 +493,16 @@ ui <- dashboardPage(
                   Despite decades of clinical application, the potential impact on neurological recovery has been largely overlooked. The goal of this
                   study was to highlight drugs with potential disease modifying effects, and, in doing so, identify a novel translational path to enhancing 
                   function for individuals with acute injury.
-                  Nearly every individual sustaining spinal cord injury receives multiple types and classes of medications to manage a litany of problems 
+                  Nearly every individual sustaining spinal cord injury receives multiple types and classes of drugs to manage a litany of problems 
                   associated with traumatic spinal cord injury. We performed an analysis of available clinical trial and observational data to determine 
                   what constitutes standards of acute pharmacological care after traumatic spinal cord injury. The goal of this study was to determine 
-                  the types of medications commonly administered, alone or in combination, in the acute phase of spinal cord injury. To this end, we conducted 
+                  the types of drugs commonly administered, alone or in combination, in the acute phase of spinal cord injury. To this end, we conducted 
                   an analysis of available clinical trial and observational data to determine what constitutes standards of acute pharmacological care
-                  after spinal cord injury. Concomitant medication use (i.e., non-randomized medications), including dosage, timing and reason for administration, 
-                  was tracked through the duration of the trial and observational study. Descriptive statistics were used to describe the medications administered 
+                  after spinal cord injury. Concomitant drug use (i.e., non-randomized drugs), including dosage, timing and reason for administration, 
+                  was tracked through the duration of the trial and observational study. Descriptive statistics were used to describe the drugs administered 
                   within the first 90 days after spinal cord injury. R Statistical Software was used for all statistical analyses and to create plots for data visualization.
-                  Over 770 unique medications were administered within the first month after injury. On average, patients received 20 unique medications (range 1-58), 
-                  often in a combinatorial or overlapping fashion (i.e., polypharmacy). Approximately 10% of medications were administered acutely as prophylaxis 
+                  Over 770 unique drugs were administered within the first month after injury. On average, patients received 20 unique drugs (range 1-58), 
+                  often in a combinatorial or overlapping fashion (i.e., polypharmacy). Approximately 10% of drugs were administered acutely as prophylaxis 
                   (e.g., pain, infections). Our study revealed a high degree of polypharmacy in the acute stages of spinal cord injury, with potential to both positively and negatively impact neurological recovery.",
                   br(),
                   br(),
@@ -562,7 +566,7 @@ ui <- dashboardPage(
                             "tab offers an insight into the diversity of our participants. We share compound information on some demographic variables, as well as the number of respondents in each country. 
                             Please note that to protect the privacy and anonymity of our participants, data visualizations are only available for selections of more than 20 people."),
                     tags$li("The ",
-                            a("Psychological Variables", onclick = "openTab('medication_scirehab')", href="#"),
+                            a("Psychological Variables", onclick = "openTab('drug_scirehab')", href="#"),
                             " tab offers an interactive interface to explore the psychological variables we collect in the initiative's baseline survey. 
                             This survey is open to anyone interested at",
                             tags$a(href="https://nyu.qualtrics.com/jfe/form/SV_6svo6J4NF7wE6tD", 
@@ -573,7 +577,7 @@ ui <- dashboardPage(
                             Additionally, we offer a tool to explore the mean level relationship between different variables for different countries. Please note that to protect the 
                             privacy and anonymity of our participants we only provide country-level visualizations once we have data for more than 20 people from any particular country."),
                     tags$li("The ",
-                            a("Development", onclick = "openTab('medication_scirehab')", href="#"),
+                            a("Development", onclick = "openTab('drug_scirehab')", href="#"),
                             " tab gives you the possibility to interactively explore how different areas are evolving over time. This section is currently partly under
                             construction, but will be fully available soon.")
                     ),
@@ -625,7 +629,7 @@ ui <- dashboardPage(
                       strong("Study design."), "Randomized, double-blind, sequential,
                       multicenter clinical trial of two doses Sygen (i.e., low-dose GM-1: 300 mg intravenous loading dose followed by 100 mg/d x 56 days or high-dose GM-1:00 mg intravenous loading dose followed by 200 mg/d x 56 days) versus
                       placebo. All patients received the National Acute Spinal Cord Injury Study (NASCIS-2) protocol dosage of methylprednisolone. Based on a potential adverse interaction between concomitant MPSS and GM-1 administration, 
-                      the initial dose of GM-1 was delayed until after the steroids were given (mean onset of study medication, 54.9 hours).",
+                      the initial dose of GM-1 was delayed until after the steroids were given (mean onset of study drug, 54.9 hours).",
                       br(),
                       br(),
                       strong("Inclusion/exclusion criteria."), "For inclusion in Sygen, patients were required to have at least one lower extremity with a substantial motor deficit. Patients with spinal cord transection 
@@ -645,8 +649,8 @@ ui <- dashboardPage(
                       function).",
                       br(),
                       br(),
-                      strong("Concomitant medications."), "The use of medications delivered alongside the study medication (i.e., GM-1) was rigorously tracked. 
-                      For each concomitant medication administered during the trial, the dosage, reason for administration, and the timing of administration were recorded.",
+                      strong("Concomitant drugs."), "The use of drugs delivered alongside the study drug (i.e., GM-1) was rigorously tracked. 
+                      For each concomitant drug administered during the trial, the dosage, reason for administration, and the timing of administration were recorded.",
                       br(),
                       br(),
                       strong("Results."), "Of 797 patients recruited, 760 were included in the analysis. The prospectively planned analysis at the prespecified endpoint time for all patients was negative.
@@ -658,9 +662,9 @@ ui <- dashboardPage(
                     
                     fluidRow(
                       valueBox(prettyNum(797, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-                      valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant medications to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
+                      valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant drugs to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
                       valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
-                               "Prophylactic medication use", icon = icon("prescription"),  width = 3,  color = "purple"
+                               "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
                       ),
                       #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
                       valueBox("28", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
@@ -717,9 +721,9 @@ ui <- dashboardPage(
               )  #close fluid row
             ),   #close tabitem (cohort sygen)
     
-    # Tab: Sygen Medication
-    # Tab: Sygen Medication
-    tabItem(tabName = "medication_sygen",
+    # Tab: Sygen drug
+    # Tab: Sygen drug
+    tabItem(tabName = "drug_sygen",
             fluidRow(
               column(width = 8,
                      
@@ -796,43 +800,17 @@ ui <- dashboardPage(
                                               align='center')
                                       ), # end box
                                           
+                                      box(title = "Number of unique drugs per patient (mean [min -max])", 
+                                          width = NULL, 
+                                          heigth = 800,
+                                          solidHeader = TRUE,
                                           
                                           
-                                          # heigth = "300px",
-                                          # solidHeader = TRUE,
-                                          # selectInput("select_indication_pharmacol_management_sygen",
-                                          #             label = "Select Indication",
-                                          #             choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders", 
-                                          #                            "Cardiac disorders" = "Cardiac disorders", 
-                                          #                            "Ear and labyrinth disorders" = "Ear and labyrinth disorders", 
-                                          #                            "Eye disorders" = "Eye disorders", 
-                                          #                            "Gastrointestinal disorders" = "Gastrointestinal disorders", 
-                                          #                            "General disorders and administration site conditions" = "General disorders and administration site conditions", 
-                                          #                            "Immune system disorders" = "Immune system disorders", 
-                                          #                            "Infections and infestations" = "Infections and infestations", 
-                                          #                            "Injury, poisoning and procedural complications" = "Injury, poisoning and procedural complications", 
-                                          #                            "Metabolism and nutrition disorders" = "Metabolism and nutrition disorders", 
-                                          #                            "Musculoskeletal and connective tissue disorders" = "Musculoskeletal and connective tissue disorders", 
-                                          #                            "Nervous system disorders" = "Nervous system disorders", 
-                                          #                            "Pain" = "Pain", 
-                                          #                            "Psychiatric disorders" = "Psychiatric disorders", 
-                                          #                            "Renal and urinary system disorders" = "Renal and urinary system disorders", 
-                                          #                            "Respiratory, thoracic and mediastinal disorders" = "Respiratory, thoracic and mediastinal disorders", 
-                                          #                            "Skin and subcutaneous tissue disorders" = "Skin and subcutaneous tissue disorders",
-                                          #                            "Surgical and medical procedures" = "Surgical and medical procedures", 
-                                          #                            "Vascular disorders" = "Vascular disorders",
-                                          #                            "Sygen Protocol" = "Sygen Protocol", 
-                                          #                            "Unknown" = "Unknown"),
-                                          #             selected = c("Blood and lymphatic system disorders"))
-                                          
-
-
-
+                                          div(plotlyOutput("plot_pharmacol_management_ind_sygen", width = "100%", height = "100%",
+                                                           inline = FALSE),
+                                              align='center')
+                                      ), # end box
                                       
-                                      
-                                      
-                                      
-                                     
                                       
                                       
                      ), # end conditionalPanel
@@ -895,7 +873,7 @@ ui <- dashboardPage(
               )#end conditional Panel
             )#close fluid row
             
-    ), # Close tab item (medication_sygen)
+    ), # Close tab item (drug_sygen)
     
     
     tabItem(tabName = "about_scirehab",
@@ -931,14 +909,14 @@ ui <- dashboardPage(
                 a patient was over time during the stay in the center.",
                 br(),
                 br(),
-                strong("Commonly administered medications."), "The SCIRehab study rigorously tracked the use of all commonly administered medications. For each medication administered, route, dosage and dosing 
-                                   (i.e., start and end date, frequency) were abstracted directly from medical records. However, medication indication was not recorded. The medication data has not been published."
+                strong("Commonly administered drugs."), "The SCIRehab study rigorously tracked the use of all commonly administered drugs. For each drug administered, route, dosage and dosing 
+                                   (i.e., start and end date, frequency) were abstracted directly from medical records. However, drug indication was not recorded. The drug data has not been published."
               
                ), # close box
               
               fluidRow(
                 valueBox(prettyNum(1243, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-                valueBox(prettyNum(575, big.mark=" ", scientific=FALSE), "Unique medications to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
+                valueBox(prettyNum(575, big.mark=" ", scientific=FALSE), "Unique drugs to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
                 #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
                 valueBox("6", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
                 valueBox("2007-2010", "Running time", icon = icon("calendar-alt"), width = 3,  color = "purple")#,
@@ -1486,6 +1464,43 @@ server <- function(input, output, session) {
       
       
     }) #close function
+  
+  
+  # Figure of drugs per patient (mean, max, min)
+  output$plot_pharmacol_management_ind_sygen <- renderPlotly({ 
+    if (input$pharmacol_management_sygen == "full_cohort_sygen"){ #full cohort selected
+      
+      # Create color list  
+      color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
+      
+      # Create plot  
+      number.of.drug.perday.sygen.plot <- ggplot(acute_pharmacol_management.data.ind.sygen, aes(x=day, y=mean, color = ais1))+
+        geom_line(aes(x=day, y=mean, color=ais1), size=1)+
+        geom_ribbon(aes(ymin=min,ymax=max,fill=ais1),color="grey",alpha=0.4) +  theme_bw(base_size = 12, base_family = "Arial") + xlim(1,60) +
+        scale_fill_manual(values=color_list) + scale_color_manual(values=color_list) +
+        facet_wrap(.~ais1, ncol = 1)+ 
+        theme(legend.position="none", axis.text = element_text(color = 'black'), 
+              axis.title = element_text(color = 'black'), 
+              strip.text = element_text(color = 'black'))+
+        xlab('Days post injury')+ylab("")
+      number.of.drug.perday.sygen.plot
+      
+      ggplotly(number.of.drug.perday.sygen.plot, tooltip=c("x", "y", 'min', "max"), height = 800, width=800)
+      
+      
+      # open sans
+      
+      }
+    
+  })
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   #full_cohort_sygen', 'sbgrps_sygen'

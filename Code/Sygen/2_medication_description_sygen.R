@@ -69,7 +69,7 @@
   #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
   
   # Load original sygen medication dataset
-  sygen.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/masterfile.csv", header = T, sep = ',')
+    sygen.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_indication_per_day2.csv", header = T, sep = ',')
   names(sygen.medication.data)
   
   #---------- Calculate and visualize point prevalance of medication administration (i.e., number of medications administered per day per patient) ----------
@@ -171,14 +171,14 @@ number.of.drug.perday.sygen2 <- number.of.drug.perday.sygen %>%
   arrange(ais1)
 number.of.drug.perday.sygen2
 
-#write.csv(number.of.drug.perday.sygen2, '/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/number.of.drug.perday.sygen2.csv')
+# write.csv(number.of.drug.perday.sygen2, '/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/Sygen/number.of.drug.perday.sygen.for.shiny.csv')
 
   
 # Create color list  
 color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
   
 # Create plot  
- number.of.drug.perday.sygen.plot <- ggplot(point.prevalence.sygen, aes(x=day, y=mean, color = ais1))+
+ number.of.drug.perday.sygen.plot <- ggplot(number.of.drug.perday.sygen2, aes(x=day, y=mean, color = ais1))+
     geom_line(aes(x=day, y=mean, color=ais1), size=1)+
     geom_ribbon(aes(ymin=min,ymax=max,fill=ais1),color="grey",alpha=0.4) +  theme_bw(base_size = 12, base_family = "Times") + xlim(1,60) +
     scale_fill_manual(values=color_list) + scale_color_manual(values=color_list) +
