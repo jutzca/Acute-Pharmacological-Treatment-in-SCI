@@ -97,6 +97,9 @@ demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/m
 
 information.on.medication.long2.extended <- merge(information.on.medication.long2,demographics.data, by="NEW_ID")
 
+
+write.csv(information.on.medication.long2.extended,"/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/information.on.medication.long.csv", row.names = F )
+
 # Create list with number of patients per drug per day
 
 nr.of.patients.per.drug.per.day <- information.on.medication.long2 %>%
@@ -106,8 +109,16 @@ nr.of.patients.per.drug.per.day <- information.on.medication.long2 %>%
   distinct()%>%
   dplyr::mutate(n.source = n()) %>%
   dplyr::select(-"NEW_ID")%>%
-  distinct()
+  distinct()%>%
+  dplyr::mutate_if(is.numeric, ~1 * (. != 0)) %>% 
+  dplyr::mutate_if(is.numeric, ~replace_na(., 0))%>%
+  dplyr::count(day)
 nr.of.patients.per.drug.per.day
+
+
+nr.of.patients.per.drug.per.day$day <-as.numeric(as.factor(nr.of.patients.per.drug.per.day$day))
+
+plot_ly(nr.of.patients.per.drug.per.day, x = ~day, y = ~n, type = 'bar')
 
 
 # Create list with number of patients per drug per day per indication
@@ -125,6 +136,10 @@ nr.of.patients.per.drug.per.day.per.indiction <- information.on.medication.long2
   ) 
 
 nr.of.patients.per.drug.per.day.per.indiction
+
+
+
+
 
 
 nr.of.patients.per.drug.per.day.X7 <- nr.of.patients.per.drug.per.day%>% subset(day=="X60")%>%

@@ -48,6 +48,7 @@ library(shinyalert)
 library(shinyBS)
 library(devtools)
 library(testthat)
+library(crosstalk)
 ##
 ## ----------------------------
 ##
@@ -118,20 +119,64 @@ source("helper_functions_2.R")
 
 ########## Data sets ##########
 
-#---------- Data set #1: Sygen baseline characteristics ---------- 
+#---------- Data sets for Sygen ---------- 
 
 
 #sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
 #save(sygen_baseline, file = "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_baseline.RData")
 setwd('/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/')
 
+# Sygen baseline characteristics
 load("data/sygen_baseline.RData")
 
+# Sygen pharmacological management
+acute_pharmacol_management.data.sygen <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/information.on.medication.for.shiny.csv", stringsAsFactors = F)
 
-#---------- Data set #2: SCIRehab baseline characteristics ---------- 
+
+#---------- Data sets for SCIRehab ---------- 
 #scirehab_baseline<- read.csv("/Users/jutzca/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
 #save(scirehab_baseline, file = "data/scirehab_baseline.RData")
+
+# SCIRehab baseline characteristics
 load("data/scirehab_baseline.RData")
+
+
+#---------- fct_acute_pharmacol_management_sygen function ---------- 
+
+fct_acute_pharmacol_management_sygen<- function(day){
+  
+    nr.of.patients.per.drug.per.day <- acute_pharmacol_management.data.sygen %>%
+    dplyr::filter(dose != 0)%>%
+    dplyr::select(-"indication")%>%
+    dplyr::group_by(day, generic_name) %>%
+    dplyr::select(generic_name, day)%>%
+    ungroup()%>%
+    dplyr::count(day)%>% 
+    dplyr::group_by(day)
+  nr.of.patients.per.drug.per.day
+  
+  
+  acute_pharmacol_management.plot<-nr.of.patients.per.drug.per.day%>%
+    plotly::highlight_key(~day)%>%
+    plotly::plot_ly(y = ~n,
+                    x =  ~day)%>%
+    plotly::add_bars(
+      marker = list(color = 'rgb(96,92,168)'),
+      width = ~0.9,
+      text = ~paste("Days post injury:", day,
+                    '</br></br>', "Number of drugs:", n
+      ),
+      hoverinfo = "text")%>%
+    plotly::layout(xaxis = list(title = "Days post injury"),
+                   yaxis = list(title = "Numbers of unique drugs"))%>%
+    plotly::highlight(on = "plotly_hover", off = "plotly_doubleclick")
+  
+  return(acute_pharmacol_management.plot)
+  
+}
+
+#fct_acute_pharmacol_management_sygen(2)
+
 
 
 #---------- updateMultiInput_2 function ---------- 
@@ -673,21 +718,184 @@ ui <- dashboardPage(
             ),   #close tabitem (cohort sygen)
     
     # Tab: Sygen Medication
+    # Tab: Sygen Medication
     tabItem(tabName = "medication_sygen",
             fluidRow(
-              box(title = "Explore The Data", 
-                width = 8, 
-                heigth = "300px",
-                solidHeader = TRUE,
-              sliderInput("obs", "Number of observations:",
-                          min = 0, max = 365, value = 1
-              ),
-                          plotOutput("distPlot")
-            
-              )  #close box
+              column(width = 8,
+                     
+                     box(width = NULL,
+                         
+                         div(style="display:inline-block;width:100%;text-align:center;margin-top:7px;margin-bottom:7px;",
+                             radioGroupButtons(
+                               inputId = "pharmacol_management_sygen", 
+                               label = "Visualise pharmacological management at different scales", 
+                               selected = 'full_cohort_sygen',
+                               status = "success",
+                               individual = T, #if false, then the boxes are connected
+                               choiceNames = c("Group level", "Customized Subgroups"),
+                               choiceValues = c('full_cohort_sygen', 'sbgrps_sygen')
+                             ) # Close radioGroupButtons bracket
+                         ), # Close div bracket
+                     ),
+                     
+                     conditionalPanel(condition = "input.pharmacol_management_sygen == 'full_cohort_sygen' ",
+                                      
+                                      
+                                      box(title = "Overview of drugs per day and indication", 
+                                          width = NULL, 
+                                          heigth = "300px",
+                                          solidHeader = TRUE,
+                                          dataTableOutput('table')
+                                      ), # end box
+                                      
+                                      
+                                      box(title = "Unique drugs per day", 
+                                          width = NULL, 
+                                          heigth = "300px",
+                                          solidHeader = TRUE,
+                          
+
+                                          div(plotlyOutput("plot_pharmacol_management_sygen", width = "100%",
+                                                           inline = FALSE),
+                                              align='center')
+                                      ), # end box
+                                      
+                                      
+                                      box(title = "Unique drugs per day and indication", 
+                                          width = NULL, 
+                                          div(style="display:inline-block;width:100%;text-align:center;",
+                                               selectInput(inputId = "select_indication_pharmacol_management_sygen",
+                                                                        label = "Select an indication",
+                                                                        choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
+                                                                                       "Cardiac disorders" = "Cardiac disorders",
+                                                                                       "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
+                                                                                       "Eye disorders" = "Eye disorders",
+                                                                                       "Gastrointestinal disorders" = "Gastrointestinal disorders",
+                                                                                       "General disorders and administration site conditions" = "General disorders and administration site conditions",
+                                                                                       "Immune system disorders" = "Immune system disorders",
+                                                                                       "Infections and infestations" = "Infections and infestations",
+                                                                                       "Injury, poisoning and procedural complications" = "Injury, poisoning and procedural complications",
+                                                                                       "Metabolism and nutrition disorders" = "Metabolism and nutrition disorders",
+                                                                                       "Musculoskeletal and connective tissue disorders" = "Musculoskeletal and connective tissue disorders",
+                                                                                       "Nervous system disorders" = "Nervous system disorders",
+                                                                                       "Pain" = "Pain",
+                                                                                       "Psychiatric disorders" = "Psychiatric disorders",
+                                                                                       "Renal and urinary system disorders" = "Renal and urinary system disorders",
+                                                                                       "Respiratory, thoracic and mediastinal disorders" = "Respiratory, thoracic and mediastinal disorders",
+                                                                                       "Skin and subcutaneous tissue disorders" = "Skin and subcutaneous tissue disorders",
+                                                                                       "Surgical and medical procedures" = "Surgical and medical procedures",
+                                                                                       "Vascular disorders" = "Vascular disorders",
+                                                                                       "Sygen Protocol" = "Sygen Protocol",
+                                                                                       "Unknown" = "Unknown"),
+                                                                        selected = c("Blood and lymphatic system disorders"),
+                                                           multiple = F) # Close radioGroupButtons bracket
+                                              
+                                          ), # Close div bracket
+                                          div(plotlyOutput("plot_pharmacol_management_by_indication_sygen", width = "100%",
+                                                           inline = FALSE),
+                                              align='center')
+                                      ), # end box
+                                          
+                                          
+                                          
+                                          # heigth = "300px",
+                                          # solidHeader = TRUE,
+                                          # selectInput("select_indication_pharmacol_management_sygen",
+                                          #             label = "Select Indication",
+                                          #             choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders", 
+                                          #                            "Cardiac disorders" = "Cardiac disorders", 
+                                          #                            "Ear and labyrinth disorders" = "Ear and labyrinth disorders", 
+                                          #                            "Eye disorders" = "Eye disorders", 
+                                          #                            "Gastrointestinal disorders" = "Gastrointestinal disorders", 
+                                          #                            "General disorders and administration site conditions" = "General disorders and administration site conditions", 
+                                          #                            "Immune system disorders" = "Immune system disorders", 
+                                          #                            "Infections and infestations" = "Infections and infestations", 
+                                          #                            "Injury, poisoning and procedural complications" = "Injury, poisoning and procedural complications", 
+                                          #                            "Metabolism and nutrition disorders" = "Metabolism and nutrition disorders", 
+                                          #                            "Musculoskeletal and connective tissue disorders" = "Musculoskeletal and connective tissue disorders", 
+                                          #                            "Nervous system disorders" = "Nervous system disorders", 
+                                          #                            "Pain" = "Pain", 
+                                          #                            "Psychiatric disorders" = "Psychiatric disorders", 
+                                          #                            "Renal and urinary system disorders" = "Renal and urinary system disorders", 
+                                          #                            "Respiratory, thoracic and mediastinal disorders" = "Respiratory, thoracic and mediastinal disorders", 
+                                          #                            "Skin and subcutaneous tissue disorders" = "Skin and subcutaneous tissue disorders",
+                                          #                            "Surgical and medical procedures" = "Surgical and medical procedures", 
+                                          #                            "Vascular disorders" = "Vascular disorders",
+                                          #                            "Sygen Protocol" = "Sygen Protocol", 
+                                          #                            "Unknown" = "Unknown"),
+                                          #             selected = c("Blood and lymphatic system disorders"))
+                                          
+
+
+
+                                      
+                                      
+                                      
+                                      
+                                     
+                                      
+                                      
+                     ), # end conditionalPanel
+                     
+                     
+                     conditionalPanel(condition = "input.pharmacol_management_sygen != 'full_cohort_sygen' ",
+                                      
+                                      box(title = "hello world", 
+                                          heigth = "300px",
+                                          width = NULL, 
+                                          solidHeader = TRUE
+                                      ), # end box       
+                                      
+                                      
+                                      
+                     ), # end conditionalPanel 
+                     
+              ),# close column
+              
+              
+              
+              
+              conditionalPanel(condition = "input.pharmacol_management_sygen != 'full_cohort_sygen' ",
+                               
+                               
+                               column(width = 4, # create second column for second type of user inputs (filters)
+                                      
+                                      box(width = NULL, # create a new box
+                                          selectInput("select_sex_pharmacol_management_sbgrp_sygen",
+                                                      label = "Select sex",
+                                                      choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                                      selected = c("Unknown"))
+                                      ), # end box
+                                      
+                                      box(width = NULL, # create box
+                                          sliderInput("select_age_pharmacol_management_sbgrp_sygen",
+                                                      label = "Select age at injury",
+                                                      min = 10, max = 100,
+                                                      value = c(20,80)),
+                                      ), # end box
+                                      
+                                      box(width = NULL, # create a new box
+                                          selectInput("select_ais_pharmacol_management_sbgrp_sygen",
+                                                      label = "Select baseline AIS grade",
+                                                      choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                                      selected = c("Unknown"))
+                                      ), # end box
+                                      
+                                      box(width = NULL, # create a new box
+                                          selectInput("select_nli_pharmacol_management_sbgrp_sygen",
+                                                      label = "Select injury level",
+                                                      choices = list("Unknown", "Cervical", "Thoracic", "Lumbar", "Sacral",
+                                                                     "C1","C2","C3","C4","C5","C6","C7","C8",
+                                                                     "T1","T2","T3","T4","T5","T6","T7","T8","T9","T1","T11", "T12",
+                                                                     "L1", "L2", "L3", "L4", "L5",
+                                                                     "S1", "S2", "S3", "S4", "S5"),
+                                                      selected = c("Unknown"))
+                                      )#, # end box
+                               ) #end column
+              )#end conditional Panel
             )#close fluid row
             
-    ), # Close tab item (Sygen Medication)
+    ), # Close tab item (medication_sygen)
     
     
     tabItem(tabName = "about_scirehab",
@@ -1179,6 +1387,113 @@ server <- function(input, output, session) {
     
     
   })
+  
+  
+  # Overview figure if pharmacological management (overall)
+  output$plot_pharmacol_management_sygen <- renderPlotly({ 
+    if (input$pharmacol_management_sygen == "full_cohort_sygen"){ #full cohort selected
+      
+      # input_day <- input$day_pharmacol_management_sygen[[1]]
+      # print(input_day)
+      plot <- fct_acute_pharmacol_management_sygen(input_day)
+      plot}
+    
+  })
+  
+  # Overview figure if pharmacological management (overall)
+  output$plot_pharmacol_management_indication_sygen <- renderPlotly({ 
+    if (input$pharmacol_management_sygen == "full_cohort_sygen"){ #full cohort selected
+      
+      # input_day <- input$day_pharmacol_management_sygen[[1]]
+      # print(input_day)
+      plot <- fct_acute_pharmacol_management_sygen(input_day)
+      plot}
+    
+  })
+  
+  
+  output$table <- renderDataTable({
+    if (input$pharmacol_management_sygen == "full_cohort_sygen"){ 
+    
+      table.for.crosstalk <- acute_pharmacol_management.data.sygen %>%
+        dplyr::filter(dose != 0)%>%
+        #dplyr::select(-"indication")%>%
+        dplyr::group_by(day_x, generic_name,indication)%>%
+        ungroup()%>%
+        dplyr::select(generic_name, day, indication)%>%
+        dplyr::distinct(generic_name,day,indication)%>%
+        dplyr::rename(Day=day)%>%
+        dplyr::rename(Indication=indication)%>%
+        dplyr::rename(`Drug name`=generic_name)%>%
+        datatable(rownames = FALSE)
+   
+      
+  }
+    
+  })
+  
+  
+  
+  
+  
+  
+  output$plot_pharmacol_management_by_indication_sygen<-renderPlotly({ 
+    if (input$pharmacol_management_sygen == "full_cohort_sygen"){
+      
+      # if (input$select_indication_pharmacol_management_sygen == "Pain")  {
+        
+        
+        fct_acute_pharmacol_management_by_indication_sygen<- function(day){
+          
+          nr.of.patients.per.drug.per.day.per.indication <- acute_pharmacol_management.data.sygen %>%
+            filter(indication == input$select_indication_pharmacol_management_sygen)%>%
+            dplyr::filter(dose != 0)%>%
+            dplyr::group_by(day, generic_name, indication) %>%
+            dplyr::select(generic_name, day,indication)%>%
+            ungroup()%>%
+            dplyr::count(day,indication)%>% 
+            dplyr::group_by(day,indication)
+          nr.of.patients.per.drug.per.day.per.indication
+          
+          
+          
+          acute_pharmacol_management.by.indication.plot<-nr.of.patients.per.drug.per.day.per.indication%>%
+            highlight_key(~day)%>%
+            plotly::plot_ly(y = ~n,
+                            x =  ~day)%>%
+            plotly::add_bars(
+              marker = list(color = 'rgb(96,92,168)'),
+              width = ~0.9,
+              text = ~paste("Days post injury:", day,
+                            '</br></br>', "Number of drugs:", n
+              ),
+              hoverinfo = "text")%>%
+            plotly::layout(xaxis = list(title = "Days post injury"),
+                           yaxis = list(title = "Numbers of unique drugs"))%>%
+            highlight(on = "plotly_hover", off = "plotly_doubleclick")
+          
+          acute_pharmacol_management.by.indication.plot
+          
+          return(acute_pharmacol_management.by.indication.plot)
+          
+        }
+        
+        
+        plot <- fct_acute_pharmacol_management_by_indication_sygen()
+        plot
+        
+        }
+      
+      
+    }) #close function
+  
+  
+  #full_cohort_sygen', 'sbgrps_sygen'
+  
+  
+  
+  
+  
   
   
   
