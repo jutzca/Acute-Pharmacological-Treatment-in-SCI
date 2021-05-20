@@ -85,12 +85,18 @@ scirehab.medication.data.2<-scirehab.medication.data.1 %>%
 #Subset Data 
 scirehab.medication.data.2.subset <- scirehab.medication.data.2[c(2:63)]
 
+new_tab_pid_long.scirehab <- gather(scirehab.medication.data.2.subset, day, prevalence, X1:X60, factor_key=TRUE)
+new_tab_pid_long.scirehab 
+
+
+
 #Aggregate data: Number of medications per day for each patient
 new_tab_pid.scirehab<-aggregate(scirehab.medication.data.2.subset[-1], scirehab.medication.data.2["newid"], FUN=sum)
 
 # Subset data according to PIDs
 
-scirehab.pid <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Data/SCIRehab/Cohort_description/sci.rehab.cohort.admission.final.csv", stringsAsFactors = F)
+scirehab.pid <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/Demographics_injury_charact/rehab_summary_stats_patients_with_C0_to_L2_injuries.csv", sep = ',', header = T,  na.strings=c("","NA"))
+
 
 new_tab_pid.scirehab.subset <- merge(scirehab.pid, new_tab_pid.scirehab, by.x = "newid", 
                    by.y = "newid", all.x = TRUE, all.y = F)
@@ -105,7 +111,7 @@ new_tab_pid_long.scirehab
 new_tab_pid_long.scirehab$prevalence1 <- (new_tab_pid_long.scirehab$prevalence/1243)*100
 
 #change columns 4:368 to numerics class format
-cols_to_change = c(11:13)    
+cols_to_change = c(10:12)    
 for(i in cols_to_change){
   class(new_tab_pid_long.scirehab[, i]) = "numeric"
 }

@@ -64,12 +64,12 @@ levels(sci.rehab.cohort.admission$NLI) <- c("Cervical", "Thoracic", 'Lumbar')
 levels(sci.rehab.cohort.admission$Cause) <- c("Automobile", "Fall", "Gun shot", "Motorcycle", "Sports", "Others", "Pedestrian", 'Person-to-person contact', "Water-related")
 
 # Relable variables
-label(sci.rehab.cohort.admission$Sex) <- "Sex, n (%)"
-label(sci.rehab.cohort.admission$Age) <- "Age Groups"
+table1::label(sci.rehab.cohort.admission$Sex) <- "Sex, n (%)"
+table1::label(sci.rehab.cohort.admission$Age) <- "Age Groups"
 # label(emsci.trauma.sex.va.a1$NLI_level)<- "Neurological level of injury"
-label(sci.rehab.cohort.admission$AIS) <- "AIS, n (%)"
-label(sci.rehab.cohort.admission$NLI) <- "Neurological level of injury, n (%)"
-label(sci.rehab.cohort.admission$Cause) <- "Cause, n (%)"
+table1::label(sci.rehab.cohort.admission$AIS) <- "AIS, n (%)"
+table1::label(sci.rehab.cohort.admission$NLI) <- "Neurological level of injury, n (%)"
+table1::label(sci.rehab.cohort.admission$Cause) <- "Cause, n (%)"
 
 
 # 2. Create Table

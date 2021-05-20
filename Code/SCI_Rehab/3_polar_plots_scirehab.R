@@ -85,10 +85,10 @@ scirehab.medication.data.subset.formatted<-scirehab.medication.data.subset %>%
 # Create data file and plot figure
 scirehab.medication.data.subset.formatted.final <- scirehab.medication.data.subset.formatted%>%
   dplyr::mutate(total = rowSums(across(where(is.numeric))))%>%
-  select(c(1,2,64))%>%
-  mutate_if(is.numeric, ~1 * (. != 0))%>%
+  dplyr::select(c(1,2,64))%>%
+  dplyr::mutate_if(is.numeric, ~1 * (. != 0))%>%
   filter(total>0)%>%
-  count(generic_name) %>%
+  dplyr::count(generic_name) %>%
   dplyr::arrange(-n)%>%
   dplyr::distinct()%>%
   top_n(20)%>%

@@ -69,7 +69,7 @@
   #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
   
   # Load original sygen medication dataset
-    sygen.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_indication_per_day2.csv", header = T, sep = ',')
+  sygen.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_indication_per_day.csv", header = T, sep = ',')
   names(sygen.medication.data)
   
   #---------- Calculate and visualize point prevalance of medication administration (i.e., number of medications administered per day per patient) ----------
