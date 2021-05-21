@@ -199,7 +199,7 @@ g <- tbl_graph(nodes2, edges, directed = FALSE)%>%
   geom_node_point(aes(size = degree),color='red') +
   geom_node_text(aes(#size = n.source, 
     label = label), repel = TRUE, 
-    max.overlaps = getOption("ggrepel.max.overlaps", default = 100), family = "Times") +  ggtitle('Day 60')+
+    max.overlaps = getOption("ggrepel.max.overlaps", default = 100), family = "Times") +  ggtitle('Day 7')+
   theme_graph(title_size = 18,
               title_face = "bold",
               title_margin = 10)
