@@ -78,17 +78,17 @@ outdir_tables='/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in
 
 # Load data
 
-network_data<-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Network_graph/edges_for_graph.csv", header = T, sep = ',')
+network_data<-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Network_graph/edges_for_graph.sygen.csv", header = T, sep = ',')
 
-information.on.medication <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_indication_per_day2.csv")
+information.on.medication <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_indication_per_day.csv")
 
 # Format file from wide to long
 information.on.medication.long <- gather(information.on.medication, day, dose, X0:X365, factor_key=TRUE)
-information.on.medication.long 
+information.on.medication.long
 
 # Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
 information.on.medication.long2<-information.on.medication.long %>%
-  dplyr::mutate_if(is.numeric, ~1 * (. != 0)) %>% 
+  dplyr::mutate_if(is.numeric, ~1 * (. != 0)) %>%
   dplyr::mutate_if(is.numeric, ~replace_na(., 0))
 
 
@@ -98,65 +98,46 @@ demographics.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/m
 information.on.medication.long2.extended <- merge(information.on.medication.long2,demographics.data, by="NEW_ID")
 
 
-write.csv(information.on.medication.long2.extended,"/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/information.on.medication.long.csv", row.names = F )
+#write.csv(information.on.medication.long2.extended,"/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/information.on.medication.long.csv", row.names = F )
+
+information.on.medication.long <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/information.on.medication.long.csv", stringsAsFactors = F)
+
 
 # Create list with number of patients per drug per day
-
-nr.of.patients.per.drug.per.day <- information.on.medication.long2 %>%
+nr.of.patients.per.drug.per.day <- information.on.medication.long2.extended %>%
   dplyr::filter(dose != 0)%>%
-  dplyr::select(-"indication")%>%
+  dplyr::select(NEW_ID,generic_name,day)%>%
+  distinct()%>%
   dplyr::group_by(day, generic_name) %>%
   distinct()%>%
-  dplyr::mutate(n.source = n()) %>%
   dplyr::select(-"NEW_ID")%>%
-  distinct()%>%
-  dplyr::mutate_if(is.numeric, ~1 * (. != 0)) %>% 
-  dplyr::mutate_if(is.numeric, ~replace_na(., 0))%>%
-  dplyr::count(day)
+  dplyr::mutate(n.source = n()) %>%
+  dplyr::select(generic_name,day,n.source)%>%
+  distinct()
 nr.of.patients.per.drug.per.day
 
-
+# Make day a numeric variable
 nr.of.patients.per.drug.per.day$day <-as.numeric(as.factor(nr.of.patients.per.drug.per.day$day))
 
-plot_ly(nr.of.patients.per.drug.per.day, x = ~day, y = ~n, type = 'bar')
 
+#---------- Create Network Graph ---------- 
 
-# Create list with number of patients per drug per day per indication
-nr.of.patients.per.drug.per.day.per.indiction <- information.on.medication.long2 %>%
-  dplyr::filter(dose != 0)%>%
-  # dplyr::select(-"indication")%>%
-  dplyr::group_by(day, generic_name, indication) %>%
-  distinct()%>%
-  dplyr::mutate(n.source = n(),
-                mean = mean(dose,na.rm=TRUE),
-                median = median(dose, na.rm=TRUE),
-                sd = sd(dose,na.rm=TRUE),
-                max = max(dose, na.rm=TRUE),
-                min = min(dose, na.rm=TRUE)
-  ) 
-
-nr.of.patients.per.drug.per.day.per.indiction
-
-
-
-
-
-
-nr.of.patients.per.drug.per.day.X7 <- nr.of.patients.per.drug.per.day%>% subset(day=="X60")%>%
+# Create subset of weights, which will be assigned to the node of the graph (node size = number of patients receiving a drug) 
+nr.of.patients.per.drug.per.day.X7 <- nr.of.patients.per.drug.per.day%>% subset(day==20)%>%
   as.data.frame()%>%
-  select(-c("day", "dose"))
+  select(-c("day"))
 
 
 # 1. Node list
 
 # Create source
-source <- network_data %>% subset(day=="X60" & value >10 )%>% 
+source <- network_data %>% subset(day=="X7" & value >20 )%>% 
   distinct(Source) %>%
   dplyr::rename(label = Source)
 head(source)
 
 # Create target
-target <- network_data %>%subset(day=="X60" & value >20 )%>% 
+target <- network_data %>%subset(day=="X7" & value >20 )%>% 
   distinct(Target) %>%
   dplyr::rename(label = Target)
 names(target)
@@ -173,7 +154,7 @@ nodes2 <- merge(nodes, nr.of.patients.per.drug.per.day.X7, by.x = "label", by.y 
 nodes2
 
 # 2. Edge list
-edge.data <- network_data %>%  subset(day=="X60" & value >20 )%>% 
+edge.data <- network_data %>%  subset(day=="X7" & value >20 )%>% 
   group_by(Source, Target) %>%
   dplyr::summarise(weight = value) %>% 
   ungroup()

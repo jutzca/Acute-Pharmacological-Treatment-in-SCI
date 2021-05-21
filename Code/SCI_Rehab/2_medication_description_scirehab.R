@@ -167,11 +167,13 @@ number.of.drug.perday.scirehab2
 write.csv(number.of.drug.perday.scirehab2, '/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/SCI_Rehab/number.of.drug.perday.scirehab2.csv')
 
 
+data.2 <-read.csv('/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/SCI_Rehab/number.of.drug.perday.scirehab2.csv', stringsAsFactors = F)
+
 # Create color list  
 color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
 
 # Create plot  
-number.of.drug.perday.scirehab.plot <- ggplot(number.of.drug.perday.scirehab, aes(x=as.numeric(day), y=mean, color = AIS))+
+number.of.drug.perday.scirehab.plot <- ggplot(data.2, aes(x=as.numeric(day), y=mean, color = AIS))+
   geom_line(aes(x=as.numeric(day), y=mean, color=AIS), size=1)+
   geom_ribbon(aes(ymin=min,ymax=max,fill=AIS),color="grey",alpha=0.4) +  theme_bw(base_size = 12, base_family = "Times") + xlim(1,60) +
   scale_fill_manual(values=color_list) + scale_color_manual(values=color_list) +

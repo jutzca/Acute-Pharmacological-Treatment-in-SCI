@@ -63,22 +63,17 @@
   #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
   
   # Lod original data
-  sygen.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/masterfile.csv", header = T, sep = ',')
+  sygen.medication.data <- read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/df_drugs_indication_per_day.csv", header = T, sep = ',')
   names(sygen.medication.data)
   
   # Make copy of data file to work with
-  sygen.medication.data.network <- sygen.medication.data
+  sygen.medication.data.network.copy <- sygen.medication.data
   
   # Replace all values greater than 0 with a 1 and all na's will be replaced with a 0
-  sygen.medication.data.network[sygen.medication.data.network>0] <- 1
-  sygen.medication.data.network[is.na(sygen.medication.data.network)] <- 0 
-  
-  #change columns to numerics class format
-  cols_to_change = c(4:6)    
-  for(i in cols_to_change){
-    aggregate(sygen.medication.data.network[,i], by=list(Category=sygen.medication.data.network$generic_name), FUN=sum)
-  }
-  
+  sygen.medication.data.network<-sygen.medication.data.network.copy %>%
+    dplyr::mutate_if(is.numeric, ~1 * (. != 0)) %>% 
+    dplyr::mutate_if(is.numeric, ~replace_na(., 0))
+
   #Create the vector generic_name
   generic_name <- unique(sygen.medication.data.network$generic_name)
   
@@ -95,34 +90,35 @@
     df_total <- rbind(df_total,df)
   }
   
-  write.csv(df_total, '/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/drug_names_per_day.csv')
-  
+  write.csv(df_total, '/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/drug_names_per_day.csv', row.names = F)
   
   
   #Read file
-  df_total <- read.csv('/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/drug_names_per_day.csv', header = T, sep = ',' )
+  df_total1 <- read.csv('/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/drug_names_per_day.csv', header = T, sep = ',' )
   head(df_total)
   
-  
+
   #rearrange the data frame from wide to long for the days X0:X365
-  data_long <- tidyr::gather(df_total, day, measurement, X0:X365, factor_key=TRUE)
+  data_long <- tidyr::gather(df_total1, day, measurement, X0:X365, factor_key=TRUE)
   tibble::glimpse(data_long)
   head(data_long)
   
-  #Subset data
-  data_long_subset =data_long[,-c(1,2,4)]
+  # Subset data
+  data_long_subset =data_long[,-c(1, 3:4)]
   
-  #Remove lines that have no value in the measurement column
+  # Remove lines that have no value in the measurement column
   data_long_subset_rm_na <- subset(data_long_subset, (!(measurement == '')) )
   
-  #Create the vector generic_name
-  days <- unique(data_long_subset_rm_na$day)
+  data_long_subset_rm_na2 <- data_long_subset_rm_na %>% distinct()
   
-  #Create template for final data frame
+  # Create the vector generic_name
+  days <- unique(data_long_subset_rm_na2$day)
+  
+  # Create template for final data frame
   df_all_days_pooled = data.frame()
   
     for (i in 1:length(days)){ 
-      temp <- data_long_subset_rm_na[data_long_subset_rm_na$day==days[i],]
+      temp <- data_long_subset_rm_na2[data_long_subset_rm_na2$day==days[i],]
       day_added <-as.character(unique(temp$day))
       
       df <- temp %>% mutate(n = 1) %>% 
@@ -139,11 +135,14 @@
     }
     
   
+  df_all_days_pooled_final <- subset(df_all_days_pooled, value>0)
+  
+  
   #Create the dataframe for the edges --> separate the pairs
-  edge_df<-df_all_days_pooled %>% separate(Pair, c("Source", "Target"), ", ")
+  edge_df<-df_all_days_pooled_final %>% separate(Pair, c("Source", "Target"), ", ")
   
   #Write file
-  write.csv(edge_df, '/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Network_graph/edges_for_graph.csv', row.names = F)
+  write.csv(edge_df, '/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Network_graph/edges_for_graph2.csv', row.names = F)
   
 
   #### -------------------------------------------------------------------------- CODE END ------------------------------------------------------------------------------------------------####
