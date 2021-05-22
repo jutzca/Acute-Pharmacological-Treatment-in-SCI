@@ -22,35 +22,43 @@
 ##
 ## Load up the packages required
 ##
-library(shiny)
-library(shinydashboard)
+library(rsconnect) ##
+library(shiny) ##
+library(shinydashboard) ##
 library(shinythemes)
-library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(stats)
-library(DT)
-library(shinyWidgets)
-library(png)
-library(plotly)
-library(splitstackshape)
-library(RColorBrewer)
-library(stringr)
-library(ggnetwork)
-library(networkD3)
-library(igraph)
-library(intergraph)
-library(sna)
-library(shinyjs)
-library(metathis)
-library(r2d3)
-library(shinyalert)
-library(shinyBS)
-library(devtools)
-library(testthat)
+library(dplyr) ##
+library(tidyr) ##
+library(ggplot2) ##
+library(stats) ##
+library(DT) ##
+library(shinyWidgets) ##
+library(png) ##
+library(plotly) ###### pb when removing ######
+library(splitstackshape) ##
+library(RColorBrewer) ##
+library(stringr) ##
+library(ggnetwork) ##
+library(networkD3) ##
+library(igraph) ##
+library(intergraph) ##
+library(sna) ##
+library(shinyjs) ##
+library(metathis) ##
+library(r2d3) ##
+library(shinyalert) ##
+library(shinyBS) ##
+library(devtools) ##
+library(testthat) ##
+library(gridExtra) ##
+library(grid) ##
+library(lattice) ##
+library(tibble) ##
+library(data.table) ##
+library(tidygraph) ##
+library(ggraph) ##
 library(crosstalk)
 library(extrafont)
-##
+
 ## ----------------------------
 ##
 ## Install packages needed:  (uncomment as required)
@@ -70,6 +78,7 @@ library(extrafont)
 # if(!require(RColorBrewer)){install.packages("RColorBrewer")}
 # if(!require(stringr)){install.packages("stringr")}
 # if(!require(ggnetwork)){install.packages("ggnetwork")}
+# if(!require(networkD3)){install.packages("networkD3")}
 # if(!require(igraph)){install.packages("igraph")}
 # if(!require(intergraph)){install.packages("intergraph")}
 # if(!require(sna)){install.packages("sna")}
@@ -78,7 +87,9 @@ library(extrafont)
 # if(!require(r2d3)){install.packages("r2d3")}
 # if(!require(Shinyalert)){install.packages("Shinyalert")}
 # if(!require(bsAlert)){install.packages("bsAlert")}
+# if(!require(shinyBS)){install.packages("shinyBS")}
 # if(!require(devtools)){install.packages("devtools")}
+# if(!require(testthat)){install.packages("testthat")}
 ##
 ## ---------------------------
 ##
@@ -90,148 +101,36 @@ gc() # garbage collector
 ## ---------------------------
 ##
 ## Set working directory 
-#setwd("/Users/jutzelec/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/")
-dirname <-  '/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/'
-if (!dir.exists(dirname))dir.create(dirname,recursive=TRUE)
+#setwd('/Volumes/bs-dfs-1/group/borgwardt/Projects/SCI_Drugs/shinyapp/acute_pharmacological_management_sci')
 
-## ---------------------------
-##
-#Set local system
-Sys.setlocale('LC_ALL','C') 
-##
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
 
 #---------- Add sources ----------# 
 source("helper_functions_2.R")
-# source("R/dependencies.R")
-# source("R/input-multi.R")
-# source("R/utils.R")
-
-#### ---------------------------
-# load data:
-# data creation not possible in docker container (i.e., on server)
-# if (!file.exists("data/shinyDataAggregated.RData")) {
-#   data_prep()
-# }
-
-#load("data/shinyDataAggregated.RData")
-#load("data/shinyDataLongitudinal.RData")
 
 ########## Data sets ##########
 
 #---------- Data sets for Sygen ---------- 
-
-
-#sygen_baseline<- read.csv("/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
-#save(sygen_baseline, file = "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/sygen_baseline.RData")
-setwd('/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/')
-
-# Sygen baseline characteristics
+network_data_sygen <- read.csv('data/edges_for_graph.csv', header = T, sep = ',')
+data_network_sygen <- read.csv('data/nr.of.patients.per.drug.per.day.csv', header=TRUE, sep=',')
 load("data/sygen_baseline.RData")
-
-# Sygen pharmacological management
-#acute_pharmacol_management.data.sygen <-read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/masterfile/information.on.medication.for.shiny.csv", stringsAsFactors = F)
-#acute_pharmacol_management.data.sygen <-read.csv("data/acute_pharmacol_management.data.sygen.csv", stringsAsFactors = F)
-#save(acute_pharmacol_management.data.sygen, file = "acute_pharmacol_management.data.sygen.RData")
 load('data/acute_pharmacol_management.data.sygen.RData')
-
-# Sygen pharmacological management per patient
-# save(acute_pharmacol_management.data.ind.sygen, file = "data/sygen_acute_pharmacol_management.data.ind.sygen.RData")
 load("data/sygen_acute_pharmacol_management.data.ind.sygen.RData")
+load("data/df_heatmap_sygen_drug.RData")
+load("data/df_heatmap_sygen_indication.RData")
+
+#vec_drug_sygen <- names(df_heatmap_sygen_drug)[7:dim(df_heatmap_sygen_drug)[2]]
 
 #---------- Data sets for SCIRehab ---------- 
-#scirehab_baseline<- read.csv("/Users/jutzca/Documents/GitHub/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/data/rehab_summary_stats_for_app_new.csv", sep = ',', header = T, stringsAsFactors = F)
-#save(scirehab_baseline, file = "data/scirehab_baseline.RData")
-
-# SCIRehab baseline characteristics
+network_data_scirehab <- read.csv('data/edges_for_graph.scirehab.csv', header = T, sep = ',')
+data_network_scirehab <- read.csv('data/nr.of.patients.per.drug.per.day.scirehab.csv', header=TRUE, sep=',')
 load("data/scirehab_baseline.RData")
-
-# SCIRehab pharmacological management
-# acute_pharmacol_management.data.scirehab=read.csv("/Volumes/jutzelec$/8_Projects/1_Ongoing/3_Drugs/Drug_addep/acute_pharmacol_management.scirehab.for_shiny.csv", stringsAsFactors = F)
-# save(acute_pharmacol_management.data.scirehab, file = "data/acute_pharmacol_management.data.scirehab.RData")
 load("data/acute_pharmacol_management.data.scirehab.RData")
-
-# SCIRehab pharmacological management per ais grade
-# acute_pharmacol_management.data.per.ais.grade <-read.csv('/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/Tables/SCI_Rehab/number.of.drug.perday.scirehab2.csv', stringsAsFactors = F)
-# save(acute_pharmacol_management.data.per.ais.grade, file = "data/acute_pharmacol_management.data.per.ais.grade.RData")
 load("data/acute_pharmacol_management.data.per.ais.grade.RData")
+#load("data/df_heatmap_scirehab_drug.RData")
 
-
-#---------- fct_acute_pharmacol_management_sygen function ---------- 
-
-fct_acute_pharmacol_management_sygen<- function(day){
-  
-    nr.of.patients.per.drug.per.day <- acute_pharmacol_management.data.sygen %>%
-    dplyr::filter(dose != 0)%>%
-    dplyr::select(-"indication")%>%
-    dplyr::group_by(day, generic_name) %>%
-    dplyr::select(generic_name, day)%>%
-    ungroup()%>%
-    dplyr::count(day)%>% 
-    dplyr::group_by(day)
-  nr.of.patients.per.drug.per.day
-  
-  
-  acute_pharmacol_management.plot<-nr.of.patients.per.drug.per.day%>%
-    plotly::highlight_key(~day)%>%
-    plotly::plot_ly(y = ~n,
-                    x =  ~day)%>%
-    plotly::add_bars(
-      marker = list(color = 'rgb(96,92,168)'),
-      width = ~0.9,
-      text = ~paste("Days post injury:", day,
-                    '</br></br>', "Number of drugs:", n
-      ),
-      hoverinfo = "text")%>%
-    plotly::layout(xaxis = list(title = "Days post injury"),
-                   yaxis = list(title = "Numbers of unique drugs"))%>%
-    plotly::highlight(on = "plotly_hover", off = "plotly_doubleclick")
-  
-  return(acute_pharmacol_management.plot)
-  
-}
-
-#fct_acute_pharmacol_management_sygen(2)
-
-
-
-fct_acute_pharmacol_management.data.scirehab<- function(day){
-  
-  nr.of.patients.per.drug.per.day <- acute_pharmacol_management.data.scirehab %>%
-    dplyr::filter(prevalence != 0)%>%
-    dplyr::group_by(day, generic_name) %>%
-    dplyr::select(generic_name, day)%>%
-    dplyr::arrange(day)%>%
-    dplyr::distinct()%>%
-    ungroup()%>%
-    dplyr::count(day)%>% 
-    dplyr::group_by(day)
-  nr.of.patients.per.drug.per.day
-  
-  
-  acute_pharmacol_management.scirehab.plot<-nr.of.patients.per.drug.per.day%>%
-    plotly::highlight_key(~day)%>%
-    plotly::plot_ly(y = ~n,
-                    x =  ~day)%>%
-    plotly::add_bars(
-      marker = list(color = 'rgb(96,92,168)'),
-      width = ~0.9,
-      text = ~paste("Days post injury:", day,
-                    '</br></br>', "Number of drugs:", n
-      ),
-      hoverinfo = "text")%>%
-    plotly::layout(xaxis = list(title = "Days post injury"),
-                   yaxis = list(title = "Numbers of unique drugs"))%>%
-    plotly::highlight(on = "plotly_hover", off = "plotly_doubleclick")
-  
-  return(acute_pharmacol_management.scirehab.plot)
-  
-}
-
-
-
-
+font_import("Times")
 
 #---------- updateMultiInput_2 function ---------- 
 
@@ -264,7 +163,6 @@ updateMultiInput_2 <- function (session, inputId, label = NULL, selected = NULL,
   message <- dropNulls(list(label = label, options = options, value = selected))
   session$sendInputMessage(inputId, message)
 }
-
 
 r2d3_script <- "
 // !preview r2d3 data= data.frame(y = 0.1, ylabel = '1%', fill = '#E69F00', mouseover = 'green', label = 'one', id = 1)
@@ -332,64 +230,60 @@ totals.transition()
 totals.exit().remove();
 "
 
-
 r2d3_file <- tempfile()
 writeLines(r2d3_script, r2d3_file)
-
-
-
 
 
 #----------  Shiny app ui  ---------- 
 
 ui <- dashboardPage(
-
+  
   #----Dashboard header----
   
-  # Define title, icon, and width of titel
+  # Define title, icon, and width of title
   title = "Pharmacological Management of Spinal Cord Injury Project",
   dashboardHeader(title=span(icon("prescription"), "Pharmacological Management of Spinal Cord Injury"),
                   titleWidth = 500), #HTML(paste(icon("virus"), "PsyCorona Data Tool"))
- 
+  
   # Select 'skin' color: blue, black, green, purple, red, yellow
   skin = "purple",
   
-
+  
   #----Dashboard sidebar----
   # Set up the sidebar of the dashboard
   dashboardSidebar(width = 350,
-    sidebarMenu(id = "sidebarMenu",
-                menuItem("About", tabName = "about", icon = icon("info-circle")),
-                #menuItem("Cohorts", tabName = "cohort", icon = icon("users"),
-                menuItem('Sygen Trial', tabName = 'sygentrial', icon = icon("hospital-user"), 
-                         menuSubItem("About", tabName = "about_sygen", icon = icon("info-circle")),
-                         menuSubItem("Cohort", tabName = "cohort_sygen", icon = icon("users")), 
-                         menuSubItem("Drugs", tabName = "drug_sygen", icon = icon("prescription")),
-                         menuSubItem("Polypharmacy", tabName = "polypharmacy_sygen", icon = icon("dice-d20")),
-                         menuSubItem("Drug administration pattern", tabName = "drug_pattern_sygen", icon = icon("chart-bar"))),
-                menuItem('SCIRehab', tabName = 'scirehab', icon=icon("database"),
-                         menuSubItem("About", tabName = "about_scirehab", icon = icon("info-circle")),
-                         menuSubItem("Cohort", tabName = "cohort_scirehab", icon = icon("users")), 
-                         menuSubItem("Drugs", tabName = "drug_scirehab", icon = icon("prescription")),
-                         menuSubItem("Polypharmacy", tabName = "polypharmacy_scirehab", icon = icon("dice-d20")),
-                         menuSubItem("Drug administration pattern", tabName = "drug_pattern_scirehab", icon = icon("chart-bar"))),
-                menuItem("Abbreviations", tabName = "abbreviations", icon = icon("language")),
-                menuItem(HTML(paste0("Contact for collaborations ", icon("external-link"))), icon=icon("envelope"), href = "mailto:catherine.jutzeler@bsse.ethz.ch"),
-                uiOutput("dynamic_content")),
-    shinyjs::useShinyjs(),
-    tags$footer(HTML("<strong>Copyright &copy; 2020 <a href=\"Dr. Catherine Jutzeler\" target=\"_blank\">Data Science for Health Lab</a>.</strong> 
-                     <br>This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-                     <br><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png\" /></a>
-                     "),
-                #latest.DateTime,
-                id = "sideFooter",
-                align = "left",
-                style = "
-                position:absolute;
-                bottom:0;
-                width:100%;
-                padding: 10px;
-                ")
+                   sidebarMenu(id = "sidebarMenu",
+                               menuItem("About", tabName = "about", icon = icon("info-circle")),
+                               #menuItem("Cohorts", tabName = "cohort", icon = icon("users"),
+                               menuItem('Sygen Trial', tabName = 'sygentrial', icon = icon("hospital-user"), 
+                                        menuSubItem("About", tabName = "about_sygen", icon = icon("info-circle")),
+                                        menuSubItem("Cohort", tabName = "cohort_sygen", icon = icon("users")), 
+                                        menuSubItem("Medications", tabName = "drug_sygen", icon = icon("prescription")),
+                                        menuSubItem("Polypharmacy", tabName = "polypharmacy_sygen", icon = icon("dice-d20")),
+                                        menuSubItem("Drug administration pattern", tabName = "drug_pattern_sygen", icon = icon("chart-bar"))),
+                               menuItem('SCIRehab', tabName = 'scirehab', icon=icon("database"),
+                                        menuSubItem("About", tabName = "about_scirehab", icon = icon("info-circle")),
+                                        menuSubItem("Cohort", tabName = "cohort_scirehab", icon = icon("users")), 
+                                        menuSubItem("Medications", tabName = "drug_scirehab", icon = icon("prescription")),
+                                        menuSubItem("Polypharmacy", tabName = "polypharmacy_scirehab", icon = icon("dice-d20")),
+                                        menuSubItem("Drug administration pattern", tabName = "drug_pattern_scirehab", icon = icon("chart-bar"))),
+                               menuItem("Abbreviations", tabName = "abbreviations", icon = icon("language")),
+                               menuItem(HTML(paste0("Contact for collaborations ", icon("external-link"))), icon=icon("envelope"), href = "mailto:catherine.jutzeler@bsse.ethz.ch"),
+                               uiOutput("dynamic_content")),
+                   shinyjs::useShinyjs(),
+                   tags$footer(HTML("<strong>Copyright &copy; 2020 <a href=\"Dr. Catherine Jutzeler\" target=\"_blank\">Data Science for Health Lab</a>.</strong> 
+                                    <br>This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+                                    <br><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png\" /></a>
+                                    "),
+                               #latest.DateTime,
+                               id = "sideFooter",
+                               align = "left",
+                               style = "
+                               position:absolute;
+                               bottom:0;
+                               width:100%;
+                               padding: 10px;
+                               ")
   ),
   
   #----Dashboard body----
@@ -405,130 +299,131 @@ ui <- dashboardPage(
     tags$style(
       type = 'text/css',
       '.bg-aqua {background-color: #605ca8!important; }
-      .bttn-simple.bttn-primary {background-color: #605ca8!important; }
-      .btn.radiobtn.btn-primary {float: center!important;
-      display: block;
-      width: 160px}
-      '
+                      .bttn-simple.bttn-primary {background-color: #605ca8!important; }
+                      .btn.radiobtn.btn-primary {float: center!important;
+                      display: block;
+                      width: 160px}
+                      '
     ),
     tags$style("@import url(https://use.fontawesome.com/releases/v5.13.0/css/all.css);"),
     tags$script(src = "https://code.highcharts.com/mapdata/custom/world.js"),
     tags$script(HTML("
-                     var openTab = function(tabName){
-                     $('a', $('.sidebar')).each(function() {
-                     if(this.getAttribute('data-value') == tabName) {
-                     this.click()
-                     };
-                     });
-                     };
-                     $('.sidebar-toggle').attr('id','menu');
-                     var dimension = [0, 0];
-                     $(document).on('shiny:connected', function(e) {
-                     dimension[0] = window.innerWidth;
-                     dimension[1] = window.innerHeight;
-                     Shiny.onInputChange('dimension', dimension);
-                     });
-                     $(window).resize(function(e) {
-                     dimension[0] = window.innerWidth;
-                     dimension[1] = window.innerHeight;
-                     Shiny.onInputChange('dimension', dimension);
-                     });
-                     ")),
+                                     var openTab = function(tabName){
+                                     $('a', $('.sidebar')).each(function() {
+                                     if(this.getAttribute('data-value') == tabName) {
+                                     this.click()
+                                     };
+                                     });
+                                     };
+                                     $('.sidebar-toggle').attr('id','menu');
+                                     var dimension = [0, 0];
+                                     $(document).on('shiny:connected', function(e) {
+                                     dimension[0] = window.innerWidth;
+                                     dimension[1] = window.innerHeight;
+                                     Shiny.onInputChange('dimension', dimension);
+                                     });
+                                     $(window).resize(function(e) {
+                                     dimension[0] = window.innerWidth;
+                                     dimension[1] = window.innerHeight;
+                                     Shiny.onInputChange('dimension', dimension);
+                                     });
+                                     ")),
     
     
     # Customize color for the box status 'primary' and 'success' to match the skin color
     tags$style(HTML("
-                      .btn-primary.btn {
-                    color: #605ca8;
-                    background-color: #fff;
-                    border: 2px #605ca8 solid;
-                    }
-                    .btn-primary.btn:hover {
-                    color: #fff;
-                    background-color: #605ca8;
-                    }
-                    .btn-primary.active {
-                    color: #fff;
-                    background-color: #605ca8;
-                    border-color: #605ca8;
-                    }
-                    .btn-outline-primary:focus,
-                    .btn-outline-primary.focus{
-                    color: #fff;
-                    background-color: #605ca8;
-                    border-color: #605ca8;
-                    }
-                    
-
-                    .btn.btn-success {
-                     color: #fff;
-                    background-color: #605ca8;
-                    border-color: #605ca8;
-                    }
-                    .btn.btn-success.focus,
-                    .btn.btn-success:focus {
-                    color: #fff;
-                    background-color: #605ca8;
-                    border-color: #605ca8;
-                    outline: none;
-                    box-shadow: none;
-                    }
-                    .btn.btn-success:hover {
-                    color: #fff;
-                    background-color: #605ca8;
-                    border-color: #605ca8;
-                    outline: none;
-                    box-shadow: none;
-                    }
-                    .btn.btn-success.active,
-                    .btn.btn-success:active {
-                    color: #fff;
-                    background-color: #605ca8;
-                    border-color: #605ca8;
-                    outline: none;
-                    }
-                    .btn.btn-success.active.focus,
-                    .btn.btn-success.active:focus,
-                    .btn.btn-success.active:hover,
-                    .btn.btn-success:active.focus,
-                    .btn.btn-success:active:focus,
-                    .btn.btn-success:active:hover {
-                    color: #fff;
-                    background-color: #8f8cc2 ;
-                    border-color: #8f8cc2 ;
-                    outline: none;
-                    box-shadow: none;
-                    }
-
-                  ")),
-
+                                    .btn-primary.btn {
+                                    color: #605ca8;
+                                    background-color: #fff;
+                                    border: 2px #605ca8 solid;
+                                    }
+                                    .btn-primary.btn:hover {
+                                    color: #fff;
+                                    background-color: #605ca8;
+                                    }
+                                    .btn-primary.active {
+                                    color: #fff;
+                                    background-color: #605ca8;
+                                    border-color: #605ca8;
+                                    }
+                                    .btn-outline-primary:focus,
+                                    .btn-outline-primary.focus{
+                                    color: #fff;
+                                    background-color: #605ca8;
+                                    border-color: #605ca8;
+                                    }
+                                    
+                                    
+                                    .btn.btn-success {
+                                    color: #fff;
+                                    background-color: #605ca8;
+                                    border-color: #605ca8;
+                                    }
+                                    .btn.btn-success.focus,
+                                    .btn.btn-success:focus {
+                                    color: #fff;
+                                    background-color: #605ca8;
+                                    border-color: #605ca8;
+                                    outline: none;
+                                    box-shadow: none;
+                                    }
+                                    .btn.btn-success:hover {
+                                    color: #fff;
+                                    background-color: #605ca8;
+                                    border-color: #605ca8;
+                                    outline: none;
+                                    box-shadow: none;
+                                    }
+                                    .btn.btn-success.active,
+                                    .btn.btn-success:active {
+                                    color: #fff;
+                                    background-color: #605ca8;
+                                    border-color: #605ca8;
+                                    outline: none;
+                                    }
+                                    .btn.btn-success.active.focus,
+                                    .btn.btn-success.active:focus,
+                                    .btn.btn-success.active:hover,
+                                    .btn.btn-success:active.focus,
+                                    .btn.btn-success:active:focus,
+                                    .btn.btn-success:active:hover {
+                                    color: #fff;
+                                    background-color: #8f8cc2 ;
+                                    border-color: #8f8cc2 ;
+                                    outline: none;
+                                    box-shadow: none;
+                                    }
+                                    
+                                    ")),
+    
     # Create function to hyperlink a text with the tab links
     tags$script(HTML("
-                            var openTab = function(tabName){
-                     $('a', $('.sidebar')).each(function() {
-                     if(this.getAttribute('data-value') == tabName) {
-                     this.click()
-                     };
-                     });
-                     };
-                     $('.sidebar-toggle').attr('id','menu');
-                     var dimension = [0, 0];
-                     $(document).on('shiny:connected', function(e) {
-                     dimension[0] = window.innerWidth;
-                     dimension[1] = window.innerHeight;
-                     Shiny.onInputChange('dimension', dimension);
-                     });
-                     $(window).resize(function(e) {
-                     dimension[0] = window.innerWidth;
-                     dimension[1] = window.innerHeight;
-                     Shiny.onInputChange('dimension', dimension);
-                     });
-                     ")),
+                                     var openTab = function(tabName){
+                                     $('a', $('.sidebar')).each(function() {
+                                     if(this.getAttribute('data-value') == tabName) {
+                                     this.click()
+                                     };
+                                     });
+                                     };
+                                     $('.sidebar-toggle').attr('id','menu');
+                                     var dimension = [0, 0];
+                                     $(document).on('shiny:connected', function(e) {
+                                     dimension[0] = window.innerWidth;
+                                     dimension[1] = window.innerHeight;
+                                     Shiny.onInputChange('dimension', dimension);
+                                     });
+                                     $(window).resize(function(e) {
+                                     dimension[0] = window.innerWidth;
+                                     dimension[1] = window.innerHeight;
+                                     Shiny.onInputChange('dimension', dimension);
+                                     });
+                                     ")),
+    
     
     
     shinyjs::useShinyjs(),
     tabItems(
-          tabItem(tabName = "about",
+      tabItem(tabName = "about",
               h3("Welcome to the",strong("Pharmacological Management of Spinal Cord Injury"), "Project"),
               br(),
               fluidRow(
@@ -560,20 +455,20 @@ ui <- dashboardPage(
                   tags$ul(
                     tags$li(strong("Dr. Catherine Jutzeler,"), "Research Group Leader, Department of Biosystems Science and Engineering, Swiss Federal Institute of Technology (ETH Zurich).",
                             tags$a(href="mailto:Catherine.Jutzeler@bsse.ethz.ch", 
-                            target="_blank",
-                            icon("envelope")))),
+                                   target="_blank",
+                                   icon("envelope")))),
                   h5("Co-investigators:"), 
                   tags$ul(
                     tags$li(strong("Lucie Bourguignon,"), "Department of Biosystems Science and Engineering, ETH Zurich and SIB Swiss Institute of Bioinformatics, Basel, Switzerland."
                     ),
                     tags$li(strong("Prof. John Kramer, "), "Department of Anesthesiology, Pharmacology, and Therapeutics, Faculty of Medicine, University of British Columbia, Canada."
-                            ),
+                    ),
                     tags$li(strong("Prof. Jacquelyn Cragg,"), "Faculty of Pharmaceutical Sciences, University of British Columbia, Vancouver, Canada."
                     )),
                   h5("Collaborators:"), 
-                   tags$ul(
-            
-                     tags$li(strong("Dr. Lukas Grassner,"), "Department of Neurosurgery, Medical University Innsbruck, Innsbruck, Austria."
+                  tags$ul(
+                    
+                    tags$li(strong("Dr. Lukas Grassner,"), "Department of Neurosurgery, Medical University Innsbruck, Innsbruck, Austria."
                     ),
                     tags$li(strong("Dr. Fred Geisler,"), "University of Saskatchewan, Saskatoon, Saskatchewan, Canada"
                     ),
@@ -629,7 +524,7 @@ ui <- dashboardPage(
                             a("Development", onclick = "openTab('drug_scirehab')", href="#"),
                             " tab gives you the possibility to interactively explore how different areas are evolving over time. This section is currently partly under
                             construction, but will be fully available soon.")
-                    ),
+                  ),
                   br(),
                   h4("Funding:"),
                   p('This project is supported by the ',
@@ -639,11 +534,11 @@ ui <- dashboardPage(
                     ' (#2017_044), and the ',
                     a('Craig H Neilsen Foundation', href = 'https://chnfoundation.org/', target="_blank"),
                     '.', align = "justify")
-                    ),
+                ),
                 box(width = 4,
                     HTML("<a class=\"twitter-timeline\" data-height=\"600\" href=\"https://twitter.com/DatSci_4_health\">A Twitter List by Data Science for Health Research Group</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
                 )
-                    ),
+              ),
               fluidRow(
                 valueBox(prettyNum(2040, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
                 valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
@@ -654,601 +549,962 @@ ui <- dashboardPage(
                 valueBox("34", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
                 #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
               )
-           ),
-          
-          tabItem(tabName = "about_sygen",
-                  h3(strong("The Sygen Clinical Trial")),
+      ),
+      
+      tabItem(tabName = "about_sygen",
+              h3(strong("The Sygen Clinical Trial")),
+              br(),
+              fluidRow(
+                box(#title = "Explore The Data", 
+                  width = 8, 
+                  heigth = "500px",
+                  solidHeader = TRUE,
+                  
+                  h4("Objectives of original study"),
+                  "To determine efficacy and safety of monosialotetrahexosylganglioside GM1 (i.e., Sygen) in acute spinal cord injury.",
                   br(),
-                  fluidRow(
-                    box(#title = "Explore The Data", 
-                      width = 8, 
-                      heigth = "500px",
-                      solidHeader = TRUE,
-                      
-                      h4("Objectives of original study"),
-                      "To determine efficacy and safety of monosialotetrahexosylganglioside GM1 (i.e., Sygen) in acute spinal cord injury.",
-                      br(),
-                      h4("Methods"),
-                      strong("Monosialotetrahexosylganglioside GM1"),
-                      "Sygen (monosialotetrahexosylganglioside GM1 sodium salt) is a naturally occurring compound in cell membranes of mammals and is especially abundant in the membranes of the central nervous system. 
-                      Acute neuroprotective and longer-term regenerative effects in multiple experimental models of ischemia and injury have been reported. The proposed mechanisms of action of GM1 include 
-                      anti-excitotoxic activity, apoptosis prevention, and potentiation of neuritic sprouting and the effects of nerve growth factors.",
-                      br(),
-                      br(),
-                      strong("Study design."), "Randomized, double-blind, sequential,
-                      multicenter clinical trial of two doses Sygen (i.e., low-dose GM-1: 300 mg intravenous loading dose followed by 100 mg/d x 56 days or high-dose GM-1:00 mg intravenous loading dose followed by 200 mg/d x 56 days) versus
-                      placebo. All patients received the National Acute Spinal Cord Injury Study (NASCIS-2) protocol dosage of methylprednisolone. Based on a potential adverse interaction between concomitant MPSS and GM-1 administration, 
-                      the initial dose of GM-1 was delayed until after the steroids were given (mean onset of study drug, 54.9 hours).",
-                      br(),
-                      br(),
-                      strong("Inclusion/exclusion criteria."), "For inclusion in Sygen, patients were required to have at least one lower extremity with a substantial motor deficit. Patients with spinal cord transection 
-                      or penetration were excluded, as were patients with a cauda equina, brachial or lumbosacral plexus, or peripheral nerve injury. Multiple trauma cases were included as long as they were not so severe
-                      as to preclude neurologic evaluation. It is notable that this requirement of participating in a detailed neurologic exam excluded major head trauma cases and also intubated 
-                      chest trauma cases.",
-                      br(),
-                      br(),
-                      strong("Assessments."), "Baseline neurologic assessment included both the AIS and detailed American Spinal Injury Association (ASIA) motor and
-                      sensory examinations. Additionally, the Modified Benzel Classification and the ASIA motor and
-                      sensory examinations were performed at 4, 8, 16, 26, and 52 weeks after injury. The Modified Benzel Classification was used for post-baseline measurement because it rates walking
-                      ability and, in effect, subdivides the broad D category of the AIS. Because most patients have an unstable spinal fracture at
-                      baseline, it is not possible to assess walking ability at that time; hence the use of different baseline and follow-up scales.
-                      Marked recovery was defined as at least a two-grade equivalent improvement in the Modified Benzel Classification from the
-                      baseline AIS. The primary efficacy assessment was the proportion of patients with marked recovery at week 26. The secondary efficacy assessments included the time course of marked recovery and
-                      other established measures of spinal cord function (the ASIA motor and sensory scores, relative and absolute sensory levels of impairment, and assessments of bladder and bowel
-                      function).",
-                      br(),
-                      br(),
-                      strong("Concomitant drugs."), "The use of drugs delivered alongside the study drug (i.e., GM-1) was rigorously tracked. 
-                      For each concomitant drug administered during the trial, the dosage, reason for administration, and the timing of administration were recorded.",
-                      br(),
-                      br(),
-                      strong("Results."), "Of 797 patients recruited, 760 were included in the analysis. The prospectively planned analysis at the prespecified endpoint time for all patients was negative.
-                      The negative finding of the Sygen study is considered Class I Medical Evidence by the spinal cord injury Committee of the 
-                      American Association of Neurological Surgeons (AANS) and the Congress of Neurological Surgeons (CNS). Subsequent analyses of the Sygen 
-                      data have been performed to characterize the trajectory and extent of spontaneous recovery from acute spinal cord injury.",
-                      br()
-                       ), # close box
-                    
-                    fluidRow(
-                      valueBox(prettyNum(797, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-                      valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant drugs to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
-                      valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
-                               "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
-                      ),
-                      #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
-                      valueBox("28", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
-                      valueBox("1991-1997", "Running time", icon = icon("calendar-alt"), width = 3,  color = "purple")#,
-                      #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
-                    )
-                  ), # close fluid row
-                  fluidRow(
-                    box(#title = "Explore The Data", 
-                      width = 8, 
-                      heigth = "500px",
-                      solidHeader = TRUE,
-                      
-                      h4("References"),
-                      
-                      tags$ul(
-                        tags$li(a('Geisler et al, 2001', href = 'https://europepmc.org/article/med/11805612', target="_blank"), "Recruitment and early treatment in a multicenter study of acute spinal cord injury. Spine (Phila Pa 1976)."),
-                        tags$li(a('Geisler et al, 2001', href = 'https://journals.lww.com/spinejournal/Fulltext/2001/12151/The_Sygen_R__Multicenter_Acute_Spinal_Cord_Injury.15.aspx', target="_blank"), "The Sygen multicenter acute spinal cord injury study. Spine (Phila Pa 1976)")
-                        ) # close tags
-                        ) # close box
-                    ) # close fluid row
-                 
-          ), # close tab item
-    
-    # Tab: Sygen Cohort  
-    tabItem(tabName = "cohort_sygen",
-            h3("Description of Sygen Study Cohort"),
-            # # Create alert
-            # shinyalert::useShinyalert(),
-            # h3("Description of Sygen Trial Cohort"),
-            # shinyBS::bsAlert("dataAlert"),
-            # 
-            fluidRow(
-                  box(width = 12,
-                      div(style="display:inline-block;width:100%;text-align:center;",
-                          radioGroupButtons(
+                  h4("Methods"),
+                  strong("Monosialotetrahexosylganglioside GM1"),
+                  "Sygen (monosialotetrahexosylganglioside GM1 sodium salt) is a naturally occurring compound in cell membranes of mammals and is especially abundant in the membranes of the central nervous system. 
+                                Acute neuroprotective and longer-term regenerative effects in multiple experimental models of ischemia and injury have been reported. The proposed mechanisms of action of GM1 include 
+                                anti-excitotoxic activity, apoptosis prevention, and potentiation of neuritic sprouting and the effects of nerve growth factors.",
+                  br(),
+                  br(),
+                  strong("Study design."), "Randomized, double-blind, sequential,
+                                multicenter clinical trial of two doses Sygen (i.e., low-dose GM-1: 300 mg intravenous loading dose followed by 100 mg/d x 56 days or high-dose GM-1:00 mg intravenous loading dose followed by 200 mg/d x 56 days) versus
+                                placebo. All patients received the National Acute Spinal Cord Injury Study (NASCIS-2) protocol dosage of methylprednisolone. Based on a potential adverse interaction between concomitant MPSS and GM-1 administration, 
+                                the initial dose of GM-1 was delayed until after the steroids were given (mean onset of study medication, 54.9 hours).",
+                  br(),
+                  br(),
+                  strong("Inclusion/exclusion criteria."), "For inclusion in Sygen, patients were required to have at least one lower extremity with a substantial motor deficit. Patients with spinal cord transection 
+                                or penetration were excluded, as were patients with a cauda equina, brachial or lumbosacral plexus, or peripheral nerve injury. Multiple trauma cases were included as long as they were not so severe
+                                as to preclude neurologic evaluation. It is notable that this requirement of participating in a detailed neurologic exam excluded major head trauma cases and also intubated 
+                                chest trauma cases.",
+                  br(),
+                  br(),
+                  strong("Assessments."), "Baseline neurologic assessment included both the AIS and detailed American Spinal Injury Association (ASIA) motor and
+                                sensory examinations. Additionally, the Modified Benzel Classification and the ASIA motor and
+                                sensory examinations were performed at 4, 8, 16, 26, and 52 weeks after injury. The Modified Benzel Classification was used for post-baseline measurement because it rates walking
+                                ability and, in effect, subdivides the broad D category of the AIS. Because most patients have an unstable spinal fracture at
+                                baseline, it is not possible to assess walking ability at that time; hence the use of different baseline and follow-up scales.
+                                Marked recovery was defined as at least a two-grade equivalent improvement in the Modified Benzel Classification from the
+                                baseline AIS. The primary efficacy assessment was the proportion of patients with marked recovery at week 26. The secondary efficacy assessments included the time course of marked recovery and
+                                other established measures of spinal cord function (the ASIA motor and sensory scores, relative and absolute sensory levels of impairment, and assessments of bladder and bowel
+                                function).",
+                  br(),
+                  br(),
+                  strong("Concomitant medications."), "The use of medications delivered alongside the study medication (i.e., GM-1) was rigorously tracked. 
+                                For each concomitant medication administered during the trial, the dosage, reason for administration, and the timing of administration were recorded.",
+                  br(),
+                  br(),
+                  strong("Results."), "Of 797 patients recruited, 760 were included in the analysis. The prospectively planned analysis at the prespecified endpoint time for all patients was negative.
+                                The negative finding of the Sygen study is considered Class I Medical Evidence by the spinal cord injury Committee of the 
+                                American Association of Neurological Surgeons (AANS) and the Congress of Neurological Surgeons (CNS). Subsequent analyses of the Sygen 
+                                data have been performed to characterize the trajectory and extent of spontaneous recovery from acute spinal cord injury.",
+                  br()
+                ), # close box
+                
+                fluidRow(
+                  valueBox(prettyNum(797, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                  valueBox(prettyNum(489, big.mark=" ", scientific=FALSE), "Unique concomittant medications to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
+                  valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
+                           "Prophylactic medication use", icon = icon("prescription"),  width = 3,  color = "purple"
+                  ),
+                  #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
+                  valueBox("28", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
+                  valueBox("1991-1997", "Running time", icon = icon("calendar-alt"), width = 3,  color = "purple")#,
+                  #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
+                )
+              ), # close fluid row
+              fluidRow(
+                box(#title = "Explore The Data", 
+                  width = 8, 
+                  heigth = "500px",
+                  solidHeader = TRUE,
+                  
+                  h4("References"),
+                  
+                  tags$ul(
+                    tags$li(a('Geisler et al, 2001', href = 'https://europepmc.org/article/med/11805612', target="_blank"), "Recruitment and early treatment in a multicenter study of acute spinal cord injury. Spine (Phila Pa 1976)."),
+                    tags$li(a('Geisler et al, 2001', href = 'https://journals.lww.com/spinejournal/Fulltext/2001/12151/The_Sygen_R__Multicenter_Acute_Spinal_Cord_Injury.15.aspx', target="_blank"), "The Sygen multicenter acute spinal cord injury study. Spine (Phila Pa 1976)")
+                  ) # close tags
+                ) # close box
+              ) # close fluid row
+              
+      ), # close tab item
+      
+      # Tab: Sygen Cohort  
+      tabItem(tabName = "cohort_sygen",
+              
+              # # Create alert
+              # shinyalert::useShinyalert(),
+              # h3("Description of Sygen Trial Cohort"),
+              # shinyBS::bsAlert("dataAlert"),
+              # 
+              fluidRow(
+                box(width = 12,
+                    div(style="display:inline-block;width:100%;text-align:center;",
+                        radioGroupButtons(
                           inputId = "var", 
                           label = "Patient characteristics:", 
                           selected = "sex",
                           status = "success",
                           #justified = T, #if true, all boxes have the same length
                           individual = T, #if false, then the boxes are connected
-                          choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- and paraplegia", "Etiology"),
-                          choiceValues = c("sex", "age", "baseline.ais", "nli", 'plegia',"etiology")
-                          ) # Close radioGroupButtons bracket
-                  ), # Close div bracket
-                  
-                  div(plotlyOutput("bar.plot.baseline.characteristic.sygen", width = "50%",
-                                             height = "600px",
-                                           inline = FALSE), align='center')
+                          choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Etiology"),
+                          choiceValues = c("sex", "age", "baseline.ais", "nli", "etiology")
+                        ) # Close radioGroupButtons bracket
+                    ), # Close div bracket
+                    
+                    div(plotlyOutput("bar.plot.baseline.characteristic.sygen", width = "50%",
+                                     height = "600px",
+                                     inline = FALSE), align='center')
+                    
+                    
                 ) #close box bracket
               )  #close fluid row
-            ),   #close tabitem (cohort sygen)
-    
-   
-    # Tab: Sygen drug
-    tabItem(tabName = "drug_sygen",
-            fluidRow(
-              column(width = 8,
-                     
-                     box(width = NULL,
-                         
-                         div(style="display:inline-block;width:100%;text-align:center;margin-top:7px;margin-bottom:7px;",
-                             radioGroupButtons(
-                               inputId = "pharmacol_management_sygen", 
-                               label = "Visualise pharmacological management at different scales", 
-                               selected = 'full_cohort_sygen',
-                               status = "success",
-                               individual = T, #if false, then the boxes are connected
-                               choiceNames = c("Group level", "Customized Subgroups"),
-                               choiceValues = c('full_cohort_sygen', 'sbgrps_sygen')
-                             ) # Close radioGroupButtons bracket
-                         ), # Close div bracket
-                     ),
-                     
-                     conditionalPanel(condition = "input.pharmacol_management_sygen == 'full_cohort_sygen' ",
-                                      
-                                      
-                                      box(title = "Overview of drugs per day and indication", 
-                                          width = NULL, 
-                                          heigth = "300px",
-                                          solidHeader = TRUE,
-                                          dataTableOutput('table'),
-                                          #downloadButton('downloadData',"Download the data")
-                                      ), # end box
-                                      
-                                      
-                                      box(title = "Unique drugs per day", 
-                                          width = NULL, 
-                                          heigth = "300px",
-                                          solidHeader = TRUE,
-                          
-
-                                          div(plotlyOutput("plot_pharmacol_management_sygen", width = "100%",
-                                                           inline = FALSE),
-                                              align='center')
-                                      ), # end box
-                                      
-                                      
-                                      box(title = "Unique drugs per day and indication", 
-                                          width = NULL, 
-                                          div(style="display:inline-block;width:100%;text-align:center;",
-                                               selectInput(inputId = "select_indication_pharmacol_management_sygen",
-                                                                        label = "Select an indication",
-                                                                        choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
-                                                                                       "Cardiac disorders" = "Cardiac disorders",
-                                                                                       "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
-                                                                                       "Eye disorders" = "Eye disorders",
-                                                                                       "Gastrointestinal disorders" = "Gastrointestinal disorders",
-                                                                                       "General disorders and administration site conditions" = "General disorders and administration site conditions",
-                                                                                       "Immune system disorders" = "Immune system disorders",
-                                                                                       "Infections and infestations" = "Infections and infestations",
-                                                                                       "Injury, poisoning and procedural complications" = "Injury, poisoning and procedural complications",
-                                                                                       "Metabolism and nutrition disorders" = "Metabolism and nutrition disorders",
-                                                                                       "Musculoskeletal and connective tissue disorders" = "Musculoskeletal and connective tissue disorders",
-                                                                                       "Nervous system disorders" = "Nervous system disorders",
-                                                                                       "Pain" = "Pain",
-                                                                                       "Psychiatric disorders" = "Psychiatric disorders",
-                                                                                       "Renal and urinary system disorders" = "Renal and urinary system disorders",
-                                                                                       "Respiratory, thoracic and mediastinal disorders" = "Respiratory, thoracic and mediastinal disorders",
-                                                                                       "Skin and subcutaneous tissue disorders" = "Skin and subcutaneous tissue disorders",
-                                                                                       "Surgical and medical procedures" = "Surgical and medical procedures",
-                                                                                       "Vascular disorders" = "Vascular disorders",
-                                                                                       "Sygen Protocol" = "Sygen Protocol",
-                                                                                       "Unknown" = "Unknown"),
-                                                                        selected = c("Blood and lymphatic system disorders"),
-                                                           multiple = F) # Close radioGroupButtons bracket
-                                              
-                                          ), # Close div bracket
-                                          div(plotlyOutput("plot_pharmacol_management_by_indication_sygen", width = "100%",
-                                                           inline = FALSE),
-                                              align='center')
-                                      ), # end box
-                                          
-                                      box(title = "Number of unique drugs per patient (mean [min -max])", 
-                                          width = NULL, 
-                                          heigth = 800,
-                                          solidHeader = TRUE,
-                                          
-                                          
-                                          div(plotlyOutput("plot_pharmacol_management_ind_sygen", width = "100%", height = "100%",
-                                                           inline = FALSE),
-                                              align='center')
-                                      ), # end box
-                                      
-                                      
-                                      
-                     ), # end conditionalPanel
-                     
-                     
-                     conditionalPanel(condition = "input.pharmacol_management_sygen != 'full_cohort_sygen' ",
-                  
-                                      box(title = "Overview of drugs per day and indication", 
-                                          width = NULL, 
-                                          heigth = "300px",
-                                          solidHeader = TRUE,
-                                          dataTableOutput('table_srgp'),
-                                          # downloadButton('downloadData',"Download the data")
-                                      ), # end box
-                                      
-                                      box(title = "Unique drugs per day", 
-                                          width = NULL, 
-                                          heigth = "300px",
-                                          solidHeader = TRUE,
-                                          
-                                          
-                                          div(plotlyOutput("plot_pharmacol_management_srgp_sygen", width = "100%",
-                                                           inline = FALSE),
-                                              align='center')
-                                      ), # end box
-                                      
-                                      
-                                      box(title = "Unique drugs per day and indication", 
-                                          width = NULL, 
-                                          div(style="display:inline-block;width:100%;text-align:center;",
-                                              selectInput(inputId = "select_indication_pharmacol_management_sgrp_sygen",
-                                                          label = "Select an indication",
-                                                          choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
-                                                                         "Cardiac disorders" = "Cardiac disorders",
-                                                                         "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
-                                                                         "Eye disorders" = "Eye disorders",
-                                                                         "Gastrointestinal disorders" = "Gastrointestinal disorders",
-                                                                         "General disorders and administration site conditions" = "General disorders and administration site conditions",
-                                                                         "Immune system disorders" = "Immune system disorders",
-                                                                         "Infections and infestations" = "Infections and infestations",
-                                                                         "Injury, poisoning and procedural complications" = "Injury, poisoning and procedural complications",
-                                                                         "Metabolism and nutrition disorders" = "Metabolism and nutrition disorders",
-                                                                         "Musculoskeletal and connective tissue disorders" = "Musculoskeletal and connective tissue disorders",
-                                                                         "Nervous system disorders" = "Nervous system disorders",
-                                                                         "Pain" = "Pain",
-                                                                         "Psychiatric disorders" = "Psychiatric disorders",
-                                                                         "Renal and urinary system disorders" = "Renal and urinary system disorders",
-                                                                         "Respiratory, thoracic and mediastinal disorders" = "Respiratory, thoracic and mediastinal disorders",
-                                                                         "Skin and subcutaneous tissue disorders" = "Skin and subcutaneous tissue disorders",
-                                                                         "Surgical and medical procedures" = "Surgical and medical procedures",
-                                                                         "Vascular disorders" = "Vascular disorders",
-                                                                         "Sygen Protocol" = "Sygen Protocol",
-                                                                         "Unknown" = "Unknown"),
-                                                          selected = c("Blood and lymphatic system disorders"),
-                                                          multiple = F) # Close radioGroupButtons bracket
-                                              
-                                          ), # Close div bracket
-                                          div(plotlyOutput("plot_pharmacol_management_by_indication_sgrp_sygen", width = "100%",
-                                                           inline = FALSE),
-                                              align='center')
-                                      ), # end box
-                     ), # end conditionalPanel 
-              ),# close column
-              
-              
-              
-              
-              conditionalPanel(condition = "input.pharmacol_management_sygen != 'full_cohort_sygen' ",
-                               
-                               
-                               column(width = 4, # create second column for second type of user inputs (filters)
-                                      
-                                      box(width = NULL, # create a new box
-                                          selectInput("select_sex_pharmacol_management_sbgrp_sygen",
-                                                      label = "Select sex",
-                                                      choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
-                                                      selected = c("Male"))
-                                      ), # end box
-                                      
-                                      box(width = NULL, # create box
-                                          sliderInput("select_age_pharmacol_management_sbgrp_sygen",
-                                                      label = "Select age at injury",
-                                                      min = 10, max = 100,
-                                                      value = c(20,80)),
-                                          
-                                          
-                                      ), # end box
-                                      
-                                      box(width = NULL, # create a new box
-                                          selectInput("select_ais_pharmacol_management_sbgrp_sygen",
-                                                      label = "Select baseline AIS grade",
-                                                      choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
-                                                      selected = c("AIS A"))
-                                      ), # end box
-                                      
-                                      box(width = NULL, # create a new box
-                                          selectInput("select_nli_pharmacol_management_sbgrp_sygen",
-                                                      label = "Select injury level",
-                                                      choices = list("Cervical", "Thoracic"),
-                                                      selected = c("Cervical"))
-                                      )#, # end box
-                               ) #end column
-              )#end conditional Panel
-            )#close fluid row
-            
-    ), # Close tab item (drug_sygen)
-    
-
-    tabItem(tabName = "about_scirehab",
-            h3(strong("Spinal Cord Injury Rehabilitation Study")),
-            br(),
-            fluidRow(
-              box(#title = "Explore The Data", 
-                width = 8, 
-                heigth = "300px",
-                solidHeader = TRUE,
-                
-                h4("Objectives"),
-                "In an effort to understand the relationship between the rehabilitation process and outcomes, the SCIRehab study collected data about rehabilitation interventions across 7 disciplines during the inpatient rehabilitation of over 1200 people with spinal cord injury. 
-                This study used practice-based evidence methods to relate the details of the rehabilitation process to outcomes after controlling for 
-                individual demographic and injury characteristics",
-                br(),
-                h4("Methods"),
-                strong("Study design."), "Longitudinal, observational, prospective event-based cohort study.",
-                br(),
-                br(),
-                strong("Inclusion/ exlusion criteria."), "The SCIRehab facilities enrolled all patients who were 12 years of age or older, gave (or whose parent/guardian gave) informed consent, and were admitted to the facility's SCI unit for initial rehabilitation following traumatic SCI. 
-                Duration of the acute-hospital inpatient admission preceding rehabilitation was not an enrollment criterion. Patients requiring transfer to acute care units or facilities during their rehabilitation program were retained in the study, no matter how long they spent in acute 
-                care before returning to the rehabilitation unit, but their acute care days were not counted as part of the rehabilitation stay. To restrict the study to initial rehabilitation cases, a small number of patients were excluded who spent more than 2 weeks in another rehabilitation 
-                center prior to admission to the SCIRehab facility. To ensure complete rehabilitation data, patients who spent more than a week of their rehabilitation stay on a non-spinal cord injury rehabilitation unit in the SCIRehab facility (staff of the non-SCI units were not trained in the data collection methods)
-                also were excluded. There were no other exclusion criteria.",
-                br(),
-                br(),
-                strong("Assessments."),
-                "Patients were followed for first year 
-                post-injury and were excluded if they spent two or more weeks at a non-participating rehabilitation center. Patient demographics and injury characteristics were extracted from the patient medical record (part of the National Institute on Disability and Rehabilitation 
-                Research Spinal Cord Injury Model Systems Form I). The International Standards of Neurological Classification of SCI (ISNCSCI) and its American Spinal Injury Association Impairment Scale (AIS) were used to describe the neurologic level and completeness of injury; the Functional Independence Measure (FIM)
-                served to describe a patient's functional independence in motor and cognitive tasks at admission and discharge, and monitor functional gains; and the Comprehensive Severity Index (CSI) was used to provide an overall summary measure of how ill (i.e., extent of deviation from normal)
-                a patient was over time during the stay in the center.",
-                br(),
-                br(),
-                strong("Commonly administered drugs."), "The SCIRehab study rigorously tracked the use of all commonly administered drugs. For each drug administered, route, dosage and dosing 
-                                   (i.e., start and end date, frequency) were abstracted directly from medical records. However, drug indication was not recorded. The drug data has not been published."
-              
-               ), # close box
-              
+      ),   #close tabitem (cohort sygen)
+      
+      # Tab: Sygen drug
+      tabItem(tabName = "drug_sygen",
               fluidRow(
-                valueBox(prettyNum(1243, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-                valueBox(prettyNum(575, big.mark=" ", scientific=FALSE), "Unique drugs to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
-                #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
-                valueBox("6", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
-                valueBox("2007-2010", "Running time", icon = icon("calendar-alt"), width = 3,  color = "purple")#,
-                #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
-              )
-            ), # close fluid row
-            fluidRow(
-              box(#title = "Explore The Data", 
-                width = 8, 
-                heigth = "500px",
-                solidHeader = TRUE,
-                h4('Website'),
-                tags$a("ADDEP SCIRehab Data Source", href="https://www.icpsr.umich.edu/web/ADDEP/studies/36724", 
-                       target="_blank",
-                       icon("external-link")),
-                h4("References"),
-                tags$ul(
-                  tags$li(a('Whiteneck et al, 2009; ', href = 'https://pubmed.ncbi.nlm.nih.gov/19810627/', target="_blank"), "New approach to study the contents and outcomes of spinal cord injury rehabilitation: the SCIRehab Project. J Spinal Cord Med."),
-                  tags$li(a('Whiteneck et al, 2011', href = 'https://pubmed.ncbi.nlm.nih.gov/21675353/', target="_blank"), "Inpatient treatment time across disciplines in spinal cord injury rehabilitation. J Spinal Cord Med")
-                ) # close tags
-              ) # close box
-            ) # close fluid row
-            
-    ),
-    
-    
-    
-    tabItem(tabName = "cohort_scirehab",
-                  h3("Description of SCIRehab Study Cohort"),
-                  fluidRow(
-                    box(width = 12,
-                        div(style="display:inline-block;width:100%;text-align:center;",
-                            radioGroupButtons(
-                              inputId = "var1", 
-                              label = "Patient characteristics:", 
-                              selected = "sex",
-                              status = "success",
-                              #justified = T, #if true, all boxes have the same length
-                              individual = T, #if false, then the boxes are connected
-                              choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Tetra- and paraplegia", "Etiology"),
-                              choiceValues = c("sex", "age", "baseline.ais", "nli", "plegia", "etiology")
-                                                          ) #close box bracket
-                        ), #close divstyle
-                        
-                        div(plotlyOutput("bar.plot.baseline.characteristic.scirehab", width = "50%",
-                                         height = "600px",
-                                         inline = FALSE), align='center')
-                   ) #close box 
-               ) #close fluid row
-    
-          ), #close tab item scirehab cohort
-    
-    
-    tabItem(tabName = "drug_scirehab",
-            fluidRow(
-              column(width = 8,
-                     
-                     box(width = NULL,
-                         
-                         div(style="display:inline-block;width:100%;text-align:center;margin-top:7px;margin-bottom:7px;",
-                             radioGroupButtons(
-                               inputId = "pharmacol_management_scirehab", 
-                               label = "Visualise pharmacological management at different scales", 
-                               selected = 'full_cohort_scirehab',
-                               status = "success",
-                               individual = T, #if false, then the boxes are connected
-                               choiceNames = c("Group level", "Customized Subgroups"),
-                               choiceValues = c('full_cohort_scirehab', 'sbgrps_scirehab')
-                             ) # Close radioGroupButtons bracket
-                         ), # Close div bracket
-                     ), # Close box
-                     
-                     conditionalPanel(condition = "input.pharmacol_management_scirehab == 'full_cohort_scirehab' ",
-                                      
-                                      box(title = "Overview of drugs per day and indication", 
-                                          width = NULL, 
-                                          heigth = "300px",
-                                          solidHeader = TRUE,
-                                          dataTableOutput('table_scirehab'),
-                                          #downloadButton('downloadData',"Download the data")
-                                      ), # end box
-                                      
-                                      box(title = "Unique drugs per day", 
-                                          width = NULL, 
-                                          heigth = "300px",
-                                          solidHeader = TRUE,
-                                          
-                                          
-                                          div(plotlyOutput("plot_pharmacol_management_scirehab", width = "100%",
-                                                           inline = FALSE),
-                                              align='center')
-                                      ), # end box
-                                      
-                                      box(title = "Number of unique drugs per patient (mean [min -max])", 
-                                          width = NULL, 
-                                          heigth = 800,
-                                          solidHeader = TRUE,
-                                          
-                                          
-                                          div(plotlyOutput("plot_pharmacol_management_per_day_scirehab", width = "100%", height = "100%",
-                                                           inline = FALSE),
-                                              align='center')
-                                      ), # end box
-                           ), # end conditionalPanel
-                     
-                     
-                     conditionalPanel(condition = "input.pharmacol_management_scirehab != 'full_cohort_scirehab' ",
-                                      
-                                      box(title = "Overview of drugs per day and indication", 
-                                          width = NULL, 
-                                          heigth = "300px",
-                                          solidHeader = TRUE,
-                                          dataTableOutput('table_srgp_scirehab'),
-                                          # downloadButton('downloadData',"Download the data")
-                                      ), # end box
-                                      
-                                      box(title = "Unique drugs per day", 
-                                          width = NULL, 
-                                          heigth = "300px",
-                                          solidHeader = TRUE,
-                                          
-                                          
-                                          div(plotlyOutput("plot_pharmacol_management_srgp_scirehab", width = "100%",
-                                                           inline = FALSE),
-                                              align='center')
-                                      ), # end box
-                                      
-                     ), # end conditionalPanel    
-              ),# close column
-              
-
-              conditionalPanel(condition = "input.pharmacol_management_scirehab != 'full_cohort_scirehab' ",
-                               
-                               
-                               column(width = 4, # create second column for second type of user inputs (filters)
-                                      
-                                      box(width = NULL, # create a new box
-                                          selectInput("select_sex_pharmacol_management_sbgrp_scirehab",
-                                                      label = "Select sex",
-                                                      choices = list("Male" = "Male", "Female" = "Female"),
-                                                      selected = c("Male"))
-                                      ), # end box
-                                      
-                                      box(width = NULL, # create box
-                                          selectInput("select_age_pharmacol_management_sbgrp_scirehab",
-                                                      label = "Select age at injury",
-                                                      choices = list("0-19 yrs", "20-29 yrs", "30-39 yrs","40-49 yrs", "50-59 yrs", 
-                                                                     "60-69 yrs", "70-79 yrs", "80+ yrs"),
-                                                      selected = c("20-29 yrs"))
+                column(width = 8,
+                       
+                       box(width = NULL,
+                           
+                           div(style="display:inline-block;width:100%;text-align:center;margin-top:7px;margin-bottom:7px;",
+                               radioGroupButtons(
+                                 inputId = "pharmacol_management_sygen", 
+                                 label = "Visualise pharmacological management at different scales", 
+                                 selected = 'full_cohort_sygen',
+                                 status = "success",
+                                 individual = T, #if false, then the boxes are connected
+                                 choiceNames = c("Group level", "Customized Subgroups"),
+                                 choiceValues = c('full_cohort_sygen', 'sbgrps_sygen')
+                               ) # Close radioGroupButtons bracket
+                           ), # Close div bracket
+                       ),
+                       
+                       conditionalPanel(condition = "input.pharmacol_management_sygen == 'full_cohort_sygen' ",
+                                        
+                                        
+                                        box(title = "Overview of drugs per day and indication", 
+                                            width = NULL, 
+                                            heigth = "300px",
+                                            solidHeader = TRUE,
+                                            dataTableOutput('table'),
+                                            #downloadButton('downloadData',"Download the data")
+                                        ), # end box
+                                        
+                                        
+                                        box(title = "Unique drugs per day", 
+                                            width = NULL, 
+                                            heigth = "300px",
+                                            solidHeader = TRUE,
+                                            
+                                            
+                                            div(plotlyOutput("plot_pharmacol_management_sygen", width = "100%",
+                                                             inline = FALSE),
+                                                align='center')
+                                        ), # end box
+                                        
+                                        
+                                        box(title = "Unique drugs per day and indication", 
+                                            width = NULL, 
+                                            div(style="display:inline-block;width:100%;text-align:center;",
+                                                selectInput(inputId = "select_indication_pharmacol_management_sygen",
+                                                            label = "Select an indication",
+                                                            choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
+                                                                           "Cardiac disorders" = "Cardiac disorders",
+                                                                           "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
+                                                                           "Eye disorders" = "Eye disorders",
+                                                                           "Gastrointestinal disorders" = "Gastrointestinal disorders",
+                                                                           "General disorders and administration site conditions" = "General disorders and administration site conditions",
+                                                                           "Immune system disorders" = "Immune system disorders",
+                                                                           "Infections and infestations" = "Infections and infestations",
+                                                                           "Injury, poisoning and procedural complications" = "Injury, poisoning and procedural complications",
+                                                                           "Metabolism and nutrition disorders" = "Metabolism and nutrition disorders",
+                                                                           "Musculoskeletal and connective tissue disorders" = "Musculoskeletal and connective tissue disorders",
+                                                                           "Nervous system disorders" = "Nervous system disorders",
+                                                                           "Pain" = "Pain",
+                                                                           "Psychiatric disorders" = "Psychiatric disorders",
+                                                                           "Renal and urinary system disorders" = "Renal and urinary system disorders",
+                                                                           "Respiratory, thoracic and mediastinal disorders" = "Respiratory, thoracic and mediastinal disorders",
+                                                                           "Skin and subcutaneous tissue disorders" = "Skin and subcutaneous tissue disorders",
+                                                                           "Surgical and medical procedures" = "Surgical and medical procedures",
+                                                                           "Vascular disorders" = "Vascular disorders",
+                                                                           "Sygen Protocol" = "Sygen Protocol",
+                                                                           "Unknown" = "Unknown"),
+                                                            selected = c("Blood and lymphatic system disorders"),
+                                                            multiple = F) # Close radioGroupButtons bracket
+                                                
+                                            ), # Close div bracket
+                                            div(plotlyOutput("plot_pharmacol_management_by_indication_sygen", width = "100%",
+                                                             inline = FALSE),
+                                                align='center')
+                                        ), # end box
+                                        
+                                        box(title = "Number of unique drugs per patient (mean [min -max])", 
+                                            width = NULL, 
+                                            heigth = 800,
+                                            solidHeader = TRUE,
+                                            
+                                            
+                                            div(plotlyOutput("plot_pharmacol_management_ind_sygen", width = "100%", height = "100%",
+                                                             inline = FALSE),
+                                                align='center')
+                                        ), # end box
+                                        
+                                        
+                                        
+                       ), # end conditionalPanel
+                       
+                       
+                       conditionalPanel(condition = "input.pharmacol_management_sygen != 'full_cohort_sygen' ",
+                                        
+                                        box(title = "Overview of drugs per day and indication", 
+                                            width = NULL, 
+                                            heigth = "300px",
+                                            solidHeader = TRUE,
+                                            dataTableOutput('table_srgp'),
+                                            # downloadButton('downloadData',"Download the data")
+                                        ), # end box
+                                        
+                                        box(title = "Unique drugs per day", 
+                                            width = NULL, 
+                                            heigth = "300px",
+                                            solidHeader = TRUE,
+                                            
+                                            
+                                            div(plotlyOutput("plot_pharmacol_management_srgp_sygen", width = "100%",
+                                                             inline = FALSE),
+                                                align='center')
+                                        ), # end box
+                                        
+                                        
+                                        box(title = "Unique drugs per day and indication", 
+                                            width = NULL, 
+                                            div(style="display:inline-block;width:100%;text-align:center;",
+                                                selectInput(inputId = "select_indication_pharmacol_management_sgrp_sygen",
+                                                            label = "Select an indication",
+                                                            choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
+                                                                           "Cardiac disorders" = "Cardiac disorders",
+                                                                           "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
+                                                                           "Eye disorders" = "Eye disorders",
+                                                                           "Gastrointestinal disorders" = "Gastrointestinal disorders",
+                                                                           "General disorders and administration site conditions" = "General disorders and administration site conditions",
+                                                                           "Immune system disorders" = "Immune system disorders",
+                                                                           "Infections and infestations" = "Infections and infestations",
+                                                                           "Injury, poisoning and procedural complications" = "Injury, poisoning and procedural complications",
+                                                                           "Metabolism and nutrition disorders" = "Metabolism and nutrition disorders",
+                                                                           "Musculoskeletal and connective tissue disorders" = "Musculoskeletal and connective tissue disorders",
+                                                                           "Nervous system disorders" = "Nervous system disorders",
+                                                                           "Pain" = "Pain",
+                                                                           "Psychiatric disorders" = "Psychiatric disorders",
+                                                                           "Renal and urinary system disorders" = "Renal and urinary system disorders",
+                                                                           "Respiratory, thoracic and mediastinal disorders" = "Respiratory, thoracic and mediastinal disorders",
+                                                                           "Skin and subcutaneous tissue disorders" = "Skin and subcutaneous tissue disorders",
+                                                                           "Surgical and medical procedures" = "Surgical and medical procedures",
+                                                                           "Vascular disorders" = "Vascular disorders",
+                                                                           "Sygen Protocol" = "Sygen Protocol",
+                                                                           "Unknown" = "Unknown"),
+                                                            selected = c("Blood and lymphatic system disorders"),
+                                                            multiple = F) # Close radioGroupButtons bracket
+                                                
+                                            ), # Close div bracket
+                                            div(plotlyOutput("plot_pharmacol_management_by_indication_sgrp_sygen", width = "100%",
+                                                             inline = FALSE),
+                                                align='center')
+                                        ), # end box
+                       ), # end conditionalPanel 
+                ),# close column
+                
+                
+                
+                
+                conditionalPanel(condition = "input.pharmacol_management_sygen != 'full_cohort_sygen' ",
                                  
-                                      ), # end box
-                                      
-                                      box(width = NULL, # create a new box
-                                          selectInput("select_ais_pharmacol_management_sbgrp_scirehab",
-                                                      label = "Select baseline AIS grade",
-                                                      choices = list("AIS A", "AIS B", "AIS C", "AIS D"),
-                                                      selected = c("AIS A"))
-                                      ), # end box
-                                      
-                                      box(width = NULL, # create a new box
-                                          selectInput("select_nli_pharmacol_management_sbgrp_scirehab",
-                                                      label = "Select injury level",
-                                                      choices = list("Cervical", "Thoracic", "Lumbar"),
-                                                      selected = c("Cervical"))
-                                      )#, # end box
-                               ) #end column
-              )#end conditional Panel
-            )#close fluid row
-            
-    ), # Close tab item (drug_scirehab)
-    
-    
-    
-    
-    tabItem(tabName = "abbreviations",
-            titlePanel(strong("Dictionary of abbreviations")),
-            fluidRow(
-              column(width = 6,
-                     box(width = NULL, status = "primary",
-                         h4(strong('General')),
-                         p(strong('SCI'), 'spinal cord injury'),
-                         p(strong(a('ASIA', href ="https://asia-spinalinjury.org/", target="_blank")), 'american spinal injury association'),
-                         p(strong(a('EMSCI', href ="https://www.emsci.org/", target="_blank")), 'european multicenter study about spinal cord injury'),
-                         p(strong('PBE'), 'practice-based evidence')
-                     ),
-                     
-                     box(width = NULL, status = "primary",
-                         h4(strong('Functional outcomes')),
-                         p(strong(a('WISCI', href = "http://www.spinalcordcenter.org/research/wisci_guide.pdf", target="_blank")), 'walking index for spinal cord injury'),
-                         p(strong(a('test_6min', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), '6 minutes walking test'),
-                         p(strong(a('test_10m', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), '10 meters walking test'),
-                         p(strong(a('TUG', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), 'timed up and go test'),
-                         p(strong(a('SCIM2', href = "https://www.emsci.org/index.php/project/the-assessments/independence", target="_blank")), 'spinal cord independence measure type 2'),
-                         p(strong(a('SCIM3', href = "https://www.emsci.org/index.php/project/the-assessments/independence", target="_blank")), 'spinal cord independence measure type 3'),
-                         p(strong('benzel'), 'modified benzel classification')
-                     )
-                     
-              ), # end column
+                                 
+                                 column(width = 4, # create second column for second type of user inputs (filters)
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_sex_pharmacol_management_sbgrp_sygen",
+                                                        label = "Select sex",
+                                                        choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                                        selected = c("Male"))
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create box
+                                            sliderInput("select_age_pharmacol_management_sbgrp_sygen",
+                                                        label = "Select age at injury",
+                                                        min = 10, max = 100,
+                                                        value = c(20,80)),
+                                            
+                                            
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_ais_pharmacol_management_sbgrp_sygen",
+                                                        label = "Select baseline AIS grade",
+                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                                        selected = c("AIS A"))
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_nli_pharmacol_management_sbgrp_sygen",
+                                                        label = "Select injury level",
+                                                        choices = list("Cervical", "Thoracic"),
+                                                        selected = c("Cervical"))
+                                        )#, # end box
+                                 ) #end column
+                )#end conditional Panel
+              )#close fluid row
               
-              column(width = 6,
-                     box(width = NULL, status = "primary",
-                         h4(strong(a('Neurological outcomes', href ="https://asia-spinalinjury.org/wp-content/uploads/2016/02/International_Stds_Diagram_Worksheet.pdf", target="_blank"))),
-                         p(strong(a('AIS', href ='https://www.icf-casestudies.org/introduction/spinal-cord-injury-sci/american-spinal-injury-association-asia-impairment-scale#:~:text=The%20American%20Spinal%20Injury%20Association,both%20sides%20of%20the%20body', target="_blank")), 'ASIA impairment scale'),
-                         p(strong('UEMS'), 'upper extremity motor score'),
-                         p(strong('RUEMS'), 'right upper extremity motor score'),
-                         p(strong('LUEMS'), 'left upper extremity motor score'),
-                         p(strong('LEMS'), 'lower extremity motor score'),
-                         p(strong('RLEMS'), 'right lower extremity motor score'),
-                         p(strong('LLEMS'), 'left lower extremity motor score'),
-                         p(strong('RMS'), 'right motor score'),
-                         p(strong('LMS'), 'left motor score'),
-                         p(strong('TMS'), 'total motor score'),
-                         p(strong('RPP'), 'right pin prick'),
-                         p(strong('LPP'), 'left pin prick'),
-                         p(strong('TPP'), 'total pin prick'),
-                         p(strong('RLT'), 'right light touch'),
-                         p(strong('LLT'), 'left light touch'),
-                         p(strong('TLT'), 'total light touch')
-                     )
-                     
-              ) # end column
-            ) # end fluidRow
-    ) # end tabItem
-    
-    
-        ) # close tabitems
-    ) # close dashboard body
+      ), # Close tab item (drug_sygen)
+      
+      # Tab: Sygen Medication
+      tabItem(tabName = "polypharmacy_sygen",
+              fluidRow(
+                column(width = 8,
+                       
+                       box(width = NULL,
+                           
+                           div(style="display:inline-block;width:100%;text-align:center;margin-top:7px;margin-bottom:7px;",
+                               radioGroupButtons(
+                                 inputId = "poly_sygen_ind", 
+                                 label = "Visualise polypharmacy plot at different scales", 
+                                 selected = 'gp_sygen',
+                                 status = "success",
+                                 individual = T, #if false, then the boxes are connected
+                                 choiceNames = c("Group level", "Individual level"),
+                                 choiceValues = c('gp_sygen', 'ind_sygen')
+                               ) # Close radioGroupButtons bracket
+                           ), # Close div bracket
+                       ),
+                       
+                       # box(width = NULL,
+                       #     checkboxInput(inputId = "poly_sygen_ind", 
+                       #                   label = "Plot polypharmacy at individual level", 
+                       #                   value = FALSE, width = NULL)),
+                       
+                       box(title = "Explore polypharmacy per day after injury", 
+                           width = NULL, 
+                           heigth = "300px",
+                           solidHeader = TRUE,
+                           sliderInput("day_polypharmacy_sygen", "Day after injury:",
+                                       min = 0, max = 60, value = 7),
+                           
+                           conditionalPanel(condition = "input.poly_sygen_ind == 'gp_sygen' ",
+                                            div(plotOutput("plot_polypharmacy_sygen", width = "100%",
+                                                           inline = FALSE), 
+                                                align='center')),
+                           conditionalPanel(condition = "input.poly_sygen_ind != 'gp_sygen' ",
+                                            div(plotOutput("plot_poly_ind_sygen", width = "100%",
+                                                           inline = FALSE), 
+                                                align='center')),
+                       ), # end box 
+                       
+                       box(title = "How to intepret this visualization", 
+                           width = NULL,
+                           solidHeader = TRUE,
+                           conditionalPanel(condition = "input.poly_sygen_ind == 'gp_sygen' ",
+                                            p('This plot represents the ',
+                                              strong('network of medications administered in combination', align='justify'),
+                                              '. The nodes of the network represent the medications. 
+                                                            The size of the nodes represents the number of patients that 
+                                                            have received this particular medication the day you selected (default is day 7). 
+                                                            Medications that were administered together 
+                                                            on that specific day are connected via an edge. 
+                                                            The width of the edge represents the number of patients that 
+                                                            have received the two medications (e.g. acetaminophen and ketorolac) 
+                                                            in combination on the day of interest.', align='justify')
+                           ),
+                           conditionalPanel(condition = "input.poly_sygen_ind != 'gp_sygen' ",
+                                            p('This plot shows examples of longitudinal medication profiles 
+                                                            for four patients in the first days post injury. The four patients 
+                                                            share the characteristics chosen from the right panel.')
+                           ),
+                       ), # end box 
+                       
+                ),# close column
+                
+                conditionalPanel(condition = "input.poly_sygen_ind != 'gp_sygen' ",
+                                 column(width = 4, # create second column for second type of user inputs (filters)
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_sex_poly_ind_sygen",
+                                                        label = "Select sex",
+                                                        choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                                        selected = c("Unknown"))
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create box
+                                            sliderInput("select_age_poly_ind_sygen",
+                                                        label = "Select age at injury",
+                                                        min = 10, max = 100,
+                                                        value = c(20,80)),
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_ais_poly_ind_sygen",
+                                                        label = "Select baseline AIS grade",
+                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                                        selected = c("Unknown"))
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_nli_poly_ind_sygen",
+                                                        label = "Select injury level",
+                                                        choices = list("Unknown", "Cervical", "Thoracic"),
+                                                        selected = c("Unknown"))
+                                        )#, # end box
+                                 ) #end column
+                )#end conditional Panel
+              )#close fluid row
+              
+      ), # Close tab item (Sygen Polypharmacy)
+      
+      tabItem(tabName = "drug_pattern_sygen",
+              fluidRow(
+                column(width = 8, # create first column for boxplot
+                       
+                       div(style="display:inline-block;width:100%;text-align:center;margin-top:7px;margin-bottom:7px;",
+                           radioGroupButtons(
+                             inputId = "type_drug_sygen", 
+                             label = "Visualise drug pattern plot acording tp", 
+                             selected = 'cat_drug_sygen',
+                             status = "success",
+                             individual = T, #if false, then the boxes are connected
+                             choiceNames = c("Drug Indication", "Specific drug"),
+                             choiceValues = c('cat_drug_sygen', 'spe_drug_sygen')
+                           ) # Close radioGroupButtons bracket
+                       ), # Close div bracket
+                       
+                       
+                       box(width = NULL, # create box to display plot
+                           align="center", # center the plot
+                           conditionalPanel(condition = "input.type_drug_sygen == 'cat_drug_sygen' ",
+                                            plotOutput('plot_drug_pattern_sygen', height = 660)),
+                           conditionalPanel(condition = "input.type_drug_sygen == 'spe_drug_sygen' ",
+                                            img(src="work_in_progress.png", height="80%", width="80%"))
+                           ),
+                ), # end column
+                
+                column(width = 4, # create second column for second type of user inputs (filters)
+                       box(width=NULL,
+                           
+                           conditionalPanel(condition = "input.type_drug_sygen == 'cat_drug_sygen' ",
+                                            selectInput("select_cat_drug_sygen",
+                                                        label = "Select an indication:",
+                                                        choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
+                                                                       "Cardiac disorders" = "Cardiac disorders",
+                                                                       "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
+                                                                       "Eye disorders" = "Eye disorders",
+                                                                       "Gastrointestinal disorders" = "Gastrointestinal disorders",
+                                                                       "General disorders and administration site conditions" = "General disorders and administration site conditions",
+                                                                       "Immune system disorders" = "Immune system disorders",
+                                                                       "Infections and infestations" = "Infections and infestations",
+                                                                       "Injury, poisoning and procedural complications" = "Injury, poisoning and procedural complications",
+                                                                       "Metabolism and nutrition disorders" = "Metabolism and nutrition disorders",
+                                                                       "Musculoskeletal and connective tissue disorders" = "Musculoskeletal and connective tissue disorders",
+                                                                       "Nervous system disorders" = "Nervous system disorders",
+                                                                       "Pain" = "Pain",
+                                                                       "Psychiatric disorders" = "Psychiatric disorders",
+                                                                       "Renal and urinary system disorders" = "Renal and urinary system disorders",
+                                                                       "Respiratory, thoracic and mediastinal disorders" = "Respiratory, thoracic and mediastinal disorders",
+                                                                       "Skin and subcutaneous tissue disorders" = "Skin and subcutaneous tissue disorders",
+                                                                       "Surgical and medical procedures" = "Surgical and medical procedures",
+                                                                       "Vascular disorders" = "Vascular disorders",
+                                                                       "Sygen Protocol" = "Sygen Protocol",
+                                                                       "Unknown" = "Unknown"),
+                                                        selected = "Blood and lymphatic system disorders"
+                                            )
+                           ), #end conditionalPanel
+                           
+                           conditionalPanel(condition = "input.type_drug_sygen == 'spe_drug_sygen' ",
+                                            selectInput("select_spe_drug_sygen",
+                                                        label = "Select a specific drug:",
+                                                        #choices = vec_drug_sygen,
+                                                        choices = 'aspirin',
+                                                        selected = 'aspirin'
+                                            )
+                           ), #end conditionalPanel
+                           
+                       ), # end box
+                       
+                       box(width = NULL,
+                           sliderInput("day_drug_sygen", "Day after injury:",
+                                       min = 0, max = 60, value = 7)), # end Box
+                       
+                       box(width = NULL, # create a new box
+                           selectInput("select_sex_drug_pattern_sygen",
+                                       label = "Select sex",
+                                       choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                       selected = c("Unknown"))
+                       ), # end box
+                       
+                       box(width = NULL, # create box
+                           sliderInput("select_age_drug_pattern_sygen",
+                                       label = "Select age at injury",
+                                       min = 10, max = 100,
+                                       value = c(20,80)),
+                       ), # end box
+                       
+                       box(width = NULL, # create a new box
+                           selectInput("select_ais_drug_pattern_sygen",
+                                       label = "Select baseline AIS grade",
+                                       choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                       selected = c("Unknown"))
+                       ), # end box
+                       
+                       box(width = NULL, # create a new box
+                           selectInput("select_nli_drug_pattern_sygen",
+                                       label = "Select injury level",
+                                       choices = list("Unknown",
+                                                      "Cervical",
+                                                      "Thoracic"),
+                                       selected = c("Unknown"))
+                       ), # end box
+                ) #end column
+                
+              )#close fluid row
+              
+      ), # Close tab item (Sygen Drug Pattern)
+      
+      
+      tabItem(tabName = "about_scirehab",
+              h3(strong("Spinal Cord Injury Rehabilitation Study")),
+              br(),
+              fluidRow(
+                box(#title = "Explore The Data", 
+                  width = 8, 
+                  heigth = "300px",
+                  solidHeader = TRUE,
+                  
+                  h4("Objectives"),
+                  "In an effort to understand the relationship between the rehabilitation process and outcomes, the SCIRehab study collected data about rehabilitation interventions across 7 disciplines during the inpatient rehabilitation of over 1200 people with spinal cord injury. 
+                                This study used practice-based evidence methods to relate the details of the rehabilitation process to outcomes after controlling for 
+                                individual demographic and injury characteristics",
+                  br(),
+                  h4("Methods"),
+                  strong("Study design."), "Longitudinal, observational, prospective event-based cohort study.",
+                  br(),
+                  br(),
+                  strong("Inclusion/ exlusion criteria."), "The SCIRehab facilities enrolled all patients who were 12 years of age or older, gave (or whose parent/guardian gave) informed consent, and were admitted to the facility's SCI unit for initial rehabilitation following traumatic SCI. 
+                                Duration of the acute-hospital inpatient admission preceding rehabilitation was not an enrollment criterion. Patients requiring transfer to acute care units or facilities during their rehabilitation program were retained in the study, no matter how long they spent in acute 
+                                care before returning to the rehabilitation unit, but their acute care days were not counted as part of the rehabilitation stay. To restrict the study to initial rehabilitation cases, a small number of patients were excluded who spent more than 2 weeks in another rehabilitation 
+                                center prior to admission to the SCIRehab facility. To ensure complete rehabilitation data, patients who spent more than a week of their rehabilitation stay on a non-spinal cord injury rehabilitation unit in the SCIRehab facility (staff of the non-SCI units were not trained in the data collection methods)
+                                also were excluded. There were no other exclusion criteria.",
+                  br(),
+                  br(),
+                  strong("Assessments."),
+                  "Patients were followed for first year 
+                                post-injury and were excluded if they spent two or more weeks at a non-participating rehabilitation center. Patient demographics and injury characteristics were extracted from the patient medical record (part of the National Institute on Disability and Rehabilitation 
+                                Research Spinal Cord Injury Model Systems Form I). The International Standards of Neurological Classification of SCI (ISNCSCI) and its American Spinal Injury Association Impairment Scale (AIS) were used to describe the neurologic level and completeness of injury; the Functional Independence Measure (FIM)
+                                served to describe a patient's functional independence in motor and cognitive tasks at admission and discharge, and monitor functional gains; and the Comprehensive Severity Index (CSI) was used to provide an overall summary measure of how ill (i.e., extent of deviation from normal)
+                                a patient was over time during the stay in the center.",
+                  br(),
+                  br(),
+                  strong("Commonly administered medications."), "The SCIRehab study rigorously tracked the use of all commonly administered medications. For each medication administered, route, dosage and dosing 
+                                (i.e., start and end date, frequency) were abstracted directly from medical records. However, medication indication was not recorded. The medication data has not been published."
+                  
+                ), # close box
+                
+                fluidRow(
+                  valueBox(prettyNum(1225, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                  valueBox(prettyNum(575, big.mark=" ", scientific=FALSE), "Unique medications to treat secondary complications", icon = icon("pills"), width = 3,  color = "purple"),
+                  #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
+                  valueBox("6", "North American clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple"),
+                  valueBox("2007-2010", "Running time", icon = icon("calendar-alt"), width = 3,  color = "purple")#,
+                  #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
+                )
+              ), # close fluid row
+              fluidRow(
+                box(#title = "Explore The Data", 
+                  width = 8, 
+                  heigth = "500px",
+                  solidHeader = TRUE,
+                  h4('Website'),
+                  tags$a("ADDEP SCIRehab Data Source", href="https://www.icpsr.umich.edu/web/ADDEP/studies/36724", 
+                         target="_blank",
+                         icon("external-link")),
+                  h4("References"),
+                  tags$ul(
+                    tags$li(a('Whiteneck et al, 2009; ', href = 'https://pubmed.ncbi.nlm.nih.gov/19810627/', target="_blank"), "New approach to study the contents and outcomes of spinal cord injury rehabilitation: the SCIRehab Project. J Spinal Cord Med."),
+                    tags$li(a('Whiteneck et al, 2011', href = 'https://pubmed.ncbi.nlm.nih.gov/21675353/', target="_blank"), "Inpatient treatment time across disciplines in spinal cord injury rehabilitation. J Spinal Cord Med")
+                  ) # close tags
+                ) # close box
+              ) # close fluid row
+              
+      ),
+      
+      
+      
+      tabItem(tabName = "cohort_scirehab",
+              h3("Description of SCIRehab Study Cohort"),
+              fluidRow(
+                box(width = 12,
+                    div(style="display:inline-block;width:100%;text-align:center;",
+                        radioGroupButtons(
+                          inputId = "var1", 
+                          label = "Patient characteristics:", 
+                          selected = "sex",
+                          status = "success",
+                          #justified = T, #if true, all boxes have the same length
+                          individual = T, #if false, then the boxes are connected
+                          choiceNames = c("Sex", "Age", "Injury Severity", "Injury Level", "Etiology"),
+                          choiceValues = c("sex", "age", "baseline.ais", "nli", "etiology")
+                        ) #close box bracket
+                    ), #close divstyle
+                    
+                    div(plotlyOutput("bar.plot.baseline.characteristic.scirehab", width = "50%",
+                                     height = "600px",
+                                     inline = FALSE), align='center')
+                ) #close box bracket
+              ) #close fluid row
+              
+      ), #close tabitem
+      
+      tabItem(tabName = "drug_scirehab",
+              fluidRow(
+                column(width = 8,
+                       
+                       box(width = NULL,
+                           
+                           div(style="display:inline-block;width:100%;text-align:center;margin-top:7px;margin-bottom:7px;",
+                               radioGroupButtons(
+                                 inputId = "pharmacol_management_scirehab", 
+                                 label = "Visualise pharmacological management at different scales", 
+                                 selected = 'full_cohort_scirehab',
+                                 status = "success",
+                                 individual = T, #if false, then the boxes are connected
+                                 choiceNames = c("Group level", "Customized Subgroups"),
+                                 choiceValues = c('full_cohort_scirehab', 'sbgrps_scirehab')
+                               ) # Close radioGroupButtons bracket
+                           ), # Close div bracket
+                       ), # Close box
+                       
+                       conditionalPanel(condition = "input.pharmacol_management_scirehab == 'full_cohort_scirehab' ",
+                                        
+                                        box(title = "Overview of drugs per day and indication", 
+                                            width = NULL, 
+                                            heigth = "300px",
+                                            solidHeader = TRUE,
+                                            dataTableOutput('table_scirehab'),
+                                            #downloadButton('downloadData',"Download the data")
+                                        ), # end box
+                                        
+                                        box(title = "Unique drugs per day", 
+                                            width = NULL, 
+                                            heigth = "300px",
+                                            solidHeader = TRUE,
+                                            
+                                            
+                                            div(plotlyOutput("plot_pharmacol_management_scirehab", width = "100%",
+                                                             inline = FALSE),
+                                                align='center')
+                                        ), # end box
+                                        
+                                        box(title = "Number of unique drugs per patient (mean [min -max])", 
+                                            width = NULL, 
+                                            heigth = 800,
+                                            solidHeader = TRUE,
+                                            
+                                            
+                                            div(plotlyOutput("plot_pharmacol_management_per_day_scirehab", width = "100%", height = "100%",
+                                                             inline = FALSE),
+                                                align='center')
+                                        ), # end box
+                       ), # end conditionalPanel
+                       
+                       
+                       conditionalPanel(condition = "input.pharmacol_management_scirehab != 'full_cohort_scirehab' ",
+                                        
+                                        box(title = "Overview of drugs per day and indication", 
+                                            width = NULL, 
+                                            heigth = "300px",
+                                            solidHeader = TRUE,
+                                            dataTableOutput('table_srgp_scirehab'),
+                                            # downloadButton('downloadData',"Download the data")
+                                        ), # end box
+                                        
+                                        box(title = "Unique drugs per day", 
+                                            width = NULL, 
+                                            heigth = "300px",
+                                            solidHeader = TRUE,
+                                            
+                                            
+                                            div(plotlyOutput("plot_pharmacol_management_srgp_scirehab", width = "100%",
+                                                             inline = FALSE),
+                                                align='center')
+                                        ), # end box
+                                        
+                       ), # end conditionalPanel    
+                ),# close column
+                
+                
+                conditionalPanel(condition = "input.pharmacol_management_scirehab != 'full_cohort_scirehab' ",
+                                 
+                                 
+                                 column(width = 4, # create second column for second type of user inputs (filters)
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_sex_pharmacol_management_sbgrp_scirehab",
+                                                        label = "Select sex",
+                                                        choices = list("Male" = "Male", "Female" = "Female"),
+                                                        selected = c("Male"))
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create box
+                                            selectInput("select_age_pharmacol_management_sbgrp_scirehab",
+                                                        label = "Select age at injury",
+                                                        choices = list("0-19 yrs", "20-29 yrs", "30-39 yrs","40-49 yrs", "50-59 yrs", 
+                                                                       "60-69 yrs", "70-79 yrs", "80+ yrs"),
+                                                        selected = c("20-29 yrs"))
+                                            
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_ais_pharmacol_management_sbgrp_scirehab",
+                                                        label = "Select baseline AIS grade",
+                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D"),
+                                                        selected = c("AIS A"))
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_nli_pharmacol_management_sbgrp_scirehab",
+                                                        label = "Select injury level",
+                                                        choices = list("Cervical", "Thoracic", "Lumbar"),
+                                                        selected = c("Cervical"))
+                                        )#, # end box
+                                 ) #end column
+                )#end conditional Panel
+              )#close fluid row
+              
+      ), # Close tab item (drug_scirehab)
+      
+      tabItem(tabName = "polypharmacy_scirehab",
+              fluidRow(
+                column(width = 8,
+                       
+                       box(width = NULL,
+                           
+                           div(style="display:inline-block;width:100%;text-align:center;margin-top:7px;margin-bottom:7px;",
+                               radioGroupButtons(
+                                 inputId = "poly_scirehab_ind", 
+                                 label = "Visualise polypharmacy plot at different scales", 
+                                 selected = 'gp_scirehab',
+                                 status = "success",
+                                 individual = T, #if false, then the boxes are connected
+                                 #choiceNames = c("Group level"),
+                                 #choiceValues = c('gp_scirehab'),
+                                 choiceNames = c("Group level", "Individual level"),
+                                 choiceValues = c('gp_scirehab', 'ind_scirehab')
+                               ) # Close radioGroupButtons bracket
+                           ), # Close div bracket
+                       ),
+                       
+                       # box(width = NULL,
+                       #     checkboxInput(inputId = "poly_scirehab_ind", 
+                       #                   label = "Plot polypharmacy at individual level", 
+                       #                   value = FALSE, width = NULL)),
+                       
+                       box(title = "Explore polypharmacy per day after injury", 
+                           width = NULL, 
+                           heigth = "300px",
+                           solidHeader = TRUE,
+                           sliderInput("day_polypharmacy_scirehab", "Day after injury:",
+                                       min = 0, max = 60, value = 7),
+                           
+                           conditionalPanel(condition = "input.poly_scirehab_ind == 'gp_scirehab' ",
+                                            div(plotOutput("plot_polypharmacy_scirehab", width = "100%",
+                                                           inline = FALSE), 
+                                                align='center')),
+                           conditionalPanel(condition = "input.poly_scirehab_ind != 'gp_scirehab' ",
+                                            img(src="work_in_progress.png", height="80%", width="80%")
+                                            ),
+                                            #div(plotOutput("plot_poly_ind_scirehab", width = "100%",
+                                            #               inline = FALSE), 
+                                            #    align='center')),
+                       ), # end box 
+                       
+                       box(title = "How to intepret this visualization", 
+                           width = NULL,
+                           solidHeader = TRUE,
+                           conditionalPanel(condition = "input.poly_scirehab_ind == 'gp_scirehab' ",
+                                            p('This plot represents the ',
+                                              strong('network of medications administered in combination', align='justify'),
+                                              '. The nodes of the network represent the medications. 
+                                                            The size of the nodes represents the number of patients that 
+                                                            have received this particular medication the day you selected (default is day 7). 
+                                                            Medications that were administered together 
+                                                            on that specific day are connected via an edge. 
+                                                            The width of the edge represents the number of patients that 
+                                                            have received the two medications (e.g. acetaminophen and ketorolac) 
+                                                            in combination on the day of interest.', align='justify')
+                           ),
+                           conditionalPanel(condition = "input.poly_scirehab_ind != 'gp_scirehab' ",
+                                            p('This plot shows examples of longitudinal medication profiles 
+                                                            for four patients in the first days post injury. The four patients 
+                                                            share the characteristics chosen from the right panel.')
+                           ),
+                       ), # end box 
+                       
+                ),# close column
+                
+                conditionalPanel(condition = "input.poly_scirehab_ind != 'gp_scirehab' ",
+                                 column(width = 4, # create second column for second type of user inputs (filters)
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_sex_poly_ind_scirehab",
+                                                        label = "Select sex",
+                                                        choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                                        selected = c("Unknown"))
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create box
+                                            sliderInput("select_age_poly_ind_scirehab",
+                                                        label = "Select age at injury",
+                                                        min = 10, max = 100,
+                                                        value = c(20,80)),
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_ais_poly_ind_scirehab",
+                                                        label = "Select baseline AIS grade",
+                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                                        selected = c("Unknown"))
+                                        ), # end box
+                                        
+                                        box(width = NULL, # create a new box
+                                            selectInput("select_nli_poly_ind_scirehab",
+                                                        label = "Select injury level",
+                                                        choices = list("Unknown", "Cervical", "Thoracic"),
+                                                        selected = c("Unknown"))
+                                        )#, # end box
+                                 ) #end column
+                )#end conditional Panel
+              )#close fluid row
+              
+      ), # Close tab item (scirehab Polypharmacy)
+      
+      # Tab: SCI Rehab drugs patterns
+      tabItem(tabName = "drug_pattern_scirehab",
+              img(src="work_in_progress.png", height="80%", width="80%")
+              # fluidRow(
+              #   column(width = 8, # create first column for boxplot
+              #          
+              #          box(width = NULL, # create box to display plot
+              #              align="center", # center the plot
+              #              plotOutput('plot_drug_pattern_scirehab', height = 660)) # call server plot function for the score and dataset chosen by the user #end box
+              #   ), # end column
+              #   
+              #   column(width = 4, # create second column for second type of user inputs (filters)
+              #          box(width=NULL,
+              #              selectInput("select_drug_scirehab",
+              #                          label = "Select a specific drug:",
+              #                          choices = gsub('_', ' ', levels(factor(drug_pattern_scirehab_ind$generic_name))),
+              #                          selected = levels(factor(drug_pattern_scirehab_ind$generic_name))[7]
+              #              )
+              #          ), # end box
+              #          
+              #          box(width = NULL,
+              #              sliderInput("day_drug_scirehab", "Day after injury:",
+              #                          min = 0, max = 60, value = 7)
+              #          ), # end Box
+              #          
+              #          box(width = NULL, # create a new box
+              #              selectInput("select_sex_drug_pattern_scirehab",
+              #                          label = "Select sex",
+              #                          choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+              #                          selected = c("Unknown"))
+              #          ), # end box
+              #          
+              #          box(width = NULL, # create box
+              #              sliderInput("select_age_drug_pattern_scirehab",
+              #                          label = "Select age at injury",
+              #                          min = 10, max = 100,
+              #                          value = c(20,80)),
+              #          ), # end box
+              #          
+              #          box(width = NULL, # create a new box
+              #              selectInput("select_ais_drug_pattern_scirehab",
+              #                          label = "Select baseline AIS grade",
+              #                          choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+              #                          selected = c("Unknown"))
+              #          ), # end box
+              #          
+              #          box(width = NULL, # create a new box
+              #              selectInput("select_nli_drug_pattern_scirehab",
+              #                          label = "Select injury level",
+              #                          choices = list("Unknown",
+              #                                         "Cervical",
+              #                                         "Thoracic"),
+              #                          selected = c("Unknown"))
+              #          ), # end box
+              #          
+              #   ) #end column
+              #   
+              # )#close fluid row
+      ), # Close tab item (SCI Rehab drugs patterns)
+      
+      tabItem(tabName = "abbreviations",
+              titlePanel(strong("Dictionary of abbreviations")),
+              fluidRow(
+                column(width = 6,
+                       box(width = NULL, status = "primary",
+                           h4(strong('General')),
+                           p(strong('SCI'), 'spinal cord injury'),
+                           p(strong(a('ASIA', href ="https://asia-spinalinjury.org/", target="_blank")), 'american spinal injury association'),
+                           p(strong(a('EMSCI', href ="https://www.emsci.org/", target="_blank")), 'european multicenter study about spinal cord injury'),
+                           p(strong('PBE'), 'practice-based evidence')
+                       ),
+                       
+                       box(width = NULL, status = "primary",
+                           h4(strong('Functional outcomes')),
+                           p(strong(a('WISCI', href = "http://www.spinalcordcenter.org/research/wisci_guide.pdf", target="_blank")), 'walking index for spinal cord injury'),
+                           p(strong(a('test_6min', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), '6 minutes walking test'),
+                           p(strong(a('test_10m', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), '10 meters walking test'),
+                           p(strong(a('TUG', href = "https://www.emsci.org/index.php/project/the-assessments/functional-test", target="_blank")), 'timed up and go test'),
+                           p(strong(a('SCIM2', href = "https://www.emsci.org/index.php/project/the-assessments/independence", target="_blank")), 'spinal cord independence measure type 2'),
+                           p(strong(a('SCIM3', href = "https://www.emsci.org/index.php/project/the-assessments/independence", target="_blank")), 'spinal cord independence measure type 3'),
+                           p(strong('benzel'), 'modified benzel classification')
+                       )
+                       
+                ), # end column
+                
+                column(width = 6,
+                       box(width = NULL, status = "primary",
+                           h4(strong(a('Neurological outcomes', href ="https://asia-spinalinjury.org/wp-content/uploads/2016/02/International_Stds_Diagram_Worksheet.pdf", target="_blank"))),
+                           p(strong(a('AIS', href ='https://www.icf-casestudies.org/introduction/spinal-cord-injury-sci/american-spinal-injury-association-asia-impairment-scale#:~:text=The%20American%20Spinal%20Injury%20Association,both%20sides%20of%20the%20body', target="_blank")), 'ASIA impairment scale'),
+                           p(strong('UEMS'), 'upper extremity motor score'),
+                           p(strong('RUEMS'), 'right upper extremity motor score'),
+                           p(strong('LUEMS'), 'left upper extremity motor score'),
+                           p(strong('LEMS'), 'lower extremity motor score'),
+                           p(strong('RLEMS'), 'right lower extremity motor score'),
+                           p(strong('LLEMS'), 'left lower extremity motor score'),
+                           p(strong('RMS'), 'right motor score'),
+                           p(strong('LMS'), 'left motor score'),
+                           p(strong('TMS'), 'total motor score'),
+                           p(strong('RPP'), 'right pin prick'),
+                           p(strong('LPP'), 'left pin prick'),
+                           p(strong('TPP'), 'total pin prick'),
+                           p(strong('RLT'), 'right light touch'),
+                           p(strong('LLT'), 'left light touch'),
+                           p(strong('TLT'), 'total light touch')
+                       )
+                       
+                ) # end column
+              ) # end fluidRow
+      ) # end tabItem
+      
+      
+    ) # close tabitems
+  ) # close dashboard body
 ) # close ui
-    
-    
-
-
-
-
-
-
-
 
 
 server <- function(input, output, session) {
-
   
   output$cohort <- renderMenu({
     sidebarMenu(
@@ -1259,7 +1515,7 @@ server <- function(input, output, session) {
   output$distPlot <- renderPlot({
     hist(rnorm(input$obs))})
   
-# Create Data Alert
+  # Create Data Alert
   # createAlert(session = session,
   #             anchorId = "dataAlert",
   #             #alertId="a1",
@@ -1269,98 +1525,98 @@ server <- function(input, output, session) {
   #             style = "warning")
   # 
   
-# #------- Plot GM1---------- 
-#   output$gm1 <- renderImage({
-#     return(list(src = "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/www/gm1.png",
-#                 type = "image/png",alt = "gm1", width = "200ptx"))
-#   }, deleteFile = FALSE) #where the src is wherever you have the picture
-#   
+  # #------- Plot GM1---------- 
+  #   output$gm1 <- renderImage({
+  #     return(list(src = "/Users/jutzca/Documents/Github/Acute-Pharmacological-Treatment-in-SCI/shinyapp/acute_pharmacological_management_sci/www/gm1.png",
+  #                 type = "image/png",alt = "gm1", width = "200ptx"))
+  #   }, deleteFile = FALSE) #where the src is wherever you have the picture
+  #   
   
-#------- Plot baseline characteristics of Sygen patients ----------
+  #------- Plot baseline characteristics of Sygen patients ----------
   
   output$bar.plot.baseline.characteristic.sygen <- renderPlotly({
     
     if (input$var == "sex")  {
-
-    width = c(0.8, 0.8, 0.8)
+      
+      width = c(0.8, 0.8, 0.8)
+      
+      sygen_baseline$Sex=factor(sygen_baseline$Sex, levels = c("Unknown", "Male", "Female" ))
+      
+      baseline.sex <- sygen_baseline%>%
+        dplyr::count(Sex)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~Sex,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width,
+          text = ~paste("Sex:", Sex,
+                        '</br></br>', "N:", n,
+                        '</br>', "Frequency:", frequency, '%'),
+          #text = ~n,
+          hoverinfo = "text")%>%
+        layout(title = '', font=list(size = 12)) %>%
+        layout(xaxis = list(title = 'Proportion [%]')) %>%
+        layout( xaxis = list(titlefont = list(size = 16), tickfont = list(size = 14)),
+                yaxis = list(titlefont = list(size = 16), tickfont = list(size = 14)) )
+      baseline.sex}
     
-    sygen_baseline$Sex=factor(sygen_baseline$Sex, levels = c("Unknown", "Male", "Female" ))
     
-    baseline.sex <- sygen_baseline%>%
-      dplyr::count(Sex)%>% 
-      dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
-      as.data.frame()%>%
-      plotly::plot_ly(y = ~Sex,
-                      x =  ~as.numeric(frequency))%>%
-      plotly::add_bars(
-        marker = list(color = 'rgb(96,92,168)'),
-        width = ~width,
-        text = ~paste("Sex:", Sex,
-                      '</br></br>', "N:", n,
-                      '</br>', "Frequency:", frequency, '%'),
-        #text = ~n,
-        hoverinfo = "text")%>%
-      layout(title = '', font=list(size = 12)) %>%
-      layout(xaxis = list(title = 'Proportion [%]')) %>%
-      layout( xaxis = list(titlefont = list(size = 16), tickfont = list(size = 14)),
-              yaxis = list(titlefont = list(size = 16), tickfont = list(size = 14)) )
-    baseline.sex}
-    
-   
-     else if (input$var == "age")  {
-       width.age.group = c(0.8, 0.8, 0.8, 0.8, 0.8)
-     
-     sygen_baseline$agegroup=factor(sygen_baseline$agegroup, levels = c("Unknown", "61+ yrs", "41-60 yrs", "21-40 yrs", "0-20 yrs" ))
-     
-     baseline.age.grp<- sygen_baseline%>%
-       dplyr::count(agegroup)%>% 
-       dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
-       as.data.frame()%>%
-       plotly::plot_ly(y = ~ agegroup,
-                       x =  ~as.numeric(frequency))%>%
-       plotly::add_bars(
-         marker = list(color = 'rgb(96,92,168)'),
-         width = ~width.age.group,
-         text = ~paste("Age Group:", agegroup,
-                       '</br></br>', "N:", n,
-                       '</br>', "Frequency:", frequency, '%'),
-         hoverinfo = "text")%>%
-       plotly::layout(xaxis = list(title = "Proportion [%]"),
-                      yaxis = list(title = ""))
-     baseline.age.grp}  
+    else if (input$var == "age")  {
+      width.age.group = c(0.8, 0.8, 0.8, 0.8, 0.8)
+      
+      sygen_baseline$agegroup=factor(sygen_baseline$agegroup, levels = c("Unknown", "61+ yrs", "41-60 yrs", "21-40 yrs", "0-20 yrs" ))
+      
+      baseline.age.grp<- sygen_baseline%>%
+        dplyr::count(agegroup)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~ agegroup,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width.age.group,
+          text = ~paste("Age Group:", agegroup,
+                        '</br></br>', "N:", n,
+                        '</br>', "Frequency:", frequency, '%'),
+          hoverinfo = "text")%>%
+        plotly::layout(xaxis = list(title = "Proportion [%]"),
+                       yaxis = list(title = ""))
+      baseline.age.grp}  
     
     
     else if (input$var == "baseline.ais")  {
+      
+      width.ais = c(0.8, 0.8, 0.8, 0.8, 0.8)
+      
+      sygen_baseline$AIS=factor(sygen_baseline$AIS, levels = c('Unknown', "AIS D", 'AIS C', "AIS B", "AIS A"))
+      
+      baseline.ais <- sygen_baseline%>%
+        dplyr::count(AIS)%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
+        as.data.frame()%>%
+        plotly::plot_ly(y = ~AIS,
+                        x =  ~as.numeric(frequency))%>%
+        plotly::add_bars(
+          marker = list(color = 'rgb(96,92,168)'),
+          width = ~width.ais,
+          text = ~paste("Injury Severity:", AIS,
+                        '</br></br>', "N:", n,
+                        '</br>', "Frequency:", frequency, '%'),
+          hoverinfo = "text")%>%
+        plotly::layout(xaxis = list(title = "Proportion [%]"),
+                       yaxis = list(title = ""))
+      baseline.ais}  
     
-              width.ais = c(0.8, 0.8, 0.8, 0.8, 0.8)
-              
-              sygen_baseline$AIS=factor(sygen_baseline$AIS, levels = c('Unknown', "AIS D", 'AIS C', "AIS B", "AIS A"))
-              
-              baseline.ais <- sygen_baseline%>%
-                dplyr::count(AIS)%>% 
-                dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
-                as.data.frame()%>%
-                plotly::plot_ly(y = ~AIS,
-                                x =  ~as.numeric(frequency))%>%
-                plotly::add_bars(
-                  marker = list(color = 'rgb(96,92,168)'),
-                  width = ~width.ais,
-                  text = ~paste("Injury Severity:", AIS,
-                                '</br></br>', "N:", n,
-                                '</br>', "Frequency:", frequency, '%'),
-                  hoverinfo = "text")%>%
-                plotly::layout(xaxis = list(title = "Proportion [%]"),
-                               yaxis = list(title = ""))
-              baseline.ais}  
-   
     
     else if (input$var == "nli")  {width.nli = c(0.8, 0.8, 0.8)
     
     sygen_baseline$NLI=factor(sygen_baseline$NLI, levels = c('Unknown','Thoracic', "Cervical"))
-  
+    
     baseline.nli <- sygen_baseline%>%
       dplyr::count(NLI)%>% 
-      dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
+      dplyr::mutate(frequency=sprintf("%0.1f", n/793*100))%>% 
       as.data.frame()%>%
       plotly::plot_ly(y = ~NLI,
                       x =  ~as.numeric(frequency))%>%
@@ -1376,34 +1632,10 @@ server <- function(input, output, session) {
     baseline.nli}
     
     
-    else if (input$var == "plegia")  {
-    
-    width.plegia = c(0.8, 0.8,0.8)
-    
-    sygen_baseline$Plegia=factor(sygen_baseline$Plegia, levels = c("Unknown",'Paraplegia','Tetraplegia'))
-    
-    baseline.plegia <- sygen_baseline%>%
-      dplyr::count(Plegia)%>% 
-      dplyr::mutate(frequency=sprintf("%0.1f", n/797*100))%>% 
-      as.data.frame()%>%
-      plotly::plot_ly(y = ~Plegia,
-                      x =  ~as.numeric(frequency))%>%
-      plotly::add_bars(
-        marker = list(color = 'rgb(96,92,168)'),
-        width = ~width.plegia,
-        text = ~paste("Para- and Tetraplegia:", Plegia,
-                      '</br></br>', "N:", n,
-                      '</br>', "Frequency:", frequency, '%'),
-        hoverinfo = "text")%>%
-      plotly::layout(xaxis = list(title = "Proportion [%]"),
-                     yaxis = list(title = ""))
-    baseline.plegia}
-    
-    
     else if (input$var == "etiology")  {
       
       width.cause = c(0.8, 0.8, 0.8, 0.8, 0.8,0.8, 0.8, 0.8, 0.8, 0.8)
-    
+      
       sygen_baseline$Cause=factor(sygen_baseline$Cause, levels = c('Unknown','Others', "Water related", "Pedestrian", "Other sports", "Motorcycle", "Gun shot wound", "Fall", "Blunt trauma", "Automobile" ))
       
       baseline.cause<- sygen_baseline%>%
@@ -1427,7 +1659,7 @@ server <- function(input, output, session) {
     
   })
   
-#------- Plot baseline characteristics of SCIRehab patients ----------
+  #------- Plot baseline characteristics of SCIRehab patients ----------
   
   output$bar.plot.baseline.characteristic.scirehab <- renderPlotly({
     
@@ -1437,7 +1669,7 @@ server <- function(input, output, session) {
       
       baseline.sex <- scirehab_baseline%>%
         dplyr::count(Sex)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~Sex,
                         x =  ~as.numeric(frequency))%>%
@@ -1463,7 +1695,7 @@ server <- function(input, output, session) {
       
       baseline.age<- scirehab_baseline%>%
         dplyr::count(Age)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~ Age,
                         x =  ~as.numeric(frequency))%>%
@@ -1481,13 +1713,13 @@ server <- function(input, output, session) {
     
     else if (input$var1 == "baseline.ais")  {
       
-      width.ais = c(0.8, 0.8, 0.8, 0.8)
+      width.ais = c(0.8, 0.8, 0.8, 0.8, 0.8)
       
-      scirehab_baseline$AIS=factor(scirehab_baseline$AIS, levels = c("AIS D", "AIS C", "AIS B", "AIS A"))
+      scirehab_baseline$AIS=factor(scirehab_baseline$AIS, levels = c('Unknown', "AIS D", 'AIS C', "AIS B", "AIS A"))
       
       baseline.ais <- scirehab_baseline%>%
         dplyr::count(AIS)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~AIS,
                         x =  ~as.numeric(frequency))%>%
@@ -1505,13 +1737,13 @@ server <- function(input, output, session) {
     
     else if (input$var1 == "nli")  {
       
-      width.nli = c(0.8, 0.8, 0.8)
+      width.nli = c(0.8, 0.8, 0.8, 0.8)
       
-      scirehab_baseline$NLI=factor(scirehab_baseline$NLI, levels = c("Lumbar", 'Thoracic', "Cervical"))
+      scirehab_baseline$NLI=factor(scirehab_baseline$NLI, levels = c('Unknown',"Lumbar", 'Thoracic', "Cervical"))
       
       baseline.nli <- scirehab_baseline%>%
         dplyr::count(NLI)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~NLI,
                         x =  ~as.numeric(frequency))%>%
@@ -1527,40 +1759,15 @@ server <- function(input, output, session) {
       baseline.nli}
     
     
-    else if (input$var1 == "plegia")  {
-      
-      width.plegia = c(0.8, 0.8)
-      
-      scirehab_baseline$Plegia=factor(scirehab_baseline$Plegia, levels = c('Paraplegia', "Tetraplegia"))
-      
-      baseline.plegia <- scirehab_baseline%>%
-        dplyr::count(Plegia)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
-        as.data.frame()%>%
-        plotly::plot_ly(y = ~Plegia,
-                        x =  ~as.numeric(frequency))%>%
-        plotly::add_bars(
-          marker = list(color = 'rgb(96,92,168)'),
-          width = ~width.plegia,
-          text = ~paste("Para- and Tetraplegia:", Plegia,
-                        '</br></br>', "N:", n,
-                        '</br>', "Percentage:", frequency, '%'),
-          hoverinfo = "text")%>%
-        plotly::layout(xaxis = list(title = "Percentage [%]"),
-                       yaxis = list(title = ""))
-      baseline.plegia}
-    
-    
-    
     else if (input$var1 == "etiology")  {
       
       width.cause = c(0.8, 0.8, 0.8, 0.8,0.8, 0.8, 0.8, 0.8, 0.8)
       
-      scirehab_baseline$Cause=factor(scirehab_baseline$Cause, levels = c("Other", "Water related","Person-to-person contact", "Pedestrian", "Sports", "Motorcycle", "Gun shot", "Fall", "Automobile" ))
+      scirehab_baseline$Cause=factor(scirehab_baseline$Cause, levels = c("Others", "Water related","Person-to-person contact", "Pedestrian", "Other sports", "Motorcycle", "Gun shot wound", "Fall", "Automobile" ))
       
       baseline.cause<- scirehab_baseline%>%
         dplyr::count(Cause)%>% 
-        dplyr::mutate(frequency=sprintf("%0.1f", n/1243*100))%>% 
+        dplyr::mutate(frequency=sprintf("%0.1f", n/1225*100))%>% 
         as.data.frame()%>%
         plotly::plot_ly(y = ~Cause,
                         x =  ~as.numeric(frequency))%>%
@@ -1579,12 +1786,11 @@ server <- function(input, output, session) {
     
   })
   
-  
   # Overview figure of pharmacological management - Sygen entire cohort
   output$plot_pharmacol_management_sygen <- renderPlotly({ 
     if (input$pharmacol_management_sygen == "full_cohort_sygen"){ #full cohort selected
-    
-      plot <- fct_acute_pharmacol_management_sygen(input_day)
+      
+      plot <- fct_acute_pharmacol_management_sygen(input_day, acute_pharmacol_management.data.sygen)
       plot}
     
   })
@@ -1592,7 +1798,7 @@ server <- function(input, output, session) {
   # Overview figure if pharmacological management - Sygen entire cohort
   output$plot_pharmacol_management_indication_sygen <- renderPlotly({ 
     if (input$pharmacol_management_sygen == "full_cohort_sygen"){ #full cohort selected
-    
+      
       plot <- fct_acute_pharmacol_management_sygen(input_day)
       plot}
     
@@ -1601,7 +1807,7 @@ server <- function(input, output, session) {
   # Table providing an overview of the drugs per day and indication - Sygen entire cohort
   output$table <- renderDataTable({
     if (input$pharmacol_management_sygen == "full_cohort_sygen"){ #full cohort selected
-    
+      
       table.for.crosstalk <- acute_pharmacol_management.data.sygen %>%
         dplyr::filter(dose != 0)%>%
         dplyr::group_by(day_x, generic_name,indication)%>%
@@ -1616,70 +1822,54 @@ server <- function(input, output, session) {
     }
   })
   
-  # data <- mtcars
-  # 
-  # output$downloadData <- downloadHandler({
-  #   if (input$pharmacol_management_sygen == "full_cohort_sygen"){ 
-  #   filename = function() {
-  #     paste("data-", Sys.Date(), ".csv", sep="")
-  #   }
-  #   content = function(file) {
-  #     write.csv(data, file)
-  #   }
-  #   }
-  # })
-  # 
- 
-  
   # Figure providing an overview of the drugs per day and indication - Sygen entire cohort
   output$plot_pharmacol_management_by_indication_sygen<-renderPlotly({ 
     if (input$pharmacol_management_sygen == "full_cohort_sygen"){
       
       fct_acute_pharmacol_management_by_indication_sygen<- function(day){
-          
+        
         # Create data set
-          nr.of.patients.per.drug.per.day.per.indication <- acute_pharmacol_management.data.sygen %>%
-            filter(indication == input$select_indication_pharmacol_management_sygen)%>%
-            dplyr::filter(dose != 0)%>%
-            dplyr::group_by(day, generic_name, indication) %>%
-            dplyr::select(generic_name, day,indication)%>%
-            ungroup()%>%
-            dplyr::count(day,indication)%>% 
-            dplyr::group_by(day,indication)
-          nr.of.patients.per.drug.per.day.per.indication
-          
-          
-          # Create plotly
-          acute_pharmacol_management.by.indication.plot<-nr.of.patients.per.drug.per.day.per.indication%>%
-            highlight_key(~day)%>%
-            plotly::plot_ly(y = ~n,
-                            x =  ~day)%>%
-            plotly::add_bars(
-              marker = list(color = 'rgb(96,92,168)'),
-              width = ~0.9,
-              text = ~paste("Days post injury:", day,
-                            '</br></br>', "Number of drugs:", n
-              ),
-              hoverinfo = "text")%>%
-            plotly::layout(xaxis = list(title = "Days post injury"),
-                           yaxis = list(title = "Numbers of unique drugs"))%>%
-            highlight(on = "plotly_hover", off = "plotly_doubleclick")
-          
-          acute_pharmacol_management.by.indication.plot
-          
-          return(acute_pharmacol_management.by.indication.plot)
-          
-        }
+        nr.of.patients.per.drug.per.day.per.indication <- acute_pharmacol_management.data.sygen %>%
+          filter(indication == input$select_indication_pharmacol_management_sygen)%>%
+          dplyr::filter(dose != 0)%>%
+          dplyr::group_by(day, generic_name, indication) %>%
+          dplyr::select(generic_name, day,indication)%>%
+          ungroup()%>%
+          dplyr::count(day,indication)%>% 
+          dplyr::group_by(day,indication)
+        nr.of.patients.per.drug.per.day.per.indication
         
         
-        plot <- fct_acute_pharmacol_management_by_indication_sygen()
-        plot
+        # Create plotly
+        acute_pharmacol_management.by.indication.plot<-nr.of.patients.per.drug.per.day.per.indication%>%
+          highlight_key(~day)%>%
+          plotly::plot_ly(y = ~n,
+                          x =  ~day)%>%
+          plotly::add_bars(
+            marker = list(color = 'rgb(96,92,168)'),
+            width = ~0.9,
+            text = ~paste("Days post injury:", day,
+                          '</br></br>', "Number of drugs:", n
+            ),
+            hoverinfo = "text")%>%
+          plotly::layout(xaxis = list(title = "Days post injury"),
+                         yaxis = list(title = "Numbers of unique drugs"))%>%
+          highlight(on = "plotly_hover", off = "plotly_doubleclick")
         
-        }
+        acute_pharmacol_management.by.indication.plot
+        
+        return(acute_pharmacol_management.by.indication.plot)
+        
+      }
       
       
-    }) #close function
-  
+      plot <- fct_acute_pharmacol_management_by_indication_sygen()
+      plot
+      
+    }
+    
+    
+  }) #close function
   
   # Figure of drugs per patient (mean, max, min)  - Sygen entire cohort
   output$plot_pharmacol_management_ind_sygen <- renderPlotly({ 
@@ -1701,11 +1891,10 @@ server <- function(input, output, session) {
       number.of.drug.perday.sygen.plot
       
       ggplotly(number.of.drug.perday.sygen.plot, tooltip=c("x", "y", 'min', "max"), height = 800, width=800)
- 
-            }
+      
+    }
     
   })
-  
   
   # Table providing an overview of the drugs per day and indication  - Sygen customized subgroups
   output$table_srgp <- renderDataTable({
@@ -1717,7 +1906,7 @@ server <- function(input, output, session) {
       
       table.for.crosstalk <- acute_pharmacol_management.data.sygen2 %>%
         dplyr::filter(Sex== input$select_sex_pharmacol_management_sbgrp_sygen &
-                       ais1 == input$select_ais_pharmacol_management_sbgrp_sygen&
+                        ais1 == input$select_ais_pharmacol_management_sbgrp_sygen&
                         NLI == input$select_nli_pharmacol_management_sbgrp_sygen)%>%
         #dplyr::filter(dose != 0)%>%
         #dplyr::select(-"indication")%>%
@@ -1826,12 +2015,11 @@ server <- function(input, output, session) {
     }
   }) # Close function
   
-  
   # Table providing an overview of the drugs per day and indication - SCIRehab entire cohort
   output$table_scirehab <- renderDataTable({
     if (input$pharmacol_management_scirehab == "full_cohort_scirehab"){ #full cohort selected
       
-        nr.of.patients.per.drug.per.day.table <- acute_pharmacol_management.data.scirehab %>%
+      nr.of.patients.per.drug.per.day.table <- acute_pharmacol_management.data.scirehab %>%
         dplyr::filter(prevalence != 0)%>%
         dplyr::group_by(day, generic_name) %>%
         dplyr::select(generic_name, day)%>%
@@ -1844,22 +2032,20 @@ server <- function(input, output, session) {
     }
   }) # Close function
   
-  
   # Overview figure of pharmacological management - SCIRehab entire cohort
   output$plot_pharmacol_management_scirehab <- renderPlotly({ 
     if (input$pharmacol_management_scirehab == "full_cohort_scirehab"){ #full cohort selected
       
-      plot <- fct_acute_pharmacol_management.data.scirehab(input_day)
+      plot <- fct_acute_pharmacol_management.data.scirehab(input_day, acute_pharmacol_management.data.scirehab)
       plot
-      }
+    }
   }) # Close function
   
-
   # Figure of drugs per patient (mean, max, min)  - SCIRehab entire cohort
   output$plot_pharmacol_management_per_day_scirehab <- renderPlotly({ 
     if (input$pharmacol_management_scirehab == "full_cohort_scirehab"){ #full cohort selected
       
-    # Create color list  
+      # Create color list  
       color_list <- c("#FFA500", "#EE6677", "#228833", "#4477AA", "#4B0082")
       
       
@@ -1886,15 +2072,13 @@ server <- function(input, output, session) {
     }
   }) # Close function
   
-  
-  
   # Table providing an overview of the drugs per day and indication - SCIRehab customized subgroups
   output$table_srgp_scirehab <- renderDataTable({
     if (input$pharmacol_management_scirehab == "sbgrps_scirehab"){ # customized subgroups
       
-        nr.of.patients.per.drug.per.day.table <- acute_pharmacol_management.data.scirehab %>%
+      nr.of.patients.per.drug.per.day.table <- acute_pharmacol_management.data.scirehab %>%
         dplyr::filter(Age == input$select_age_pharmacol_management_sbgrp_scirehab &
-                      Sex == input$select_sex_pharmacol_management_sbgrp_scirehab & 
+                        Sex == input$select_sex_pharmacol_management_sbgrp_scirehab & 
                         AIS == input$select_ais_pharmacol_management_sbgrp_scirehab &
                         NLI == input$select_nli_pharmacol_management_sbgrp_scirehab)%>%
         dplyr::filter(prevalence != 0)%>%
@@ -1908,8 +2092,6 @@ server <- function(input, output, session) {
         datatable(rownames = FALSE)
     }
   }) # Close function
-  
-  
   
   # Overview figure of pharmacological management - SCIRehab entire cohort
   output$plot_pharmacol_management_srgp_scirehab <- renderPlotly({ 
@@ -1950,15 +2132,177 @@ server <- function(input, output, session) {
     }
   }) # Close function
   
+  output$plot_poly_ind_sygen <- renderPlot({
+    input_sex <- unique(input$select_sex_poly_ind_sygen)[1]
+    input_age <- c(unique(input$select_age_poly_ind_sygen)[1]:unique(input$select_age_poly_ind_sygen)[2])
+    input_age_str <- as.character(input_age)
+    input_age_str <- paste0(input_age_str, '.csv')
+    #print(input_age_str)
+    input_ais <- unique(input$select_ais_poly_ind_sygen)[1]
+    input_nli <- unique(input$select_nli_poly_ind_sygen)[1]
+    
+    file_list <- list.files('data/pid_graphs')
+    
+    vec_filter <- c()
+    if (input_sex != 'Unknown') {
+      vec_filter <- append(vec_filter, input_sex)
+    }
+    if (input_ais != 'Unknown') {
+      vec_filter <- append(vec_filter, input_ais)
+    }
+    if (input_nli != 'Unknown') {
+      vec_filter <- append(vec_filter, input_nli)
+    }
+    
+    
+    if (length(vec_filter) == 1){
+      sub_list <- file_list[grep(file_list , pattern = vec_filter[1])]
+    } else if (length(vec_filter) == 2){
+      sub_list <- file_list[intersect(grep(file_list , pattern = vec_filter[1]),
+                                      grep(file_list , pattern = vec_filter[2]))]
+    } else if (length(vec_filter) == 3){
+      temp_list <- file_list[intersect(grep(file_list , pattern = vec_filter[1]),
+                                       grep(file_list , pattern = vec_filter[2]))]
+      sub_list <- temp_list[grep(temp_list, pattern = vec_filter[3])]
+    } else if (length(vec_filter) == 0){
+      sub_list <- file_list
+    }
+    
+    sub_list_filtered <- c()
+    for (name in sub_list){
+      age_str <- substr(name, nchar(name)-5, nchar(name))
+      if (age_str %in% input_age_str){
+        sub_list_filtered <- append(sub_list_filtered, name)
+      }
+    }
+    
+    if (length(sub_list_filtered) == 0){
+      plot <- plot_error_line()
+    } else if (length(sub_list_filtered) == 1){
+      plot <- fct_poly_ind_sygen(sub_list_filtered[1])
+    } else if (length(sub_list_filtered) == 2){
+      plot.1 <- fct_poly_ind_sygen(sub_list_filtered[1])
+      plot.2 <- fct_poly_ind_sygen(sub_list_filtered[2])
+      plot <- plot_grid(plot.1, plot.2, ncol=2)
+    } else if (length(sub_list_filtered) == 3){
+      plot.1 <- fct_poly_ind_sygen(sub_list_filtered[1])
+      plot.2 <- fct_poly_ind_sygen(sub_list_filtered[2])
+      plot.3 <- fct_poly_ind_sygen(sub_list_filtered[3])
+      plot <- grid.arrange(plot.1, plot.2, plot.3, ncol=2, nrow=2)
+    } else if (length(sub_list_filtered) > 3){
+      sub_only4 <- sample(sub_list_filtered, 4)
+      plot.1 <- fct_poly_ind_sygen(sub_only4[1])
+      plot.2 <- fct_poly_ind_sygen(sub_only4[2])
+      plot.3 <- fct_poly_ind_sygen(sub_only4[3])
+      plot.4 <- fct_poly_ind_sygen(sub_only4[4])
+      plot <- grid.arrange(plot.1, plot.2, plot.3, plot.4, ncol=2, nrow=2)
+    }
+    
+  })
   
+  output$plot_drug_pattern_sygen <- renderPlot({
+    
+    input_sex <- unique(input$select_sex_drug_pattern_sygen)[1]
+    input_age <- c(unique(input$select_age_drug_pattern_sygen)[1]:unique(input$select_age_drug_pattern_sygen)[2])
+    input_age_str <- as.character(input_age)
+    input_ais <- unique(input$select_ais_drug_pattern_sygen)[1]
+    input_nli <- unique(input$select_nli_drug_pattern_sygen)[1]
+    
+    input_type <- unique(input$type_drug_sygen)[1]
+    varnames <- c("ID", "Days_after_injury", "Sex", "Age", "AIS", "NLI")
+    if (input_type == 'cat_drug_sygen'){
+      varnames <- c(varnames, input$select_cat_drug_sygen)
+      feat <- input$select_cat_drug_sygen
+      data_modified <- df_heatmap_sygen_indication[names(df_heatmap_sygen_indication)[names(df_heatmap_sygen_indication) %in% varnames] ]
+    } else if (input_type == 'spe_drug_sygen'){
+      varnames <- c(varnames, input$select_spe_drug_sygen)
+      feat <- input$select_spe_drug_sygen
+      print(feat)
+      data_modified <- df_heatmap_sygen_drug[names(df_heatmap_sygen_drug)[names(df_heatmap_sygen_drug) %in% varnames] ]
+    } 
+    
+    if (!('Unknown' %in% input_sex)){data_modified <- data_modified[data_modified$Sex %in% input_sex, ]}
+    if (!('Unknown' %in% input_age)){data_modified <- data_modified[data_modified$Age %in% input_age_str, ]}
+    if (!('Unknown' %in% input_ais)){data_modified <- data_modified[data_modified$AIS %in% input_ais, ]}
+    if (!('Unknown' %in% input_nli)){data_modified <- data_modified[data_modified$NLI_raw %in% input_nli, ]}
+    
+    input_day <- input$day_drug_sygen[1]
+    input_day_vec <- c(0:input_day)
+    input_day_str1 <- as.character(input_day_vec)
+    input_day_str2 <- paste0('X',input_day_str1)
+    
+    data_modified <- data_modified[data_modified$Days_after_injury %in% input_day_str2, ]
+    
+    names(data_modified) <- gsub(" ", ".", names(data_modified))
+    feat <- gsub(" ", ".", feat)
+    
+    colors <- colorRampPalette(c("white", "#0000ff"))(7)
+    plot <- ggplot(data = data_modified, aes(x = Days_after_injury, y = ID))+
+      geom_tile(aes_string(fill = feat)) +
+      #geom_tile(aes_string(fill = 'Pain')) +
+      theme(axis.ticks.y=element_blank(),
+            axis.text.y=element_blank()) +
+      scale_fill_manual(name = 'Number of drugs', values=colors) + 
+      scale_x_discrete(name ="Days after injury", labels=input_day_str1) +
+      scale_y_discrete(name ="1 row = 1 patient") +
+      labs(title = paste("Number of patients: ", length(levels(factor(data_modified$ID)))))
+    
+    plot
+  })
   
+  output$plot_drug_pattern_scirehab <- renderPlot({
+    
+    varnames <- c("ID", "Days_after_injury", "Sex", "Age", "AIS", "NLI", unique(input$select_drug_scirehab)[1])
+    data_modified <- df_heatmap_scirehab[names(df_heatmap_scirehab)[names(df_heatmap_scirehab) %in% varnames] ]
+    
+    input_sex <- unique(input$select_sex_drug_pattern_scirehab)[1]
+    input_age <- c(unique(input$select_age_drug_pattern_scirehab)[1]:unique(input$select_age_drug_pattern_scirehab)[2])
+    input_age_str <- as.character(input_age)
+    input_ais <- unique(input$select_ais_drug_pattern_scirehab)[1]
+    input_nli <- unique(input$select_nli_drug_pattern_scirehab)[1]
+    
+    if (!('Unknown' %in% input_sex)){data_modified <- data_modified[data_modified$Sex %in% input_sex, ]}
+    if (!('Unknown' %in% input_age)){data_modified <- data_modified[data_modified$Age %in% input_age_str, ]}
+    if (!('Unknown' %in% input_ais)){data_modified <- data_modified[data_modified$AIS %in% input_ais, ]}
+    if (!('Unknown' %in% input_nli)){data_modified <- data_modified[data_modified$NLI_raw %in% input_nli, ]}
+    
+    input_day <- input$day_drug_scirehab[1]
+    input_day_vec <- c(0:input_day)
+    input_day_str1 <- as.character(input_day_vec)
+    input_day_str2 <- paste0('X',input_day_str1)
+    
+    data_modified <- data_modified[data_modified$Days_after_injury %in% input_day_str2, ]
+    
+    if (dim(data_modified)[1] == 0){
+      plot <- plot_error_data()
+    } else {
+      colors <- colorRampPalette(c("white", "#0000ff"))(max(as.numeric(df_heatmap$Number_of_doses)))
+      plot <- ggplot(data = data_modified, aes(x = Days_after_injury, y = ID))+
+        geom_tile(aes_string(fill = input$select_drug_scirehab)) +
+        theme(axis.ticks.y=element_blank(),
+              axis.text.y=element_blank()) +
+        scale_fill_manual(name = 'Drug prescribed? (0:"No")', values=colors) + 
+        scale_x_discrete(name ="Days after injury", labels=input_day_str1) +
+        scale_y_discrete(name ="1 row = 1 patient") +
+        labs(title = paste("Number of patients: ", length(levels(factor(data_modified$ID)))))
+    }
+    
+    plot
+  })
   
+  output$plot_polypharmacy_sygen <- renderPlot({ 
+    input_day <- input$day_polypharmacy_sygen[1]
+    #print(input_day)
+    plot <- fct_poypharmacy_sygen(input_day, data_network_sygen, network_data_sygen, 'sygen')
+    plot
+  })
   
-  
-  
-  
-  
- 
+  output$plot_polypharmacy_scirehab <- renderPlot({
+    input_day <- input$day_polypharmacy_scirehab[1]
+    #print(input_day)
+    plot <- fct_poypharmacy_sygen(input_day, data_network_scirehab, network_data_scirehab, 'scirehab')
+    plot
+  })
   
   #------- other ----------- 
   
@@ -1971,4 +2315,3 @@ server <- function(input, output, session) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-
