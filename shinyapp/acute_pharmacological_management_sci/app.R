@@ -58,6 +58,7 @@ library(tidygraph) ##
 library(ggraph) ##
 library(crosstalk)
 library(extrafont)
+library(shinybusy)
 
 ## ----------------------------
 ##
@@ -101,7 +102,7 @@ gc() # garbage collector
 ## ---------------------------
 ##
 ## Set working directory 
-#setwd('/Volumes/bs-dfs-1/group/borgwardt/Projects/SCI_Drugs/shinyapp/acute_pharmacological_management_sci')
+#setwd('/Volumes/bs-dfs/group/borgwardt/Projects/SCI_Drugs/shinyapp/acute_pharmacological_management_sci')
 
 #### -------------------------------------------------------------------------- CODE START ------------------------------------------------------------------------------------------------####
 
@@ -120,7 +121,8 @@ load("data/sygen_acute_pharmacol_management.data.ind.sygen.RData")
 load("data/df_heatmap_sygen_drug.RData")
 load("data/df_heatmap_sygen_indication.RData")
 
-#vec_drug_sygen <- names(df_heatmap_sygen_drug)[7:dim(df_heatmap_sygen_drug)[2]]
+colnames(df_heatmap_sygen_drugs_copy)[which(names(df_heatmap_sygen_drugs_copy) == "Days after injury")] <- "Days_after_injury"
+vec_drug_sygen <- names(df_heatmap_sygen_drugs_copy)[7:dim(df_heatmap_sygen_drugs_copy)[2]]
 
 #---------- Data sets for SCIRehab ---------- 
 network_data_scirehab <- read.csv('data/edges_for_graph.scirehab.csv', header = T, sep = ',')
@@ -130,7 +132,7 @@ load("data/acute_pharmacol_management.data.scirehab.RData")
 load("data/acute_pharmacol_management.data.per.ais.grade.RData")
 #load("data/df_heatmap_scirehab_drug.RData")
 
-font_import("Times")
+#font_import("Times")
 
 #---------- updateMultiInput_2 function ---------- 
 
@@ -426,6 +428,18 @@ ui <- dashboardPage(
       tabItem(tabName = "about",
               h3("Welcome to the",strong("Pharmacological Management of Spinal Cord Injury"), "Project"),
               br(),
+              
+              fluidRow(
+                valueBox(prettyNum(2040, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+                valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
+                valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
+                         "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
+                ),
+                #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
+                valueBox("34", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
+                #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
+              ),
+              
               fluidRow(
                 box(#title = "Explore The Data", 
                   width = 8, 
@@ -497,33 +511,41 @@ ui <- dashboardPage(
                   br(),
                   h4("What You Can Do Here:"),
                   "This applet has ",
-                  tags$b("four main interactive sections"),
-                  " that enable visitors to directly interact with the PsyCorona data: ",
+                  tags$b("five main interactive sections per dataset"),
+                  "that enables users to directly interact with the RxSCI data: ",
                   tags$ul(
-                    tags$li("The cohort tab provides information on the patients that were enrolled in the", 
-                            a("Sygen clinical trial", onclick = "openTab('cohort_sygen')", href="#"), 'or',
-                            a("SCIRehab study", onclick = "openTab('cohort_scirehab')", href="#"),
-                            ".")),
-                  tags$ul(
-                    tags$li("The ",
-                            a("Data Sources", onclick = "openTab('scirehab')", href="#"),
-                            "tab offers an insight into the diversity of our participants. We share compound information on some demographic variables, as well as the number of respondents in each country. 
-                            Please note that to protect the privacy and anonymity of our participants, data visualizations are only available for selections of more than 20 people."),
-                    tags$li("The ",
-                            a("Psychological Variables", onclick = "openTab('drug_scirehab')", href="#"),
-                            " tab offers an interactive interface to explore the psychological variables we collect in the initiative's baseline survey. 
-                            This survey is open to anyone interested at",
-                            tags$a(href="https://nyu.qualtrics.com/jfe/form/SV_6svo6J4NF7wE6tD", 
-                                   target="_blank",
-                                   "tiny.cc/corona_survey"),
-                            "and currently includes over 50 000 participants. You can explore psychological reactions to the coronavirus at five different levels: 
-                            (1) Governmental Response, (2) Community Response, (3) Cognitive Response, (4) Behavioral Response, as well as (5) Emotional Response. 
-                            Additionally, we offer a tool to explore the mean level relationship between different variables for different countries. Please note that to protect the 
-                            privacy and anonymity of our participants we only provide country-level visualizations once we have data for more than 20 people from any particular country."),
-                    tags$li("The ",
-                            a("Development", onclick = "openTab('drug_scirehab')", href="#"),
-                            " tab gives you the possibility to interactively explore how different areas are evolving over time. This section is currently partly under
-                            construction, but will be fully available soon.")
+                    tags$li("The", tags$b("About tabs"), "provide a detailed description (e.g., objective of study, 
+                            inclusion and exclusion criteria, results) of the original",
+                            a("Sygen clinical trial", onclick = "openTab('about_sygen')", href="#"), 
+                            "or",
+                            a("SCIRehab study", onclick = "openTab('about_scirehab')", href="#"), 
+                            ", respectively."),
+                    tags$li("The", tags$b("Cohort tabs"), '(',
+                            a("Sygen", onclick = "openTab('cohort_sygen')", href="#"), "&",
+                            a("SCIRehab", onclick = "openTab('cohort_scirehab')", href="#"),
+                            ") offers an insight into the diversity of the patients of both data sources. 
+                            We share information on demographics and injury characteristics. Please note 
+                            that to protect the privacy and anonymity of the patients, data visualizations 
+                            are only available for the group level (i.e., aggregated values for age)."),
+                    tags$li("The", tags$b("Medication tabs"), '(',
+                            a("Sygen", onclick = "openTab('drug_sygen')", href="#"), "&",
+                            a("SCIRehab", onclick = "openTab('drug_scirehab')", href="#"),
+                            ") give the user the possibility to interactively explore the number of drugs 
+                            that were administered to patients on a daily dose. For the Sygen cohort, the 
+                            drugs per indication can be explored. The user can choose to visualize the 
+                            result of the whole cohort or customized subgroups."),
+                    tags$li("The ",tags$b("Polypharmacy tabs"), '(',
+                            a("Sygen", onclick = "openTab('polypharmacy_sygen')", href="#"), "&",
+                            a("SCIRehab", onclick = "openTab('polypharmacy_scirehab')", href="#"),
+                            ") offer an interactive interface to explore the combinations of drugs that were 
+                            administered to patients. This group-level data is provided for everyday up to 
+                            60 days post injury. In addition, the user can also choose to look at specific 
+                            patient examples of polypharmacy."),
+                    tags$li("The ",tags$b("Drug administration pattern tabs"), '(',
+                            a("Sygen", onclick = "openTab('drug_pattern_sygen')", href="#"), "&",
+                            a("SCIRehab", onclick = "openTab('drug_pattern_scirehab')", href="#"),
+                            ") provide the user with the possibility to explore how the user-selected drug 
+                            was administered to the different patients of each data source.")
                   ),
                   br(),
                   h4("Funding:"),
@@ -539,16 +561,16 @@ ui <- dashboardPage(
                     HTML("<a class=\"twitter-timeline\" data-height=\"600\" href=\"https://twitter.com/DatSci_4_health\">A Twitter List by Data Science for Health Research Group</a> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>")
                 )
               ),
-              fluidRow(
-                valueBox(prettyNum(2040, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
-                valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
-                valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
-                         "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
-                ),
-                #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
-                valueBox("34", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
-                #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
-              )
+              # fluidRow(
+              #   valueBox(prettyNum(2040, big.mark=" ", scientific=FALSE), "Patients", icon = icon("user-edit"), width = 3, color = "purple"),
+              #   valueBox(prettyNum(770, big.mark=" ", scientific=FALSE), "Unique drugs", icon = icon("pills"), width = 3,  color = "purple"),
+              #   valueBox(tagList("10", tags$sup(style="font-size: 20px", "%")),
+              #            "Prophylactic drug use", icon = icon("prescription"),  width = 3,  color = "purple"
+              #   ),
+              #   #valueBox(prettyNum(10, big.mark="", scientific=FALSE), "Prophylaxis", icon = icon("heartbeat"), width = 3,  color = "purple"),
+              #   valueBox("34", "Clinical sites", icon = icon("clinic-medical"), width = 3,  color = "purple")#,
+              #   #valueBox(404, "Something", icon = icon("project-diagram"), width = 3)
+              # )
       ),
       
       tabItem(tabName = "about_sygen",
@@ -983,10 +1005,11 @@ ui <- dashboardPage(
                        
                        box(width = NULL, # create box to display plot
                            align="center", # center the plot
-                           conditionalPanel(condition = "input.type_drug_sygen == 'cat_drug_sygen' ",
-                                            plotOutput('plot_drug_pattern_sygen', height = 660)),
-                           conditionalPanel(condition = "input.type_drug_sygen == 'spe_drug_sygen' ",
-                                            img(src="work_in_progress.png", height="80%", width="80%"))
+                           #conditionalPanel(condition = "input.type_drug_sygen == 'cat_drug_sygen' ",
+                                            plotOutput('plot_drug_pattern_sygen', height = 660)#),
+                           #conditionalPanel(condition = "input.type_drug_sygen == 'spe_drug_sygen' ",
+                                            #plotOutput('plot_drug_pattern_sygen', height = 660))
+                                            #img(src="work_in_progress.png", height="80%", width="80%"))
                            ),
                 ), # end column
                 
@@ -1024,8 +1047,8 @@ ui <- dashboardPage(
                            conditionalPanel(condition = "input.type_drug_sygen == 'spe_drug_sygen' ",
                                             selectInput("select_spe_drug_sygen",
                                                         label = "Select a specific drug:",
-                                                        #choices = vec_drug_sygen,
-                                                        choices = 'aspirin',
+                                                        choices = vec_drug_sygen,
+                                                        #choices = 'aspirin',
                                                         selected = 'aspirin'
                                             )
                            ), #end conditionalPanel
@@ -1505,6 +1528,10 @@ ui <- dashboardPage(
 
 
 server <- function(input, output, session) {
+  
+  # in server
+  show_modal_spinner() # show the modal window
+  remove_modal_spinner() # remove it when done
   
   output$cohort <- renderMenu({
     sidebarMenu(
@@ -2218,7 +2245,7 @@ server <- function(input, output, session) {
       varnames <- c(varnames, input$select_spe_drug_sygen)
       feat <- input$select_spe_drug_sygen
       print(feat)
-      data_modified <- df_heatmap_sygen_drug[names(df_heatmap_sygen_drug)[names(df_heatmap_sygen_drug) %in% varnames] ]
+      data_modified <- df_heatmap_sygen_drugs_copy[names(df_heatmap_sygen_drugs_copy)[names(df_heatmap_sygen_drugs_copy) %in% varnames] ]
     } 
     
     if (!('Unknown' %in% input_sex)){data_modified <- data_modified[data_modified$Sex %in% input_sex, ]}
@@ -2231,10 +2258,15 @@ server <- function(input, output, session) {
     input_day_str1 <- as.character(input_day_vec)
     input_day_str2 <- paste0('X',input_day_str1)
     
+    print(names(data_modified))
+    
     data_modified <- data_modified[data_modified$Days_after_injury %in% input_day_str2, ]
     
     names(data_modified) <- gsub(" ", ".", names(data_modified))
     feat <- gsub(" ", ".", feat)
+    
+    print(names(data_modified))
+    print(feat)
     
     colors <- colorRampPalette(c("white", "#0000ff"))(7)
     plot <- ggplot(data = data_modified, aes(x = Days_after_injury, y = ID))+

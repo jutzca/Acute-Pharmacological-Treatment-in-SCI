@@ -308,9 +308,9 @@ fct_poypharmacy_sygen <- function(nb, data_network_sygen, network_data_sygen, na
       theme_graph(title_size = 18,
                   title_face = "bold",
                   title_margin = 10)+
-      theme(legend.text = element_text(family = "open sans"),
-            legend.title = element_text(family = "open sans"),
-            plot.title = element_text(family = "open sans"))
+      theme(legend.text = element_text(family = "Times"),
+            legend.title = element_text(family = "Times"),
+            plot.title = element_text(family = "Times"))
   } else if (name == 'scirehab'){
     g <- tbl_graph(nodes = nodes3, edges = edges, directed = FALSE)%>%
       mutate(degree = n.source)%>%
@@ -329,9 +329,9 @@ fct_poypharmacy_sygen <- function(nb, data_network_sygen, network_data_sygen, na
       theme_graph(title_size = 18,
                   title_face = "bold",
                   title_margin = 10) +
-      theme(legend.text = element_text(family = "open sans"),
-            legend.title = element_text(family = "open sans"),
-            plot.title = element_text(family = "open sans"))
+      theme(legend.text = element_text(family = "Times"),
+            legend.title = element_text(family = "Times"),
+            plot.title = element_text(family = "Times"))
   }
 
 
