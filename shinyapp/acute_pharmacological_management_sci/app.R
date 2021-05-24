@@ -130,7 +130,10 @@ data_network_scirehab <- read.csv('data/nr.of.patients.per.drug.per.day.scirehab
 load("data/scirehab_baseline.RData")
 load("data/acute_pharmacol_management.data.scirehab.RData")
 load("data/acute_pharmacol_management.data.per.ais.grade.RData")
-#load("data/df_heatmap_scirehab_drug.RData")
+load("data/df_heatmap_scirehab_drug.RData")
+
+colnames(df_heatmap_scirehab_drugs_copy)[which(names(df_heatmap_scirehab_drugs_copy) == "Days after injury")] <- "Days_after_injury"
+vec_drug_scirehab <- names(df_heatmap_scirehab_drugs_copy)[7:dim(df_heatmap_scirehab_drugs_copy)[2]]
 
 #font_import("Times")
 
@@ -1413,62 +1416,64 @@ ui <- dashboardPage(
       
       # Tab: SCI Rehab drugs patterns
       tabItem(tabName = "drug_pattern_scirehab",
-              img(src="work_in_progress.png", height="80%", width="80%")
-              # fluidRow(
-              #   column(width = 8, # create first column for boxplot
-              #          
-              #          box(width = NULL, # create box to display plot
-              #              align="center", # center the plot
-              #              plotOutput('plot_drug_pattern_scirehab', height = 660)) # call server plot function for the score and dataset chosen by the user #end box
-              #   ), # end column
-              #   
-              #   column(width = 4, # create second column for second type of user inputs (filters)
-              #          box(width=NULL,
-              #              selectInput("select_drug_scirehab",
-              #                          label = "Select a specific drug:",
-              #                          choices = gsub('_', ' ', levels(factor(drug_pattern_scirehab_ind$generic_name))),
-              #                          selected = levels(factor(drug_pattern_scirehab_ind$generic_name))[7]
-              #              )
-              #          ), # end box
-              #          
-              #          box(width = NULL,
-              #              sliderInput("day_drug_scirehab", "Day after injury:",
-              #                          min = 0, max = 60, value = 7)
-              #          ), # end Box
-              #          
-              #          box(width = NULL, # create a new box
-              #              selectInput("select_sex_drug_pattern_scirehab",
-              #                          label = "Select sex",
-              #                          choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
-              #                          selected = c("Unknown"))
-              #          ), # end box
-              #          
-              #          box(width = NULL, # create box
-              #              sliderInput("select_age_drug_pattern_scirehab",
-              #                          label = "Select age at injury",
-              #                          min = 10, max = 100,
-              #                          value = c(20,80)),
-              #          ), # end box
-              #          
-              #          box(width = NULL, # create a new box
-              #              selectInput("select_ais_drug_pattern_scirehab",
-              #                          label = "Select baseline AIS grade",
-              #                          choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
-              #                          selected = c("Unknown"))
-              #          ), # end box
-              #          
-              #          box(width = NULL, # create a new box
-              #              selectInput("select_nli_drug_pattern_scirehab",
-              #                          label = "Select injury level",
-              #                          choices = list("Unknown",
-              #                                         "Cervical",
-              #                                         "Thoracic"),
-              #                          selected = c("Unknown"))
-              #          ), # end box
-              #          
-              #   ) #end column
-              #   
-              # )#close fluid row
+              #img(src="work_in_progress.png", height="80%", width="80%")
+              fluidRow(
+                column(width = 8, # create first column for boxplot
+
+                       box(width = NULL, # create box to display plot
+                           align="center", # center the plot
+                           plotOutput('plot_drug_pattern_scirehab', height = 660)) # call server plot function for the score and dataset chosen by the user #end box
+                ), # end column
+
+                column(width = 4, # create second column for second type of user inputs (filters)
+                       box(width=NULL,
+                           selectInput("select_drug_scirehab",
+                                       label = "Select a specific drug:",
+                                       choices = vec_drug_scirehab,
+                                       selected = 'ibuprofen'
+                           )
+                       ), # end box
+
+                       box(width = NULL,
+                           sliderInput("day_drug_scirehab", "Day after injury:",
+                                       min = 0, max = 60, value = 7)
+                       ), # end Box
+
+                       box(width = NULL, # create a new box
+                           selectInput("select_sex_drug_pattern_scirehab",
+                                       label = "Select sex",
+                                       choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                       selected = c("Unknown"))
+                       ), # end box
+
+                       box(width = NULL, # create box
+                           selectInput("select_age_drug_pattern_scirehab",
+                                       label = "Select age at injury",
+                                       choices = list("12-19 yrs", "20-29 yrs", "30-39 yrs", 
+                                                      "40-49 yrs", "50-59 yrs", "60-69 yrs", "70-79 yrs", 
+                                                      "80+ yrs", "Unknown" = "Unknown"),
+                                       selected = c("Unknown")),
+                       ), # end box
+
+                       box(width = NULL, # create a new box
+                           selectInput("select_ais_drug_pattern_scirehab",
+                                       label = "Select baseline AIS grade",
+                                       choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                       selected = c("Unknown"))
+                       ), # end box
+
+                       box(width = NULL, # create a new box
+                           selectInput("select_nli_drug_pattern_scirehab",
+                                       label = "Select injury level",
+                                       choices = list("Unknown",
+                                                      "Cervical",
+                                                      "Thoracic"),
+                                       selected = c("Unknown"))
+                       ), # end box
+
+                ) #end column
+
+              )#close fluid row
       ), # Close tab item (SCI Rehab drugs patterns)
       
       tabItem(tabName = "abbreviations",
@@ -2285,18 +2290,26 @@ server <- function(input, output, session) {
   output$plot_drug_pattern_scirehab <- renderPlot({
     
     varnames <- c("ID", "Days_after_injury", "Sex", "Age", "AIS", "NLI", unique(input$select_drug_scirehab)[1])
-    data_modified <- df_heatmap_scirehab[names(df_heatmap_scirehab)[names(df_heatmap_scirehab) %in% varnames] ]
+    data_modified <- df_heatmap_scirehab_drugs_copy[names(df_heatmap_scirehab_drugs_copy)[names(df_heatmap_scirehab_drugs_copy) %in% varnames] ]
+    
+    #print(head(data_modified))
     
     input_sex <- unique(input$select_sex_drug_pattern_scirehab)[1]
-    input_age <- c(unique(input$select_age_drug_pattern_scirehab)[1]:unique(input$select_age_drug_pattern_scirehab)[2])
-    input_age_str <- as.character(input_age)
+    input_age <- unique(input$select_age_drug_pattern_scirehab)[1]
     input_ais <- unique(input$select_ais_drug_pattern_scirehab)[1]
     input_nli <- unique(input$select_nli_drug_pattern_scirehab)[1]
     
     if (!('Unknown' %in% input_sex)){data_modified <- data_modified[data_modified$Sex %in% input_sex, ]}
+    #print(head(data_modified))
+    
     if (!('Unknown' %in% input_age)){data_modified <- data_modified[data_modified$Age %in% input_age_str, ]}
+    #print(head(data_modified))
+    
     if (!('Unknown' %in% input_ais)){data_modified <- data_modified[data_modified$AIS %in% input_ais, ]}
+    #print(head(data_modified))
+    
     if (!('Unknown' %in% input_nli)){data_modified <- data_modified[data_modified$NLI_raw %in% input_nli, ]}
+    #print(head(data_modified))
     
     input_day <- input$day_drug_scirehab[1]
     input_day_vec <- c(0:input_day)
@@ -2305,12 +2318,18 @@ server <- function(input, output, session) {
     
     data_modified <- data_modified[data_modified$Days_after_injury %in% input_day_str2, ]
     
+    feat <- input$select_drug_scirehab
+    names(data_modified) <- gsub(" ", ".", names(data_modified))
+    feat <- gsub(" ", ".", feat)
+    
+    #print(head(data_modified))
+    
     if (dim(data_modified)[1] == 0){
       plot <- plot_error_data()
     } else {
-      colors <- colorRampPalette(c("white", "#0000ff"))(max(as.numeric(df_heatmap$Number_of_doses)))
+      colors <- colorRampPalette(c("white", "#0000ff"))(7)
       plot <- ggplot(data = data_modified, aes(x = Days_after_injury, y = ID))+
-        geom_tile(aes_string(fill = input$select_drug_scirehab)) +
+        geom_tile(aes_string(fill = feat)) +
         theme(axis.ticks.y=element_blank(),
               axis.text.y=element_blank()) +
         scale_fill_manual(name = 'Drug prescribed? (0:"No")', values=colors) + 
