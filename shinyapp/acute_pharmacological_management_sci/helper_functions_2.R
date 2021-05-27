@@ -163,26 +163,25 @@ fct_acute_pharmacol_management.data.scirehab<- function(day, acute_pharmacol_man
 
 # -----------------------------------------------------------------------------------
 
-fct_poly_ind_sygen <- function(file){
+fct_poly_ind_sygen <- function(data_test){
   
-  data1 <- read.csv(paste('data/pid_graphs/',file, sep=''), header=TRUE, sep=',')
-  
-  cols_to_change = c(5:368)    #change columns 4:368 to numerics class format
-  for(j in cols_to_change){
-    data1[, j][(data1[, j]>0)] <- 1
-    class(data1[, j]) = "numeric"
-  }
-  
-  # Sum up all lines with same drugs per patient
-  datan<-plyr::ddply(data1, c('ID', 'generic.name', 'indication','Sex', 'Age', 'AIS', 'Cause', 'NLI', 'NLI_raw', 'YEARDOI','Time_wks', 'New_timeline'), function(x) colSums(x[,-c(1,2,3,4,66:382)], na.rm = TRUE))
-  
-  # Reformat data from wide to long
+  # data1 <- read.csv(paste('data/pid_graphs/',file, sep=''), header=TRUE, sep=',')
+  # 
+  # cols_to_change = c(4:368)    #change columns 4:368 to numerics class format
+  # for(j in cols_to_change){
+  #   data_test[, j][(data_test[, j]>0)] <- 1
+  #   class(data_test[, j]) = "numeric"
+  # }
+
+  # # Sum up all lines with same drugs per patient
+  datan<-plyr::ddply(data_test, c('ID', 'generic.name', 'Sex', 'Age', 'AIS', 'NLI', 'NLI_raw'), function(x) colSums(x[,-c(1,2,64:69)], na.rm = TRUE))
+  # 
+  # # Reformat data from wide to long
   data_long<-datan%>%
     gather(Day, daily_dose, X0:X60)
-  
+
   data_long$Day<- sub("X","",data_long$Day)
   data_long$Day<- as.numeric(data_long$Day)
-  
   
   ais.grade.plot <-unique(data_long$AIS)
   sex.plot <-unique(data_long$Sex)
@@ -196,13 +195,65 @@ fct_poly_ind_sygen <- function(file){
   # Create plot  
   myplot1<- ggplot(data_long, aes(Day, generic.name, fill=as.factor(daily_dose)))+geom_tile(color = "white") +
     scale_fill_manual(values=colors)+theme_linedraw()+scale_x_continuous(expand = c(0, 0), breaks = c(0,15,30,45,60))+ 
-    #ggtitle(paste(sex.plot,", ",ais.grade.plot,", ",plegia.plot," (",nli.plot,"), ",cause.plot, sep = ""))+ 
+    ggtitle(paste(sex.plot,", ",ais.grade.plot,", ",plegia.plot, sep = ""))+ 
     labs(x="Days Post-Injury", fill = "Number of\n Doses")+ 
     theme(panel.grid.major = element_blank(),axis.title.x = element_text(size = 12),# family = 'Times'),
           #plot.title =  element_text(size = 14, family = 'Times', face='bold'),
           axis.text.x = element_text(color="black", size=10), # family = 'Times'), 
-          axis.text.y = element_text( color="black", size=10)) # family = 'Times'))#, 
-  #axis.title.y  = element_blank(), legend.key = element_rect(fill = "black", color = NA))
+          axis.text.y = element_text( color="black", size=10),
+          axis.title.y  = element_blank())
+  #legend.key = element_rect(fill = "black", color = NA)
+  return(myplot1)
+  
+}
+
+# -----------------------------------------------------------------------------------
+
+fct_poly_ind_scirehab <- function(data_test){
+  
+  # data1 <- read.csv(paste('data/pid_graphs/',file, sep=''), header=TRUE, sep=',')
+  # 
+  # cols_to_change = c(4:368)    #change columns 4:368 to numerics class format
+  # for(j in cols_to_change){
+  #   data_test[, j][(data_test[, j]>0)] <- 1
+  #   class(data_test[, j]) = "numeric"
+  # }
+  
+  # # Sum up all lines with same drugs per patient
+  datan<-plyr::ddply(data_test, names(data_test)[1:10], function(x) colSums(x[,-c(1:10, 72)], na.rm = TRUE))
+  # 
+  # # Reformat data from wide to long
+  data_long<-datan%>%
+    gather(Day, daily_dose, X0:X60)
+  
+  data_long$Day<- sub("X","",data_long$Day)
+  data_long$Day<- as.numeric(data_long$Day)
+  
+  ais.grade.plot <-unique(data_long$AIS)
+  sex.plot <-unique(data_long$Sex)
+  cause.plot <-unique(data_long$Cause)
+  plegia.plot <-unique(data_long$NLI)
+  nli.plot <-unique(data_long$NLI_coded)
+  
+  # colors <- colorRampPalette(c("white", "#bca0dc", "#b491c8", "#663a82", "#3c1361"))(8)
+  colors <- colorRampPalette(c("white", "#0000ff"))(7)
+  
+  data_long$generic_name <- gsub('_', ' ', data_long$generic_name)
+  
+  # Create plot  
+  myplot1<- ggplot(data_long, aes(Day, generic_name, fill=as.factor(daily_dose)))+
+    geom_tile(color = "white") +
+    scale_fill_manual(values=colors, labels = c('Drug not prescribed', 'Drug prescribed'), name = '')+
+    theme_linedraw()+
+    scale_x_continuous(expand = c(0, 0), breaks = c(0,15,30,45,60))+ 
+    ggtitle(paste(sex.plot,", AIS ",ais.grade.plot,", ",plegia.plot, sep = ""))+ 
+    labs(x="Days Post-Injury", fill = "")+ 
+    theme(panel.grid.major = element_blank(),axis.title.x = element_text(size = 12),# family = 'Times'),
+          #plot.title =  element_text(size = 14, family = 'Times', face='bold'),
+          axis.text.x = element_text(color="black", size=10), # family = 'Times'), 
+          axis.text.y = element_text( color="black", size=10),
+          axis.title.y  = element_blank())
+  #legend.key = element_rect(fill = "black", color = NA)
   return(myplot1)
   
 }
@@ -219,46 +270,46 @@ fct_poypharmacy_sygen <- function(nb, data_network_sygen, network_data_sygen, na
     nr.of.patients.per.drug.per.day.X7 <- data_network_sygen %>% subset(day==nb)%>%
       as.data.frame()%>%
       select(-c("day"))
-    print(nr.of.patients.per.drug.per.day.X7)
+    #print(nr.of.patients.per.drug.per.day.X7)
   }
-  print('test1')
+  #print('test1')
   # 1. Node list
   
   # Create source
   source <- network_data_sygen %>% subset(day==code_day & value > 20 )%>% 
     distinct(Source) %>%
     dplyr::rename(label = Source)
-  print(head(source))
-  print('source ok')
+  #print(head(source))
+  #print('source ok')
   
   # Create target
   target <- network_data_sygen %>%subset(day==code_day & value > 20 )%>% 
     distinct(Target) %>%
     dplyr::rename(label = Target)
-  print(head(target))
-  print('target ok')
+  #print(head(target))
+  #print('target ok')
 
   
   # To create a single dataframe with a column with the unique locations we need to use a full join
   nodes <- full_join(source, target, by = "label")
-  print(head(nodes))
-  print('nodes ok')
+  #print(head(nodes))
+  #print('nodes ok')
   
   # To have unique IDs for each city, we add an ???id??? column
   nodes <- nodes %>% rowid_to_column("id")
-  print(nodes)
+  #print(nodes)
   
   nodes2 <- merge(nodes, nr.of.patients.per.drug.per.day.X7, by.x = "label", by.y = "generic_name")
-  print(nodes2)
-  print('nodes2 ok')
+  #print(nodes2)
+  #print('nodes2 ok')
   
   # 2. Edge list
   edge.data <- network_data_sygen %>%  subset(day==code_day & value > 20 )%>% 
     group_by(Source, Target) %>%
     dplyr::summarise(weight = value) %>% 
     ungroup()
-  print(head(edge.data))
-  print('edge.data ok')
+  #print(head(edge.data))
+  #print('edge.data ok')
   
   edges <- edge.data %>% 
     left_join(nodes, by = c("Source" = "label")) %>% 
@@ -266,11 +317,11 @@ fct_poypharmacy_sygen <- function(nb, data_network_sygen, network_data_sygen, na
     left_join(nodes, by = c("Target" = "label")) %>% 
     dplyr::rename(to = id) %>% 
     select(from, to, weight)
-  print(head(edges))
+  #print(head(edges))
 
   edges$weight.grp <- cut(edges$weight, c(-1,50,100,150),
                           labels=c("0-50", "51-100","l"))
-  print(edges)
+  #print(edges)
 
   # 3. Creating network objects
   set.seed(100)
@@ -282,9 +333,9 @@ fct_poypharmacy_sygen <- function(nb, data_network_sygen, network_data_sygen, na
   
   nodes3 <- nodes2
   
-  print(nodes)
+  #print(nodes)
   
-  print('test2')
+  #print('test2')
   
   if (name == 'sygen'){
     names(nodes3)[names(nodes3) == 'n.source'] <- 'degree'

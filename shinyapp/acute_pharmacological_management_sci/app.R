@@ -113,27 +113,33 @@ source("helper_functions_2.R")
 ########## Data sets ##########
 
 #---------- Data sets for Sygen ---------- 
-network_data_sygen <- read.csv('data/edges_for_graph.csv', header = T, sep = ',')
-data_network_sygen <- read.csv('data/nr.of.patients.per.drug.per.day.csv', header=TRUE, sep=',')
+#network_data_sygen <- read.csv('data/edges_for_graph.csv', header = T, sep = ',')
+#data_network_sygen <- read.csv('data/nr.of.patients.per.drug.per.day.csv', header=TRUE, sep=',')
+load('data/edges_for_graph.RData')
+load('data/nr.of.patients.per.drug.per.day.RData')
 load("data/sygen_baseline.RData")
 load('data/acute_pharmacol_management.data.sygen.RData')
 load("data/sygen_acute_pharmacol_management.data.ind.sygen.RData")
 load("data/df_heatmap_sygen_drug.RData")
 load("data/df_heatmap_sygen_indication.RData")
+load("data/data_polypharma_individual_sygen.RData")
 
 colnames(df_heatmap_sygen_drugs_copy)[which(names(df_heatmap_sygen_drugs_copy) == "Days after injury")] <- "Days_after_injury"
 vec_drug_sygen <- names(df_heatmap_sygen_drugs_copy)[7:dim(df_heatmap_sygen_drugs_copy)[2]]
 
 #---------- Data sets for SCIRehab ---------- 
-network_data_scirehab <- read.csv('data/edges_for_graph.scirehab.csv', header = T, sep = ',')
-data_network_scirehab <- read.csv('data/nr.of.patients.per.drug.per.day.scirehab.csv', header=TRUE, sep=',')
+#network_data_scirehab <- read.csv('data/edges_for_graph.scirehab.csv', header = T, sep = ',')
+#data_network_scirehab <- read.csv('data/nr.of.patients.per.drug.per.day.scirehab.csv', header=TRUE, sep=',')
+load('data/edges_for_graph.scirehab.RData')
+load('data/nr.of.patients.per.drug.per.day.scirehab.RData')
 load("data/scirehab_baseline.RData")
 load("data/acute_pharmacol_management.data.scirehab.RData")
 load("data/acute_pharmacol_management.data.per.ais.grade.RData")
-load("data/df_heatmap_scirehab_drug.RData")
+load("data/df_heatmap_scirehab_drug_small.RData")
+load("data/data_polypharma_individual_scirehab.RData")
 
-colnames(df_heatmap_scirehab_drugs_copy)[which(names(df_heatmap_scirehab_drugs_copy) == "Days after injury")] <- "Days_after_injury"
-vec_drug_scirehab <- names(df_heatmap_scirehab_drugs_copy)[7:dim(df_heatmap_scirehab_drugs_copy)[2]]
+colnames(df_heatmap_scirehab_drug)[which(names(df_heatmap_scirehab_drug) == "Days after injury")] <- "Days_after_injury"
+vec_drug_scirehab <- names(df_heatmap_scirehab_drug)[7:dim(df_heatmap_scirehab_drug)[2]]
 
 #font_import("Times")
 
@@ -739,7 +745,8 @@ ui <- dashboardPage(
                                             div(style="display:inline-block;width:100%;text-align:center;",
                                                 selectInput(inputId = "select_indication_pharmacol_management_sygen",
                                                             label = "Select an indication",
-                                                            choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
+                                                            choices = list(#"All" = "All",
+                                                                           "Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
                                                                            "Cardiac disorders" = "Cardiac disorders",
                                                                            "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
                                                                            "Eye disorders" = "Eye disorders",
@@ -812,7 +819,8 @@ ui <- dashboardPage(
                                             div(style="display:inline-block;width:100%;text-align:center;",
                                                 selectInput(inputId = "select_indication_pharmacol_management_sgrp_sygen",
                                                             label = "Select an indication",
-                                                            choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
+                                                            choices = list(#"All" = "All",
+                                                                           "Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
                                                                            "Cardiac disorders" = "Cardiac disorders",
                                                                            "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
                                                                            "Eye disorders" = "Eye disorders",
@@ -855,8 +863,8 @@ ui <- dashboardPage(
                                         box(width = NULL, # create a new box
                                             selectInput("select_sex_pharmacol_management_sbgrp_sygen",
                                                         label = "Select sex",
-                                                        choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
-                                                        selected = c("Male"))
+                                                        choices = list("All" = "All", "Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                                        selected = c("All"))
                                         ), # end box
                                         
                                         box(width = NULL, # create box
@@ -871,15 +879,15 @@ ui <- dashboardPage(
                                         box(width = NULL, # create a new box
                                             selectInput("select_ais_pharmacol_management_sbgrp_sygen",
                                                         label = "Select baseline AIS grade",
-                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
-                                                        selected = c("AIS A"))
+                                                        choices = list("All" = "All", "AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                                        selected = c("All"))
                                         ), # end box
                                         
                                         box(width = NULL, # create a new box
                                             selectInput("select_nli_pharmacol_management_sbgrp_sygen",
                                                         label = "Select injury level",
-                                                        choices = list("Cervical", "Thoracic"),
-                                                        selected = c("Cervical"))
+                                                        choices = list("All" = "All", "Cervical", "Thoracic"),
+                                                        selected = c("All"))
                                         )#, # end box
                                  ) #end column
                 )#end conditional Panel
@@ -924,6 +932,7 @@ ui <- dashboardPage(
                                                            inline = FALSE), 
                                                 align='center')),
                            conditionalPanel(condition = "input.poly_sygen_ind != 'gp_sygen' ",
+                                            actionButton("buttonNext_sygen", "Next"),
                                             div(plotOutput("plot_poly_ind_sygen", width = "100%",
                                                            inline = FALSE), 
                                                 align='center')),
@@ -946,8 +955,9 @@ ui <- dashboardPage(
                            ),
                            conditionalPanel(condition = "input.poly_sygen_ind != 'gp_sygen' ",
                                             p('This plot shows examples of longitudinal medication profiles 
-                                                            for four patients in the first days post injury. The four patients 
-                                                            share the characteristics chosen from the right panel.')
+                                            for up to 5 patients in the first days post injury (click "Next" to 
+                                            go to the next patient). The patients share the characteristics chosen 
+                                            from the right panel.', align='justify')
                            ),
                        ), # end box 
                        
@@ -959,7 +969,7 @@ ui <- dashboardPage(
                                         box(width = NULL, # create a new box
                                             selectInput("select_sex_poly_ind_sygen",
                                                         label = "Select sex",
-                                                        choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                                        choices = list("Male" = "Male", "Female" = "Female", "All" = "Unknown"),
                                                         selected = c("Unknown"))
                                         ), # end box
                                         
@@ -973,14 +983,14 @@ ui <- dashboardPage(
                                         box(width = NULL, # create a new box
                                             selectInput("select_ais_poly_ind_sygen",
                                                         label = "Select baseline AIS grade",
-                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "All" = "Unknown"),
                                                         selected = c("Unknown"))
                                         ), # end box
                                         
                                         box(width = NULL, # create a new box
                                             selectInput("select_nli_poly_ind_sygen",
                                                         label = "Select injury level",
-                                                        choices = list("Unknown", "Cervical", "Thoracic"),
+                                                        choices = list("Cervical", "Thoracic", "All" = "Unknown"),
                                                         selected = c("Unknown"))
                                         )#, # end box
                                  ) #end column
@@ -1014,6 +1024,20 @@ ui <- dashboardPage(
                                             #plotOutput('plot_drug_pattern_sygen', height = 660))
                                             #img(src="work_in_progress.png", height="80%", width="80%"))
                            ),
+                       
+                       box(title = "How to intepret this visualization", 
+                           width = NULL,
+                           solidHeader = TRUE,
+                           p('This plot represents the ',
+                             strong('drug administration pattern for the selected indication or drug', align='justify'),
+                             '. Each row on the y-axis represents a patient, whilst the x-axis shows time in days 
+                             after injury. A white entry in this plot indicates that the drug was not administered 
+                             on the corresponding day to the corresponding patient. Similarly, the darker the shades, 
+                             the more drug administered. The total number of patients who received the selected drug or drugs for 
+                             the chosen indication in the defined time window is shown on top.', align='justify'
+                             )
+                       ), # end box 
+                       
                 ), # end column
                 
                 column(width = 4, # create second column for second type of user inputs (filters)
@@ -1022,7 +1046,8 @@ ui <- dashboardPage(
                            conditionalPanel(condition = "input.type_drug_sygen == 'cat_drug_sygen' ",
                                             selectInput("select_cat_drug_sygen",
                                                         label = "Select an indication:",
-                                                        choices = list("Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
+                                                        choices = list(#"All" = "All",
+                                                                       "Blood and lymphatic system disorders" = "Blood and lymphatic system disorders",
                                                                        "Cardiac disorders" = "Cardiac disorders",
                                                                        "Ear and labyrinth disorders" = "Ear and labyrinth disorders",
                                                                        "Eye disorders" = "Eye disorders",
@@ -1052,7 +1077,7 @@ ui <- dashboardPage(
                                                         label = "Select a specific drug:",
                                                         choices = vec_drug_sygen,
                                                         #choices = 'aspirin',
-                                                        selected = 'aspirin'
+                                                        selected = 'morphin'
                                             )
                            ), #end conditionalPanel
                            
@@ -1060,12 +1085,12 @@ ui <- dashboardPage(
                        
                        box(width = NULL,
                            sliderInput("day_drug_sygen", "Day after injury:",
-                                       min = 0, max = 60, value = 7)), # end Box
+                                       min = 0, max = 60, value = 30)), # end Box
                        
                        box(width = NULL, # create a new box
                            selectInput("select_sex_drug_pattern_sygen",
                                        label = "Select sex",
-                                       choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                       choices = list("Male" = "Male", "Female" = "Female", "All" = "Unknown"),
                                        selected = c("Unknown"))
                        ), # end box
                        
@@ -1079,16 +1104,16 @@ ui <- dashboardPage(
                        box(width = NULL, # create a new box
                            selectInput("select_ais_drug_pattern_sygen",
                                        label = "Select baseline AIS grade",
-                                       choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                       choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "All" = "Unknown"),
                                        selected = c("Unknown"))
                        ), # end box
                        
                        box(width = NULL, # create a new box
                            selectInput("select_nli_drug_pattern_sygen",
                                        label = "Select injury level",
-                                       choices = list("Unknown",
-                                                      "Cervical",
-                                                      "Thoracic"),
+                                       choices = list("Cervical",
+                                                      "Thoracic", 
+                                                      "All" = "Unknown"),
                                        selected = c("Unknown"))
                        ), # end box
                 ) #end column
@@ -1277,31 +1302,31 @@ ui <- dashboardPage(
                                         box(width = NULL, # create a new box
                                             selectInput("select_sex_pharmacol_management_sbgrp_scirehab",
                                                         label = "Select sex",
-                                                        choices = list("Male" = "Male", "Female" = "Female"),
-                                                        selected = c("Male"))
+                                                        choices = list("All" = "All", "Male" = "Male", "Female" = "Female"),
+                                                        selected = c("All"))
                                         ), # end box
                                         
                                         box(width = NULL, # create box
                                             selectInput("select_age_pharmacol_management_sbgrp_scirehab",
                                                         label = "Select age at injury",
                                                         choices = list("0-19 yrs", "20-29 yrs", "30-39 yrs","40-49 yrs", "50-59 yrs", 
-                                                                       "60-69 yrs", "70-79 yrs", "80+ yrs"),
-                                                        selected = c("20-29 yrs"))
+                                                                       "60-69 yrs", "70-79 yrs", "80+ yrs", "All" = "All"),
+                                                        selected = c("All"))
                                             
                                         ), # end box
                                         
                                         box(width = NULL, # create a new box
                                             selectInput("select_ais_pharmacol_management_sbgrp_scirehab",
                                                         label = "Select baseline AIS grade",
-                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D"),
-                                                        selected = c("AIS A"))
+                                                        choices = list("All" = "All", "AIS A", "AIS B", "AIS C", "AIS D"),
+                                                        selected = c("All"))
                                         ), # end box
                                         
                                         box(width = NULL, # create a new box
                                             selectInput("select_nli_pharmacol_management_sbgrp_scirehab",
                                                         label = "Select injury level",
-                                                        choices = list("Cervical", "Thoracic", "Lumbar"),
-                                                        selected = c("Cervical"))
+                                                        choices = list("All" = "All", "Cervical", "Thoracic", "Lumbar"),
+                                                        selected = c("All"))
                                         )#, # end box
                                  ) #end column
                 )#end conditional Panel
@@ -1347,11 +1372,12 @@ ui <- dashboardPage(
                                                            inline = FALSE), 
                                                 align='center')),
                            conditionalPanel(condition = "input.poly_scirehab_ind != 'gp_scirehab' ",
-                                            img(src="work_in_progress.png", height="80%", width="80%")
-                                            ),
-                                            #div(plotOutput("plot_poly_ind_scirehab", width = "100%",
-                                            #               inline = FALSE), 
-                                            #    align='center')),
+                                            #img(src="work_in_progress.png", height="80%", width="80%")
+                                            #),
+                                            actionButton("buttonNext_scirehab", "Next"),
+                                            div(plotOutput("plot_poly_ind_scirehab", width = "100%",
+                                                           inline = FALSE), 
+                                                align='center')),
                        ), # end box 
                        
                        box(title = "How to intepret this visualization", 
@@ -1371,8 +1397,9 @@ ui <- dashboardPage(
                            ),
                            conditionalPanel(condition = "input.poly_scirehab_ind != 'gp_scirehab' ",
                                             p('This plot shows examples of longitudinal medication profiles 
-                                                            for four patients in the first days post injury. The four patients 
-                                                            share the characteristics chosen from the right panel.')
+                                            for up to 5 patients in the first days post injury (click "Next" to 
+                                            go to the next patient). The patients share the characteristics chosen 
+                                            from the right panel.')
                            ),
                        ), # end box 
                        
@@ -1384,28 +1411,38 @@ ui <- dashboardPage(
                                         box(width = NULL, # create a new box
                                             selectInput("select_sex_poly_ind_scirehab",
                                                         label = "Select sex",
-                                                        choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                                        choices = list("Male" = "Male", "Female" = "Female", "All" = "Unknown"),
                                                         selected = c("Unknown"))
                                         ), # end box
                                         
                                         box(width = NULL, # create box
-                                            sliderInput("select_age_poly_ind_scirehab",
+                                            selectInput("select_age_poly_ind_scirehab",
                                                         label = "Select age at injury",
-                                                        min = 10, max = 100,
-                                                        value = c(20,80)),
+                                                        choices = list("12-19 yrs", "20-29 yrs", "30-39 yrs",
+                                                                       "40-49 yrs", "50-59 yrs", "60-69 yrs", "70-79 yrs",
+                                                                       "80+ yrs", "All" = "Unknown"),
+                                                        selected = c("Unknown"))
+                                            # sliderInput("select_age_poly_ind_scirehab",
+                                            #             label = "Select age at injury",
+                                            #             min = 10, max = 100,
+                                            #             value = c(20,80)),
                                         ), # end box
                                         
                                         box(width = NULL, # create a new box
                                             selectInput("select_ais_poly_ind_scirehab",
                                                         label = "Select baseline AIS grade",
-                                                        choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                                        choices = list("AIS A" = 'A', 
+                                                                       "AIS B" = 'B', 
+                                                                       "AIS C" = 'C', 
+                                                                       "AIS D" = 'D',
+                                                                       "All" = "Unknown"),
                                                         selected = c("Unknown"))
                                         ), # end box
                                         
                                         box(width = NULL, # create a new box
                                             selectInput("select_nli_poly_ind_scirehab",
                                                         label = "Select injury level",
-                                                        choices = list("Unknown", "Cervical", "Thoracic"),
+                                                        choices = list("Cervical", "Thoracic", "All" = "Unknown"),
                                                         selected = c("Unknown"))
                                         )#, # end box
                                  ) #end column
@@ -1422,8 +1459,20 @@ ui <- dashboardPage(
 
                        box(width = NULL, # create box to display plot
                            align="center", # center the plot
-                           plotOutput('plot_drug_pattern_scirehab', height = 660)) # call server plot function for the score and dataset chosen by the user #end box
-                ), # end column
+                           plotOutput('plot_drug_pattern_scirehab', height = 660)), # call server plot function for the score and dataset chosen by the user #end box
+                
+                       box(title = "How to intepret this visualization", 
+                           width = NULL,
+                           solidHeader = TRUE,
+                           p('This plot represents the ',
+                             strong('drug administration pattern for the selected drug', align='justify'),
+                             '. Each row on the y-axis represents a patient, whilst the x-axis shows time in days 
+                             after injury. A white entry in this plot indicates that the drug was not administered 
+                             on the corresponding day to the corresponding patient. The total number of patients who 
+                             received the selected drug in the defined time window is shown on top.', align='justify'
+                           )
+                           ), # end box 
+                       ), # end column
 
                 column(width = 4, # create second column for second type of user inputs (filters)
                        box(width=NULL,
@@ -1436,36 +1485,36 @@ ui <- dashboardPage(
 
                        box(width = NULL,
                            sliderInput("day_drug_scirehab", "Day after injury:",
-                                       min = 0, max = 60, value = 7)
+                                       min = 0, max = 60, value = 30)
                        ), # end Box
 
                        box(width = NULL, # create a new box
                            selectInput("select_sex_drug_pattern_scirehab",
                                        label = "Select sex",
-                                       choices = list("Male" = "Male", "Female" = "Female", "Unknown" = "Unknown"),
+                                       choices = list("Male" = "Male", "Female" = "Female", "All" = "Unknown"),
                                        selected = c("Unknown"))
                        ), # end box
 
                        box(width = NULL, # create box
                            selectInput("select_age_drug_pattern_scirehab",
                                        label = "Select age at injury",
-                                       choices = list("12-19 yrs", "20-29 yrs", "30-39 yrs", 
-                                                      "40-49 yrs", "50-59 yrs", "60-69 yrs", "70-79 yrs", 
-                                                      "80+ yrs", "Unknown" = "Unknown"),
+                                       choices = list("12-19 yrs", "20-29 yrs", "30-39 yrs",
+                                                      "40-49 yrs", "50-59 yrs", "60-69 yrs", "70-79 yrs",
+                                                      "80+ yrs", "All" = "Unknown"),
                                        selected = c("Unknown")),
                        ), # end box
 
                        box(width = NULL, # create a new box
                            selectInput("select_ais_drug_pattern_scirehab",
                                        label = "Select baseline AIS grade",
-                                       choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "Unknown" = "Unknown"),
+                                       choices = list("AIS A", "AIS B", "AIS C", "AIS D", "AIS E", "All" = "Unknown"),
                                        selected = c("Unknown"))
                        ), # end box
 
                        box(width = NULL, # create a new box
                            selectInput("select_nli_drug_pattern_scirehab",
                                        label = "Select injury level",
-                                       choices = list("Unknown",
+                                       choices = list("All" = "Unknown",
                                                       "Cervical",
                                                       "Thoracic"),
                                        selected = c("Unknown"))
@@ -1936,10 +1985,15 @@ server <- function(input, output, session) {
       range = c(input$select_age_pharmacol_management_sbgrp_sygen[1] : input$select_age_pharmacol_management_sbgrp_sygen[2]) 
       acute_pharmacol_management.data.sygen2 <- acute_pharmacol_management.data.sygen[acute_pharmacol_management.data.sygen$Age %in% range, ]
       
-      table.for.crosstalk <- acute_pharmacol_management.data.sygen2 %>%
-        dplyr::filter(Sex== input$select_sex_pharmacol_management_sbgrp_sygen &
-                        ais1 == input$select_ais_pharmacol_management_sbgrp_sygen&
-                        NLI == input$select_nli_pharmacol_management_sbgrp_sygen)%>%
+      data_modified <- acute_pharmacol_management.data.sygen2
+      if (!('All' %in% input$select_sex_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$Sex %in% input$select_sex_pharmacol_management_sbgrp_sygen, ]}
+      if (!('All' %in% input$select_ais_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$ais1 %in% input$select_ais_pharmacol_management_sbgrp_sygen, ]}
+      if (!('All' %in% input$select_nli_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$NLI %in% input$select_nli_pharmacol_management_sbgrp_sygen, ]}
+      
+      table.for.crosstalk <- data_modified %>%
+        #dplyr::filter(Sex== input$select_sex_pharmacol_management_sbgrp_sygen &
+        #                ais1 == input$select_ais_pharmacol_management_sbgrp_sygen&
+        #                NLI == input$select_nli_pharmacol_management_sbgrp_sygen)%>%
         #dplyr::filter(dose != 0)%>%
         #dplyr::select(-"indication")%>%
         dplyr::group_by(day_x, generic_name,indication)%>%
@@ -1962,10 +2016,15 @@ server <- function(input, output, session) {
       range = c(input$select_age_pharmacol_management_sbgrp_sygen[1] : input$select_age_pharmacol_management_sbgrp_sygen[2]) 
       acute_pharmacol_management.data.sygen2 <- acute_pharmacol_management.data.sygen[acute_pharmacol_management.data.sygen$Age %in% range, ]
       
-      nr.of.patients.per.drug.per.day <- acute_pharmacol_management.data.sygen2 %>%
-        dplyr::filter(Sex == input$select_sex_pharmacol_management_sbgrp_sygen & 
-                        ais1 == input$select_ais_pharmacol_management_sbgrp_sygen&
-                        NLI == input$select_nli_pharmacol_management_sbgrp_sygen)%>%
+      data_modified <- acute_pharmacol_management.data.sygen2
+      if (!('All' %in% input$select_sex_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$Sex %in% input$select_sex_pharmacol_management_sbgrp_sygen, ]}
+      if (!('All' %in% input$select_ais_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$ais1 %in% input$select_ais_pharmacol_management_sbgrp_sygen, ]}
+      if (!('All' %in% input$select_nli_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$NLI %in% input$select_nli_pharmacol_management_sbgrp_sygen, ]}
+      
+      nr.of.patients.per.drug.per.day <- data_modified %>%
+        #dplyr::filter(Sex == input$select_sex_pharmacol_management_sbgrp_sygen & 
+        #                ais1 == input$select_ais_pharmacol_management_sbgrp_sygen&
+        #                NLI == input$select_nli_pharmacol_management_sbgrp_sygen)%>%
         dplyr::filter(dose != 0)%>%
         dplyr::select(-"indication")%>%
         dplyr::group_by(day, generic_name) %>%
@@ -2003,14 +2062,18 @@ server <- function(input, output, session) {
       range = c(input$select_age_pharmacol_management_sbgrp_sygen[1] : input$select_age_pharmacol_management_sbgrp_sygen[2]) 
       acute_pharmacol_management.data.sygen2 <- acute_pharmacol_management.data.sygen[acute_pharmacol_management.data.sygen$Age %in% range, ]
       
+      data_modified <- acute_pharmacol_management.data.sygen2
+      if (!('All' %in% input$select_sex_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$Sex %in% input$select_sex_pharmacol_management_sbgrp_sygen, ]}
+      if (!('All' %in% input$select_ais_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$ais1 %in% input$select_ais_pharmacol_management_sbgrp_sygen, ]}
+      if (!('All' %in% input$select_nli_pharmacol_management_sbgrp_sygen)){data_modified <- data_modified[data_modified$NLI %in% input$select_nli_pharmacol_management_sbgrp_sygen, ]}
       
       fct_acute_pharmacol_management_by_indication_sygen<- function(day){
         
         # Create data set
-        nr.of.patients.per.drug.per.day.per.indication <- acute_pharmacol_management.data.sygen2 %>%
-          dplyr::filter(Sex == input$select_sex_pharmacol_management_sbgrp_sygen & 
-                          ais1 == input$select_ais_pharmacol_management_sbgrp_sygen &
-                          NLI == input$select_nli_pharmacol_management_sbgrp_sygen)%>%
+        nr.of.patients.per.drug.per.day.per.indication <- data_modified %>%
+          # dplyr::filter(Sex == input$select_sex_pharmacol_management_sbgrp_sygen & 
+          #                 ais1 == input$select_ais_pharmacol_management_sbgrp_sygen &
+          #                 NLI == input$select_nli_pharmacol_management_sbgrp_sygen)%>%
           dplyr::filter(indication == input$select_indication_pharmacol_management_sgrp_sygen)%>%
           dplyr::filter(dose != 0)%>%
           dplyr::group_by(day, generic_name, indication) %>%
@@ -2108,11 +2171,17 @@ server <- function(input, output, session) {
   output$table_srgp_scirehab <- renderDataTable({
     if (input$pharmacol_management_scirehab == "sbgrps_scirehab"){ # customized subgroups
       
-      nr.of.patients.per.drug.per.day.table <- acute_pharmacol_management.data.scirehab %>%
-        dplyr::filter(Age == input$select_age_pharmacol_management_sbgrp_scirehab &
-                        Sex == input$select_sex_pharmacol_management_sbgrp_scirehab & 
-                        AIS == input$select_ais_pharmacol_management_sbgrp_scirehab &
-                        NLI == input$select_nli_pharmacol_management_sbgrp_scirehab)%>%
+      data_modified <- acute_pharmacol_management.data.scirehab
+      if (!('All' %in% input$select_sex_pharmacol_management_sbgrp_scirehab)){data_modified <- data_modified[data_modified$Sex %in% input$select_sex_pharmacol_management_sbgrp_scirehab, ]}
+      if (!('All' %in% input$select_ais_pharmacol_management_sbgrp_scirehab)){data_modified <- data_modified[data_modified$AIS %in% input$select_ais_pharmacol_management_sbgrp_scirehab, ]}
+      if (!('All' %in% input$select_nli_pharmacol_management_sbgrp_scirehab)){data_modified <- data_modified[data_modified$NLI %in% input$select_nli_pharmacol_management_sbgrp_scirehab, ]}
+      if (!('All' %in% input$select_age_pharmacol_management_sbgrp_scirehab)){data_modified <- data_modified[data_modified$Age %in% input$select_age_pharmacol_management_sbgrp_scirehab, ]}
+      
+      nr.of.patients.per.drug.per.day.table <- data_modified %>%
+        # dplyr::filter(Age == input$select_age_pharmacol_management_sbgrp_scirehab &
+        #                 Sex == input$select_sex_pharmacol_management_sbgrp_scirehab & 
+        #                 AIS == input$select_ais_pharmacol_management_sbgrp_scirehab &
+        #                 NLI == input$select_nli_pharmacol_management_sbgrp_scirehab)%>%
         dplyr::filter(prevalence != 0)%>%
         dplyr::group_by(day, generic_name) %>%
         dplyr::select(generic_name, day)%>%
@@ -2129,11 +2198,17 @@ server <- function(input, output, session) {
   output$plot_pharmacol_management_srgp_scirehab <- renderPlotly({ 
     if (input$pharmacol_management_scirehab == "sbgrps_scirehab"){ #full cohort selected
       
-      nr.of.patients.per.drug.per.day <- acute_pharmacol_management.data.scirehab %>%
-        dplyr::filter(Age == input$select_age_pharmacol_management_sbgrp_scirehab &
-                        Sex == input$select_sex_pharmacol_management_sbgrp_scirehab & 
-                        AIS == input$select_ais_pharmacol_management_sbgrp_scirehab &
-                        NLI == input$select_nli_pharmacol_management_sbgrp_scirehab)%>%
+      data_modified <- acute_pharmacol_management.data.scirehab
+      if (!('All' %in% input$select_sex_pharmacol_management_sbgrp_scirehab)){data_modified <- data_modified[data_modified$Sex %in% input$select_sex_pharmacol_management_sbgrp_scirehab, ]}
+      if (!('All' %in% input$select_ais_pharmacol_management_sbgrp_scirehab)){data_modified <- data_modified[data_modified$AIS %in% input$select_ais_pharmacol_management_sbgrp_scirehab, ]}
+      if (!('All' %in% input$select_nli_pharmacol_management_sbgrp_scirehab)){data_modified <- data_modified[data_modified$NLI %in% input$select_nli_pharmacol_management_sbgrp_scirehab, ]}
+      if (!('All' %in% input$select_age_pharmacol_management_sbgrp_scirehab)){data_modified <- data_modified[data_modified$Age %in% input$select_age_pharmacol_management_sbgrp_scirehab, ]}
+      
+      nr.of.patients.per.drug.per.day <- data_modified %>%
+        # dplyr::filter(Age == input$select_age_pharmacol_management_sbgrp_scirehab &
+        #                 Sex == input$select_sex_pharmacol_management_sbgrp_scirehab & 
+        #                 AIS == input$select_ais_pharmacol_management_sbgrp_scirehab &
+        #                 NLI == input$select_nli_pharmacol_management_sbgrp_scirehab)%>%
         dplyr::filter(prevalence != 0)%>%
         dplyr::group_by(day, generic_name) %>%
         dplyr::select(generic_name, day)%>%
@@ -2164,72 +2239,156 @@ server <- function(input, output, session) {
     }
   }) # Close function
   
+  clickNext <- reactive({
+    randomNumber <- as.numeric(input$buttonNext_sygen)
+    out_nb <- randomNumber%%5
+    return(out_nb+1)
+  })
+  
+  clickNext_scirehab <- reactive({
+    randomNumber <- as.numeric(input$buttonNext_scirehab)
+    out_nb <- randomNumber%%5
+    return(out_nb+1)
+  })
+  
+  observeEvent(input$buttonNext_sygen,{})
+  observeEvent(input$buttonNext_scirehab,{})
+  
   output$plot_poly_ind_sygen <- renderPlot({
     input_sex <- unique(input$select_sex_poly_ind_sygen)[1]
     input_age <- c(unique(input$select_age_poly_ind_sygen)[1]:unique(input$select_age_poly_ind_sygen)[2])
     input_age_str <- as.character(input_age)
-    input_age_str <- paste0(input_age_str, '.csv')
     #print(input_age_str)
     input_ais <- unique(input$select_ais_poly_ind_sygen)[1]
     input_nli <- unique(input$select_nli_poly_ind_sygen)[1]
     
-    file_list <- list.files('data/pid_graphs')
+    data_modified <- data_polypharma_individual_sygen
     
-    vec_filter <- c()
-    if (input_sex != 'Unknown') {
-      vec_filter <- append(vec_filter, input_sex)
-    }
-    if (input_ais != 'Unknown') {
-      vec_filter <- append(vec_filter, input_ais)
-    }
-    if (input_nli != 'Unknown') {
-      vec_filter <- append(vec_filter, input_nli)
-    }
+    if (!('Unknown' %in% input_sex)){data_modified <- data_modified[data_modified$Sex %in% input_sex, ]}
+    if (!('Unknown' %in% input_age)){data_modified <- data_modified[data_modified$Age %in% input_age_str, ]}
+    if (!('Unknown' %in% input_ais)){data_modified <- data_modified[data_modified$AIS %in% input_ais, ]}
+    if (!('Unknown' %in% input_nli)){data_modified <- data_modified[data_modified$NLI %in% input_nli, ]}
     
-    
-    if (length(vec_filter) == 1){
-      sub_list <- file_list[grep(file_list , pattern = vec_filter[1])]
-    } else if (length(vec_filter) == 2){
-      sub_list <- file_list[intersect(grep(file_list , pattern = vec_filter[1]),
-                                      grep(file_list , pattern = vec_filter[2]))]
-    } else if (length(vec_filter) == 3){
-      temp_list <- file_list[intersect(grep(file_list , pattern = vec_filter[1]),
-                                       grep(file_list , pattern = vec_filter[2]))]
-      sub_list <- temp_list[grep(temp_list, pattern = vec_filter[3])]
-    } else if (length(vec_filter) == 0){
-      sub_list <- file_list
-    }
-    
-    sub_list_filtered <- c()
-    for (name in sub_list){
-      age_str <- substr(name, nchar(name)-5, nchar(name))
-      if (age_str %in% input_age_str){
-        sub_list_filtered <- append(sub_list_filtered, name)
-      }
-    }
-    
-    if (length(sub_list_filtered) == 0){
+    id_all <- levels(factor(data_modified$NEW_ID))
+    set.seed(9)
+    selected_ids <- sample(id_all, 5)
+    if (length(id_all)>=5){
+      #print(selected_ids)
+      i <- clickNext()
+      #print(i)
+      plot <- fct_poly_ind_sygen(data_modified[data_modified$NEW_ID %in% selected_ids[i], ])
+    } else if (length(id_all) == 0) {
       plot <- plot_error_line()
-    } else if (length(sub_list_filtered) == 1){
-      plot <- fct_poly_ind_sygen(sub_list_filtered[1])
-    } else if (length(sub_list_filtered) == 2){
-      plot.1 <- fct_poly_ind_sygen(sub_list_filtered[1])
-      plot.2 <- fct_poly_ind_sygen(sub_list_filtered[2])
-      plot <- plot_grid(plot.1, plot.2, ncol=2)
-    } else if (length(sub_list_filtered) == 3){
-      plot.1 <- fct_poly_ind_sygen(sub_list_filtered[1])
-      plot.2 <- fct_poly_ind_sygen(sub_list_filtered[2])
-      plot.3 <- fct_poly_ind_sygen(sub_list_filtered[3])
-      plot <- grid.arrange(plot.1, plot.2, plot.3, ncol=2, nrow=2)
-    } else if (length(sub_list_filtered) > 3){
-      sub_only4 <- sample(sub_list_filtered, 4)
-      plot.1 <- fct_poly_ind_sygen(sub_only4[1])
-      plot.2 <- fct_poly_ind_sygen(sub_only4[2])
-      plot.3 <- fct_poly_ind_sygen(sub_only4[3])
-      plot.4 <- fct_poly_ind_sygen(sub_only4[4])
-      plot <- grid.arrange(plot.1, plot.2, plot.3, plot.4, ncol=2, nrow=2)
-    }
+    } else {
+      selected_ids <- id_all
+      i <- clickNext()
+      i <- i%%length(selected_ids) + 1
+      plot <- fct_poly_ind_sygen(data_modified[data_modified$NEW_ID %in% selected_ids[i], ])
+    } 
     
+
+    # file_list <- list.files('data/pid_graphs')
+    # 
+    # vec_filter <- c()
+    # if (input_sex != 'Unknown') {vec_filter <- append(vec_filter, input_sex)}
+    # if (input_ais != 'Unknown') {vec_filter <- append(vec_filter, input_ais)}
+    # if (input_nli != 'Unknown') {vec_filter <- append(vec_filter, input_nli)}
+    # 
+    # if (length(vec_filter) == 1){
+    #   sub_list <- file_list[grep(file_list , pattern = vec_filter[1])]
+    # } else if (length(vec_filter) == 2){
+    #   sub_list <- file_list[intersect(grep(file_list , pattern = vec_filter[1]),
+    #                                   grep(file_list , pattern = vec_filter[2]))]
+    # } else if (length(vec_filter) == 3){
+    #   temp_list <- file_list[intersect(grep(file_list , pattern = vec_filter[1]),
+    #                                    grep(file_list , pattern = vec_filter[2]))]
+    #   sub_list <- temp_list[grep(temp_list, pattern = vec_filter[3])]
+    # } else if (length(vec_filter) == 0){
+    #   sub_list <- file_list
+    # }
+    # 
+    # sub_list_filtered <- c()
+    # for (name in sub_list){
+    #   age_str <- substr(name, nchar(name)-5, nchar(name))
+    #   if (age_str %in% input_age_str){
+    #     sub_list_filtered <- append(sub_list_filtered, name)
+    #   }
+    # }
+    # 
+    # sub_list_filtered <- sample(sub_list_filtered)
+    # 
+    # if (length(sub_list_filtered) == 0){
+    #   plot <- plot_error_line()
+    # } else if (length(sub_list_filtered) < 5){
+    #   i <- clickNext()
+    #   i <- i%%length(sub_list_filtered) + 1
+    #   #print('test1', i)
+    #   #print(sub_list_filtered[i])
+    #   plot <- fct_poly_ind_sygen(sub_list_filtered[i])
+    # } else if (length(sub_list_filtered) >= 5){
+    #   i <- clickNext()
+    #   #print('test2', i)
+    #   #print(sub_list_filtered[i])
+    #   plot <- fct_poly_ind_sygen(sub_list_filtered[i])
+    # } 
+    
+  plot})
+  
+  output$plot_poly_ind_scirehab <- renderPlot({
+    
+    input_sex <- unique(input$select_sex_poly_ind_scirehab)[1]
+    input_age <- unique(input$select_age_poly_ind_scirehab)[1]
+    input_age_str <- as.character(input_age)
+    #print(input_age_str)
+    input_ais <- unique(input$select_ais_poly_ind_scirehab)[1]
+    input_nli <- unique(input$select_nli_poly_ind_scirehab)[1]
+    
+    data_modified <- data_polypharma_individual_scirehab
+    
+    if (!('Unknown' %in% input_sex)){data_modified <- data_modified[data_modified$Sex %in% input_sex, ]}
+    if (!('Unknown' %in% input_age)){data_modified <- data_modified[data_modified$Age %in% input_age_str, ]}
+    if (!('Unknown' %in% input_ais)){data_modified <- data_modified[data_modified$AIS %in% input_ais, ]}
+    if (!('Unknown' %in% input_nli)){data_modified <- data_modified[data_modified$NLI %in% input_nli, ]}
+    
+    id_all <- levels(factor(data_modified$newid))
+    set.seed(9)
+    selected_ids <- sample(id_all, 5)
+    if (length(id_all)>=5){
+      #print(selected_ids)
+      i <- clickNext_scirehab()
+      #print(i)
+      tmp <- data_modified[data_modified$newid %in% selected_ids[i], ]
+      dg_name <- levels(factor(tmp$generic_name))
+      for (dg in dg_name){
+        sub_data_modified <- tmp[tmp$generic_name %in% dg, ]
+        sub_data_modified2<-sub_data_modified%>%
+            select(X0:X60)
+        if (all(is.na(sub_data_modified2))){
+          tmp <- tmp[!(tmp$generic_name==dg),]
+        } 
+      }
+      plot <- fct_poly_ind_scirehab(tmp)
+      
+    } else if (length(id_all) == 0) {
+      plot <- plot_error_line()
+    } else {
+      selected_ids <- id_all
+      i <- clickNext_scirehab()
+      i <- i%%length(selected_ids) + 1
+      tmp <- data_modified[data_modified$newid %in% selected_ids[i], ]
+      dg_name <- levels(factor(tmp$generic_name))
+      for (dg in dg_name){
+        sub_data_modified <- tmp[tmp$generic_name %in% dg, ]
+        sub_data_modified2<-sub_data_modified%>%
+          select(X0:X60)
+        if (all(is.na(sub_data_modified2))){
+          tmp <- tmp[!(tmp$generic_name==dg),]
+        } 
+      }
+      plot <- fct_poly_ind_scirehab(tmp)
+    } 
+    
+    plot
   })
   
   output$plot_drug_pattern_sygen <- renderPlot({
@@ -2249,7 +2408,7 @@ server <- function(input, output, session) {
     } else if (input_type == 'spe_drug_sygen'){
       varnames <- c(varnames, input$select_spe_drug_sygen)
       feat <- input$select_spe_drug_sygen
-      print(feat)
+      #print(feat)
       data_modified <- df_heatmap_sygen_drugs_copy[names(df_heatmap_sygen_drugs_copy)[names(df_heatmap_sygen_drugs_copy) %in% varnames] ]
     } 
     
@@ -2263,15 +2422,23 @@ server <- function(input, output, session) {
     input_day_str1 <- as.character(input_day_vec)
     input_day_str2 <- paste0('X',input_day_str1)
     
-    print(names(data_modified))
+    #print(names(data_modified))
     
     data_modified <- data_modified[data_modified$Days_after_injury %in% input_day_str2, ]
+
+    ids <- levels(factor(data_modified$ID))
+    for (i in ids){
+      sub_data_modified <- data_modified[data_modified$ID %in% i, ]
+      if (all(sub_data_modified[feat] == 0)){
+        data_modified <- data_modified[!(data_modified$ID==i),]
+      } 
+    }
     
     names(data_modified) <- gsub(" ", ".", names(data_modified))
     feat <- gsub(" ", ".", feat)
     
-    print(names(data_modified))
-    print(feat)
+    #print(names(data_modified))
+    #print(feat)
     
     colors <- colorRampPalette(c("white", "#0000ff"))(7)
     plot <- ggplot(data = data_modified, aes(x = Days_after_injury, y = ID))+
@@ -2290,7 +2457,7 @@ server <- function(input, output, session) {
   output$plot_drug_pattern_scirehab <- renderPlot({
     
     varnames <- c("ID", "Days_after_injury", "Sex", "Age", "AIS", "NLI", unique(input$select_drug_scirehab)[1])
-    data_modified <- df_heatmap_scirehab_drugs_copy[names(df_heatmap_scirehab_drugs_copy)[names(df_heatmap_scirehab_drugs_copy) %in% varnames] ]
+    data_modified <- df_heatmap_scirehab_drug[names(df_heatmap_scirehab_drug)[names(df_heatmap_scirehab_drug) %in% varnames] ]
     
     #print(head(data_modified))
     
@@ -2319,6 +2486,15 @@ server <- function(input, output, session) {
     data_modified <- data_modified[data_modified$Days_after_injury %in% input_day_str2, ]
     
     feat <- input$select_drug_scirehab
+    
+    ids <- levels(factor(data_modified$ID))
+    for (i in ids){
+      sub_data_modified <- data_modified[data_modified$ID %in% i, ]
+      if (all(sub_data_modified[feat] == 0)){
+        data_modified <- data_modified[!(data_modified$ID==i),]
+      } 
+    }
+    
     names(data_modified) <- gsub(" ", ".", names(data_modified))
     feat <- gsub(" ", ".", feat)
     
@@ -2332,7 +2508,7 @@ server <- function(input, output, session) {
         geom_tile(aes_string(fill = feat)) +
         theme(axis.ticks.y=element_blank(),
               axis.text.y=element_blank()) +
-        scale_fill_manual(name = 'Drug prescribed? (0:"No")', values=colors) + 
+        scale_fill_manual(name = '', values=colors, labels = c('Drug not prescribed', 'Drug prescribed')) + 
         scale_x_discrete(name ="Days after injury", labels=input_day_str1) +
         scale_y_discrete(name ="1 row = 1 patient") +
         labs(title = paste("Number of patients: ", length(levels(factor(data_modified$ID)))))
