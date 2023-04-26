@@ -15,7 +15,7 @@ Our study revealed a high degree of polypharmacy in the acute stages of spinal c
 
 :open_book:	**Link to paper**: [Peer-reviewed](https://www.nature.com/articles/s41598-023-31773-8)
 
-:desktop_computer: **Link to web application**: [Neuropharmacovigilance Platform](https://jutzelec.shinyapps.io/RxSCI/)
+:desktop_computer: **Link to web application**: [RxSCI Platform](https://jutzelec.shinyapps.io/RxSCI/)
 
 
 :bar_chart: **Link to data**:
